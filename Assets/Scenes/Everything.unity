@@ -644,7 +644,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1815878727905419337}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1790708162
+--- !u!136 &1790708168
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -852,6 +852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604913857170723732, guid: 5e53a6ae470acc34f9e87de838f2b368,
+        type: 3}
+      propertyPath: m_TagString
+      value: Witch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e53a6ae470acc34f9e87de838f2b368, type: 3}

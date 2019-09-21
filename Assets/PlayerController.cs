@@ -47,6 +47,12 @@ public class PlayerController : MonoBehaviour
             numFruits += fruitBushScript.fruitsInBush;
             fruitBushScript.fruitsInBush = 0;
         }
+
+        if (collision.transform.tag == "Witch")
+        {
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+            gameLost = true;
+        }
     }
 
     private void OnGUI()
