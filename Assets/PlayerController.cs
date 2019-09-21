@@ -11,15 +11,18 @@ public class PlayerController : MonoBehaviour
 
     bool gameWon = false;
     bool gameLost = false;
-
+    [SerializeField] AudioClip witchSound;
+    [SerializeField] AudioClip fruitCaptureSound;
     FruitBushScript fruitBushScript;
+
+    AudioSource audioSource;
 
     private GUIStyle style = new GUIStyle();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
             GameObject fruitBush = GameObject.Find(collision.transform.name);
             fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
 
+            audioSource.PlayOneShot(fruitCaptureSound);
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             numFruits += fruitBushScript.fruitsInBush;
             fruitBushScript.fruitsInBush = 0;
@@ -50,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
         if (collision.transform.tag == "Witch")
         {
+            audioSource.Stop();
+            audioSource.PlayOneShot(witchSound);
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             gameLost = true;
         }
