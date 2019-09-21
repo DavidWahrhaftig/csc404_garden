@@ -9,14 +9,17 @@ public class PlayerController : MonoBehaviour
 
     int numFruits = 0;
 
+    bool gameWon = false;
+    bool gameLost = false;
+
     FruitBushScript fruitBushScript;
+
+    private GUIStyle style = new GUIStyle();
 
     // Start is called before the first frame update
     void Start()
     {
-        //fruitBushScript = GetComponent<FruitBushScript>();
-        //GameObject fruitBush = GameObject.Find("FruitBush");
-        //fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
+        
     }
 
     // Update is called once per frame
@@ -24,6 +27,11 @@ public class PlayerController : MonoBehaviour
     {
         transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
         transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
+
+        if (numFruits == 25)
+        {
+            gameWon = true;
+        }
 
         Debug.Log(numFruits);
     }
@@ -38,6 +46,19 @@ public class PlayerController : MonoBehaviour
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             numFruits += fruitBushScript.fruitsInBush;
             fruitBushScript.fruitsInBush = 0;
+        }
+    }
+
+    private void OnGUI()
+    {
+        style.fontSize = 100;
+        if (gameWon)
+        {
+            GUI.Label(new Rect(100, 100, 100, 200), "You Win!", style);
+        }
+        else if (gameLost)
+        {
+            GUI.Label(new Rect(100, 100, 100, 200), "You Lose!", style);
         }
     }
 }
