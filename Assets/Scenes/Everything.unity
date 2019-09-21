@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,6 +120,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 80a0b74572cdb3a42bbf132deff2b2be, type: 2}
+--- !u!1001 &35575805
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6127495663887586712, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_Name
+      value: FruitBush (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.079716
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0149231
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.184108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663887586713, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: fruitsInBush
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127495663256375035, guid: 27867ffe468e50b42b443ea2b26618cc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84fc0a5feaccbef4da09bf013c55f287, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27867ffe468e50b42b443ea2b26618cc, type: 3}
 --- !u!1001 &73165513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
@@ -402,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
@@ -481,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
@@ -508,80 +587,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 84fc0a5feaccbef4da09bf013c55f287, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 27867ffe468e50b42b443ea2b26618cc, type: 3}
---- !u!1001 &1404458856
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6127495663887586712, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_Name
-      value: FruitBush (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6588793
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127495663887586713, guid: 27867ffe468e50b42b443ea2b26618cc,
-        type: 3}
-      propertyPath: fruitsInBush
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27867ffe468e50b42b443ea2b26618cc, type: 3}
 --- !u!1001 &1462946421
@@ -718,7 +723,7 @@ PrefabInstance:
     - target: {fileID: 4554530069927253813, guid: 36406e4727e98b843ad6606cab443bc9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4554530069927253813, guid: 36406e4727e98b843ad6606cab443bc9,
         type: 3}
@@ -927,7 +932,7 @@ PrefabInstance:
     - target: {fileID: 9140046444415291831, guid: 5e53a6ae470acc34f9e87de838f2b368,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9140046444415291831, guid: 5e53a6ae470acc34f9e87de838f2b368,
         type: 3}
@@ -996,7 +1001,7 @@ PrefabInstance:
     - target: {fileID: 3238032816225192230, guid: 9ec668f220509be489f052eaf757103d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3238032816225192230, guid: 9ec668f220509be489f052eaf757103d,
         type: 3}
@@ -1023,16 +1028,16 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 6275916271865062896, guid: 9ec668f220509be489f052eaf757103d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ffd1b825932347c449cd5d81e543207f, type: 2}
     - target: {fileID: 5313831301738710229, guid: 9ec668f220509be489f052eaf757103d,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6275916271865062896, guid: 9ec668f220509be489f052eaf757103d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84fc0a5feaccbef4da09bf013c55f287, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ec668f220509be489f052eaf757103d, type: 3}
 --- !u!1001 &6127495663213385946
@@ -1085,7 +1090,7 @@ PrefabInstance:
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6127495663887586718, guid: 27867ffe468e50b42b443ea2b26618cc,
         type: 3}
