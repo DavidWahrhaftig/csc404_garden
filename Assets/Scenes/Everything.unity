@@ -638,26 +638,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750840132bfe1e24bac9a8c6f6b115c0, type: 3}
---- !u!1 &1790708161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1604913857170723732, guid: 5e53a6ae470acc34f9e87de838f2b368,
-    type: 3}
-  m_PrefabInstance: {fileID: 1815878727905419337}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &1790708168
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790708161}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1928162120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -853,11 +833,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1604913857170723732, guid: 5e53a6ae470acc34f9e87de838f2b368,
-        type: 3}
-      propertyPath: m_TagString
-      value: Witch
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e53a6ae470acc34f9e87de838f2b368, type: 3}
 --- !u!1001 &3238032815294739347
@@ -940,7 +915,7 @@ PrefabInstance:
     - target: {fileID: 5313831301738710229, guid: 9ec668f220509be489f052eaf757103d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ec668f220509be489f052eaf757103d, type: 3}
