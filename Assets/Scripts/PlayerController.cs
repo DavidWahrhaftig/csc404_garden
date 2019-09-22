@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     bool gameWon = false;
     bool gameLost = false;
     [SerializeField] AudioClip witchSound;
-    [SerializeField] AudioClip fruitCaptureSound;
+    [SerializeField] AudioClip[] fruitSounds;
     FruitBushScript fruitBushScript;
 
     AudioSource audioSource;
@@ -28,15 +28,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
+        respondToInput();
 
         if (numFruits == 25)
         {
             gameWon = true;
         }
 
-        Debug.Log(numFruits);
+        //Debug.Log(numFruits);
+    }
+
+    private void respondToInput()
+    {
+        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+        transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,8 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             GameObject fruitBush = GameObject.Find(collision.transform.name);
             fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
-
-            audioSource.PlayOneShot(fruitCaptureSound);
+            playFruitSound();
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             numFruits += fruitBushScript.fruitsInBush;
             fruitBushScript.fruitsInBush = 0;
@@ -58,6 +62,17 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(witchSound);
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             gameLost = true;
+        }
+    }
+
+    private void playFruitSound()
+    {
+        if (fruitSounds.Length == 0) { return; } // if no sounds were added
+        int index = Random.Range(0, fruitSounds.Length);
+
+        if (!audioSource.isPlaying) // so it doesn't layer
+        {
+            audioSource.PlayOneShot(fruitSounds[index]);
         }
     }
 
