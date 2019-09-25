@@ -17,6 +17,8 @@ public class RandomMovement : MonoBehaviour
     public float fieldOfvision = 30;
     public AudioClip chasingSound;
 
+    bool isChasing = false;
+
     AudioSource audioSoruce;
 
     // Start is called before the first frame update
@@ -41,6 +43,7 @@ public class RandomMovement : MonoBehaviour
 
             if (direction.magnitude > 1) // start chasing player when the length between player is small enough
             {
+                isChasing = true;
                 this.transform.Translate(0, 0, 0.07f);
                 if (!audioSoruce.isPlaying) // so the sound doesn't layer
                 {
@@ -53,7 +56,8 @@ public class RandomMovement : MonoBehaviour
         else
         {
 
-            //moveRandomly();
+            isChasing = false;
+            moveRandomly();
             print("moving randomly");
         }
     }
