@@ -10,24 +10,63 @@ public class RandomMovement : MonoBehaviour
     public float timeForNewPath;
     bool inCoRoutine = false;
 
+    // chasing levers
+    public Transform player;
+    public int detectionDistance = 10;
+    [Range(0f, 180f)]
+    public float fieldOfvision = 30;
+    public AudioClip chasingSound;
+
+    AudioSource audioSoruce;
+
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-
+        audioSoruce = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (!inCoRoutine)
+        Vector3 direction = player.position - this.transform.position;
+        float angle = Vector3.Angle(direction, this.transform.forward);
+
+        if (Vector3.Distance(player.position, this.transform.position) < detectionDistance && angle < fieldOfvision) //  < 30 is the field of vision
         {
-            StartCoroutine(moveRandomly());
+
+            direction.y = 0f; // so enemy does not tip over
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+
+            if (direction.magnitude > 1) // start chasing player when the length between player is small enough
+            {
+                this.transform.Translate(0, 0, 0.07f);
+                if (!audioSoruce.isPlaying) // so the sound doesn't layer
+                {
+                    audioSoruce.PlayOneShot(chasingSound);
+                }
+                print("chasing");
+            }
+
+        }
+        else
+        {
+
+            //moveRandomly();
+            print("moving randomly");
         }
     }
 
-    IEnumerator moveRandomly()
+    private void moveRandomly()
+    {
+        if (!inCoRoutine)
+        {
+            StartCoroutine(CoRoutineMoveRandomly());
+        }
+    }
+
+    IEnumerator CoRoutineMoveRandomly()
     {
         inCoRoutine = true;
 
