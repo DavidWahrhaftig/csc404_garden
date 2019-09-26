@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,6 +30,19 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         respondToInput();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+            numFruits = 0;
+            gameWon = false;
+            gameLost = false;
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Application.Quit();
+        }
 
         if (numFruits == 25)
         {

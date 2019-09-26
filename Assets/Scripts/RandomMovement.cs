@@ -17,7 +17,7 @@ public class RandomMovement : MonoBehaviour
     public float fieldOfvision = 30;
     public AudioClip chasingSound;
 
-    bool isChasing = false;
+    private bool isChasing = false;
 
     AudioSource audioSoruce;
 
@@ -32,20 +32,22 @@ public class RandomMovement : MonoBehaviour
     void Update()
     {
 
-        Vector3 direction = player.position - this.transform.position;
-        float angle = Vector3.Angle(direction, this.transform.forward);
+        Vector3 direction = player.position - this.transform.position; // the direction of the player
+        float angle = Vector3.Angle(direction, this.transform.forward); // player angle
 
-        if (Vector3.Distance(player.position, this.transform.position) < detectionDistance && angle < fieldOfvision) //  < 30 is the field of vision
+        if (Vector3.Distance(player.position, this.transform.position) < detectionDistance && angle < fieldOfvision) //  player must be within the given distance and angle from the witch
         {
 
             direction.y = 0f; // so enemy does not tip over
-            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0f); // align Witch with the player's position
 
-            if (direction.magnitude > 1) // start chasing player when the length between player is small enough
+            if (direction.magnitude > 1) // start chasing player until the length of distance is no more than specified
             {
                 isChasing = true;
-                this.transform.Translate(0, 0, 0.07f);
-                if (!audioSoruce.isPlaying) // so the sound doesn't layer
+                // may need to stop the translation that is happening on the witch before
+                this.transform.Translate(0, 0, 0.07f); // the witch translation towards the player
+
+                if (!audioSoruce.isPlaying) // To avoid sound from layering over itself
                 {
                     audioSoruce.PlayOneShot(chasingSound);
                 }

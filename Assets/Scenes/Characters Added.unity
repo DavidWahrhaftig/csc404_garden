@@ -384,7 +384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579999220}
   m_LocalRotation: {x: 0.13071476, y: -0, z: -0, w: 0.99142003}
-  m_LocalPosition: {x: 0, y: 157.29999, z: -277.3}
+  m_LocalPosition: {x: 0, y: 259.3, z: -358.7}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1883362697}
@@ -675,7 +675,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 1
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -715,7 +715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913241412}
   m_LocalRotation: {x: 0.029343821, y: -0.04988335, z: 0.7255528, w: 0.68572867}
-  m_LocalPosition: {x: 37, y: 117, z: -65}
+  m_LocalPosition: {x: 36.7, y: 115.7, z: -53.2}
   m_LocalScale: {x: 188.51004, y: 188.51012, z: 188.51012}
   m_Children: []
   m_Father: {fileID: 1148916831}
@@ -766,7 +766,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -904,7 +904,7 @@ MonoBehaviour:
   timeForNewPath: 4
   player: {fileID: 1883362697}
   detectionDistance: 13
-  fieldOfvision: 30
+  fieldOfvision: 50
   chasingSound: {fileID: 8300000, guid: 277b5fae6b12a7240911f533ced5ec53, type: 3}
 --- !u!195 &1148916830
 NavMeshAgent:
@@ -916,8 +916,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.77
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 2.5
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -1191,6 +1191,21 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2382119824984214846, guid: 750840132bfe1e24bac9a8c6f6b115c0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.09109667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382119824984214846, guid: 750840132bfe1e24bac9a8c6f6b115c0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.088109665
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382119824984214846, guid: 750840132bfe1e24bac9a8c6f6b115c0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5660378
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750840132bfe1e24bac9a8c6f6b115c0, type: 3}
 --- !u!1 &1485145208
@@ -1206,7 +1221,7 @@ GameObject:
   - component: {fileID: 1485145211}
   - component: {fileID: 1485145210}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
