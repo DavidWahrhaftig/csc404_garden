@@ -51,7 +51,7 @@ public class RandomMovement : MonoBehaviour
                 {
                     audioSoruce.PlayOneShot(chasingSound);
                 }
-                print("chasing");
+                //print("chasing");
             }
 
         }
@@ -60,7 +60,7 @@ public class RandomMovement : MonoBehaviour
 
             isChasing = false;
             moveRandomly();
-            print("moving randomly");
+            //print("moving randomly");
         }
     }
 

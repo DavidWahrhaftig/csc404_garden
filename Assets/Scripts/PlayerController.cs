@@ -8,6 +8,14 @@ public class PlayerController : MonoBehaviour
     public float movingSpeed = 20;
     public float rotationSpeed = 100;
 
+    public Transform playerBase;
+    public float centerToBaseSpeed;
+    private float defaultY;
+
+    public int jumpForce;
+    private bool canJump;
+    private Rigidbody selfRigidbody;
+
     int numFruits = 0;
 
     bool gameWon = false;
@@ -24,6 +32,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        selfRigidbody = GetComponent<Rigidbody>();
+        defaultY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -55,7 +65,30 @@ public class PlayerController : MonoBehaviour
     private void respondToInput()
     {
         transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
+        transform.Translate(movingSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 0f);
+        transform.Rotate(0, rotationSpeed * Input.GetAxis("HorizontalRot") * Time.deltaTime, 0);
+
+        if (Input.GetButton("Fire1"))
+        {
+            Vector3 targetDir = playerBase.position - transform.position;
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
+            Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
+            transform.rotation = Quaternion.LookRotation(newestDir);
+        }
+
+        if (Input.GetButton("Jump"))
+        {
+            if (canJump)
+            {
+                selfRigidbody.AddForce(Vector3.up * jumpForce);
+                canJump = false;
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -77,6 +110,9 @@ public class PlayerController : MonoBehaviour
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             gameLost = true;
         }
+
+        if (collision.transform.tag == "Ground")
+            canJump = true;
     }
 
     private void playFruitSound()
