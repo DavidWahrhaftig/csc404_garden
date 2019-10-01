@@ -15,12 +15,14 @@ public class SphereCast : MonoBehaviour
     public float distance1;
     private Vector3 origin; // position of this gameObject
     private Vector3 direction; // the direction to shoot raycast
+    private Transform parent;
     private Oscillator oscillator; // access to gameObject's floating functionality
 
     // Start is called before the first frame update
     void Start()
     {
-        oscillator = GetComponent<Oscillator>();
+        parent = transform.parent;
+        oscillator = parent.GetComponent<Oscillator>();
     }
 
     // Update is called once per frame
@@ -54,6 +56,10 @@ public class SphereCast : MonoBehaviour
                     centerOnPlayer(hit2.collider.transform);
                     // TODO: caught player so disable player movement, etc...
                 }
+                else
+                {
+                    oscillator.isOscillating = true;
+                }
             }           
         }
        
@@ -68,8 +74,8 @@ public class SphereCast : MonoBehaviour
         //print("collider x: " + t.position.x + "collider y: " + t.position.y + "collider z: " + t.position.z );
         float speed = 2.5f; // default speed
         float step = speed * Time.deltaTime; // step factor during each call of the function
-        Vector3 targetPosition = new Vector3(t.position.x, transform.position.y, t.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+        Vector3 targetPosition = new Vector3(t.position.x, transform.parent.position.y, t.position.z);
+        transform.parent.position = Vector3.MoveTowards(transform.position, targetPosition, step);
         
     }
 
