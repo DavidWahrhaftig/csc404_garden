@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movingSpeed = 20;
-    public float rotationSpeed = 100;
+    public float walkingSpeed, rotationSpeed, stamina;
+    private float movingSpeed;
 
     public Transform playerBase;
     public float centerToBaseSpeed;
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         selfRigidbody = GetComponent<Rigidbody>();
         defaultY = transform.position.y;
+        movingSpeed = walkingSpeed;
     }
 
     // Update is called once per frame
@@ -43,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("PlayerControls");
             numFruits = 0;
             gameWon = false;
             gameLost = false;
@@ -58,8 +59,6 @@ public class PlayerController : MonoBehaviour
         {
             gameWon = true;
         }
-
-        //Debug.Log(numFruits);
     }
 
     private void respondToInput()
@@ -84,11 +83,17 @@ public class PlayerController : MonoBehaviour
                 canJump = false;
             }
         }
-    }
 
-    private void FixedUpdate()
-    {
-        
+        if (Input.GetButton("Fire2") && stamina > 0)
+        {
+            movingSpeed = walkingSpeed * 2;
+            stamina -= 0.1f;
+        }
+        else
+        {
+            movingSpeed = walkingSpeed;
+            stamina += 0.01f;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -108,6 +113,7 @@ public class PlayerController : MonoBehaviour
             audioSource.Stop();
             audioSource.PlayOneShot(witchSound);
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+            transform.position = playerBase.transform.position;
             gameLost = true;
         }
 
@@ -137,6 +143,9 @@ public class PlayerController : MonoBehaviour
         {
             GUI.Label(new Rect(100, 100, 100, 200), "You Lose!", style);
         }
+
+        style.fontSize = 20;
+        GUI.Label(new Rect(0, 0, 50, 50), "Fruit Count: " + numFruits, style);
     }
 }
 

@@ -1460,8 +1460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b1466383f8b304c995cb49ddc148f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 10
+  walkingSpeed: 10
   rotationSpeed: 100
+  stamina: 20
   playerBase: {fileID: 395273796}
   centerToBaseSpeed: 10
   jumpForce: 4000
