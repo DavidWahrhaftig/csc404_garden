@@ -28,7 +28,7 @@ public class SphereCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        origin = transform.position;
+        origin = parent.position;
         direction = Vector3.down;
         angle = lightComponent.spotAngle;
         RaycastHit hit1; // only used for sphere radius calculation
@@ -74,9 +74,9 @@ public class SphereCast : MonoBehaviour
         //print("collider x: " + t.position.x + "collider y: " + t.position.y + "collider z: " + t.position.z );
         float speed = 2.5f; // default speed
         float step = speed * Time.deltaTime; // step factor during each call of the function
-        Vector3 targetPosition = new Vector3(t.position.x, transform.parent.position.y, t.position.z);
-        transform.parent.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-        
+        Vector3 targetPosition = new Vector3(t.position.x, parent.position.y, t.position.z);
+        parent.position = Vector3.MoveTowards(parent.position, targetPosition, step); // Vector3.MoveTowards(transform.position, targetPosition, step);
+
     }
 
     private void OnDrawGizmos()
