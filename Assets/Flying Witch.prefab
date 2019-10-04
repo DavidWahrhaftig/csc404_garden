@@ -10,10 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2045278837398130553}
   - component: {fileID: 2045278837398130552}
+  - component: {fileID: 2045278838130267083}
+  - component: {fileID: 2045278838130267081}
+  - component: {fileID: 2045278838130267082}
+  - component: {fileID: 2045278838130267086}
   m_Layer: 0
   m_Name: Flying Witch
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,13 +28,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045278837398130554}
-  m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.191, y: 3.66, z: -0.5890001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6420161141149295261}
   - {fileID: 2045278837741087021}
-  - {fileID: 2045278838316092830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -48,78 +51,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 0.5, z: 0}
   period: 3
-  isOscillating: 1
---- !u!1 &2045278837741087022
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045278837741087021}
-  m_Layer: 0
-  m_Name: Wand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2045278837741087021
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045278837741087022}
-  m_LocalRotation: {x: -1, y: -0, z: -0, w: 0.000000059604645}
-  m_LocalPosition: {x: 0.009000018, y: -0.00091436505, z: -0.43979645}
-  m_LocalScale: {x: 0.07184505, y: 0.078128, z: 0.39692014}
-  m_Children:
-  - {fileID: 2045278838681588304}
-  - {fileID: 2045278838597764447}
-  m_Father: {fileID: 2045278837398130553}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
---- !u!1 &2045278838316092817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045278838316092830}
-  - component: {fileID: 2045278838316092831}
-  - component: {fileID: 2045278838316092816}
-  m_Layer: 0
-  m_Name: Detection Light (Spot Light)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2045278838316092830
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045278838316092817}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2045278837398130553}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!108 &2045278838316092831
+  isOscillating: 0
+--- !u!108 &2045278838130267083
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045278838316092817}
+  m_GameObject: {fileID: 2045278837398130554}
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
@@ -173,13 +112,32 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &2045278838316092816
+--- !u!95 &2045278838130267081
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045278837398130554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6b0d18218a945c4db1a8d16e125b133, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2045278838130267082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045278838316092817}
+  m_GameObject: {fileID: 2045278837398130554}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71e3ee81b38e795418f95a4cff8cc1f0, type: 3}
@@ -190,10 +148,55 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  lightComponent: {fileID: 2045278838316092831}
   angle: 0
   currentHitDistance: 0
   distance1: 0
+  targetPlayer: {fileID: 0}
+--- !u!114 &2045278838130267086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045278837398130554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419e25cf20628e44dac2947be6492cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2045278838130267081}
+--- !u!1 &2045278837741087022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045278837741087021}
+  m_Layer: 0
+  m_Name: Wand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045278837741087021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045278837741087022}
+  m_LocalRotation: {x: -1, y: -0, z: -0, w: 0.000000059604645}
+  m_LocalPosition: {x: 0.009000018, y: -0.00091436505, z: -0.43979645}
+  m_LocalScale: {x: 0.07184505, y: 0.078128, z: 0.39692014}
+  m_Children:
+  - {fileID: 2045278838681588304}
+  - {fileID: 2045278838597764447}
+  m_Father: {fileID: 2045278837398130553}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!1 &2045278838597764432
 GameObject:
   m_ObjectHideFlags: 0

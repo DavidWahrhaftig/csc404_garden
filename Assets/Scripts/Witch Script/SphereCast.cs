@@ -9,26 +9,33 @@ public class SphereCast : MonoBehaviour
     public float sphereRadius; // for debugging
     
     public LayerMask layerMask;
-    public Light lightComponent;
+
     public float angle;
     public float currentHitDistance; // for debugging
     public float distance1;
+    public Transform targetPlayer;
+   
     private Vector3 origin; // position of this gameObject
     private Vector3 direction; // the direction to shoot raycast
     private Transform parent;
     private Oscillator oscillator; // access to gameObject's floating functionality
+    private Light lightComponent;
+    private Animator animator; 
 
     // Start is called before the first frame update
     void Start()
     {
         parent = transform.parent;
-        oscillator = parent.GetComponent<Oscillator>();
+        oscillator = GetComponent<Oscillator>();
+        lightComponent = GetComponent<Light>();
+        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        origin = parent.position;
+        origin = transform.position;
         direction = Vector3.down;
         angle = lightComponent.spotAngle;
         RaycastHit hit1; // only used for sphere radius calculation
@@ -51,18 +58,20 @@ public class SphereCast : MonoBehaviour
 
                 if (hit2.collider.tag == "Player")
                 {
-                    print("Ray Hit Player");
-                    oscillator.isOscillating = false; // stop floating
-                    centerOnPlayer(hit2.collider.transform);
-                    // TODO: caught player so disable player movement, etc...
+                    //print("Ray Hit Player");
+                    //oscillator.isOscillating = false; // stop floating
+                    targetPlayer = hit2.collider.transform;
+                    animator.SetBool("isIdle", false);
+                    animator.SetBool("isChasing", false);
+                    animator.SetBool("isPatrolling", false);
+                    animator.SetBool("isCapturing", true);
                 }
                 else
                 {
-                    oscillator.isOscillating = true;
+                    //oscillator.isOscillating = true;
                 }
             }           
-        }
-       
+        } 
     }
 
     private void centerOnPlayer(Transform t)
@@ -75,7 +84,7 @@ public class SphereCast : MonoBehaviour
         float speed = 2.5f; // default speed
         float step = speed * Time.deltaTime; // step factor during each call of the function
         Vector3 targetPosition = new Vector3(t.position.x, parent.position.y, t.position.z);
-        parent.position = Vector3.MoveTowards(parent.position, targetPosition, step); // Vector3.MoveTowards(transform.position, targetPosition, step);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, step); // Vector3.MoveTowards(transform.position, targetPosition, step);
 
     }
 
