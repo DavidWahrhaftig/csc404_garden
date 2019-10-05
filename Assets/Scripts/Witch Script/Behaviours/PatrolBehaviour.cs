@@ -1,7 +1,7 @@
-﻿
+﻿using System.Collections;
 using UnityEngine;
 
-public class PatrolBehaviour : StateMachineBehaviour
+public class PatrolBehaviour : StateMachineBehaviour //the instance of the StateMachineBehaviour lives inside an asset, not inside a scene.
 {
     public int numOfPositions = 3;
     public float patrolRange = 4;
@@ -29,7 +29,6 @@ public class PatrolBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         Vector3 direction = animator.transform.position - patrolPositions[randomIndex];
         direction.y = 0f;
 
@@ -39,7 +38,6 @@ public class PatrolBehaviour : StateMachineBehaviour
             {
                 //animator.transform.rotation = Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
                 animator.transform.position = Vector3.MoveTowards(animator.transform.position, patrolPositions[randomIndex], Random.Range(patrolSpeedMin, patrolSpeedMax) * Time.deltaTime);
-
             }
             else
             {
@@ -79,7 +77,4 @@ public class PatrolBehaviour : StateMachineBehaviour
 
         return patrolPositions;
     }
-
-
-
 }
