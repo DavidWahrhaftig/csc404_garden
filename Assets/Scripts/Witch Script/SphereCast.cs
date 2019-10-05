@@ -59,35 +59,25 @@ public class SphereCast : MonoBehaviour
                 if (hit2.collider.tag == "Player")
                 {
                     //print("Ray Hit Player");
-                    //oscillator.isOscillating = false; // stop floating
                     targetPlayer = hit2.collider.transform;
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isChasing", false);
                     animator.SetBool("isPatrolling", false);
+                    // if (player.isHidden) {animator.SetBool("isPatrolling", true); animator.SetBool("isCapturing", false);}
+                    //else {
                     animator.SetBool("isCapturing", true);
                 }
-                else
+
+                if (Input.GetKeyDown(KeyCode.Space)) // to indicate a player is hidden
                 {
-                    //oscillator.isOscillating = true;
+                    animator.SetBool("isIdle", false);
+                    animator.SetBool("isChasing", false);
+                    animator.SetBool("isPatrolling", true);
+                    animator.SetBool("isCapturing", false);
                 }
             }           
         } 
     }
-
-    private void centerOnPlayer(Transform t)
-    {
-        /*
-         * Moves this gameObject towards t's position
-         */
-
-        //print("collider x: " + t.position.x + "collider y: " + t.position.y + "collider z: " + t.position.z );
-        float speed = 2.5f; // default speed
-        float step = speed * Time.deltaTime; // step factor during each call of the function
-        Vector3 targetPosition = new Vector3(t.position.x, parent.position.y, t.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, step); // Vector3.MoveTowards(transform.position, targetPosition, step);
-
-    }
-
     private void OnDrawGizmos()
     {
         /*

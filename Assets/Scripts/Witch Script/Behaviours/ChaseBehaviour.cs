@@ -18,18 +18,10 @@ public class ChaseBehaviour : StateMachineBehaviour
         // disable oscillation 
         // only approach target if spherecast hasn't collided since spherecast controls the player movement, or can change
 
+        // if (playerIsHidden) { animator.SetBool("isPatrolling", true); animator.SetBool("isChasing", false); }
+
         Vector3 targetPosition = new Vector3(target.position.x, animator.transform.position.y, target.position.z);
         animator.transform.position = Vector3.MoveTowards(animator.transform.position, targetPosition, speed * Time.deltaTime); // Vector3.MoveTowards(transform.position, targetPosition, step);
-
-
-        //Debug.Log("--> Chasing");
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetBool("isChasing", false);
-        }
-
-        
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -37,16 +29,4 @@ public class ChaseBehaviour : StateMachineBehaviour
     {
         
     }
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
