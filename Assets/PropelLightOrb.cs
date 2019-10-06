@@ -39,6 +39,18 @@ public class PropelLightOrb : MonoBehaviour
         if (impactPrefab != null)
         {
             var impactVFX = Instantiate(impactPrefab, pos, rotation);
+            var psHit = impactVFX.GetComponent<ParticleSystem>();
+
+            if (psHit != null)
+            {
+                Destroy(impactVFX, psHit.main.duration);
+            }
+
+            else
+            {
+                var psChild = impactVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
+                Destroy(impactVFX, psChild.main.duration);
+            }
         }
 
         //Debug.Log("BOOM");
