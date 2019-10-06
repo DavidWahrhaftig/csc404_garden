@@ -22,7 +22,7 @@ public class SphereCast : MonoBehaviour
     private Light lightComponent;
     private Animator animator; 
 
-    public GameManagerDavid gameManager;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class GameManagerReference : MonoBehaviour
 {
-    public GameManagerDavid gameManager;
+    public GameManager gameManager;
 
 }
