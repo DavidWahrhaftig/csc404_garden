@@ -22,8 +22,7 @@ public class SphereCast : MonoBehaviour
     private Light lightComponent;
     private Animator animator; 
 
-
-    // TODO: public GameManager gameManager;
+    public GameManagerDavid gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +65,7 @@ public class SphereCast : MonoBehaviour
                 {
                     //print("Ray Hit Player");
 
-                    // TODO: gameManager.SetTargetPlayer(hit2.collider)
+                    gameManager.setTargetPlayer(hit2.collider.transform);
 
                     targetPlayer = hit2.collider.transform;
                     animator.SetBool("isIdle", false);
@@ -79,6 +78,8 @@ public class SphereCast : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space)) // to indicate a player is hidden
                 {
+                    //gameManager.setTargetPlayer(null);
+
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isChasing", false);
                     animator.SetBool("isPatrolling", true);

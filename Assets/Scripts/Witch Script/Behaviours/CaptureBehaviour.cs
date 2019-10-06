@@ -9,12 +9,13 @@ public class CaptureBehaviour : StateMachineBehaviour
     public float waitTime = 3;
     private Transform targetPlayer;
     private CaptureWait waitScript;
-    // TODO: public GameManager gameManager;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // TODO: targetPlayer = gameManager.getTargetPlayer()
-        targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
+
+        
+        targetPlayer = animator.GetComponent<GameManagerReference>().gameManager.getTargetPlayer();
+        //targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
         waitScript = animator.GetComponent<CaptureWait>();
     }
 

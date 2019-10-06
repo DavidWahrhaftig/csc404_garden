@@ -6,13 +6,13 @@ public class ChaseBehaviour : StateMachineBehaviour
 {
     Transform target;
     public float speed = 1;
-    // TODO: public GameManager gameManager; 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         // TODO: targetPlayer = gameManage.getTargetPlayer()
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = animator.GetComponent<GameManagerReference>().gameManager.getTargetPlayer();
+        Debug.Log(target.tag);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,6 +27,9 @@ public class ChaseBehaviour : StateMachineBehaviour
 
         // continue chasing after player
         Vector3 targetPosition = new Vector3(target.position.x, animator.transform.position.y, target.position.z);
+        Vector3 direction = animator.transform.position;
+        direction.y = 0f;
+        animator.transform.LookAt(targetPosition); //Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
         animator.transform.position = Vector3.MoveTowards(animator.transform.position, targetPosition, speed * Time.deltaTime);
     }
 

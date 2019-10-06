@@ -2,29 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManagerDavid : MonoBehaviour
 {
 
-    public GameObject player1;
-    public GameObject player2;
-
-    private GameObject targetPlayer;
-    
+    public Transform player1;
+    public Transform player2;
+    public Transform targetPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
-
-
-    public void setTargetPlayer(GameObject target)
+    public void setTargetPlayer(Transform target)
     {
         this.targetPlayer = target;
     }
 
-    public GameObject getTargetPlayer()
+    public Transform getTargetPlayer()
     {
         return this.targetPlayer;
     }
