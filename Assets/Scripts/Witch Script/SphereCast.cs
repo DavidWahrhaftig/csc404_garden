@@ -17,19 +17,25 @@ public class SphereCast : MonoBehaviour
    
     private Vector3 origin; // position of this gameObject
     private Vector3 direction; // the direction to shoot raycast
-    private Transform parent;
+    //private Transform parent;
     private Oscillator oscillator; // access to gameObject's floating functionality
     private Light lightComponent;
     private Animator animator; 
 
+
+    // TODO: public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        parent = transform.parent;
+        //parent = transform.parent;
         oscillator = GetComponent<Oscillator>();
         lightComponent = GetComponent<Light>();
         animator = GetComponent<Animator>();
-
+        if (animator == null)
+        {
+            animator = transform.parent.transform.GetComponent<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -56,9 +62,12 @@ public class SphereCast : MonoBehaviour
                 currentHitObject = hit2.transform.gameObject;
                 currentHitDistance = hit2.distance + sphereRadius; //to use sphere as a semisphere
 
-                if (hit2.collider.tag == "Player")
+                if (hit2.collider.tag == "Player") // TODO: gameManager.isPlayer(hit2.collider) 
                 {
                     //print("Ray Hit Player");
+
+                    // TODO: gameManager.SetTargetPlayer(hit2.collider)
+
                     targetPlayer = hit2.collider.transform;
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isChasing", false);

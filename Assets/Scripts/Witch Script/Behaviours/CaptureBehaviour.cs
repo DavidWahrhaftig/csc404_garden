@@ -9,10 +9,11 @@ public class CaptureBehaviour : StateMachineBehaviour
     public float waitTime = 3;
     private Transform targetPlayer;
     private CaptureWait waitScript;
-
+    // TODO: public GameManager gameManager;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        // TODO: targetPlayer = gameManager.getTargetPlayer()
         targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
         waitScript = animator.GetComponent<CaptureWait>();
     }
@@ -29,9 +30,7 @@ public class CaptureBehaviour : StateMachineBehaviour
             //oscillator.isOscillating = true; // float on the spot
 
             // pause for a little while before moving back to Idle state
-            Debug.Log("before CoRouting");
-            //animator.transform.GetComponent<waitAFewSeconds>().DoCoroutine(waitTime, animator, ChangeState);
-            
+            Debug.Log("before CoRouting");            
         }
         else
         {
@@ -56,17 +55,5 @@ public class CaptureBehaviour : StateMachineBehaviour
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
     //    
-    //}
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
     //}
 }

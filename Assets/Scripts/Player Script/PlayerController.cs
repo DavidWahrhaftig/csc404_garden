@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     bool gameWon = false;
     bool gameLost = false;
-    [SerializeField] AudioClip witchSound;
+    [SerializeField] AudioClip witchSound; //TODO: move to Witch script
     [SerializeField] AudioClip[] fruitSounds;
     FruitBushScript fruitBushScript;
 
