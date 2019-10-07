@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 494533203}
   - component: {fileID: 494533207}
   - component: {fileID: 494533208}
+  - component: {fileID: 494533209}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -489,6 +490,20 @@ MonoBehaviour:
   firePoint: {fileID: 598590894}
   vfx:
   - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
+--- !u!114 &494533209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494533202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4636c3b30b83435e87ac2447ec43846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyProjectile: {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8,
+    type: 3}
 --- !u!1 &553124511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1178,7 @@ GameObject:
   - component: {fileID: 1712769773}
   - component: {fileID: 1712769777}
   - component: {fileID: 1712769778}
+  - component: {fileID: 1712769779}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -1276,6 +1292,20 @@ MonoBehaviour:
   firePoint: {fileID: 1985286243}
   vfx:
   - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
+--- !u!114 &1712769779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712769772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4636c3b30b83435e87ac2447ec43846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyProjectile: {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501,
+    type: 3}
 --- !u!1 &1796693181
 GameObject:
   m_ObjectHideFlags: 0
