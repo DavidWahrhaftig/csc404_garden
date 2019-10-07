@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     public float centerToBaseSpeed;
     private float defaultY;
 
+    public GameObject enemyProjectile;
+    private bool lightUp;
+    private float lightTime = 10;
+    private Color ogColor;
+
     public int jumpForce;
     private bool canJump;
     private Rigidbody selfRigidbody;
@@ -20,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     bool gameWon = false;
     bool gameLost = false;
-    [SerializeField] AudioClip witchSound;  // TODO: move to Witch script
+    [SerializeField] AudioClip witchSound;
     [SerializeField] AudioClip[] fruitSounds;
     FruitBushScript fruitBushScript;
 
@@ -58,6 +63,20 @@ public class PlayerController : MonoBehaviour
         if (numFruits == 25)
         {
             gameWon = true;
+        }
+
+        if (lightUp)
+        {
+            lightTime -= Time.smoothDeltaTime;
+
+            if (lightTime < 0)
+            {
+
+                lightUp = false;
+                var playerRend = gameObject.GetComponent<Renderer>();
+                playerRend.material.SetColor("_Color", ogColor);
+                lightTime = 10;
+            }
         }
     }
 
@@ -119,6 +138,15 @@ public class PlayerController : MonoBehaviour
 
         if (collision.transform.tag == "Ground")
             canJump = true;
+
+        if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
+        {
+            //Debug.Log("COLOR CHANGE!!!");
+            var playerRend = gameObject.GetComponent<Renderer>();
+            ogColor = playerRend.material.GetColor("_Color");
+            playerRend.material.SetColor("_Color", Color.white);
+            lightUp = true;
+        }
     }
 
     private void playFruitSound()
