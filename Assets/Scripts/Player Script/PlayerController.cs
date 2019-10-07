@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     private bool canJump;
     private Rigidbody selfRigidbody;
 
-    int numFruits = 0;
+    /**int numFruits = 0;
 
     bool gameWon = false;
-    bool gameLost = false;
+    bool gameLost = false;**/
     [SerializeField] AudioClip witchSound;
     [SerializeField] AudioClip[] fruitSounds;
     FruitBushScript fruitBushScript;
@@ -47,23 +47,23 @@ public class PlayerController : MonoBehaviour
     {
         respondToInput();
 
-        if (Input.GetKeyDown(KeyCode.R))
+        /**if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("PlayerControls");
             numFruits = 0;
             gameWon = false;
             gameLost = false;
-        }
+        }**/
 
         if (Input.GetKey(KeyCode.Q))
         {
             Application.Quit();
         }
 
-        if (numFruits == 25)
+        /**if (numFruits == 25)
         {
             gameWon = true;
-        }
+        }**/
 
         if (lightUp)
         {
@@ -123,7 +123,9 @@ public class PlayerController : MonoBehaviour
             fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
             playFruitSound();
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-            numFruits += fruitBushScript.fruitsInBush;
+            /**numFruits += fruitBushScript.fruitsInBush;**/
+
+            FindObjectOfType<GameManager>().updateFruitCount(1); //added
             fruitBushScript.fruitsInBush = 0;
         }
 
@@ -133,7 +135,8 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(witchSound);
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             transform.position = playerBase.transform.position;
-            gameLost = true;
+            /**gameLost = true;**/
+            FindObjectOfType<GameManager>().GameLost(); //added
         }
 
         if (collision.transform.tag == "Ground")
@@ -160,7 +163,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         style.fontSize = 100;
         if (gameWon)
@@ -174,6 +177,5 @@ public class PlayerController : MonoBehaviour
 
         style.fontSize = 20;
         GUI.Label(new Rect(0, 0, 50, 50), "Fruit Count: " + numFruits, style);
-    }
+    }*/
 }
-
