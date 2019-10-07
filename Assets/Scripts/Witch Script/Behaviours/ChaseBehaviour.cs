@@ -6,11 +6,11 @@ public class ChaseBehaviour : StateMachineBehaviour
 {
     Transform target;
     public float speed = 1;
+    public float rotationSpeed = 2;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // TODO: targetPlayer = gameManage.getTargetPlayer()
         target = animator.GetComponent<GameManagerReference>().gameManager.getTargetPlayer();
         Debug.Log(target.tag);
     }

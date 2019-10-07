@@ -17,6 +17,7 @@ public class IdleBehaviour : StateMachineBehaviour
     {
         //Debug.Log("Idle");
 
+        animator.transform.LookAt(newVector); //Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
         animator.transform.position = Vector3.MoveTowards(animator.transform.position, newVector, 1 * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space))
