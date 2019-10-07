@@ -599,12 +599,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 84fc0a5feaccbef4da09bf013c55f287, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27867ffe468e50b42b443ea2b26618cc, type: 3}
---- !u!95 &1223335472 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7988786761543207938, guid: 8a73bb831ea373a46ad004b1a7807539,
-    type: 3}
-  m_PrefabInstance: {fileID: 7988786762375606128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1404458856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1599,10 +1593,30 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2999655317578931557}
-    - target: {fileID: 7988786761543207940, guid: 8a73bb831ea373a46ad004b1a7807539,
+    - target: {fileID: 7988786760743539556, guid: 8a73bb831ea373a46ad004b1a7807539,
         type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1223335472}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: noiseIntensity
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: noiseMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: noiseVelocityUseGlobal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: coneRadiusStart
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
