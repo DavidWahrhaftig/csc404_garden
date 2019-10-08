@@ -22,12 +22,13 @@ public class SphereCast : MonoBehaviour
     private Light lightComponent;
     private Animator animator; 
 
-    public GameManager gameManager;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         //parent = transform.parent;
+        gameManager = FindObjectOfType<GameManager>();
         oscillator = GetComponent<Oscillator>();
         lightComponent = GetComponent<Light>();
         animator = GetComponent<Animator>();
@@ -61,7 +62,7 @@ public class SphereCast : MonoBehaviour
                 currentHitObject = hit2.transform.gameObject;
                 currentHitDistance = hit2.distance + sphereRadius; //to use sphere as a semisphere
 
-                if (hit2.collider.tag == "Player") // TODO: gameManager.isPlayer(hit2.collider) 
+                if (gameManager.getTargetPlayer() != null && hit2.collider.gameObject == gameManager.getTargetPlayer().gameObject) // TODO: gameManager.isPlayer(hit2.collider) 
                 {
                     //print("Ray Hit Player");
 

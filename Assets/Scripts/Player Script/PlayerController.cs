@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,31 +7,24 @@ public class PlayerController : MonoBehaviour
 {
     public float walkingSpeed, rotationSpeed, stamina;
     private float movingSpeed;
-
     public Transform playerBase;
     public float centerToBaseSpeed;
     private float defaultY;
-
     public GameObject enemyProjectile;
-    private bool lightUp;
+    private bool isLightUp;
     private float lightTime = 10;
     private Color ogColor;
-
     public int jumpForce;
-    private bool canJump;
+    private bool canJump = true;
     private Rigidbody selfRigidbody;
-
-    int numFruits = 0;
-
+    /**int numFruits = 0;
     bool gameWon = false;
-    bool gameLost = false;
-    [SerializeField] AudioClip witchSound;
+    bool gameLost = false;**/
     [SerializeField] AudioClip[] fruitSounds;
     FruitBushScript fruitBushScript;
-
     AudioSource audioSource;
-
-    private GUIStyle style = new GUIStyle();
+    GameManager gameManager;
+    private int fruitCounter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +34,7 @@ public class PlayerController : MonoBehaviour
         defaultY = transform.position.y;
         movingSpeed = walkingSpeed;
 
-        Debug.Log(Input.GetJoystickNames()[0]);
-        Debug.Log(Input.GetJoystickNames()[1]);
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -50,32 +42,14 @@ public class PlayerController : MonoBehaviour
     {
         respondToInput();
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("PlayerControls");
-            numFruits = 0;
-            gameWon = false;
-            gameLost = false;
-        }
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            Application.Quit();
-        }
-
-        if (numFruits == 25)
-        {
-            gameWon = true;
-        }
-
-        if (lightUp)
+        if (isLightUp)
         {
             lightTime -= Time.smoothDeltaTime;
 
-            if (lightTime < 0)
+            if (lightTime < 0) // keep player lit up until timer runs out 
             {
 
-                lightUp = false;
+                isLightUp = false;
                 var playerRend = gameObject.GetComponent<Renderer>();
                 playerRend.material.SetColor("_Color", ogColor);
                 lightTime = 10;
@@ -89,7 +63,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movingSpeed * Input.GetAxis("Horizontal1") * Time.deltaTime, 0f, 0f);
         transform.Rotate(0, rotationSpeed * Input.GetAxis("HorizontalRot") * Time.deltaTime, 0);
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1")) // Ceneter to base
         {
             Vector3 targetDir = playerBase.position - transform.position;
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
@@ -99,6 +73,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButton("Jump"))
         {
+            Debug.Log("Jumping");
             if (canJump)
             {
                 selfRigidbody.AddForce(Vector3.up * jumpForce);
@@ -106,7 +81,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Fire2") && stamina > 0)
+        if (Input.GetButton("Fire2") && stamina > 0) // running
         {
             movingSpeed = walkingSpeed * 2;
             stamina -= 0.1f;
@@ -115,40 +90,6 @@ public class PlayerController : MonoBehaviour
         {
             movingSpeed = walkingSpeed;
             stamina += 0.01f;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "FruitBush")
-        {
-            GameObject fruitBush = GameObject.Find(collision.transform.name);
-            fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
-            playFruitSound();
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-            numFruits += fruitBushScript.fruitsInBush;
-            fruitBushScript.fruitsInBush = 0;
-        }
-
-        if (collision.transform.tag == "Witch")
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(witchSound);
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-            transform.position = playerBase.transform.position;
-            gameLost = true;
-        }
-
-        if (collision.transform.tag == "Ground")
-            canJump = true;
-
-        if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
-        {
-            //Debug.Log("COLOR CHANGE!!!");
-            var playerRend = gameObject.GetComponent<Renderer>();
-            ogColor = playerRend.material.GetColor("_Color");
-            playerRend.material.SetColor("_Color", Color.white);
-            lightUp = true;
         }
     }
 
@@ -163,20 +104,69 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnGUI()
+    public void setCanJump(bool b)
     {
-        style.fontSize = 100;
-        if (gameWon)
+        canJump = b;
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.transform.tag == "Fruit")
         {
-            GUI.Label(new Rect(100, 100, 100, 200), "You Win!", style);
-        }
-        else if (gameLost)
-        {
-            GUI.Label(new Rect(100, 100, 100, 200), "You Lose!", style);
+            //GameObject fruitBush = GameObject.Find(collision.transform.name);
+            //fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
+            //numFruits += fruitBushScript.fruitsInBush;
+            //FindObjectOfType<GameManager>().updateFruitCount(1); //added
+            //fruitBushScript.fruitsInBush = 0;
+            playFruitSound();
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+            
+            Debug.Log("FruitCounter: " + fruitCounter);
+
         }
 
-        style.fontSize = 20;
-        GUI.Label(new Rect(0, 0, 50, 50), "Fruit Count: " + numFruits, style);
+        if (collision.transform.tag == "Witch")
+        {
+            audioSource.Stop();
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+            transform.position = playerBase.transform.position;
+            // gameLost = true;
+            FindObjectOfType<GameManager>().GameLost(); //added
+        }
+
+        if (collision.transform.tag == "Ground")
+            canJump = true;
+
+        if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
+        {
+            //Debug.Log("COLOR CHANGE!!!");
+            var playerRend = gameObject.GetComponent<Renderer>();
+            ogColor = playerRend.material.GetColor("_Color");
+            playerRend.material.SetColor("_Color", Color.white);
+            isLightUp = true;
+
+            // change witch state to chase
+            Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
+            witchAnimator.SetBool("isChasing", true);
+            witchAnimator.SetBool("isIdle", false);
+            witchAnimator.SetBool("isPatrolling", false);
+            gameManager.setTargetPlayer(transform);
+
+            // disable this player from shooting
+        
+        }
+    }
+
+    public int getFruitCounter()
+    {
+        return fruitCounter;
+    }
+    
+    public void incrementFruitCounter()
+    {
+        fruitCounter += 1;
     }
 }
 
