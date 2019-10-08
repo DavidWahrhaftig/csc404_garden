@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 5698705464590285103}
   - component: {fileID: 7658990753942065238}
   - component: {fileID: 7658990753942065234}
+  - component: {fileID: 1150614113}
   m_Layer: 0
-  m_Name: Player1 1
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,6 +149,7 @@ MonoBehaviour:
   firePoint: {fileID: 5341083395083149583}
   vfx:
   - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
+  reloadTime: 15
 --- !u!114 &7658990753942065234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,10 +170,21 @@ MonoBehaviour:
   enemyProjectile: {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8,
     type: 3}
   jumpForce: 4000
-  witchSound: {fileID: 8300000, guid: 5752d115ee6e2e74f989d37d87346c3c, type: 3}
   fruitSounds:
   - {fileID: 8300000, guid: aa00e90e36a82764ab9f07065a67c7d0, type: 3}
   - {fileID: 8300000, guid: f08edda956cb53d45867aa222956a654, type: 3}
+--- !u!114 &1150614113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157609550722014039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bb3e3b0b934ef4fb24f254a79cb368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5341083395083149583
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,4 +297,4 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7658990753136686969}
-  m_Enabled: 1
+  m_Enabled: 0

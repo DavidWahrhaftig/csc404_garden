@@ -106,11 +106,11 @@ public class GameManager : MonoBehaviour
         {
             if (player1.GetComponent<PlayerController>().getFruitCounter() > player2.GetComponent<PlayerController>().getFruitCounter())
             {
-                gameResult.text = "Winner: Player 1\nLoser: Player 2";
+                gameResult.text = "Merlin's New Apprentice is PLAYER 1";
             }
             else if (player1.GetComponent<PlayerController>().getFruitCounter() < player2.GetComponent<PlayerController>().getFruitCounter())
             {
-                gameResult.text = "Winner: Player 2\nLoser: Player 1";
+                gameResult.text = "Merlin's New Apprentice is PLAYER 2";
             }
             else
             {
