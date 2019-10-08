@@ -20,7 +20,11 @@ public class GameManager : MonoBehaviour
     public Text fruitCounter2;
     public Text shotTimer1;
     public Text shotTimer2;
+    public Text GameTimer;
+    public Text gameResult;
 
+    public float gameDuration = 60;
+    private float startTime;
     /***end fruit count stuff***/
 
     /*** gui***/
@@ -46,7 +50,8 @@ public class GameManager : MonoBehaviour
         fruitCounter2.text = "Fruit Count: 0";
         shotTimer1.text = "Charge Full";
         shotTimer2.text = "Charge Full";
-
+        gameResult.text = "";
+        startTime = Time.time;
     }
 
     void Update()
@@ -90,6 +95,29 @@ public class GameManager : MonoBehaviour
 
         fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerController>().getFruitCounter();
         fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerController>().getFruitCounter();
+
+        float t = gameDuration - (Time.time - startTime);
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f0");
+        GameTimer.text = minutes + ":" + seconds;
+        
+        // winner detection
+        if (t <= Mathf.Epsilon)
+        {
+            if (player1.GetComponent<PlayerController>().getFruitCounter() > player2.GetComponent<PlayerController>().getFruitCounter())
+            {
+                gameResult.text = "Winner: Player 1\nLoser: Player 2";
+            }
+            else if (player1.GetComponent<PlayerController>().getFruitCounter() < player2.GetComponent<PlayerController>().getFruitCounter())
+            {
+                gameResult.text = "Winner: Player 2\nLoser: Player 1";
+            }
+            else
+            {
+                gameResult.text = "No One Likes Ties\nPlay Again";
+            }
+        }
+
     }
 
     public void GameLost()
