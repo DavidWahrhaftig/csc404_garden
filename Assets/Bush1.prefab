@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2975340687024660592}
   - component: {fileID: 6057779276928784966}
   - component: {fileID: 517077518270588607}
+  - component: {fileID: 631643982}
+  - component: {fileID: 631643983}
   m_Layer: 0
   m_Name: Bush1
   m_TagString: Untagged
@@ -25,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2238800630506967651}
-  m_LocalRotation: {x: -0.019269984, y: -0.5663156, z: -0.5937334, w: 0.5713108}
+  m_LocalRotation: {x: -0.019266399, y: -0.56631476, z: -0.59373426, w: 0.5713108}
   m_LocalPosition: {x: -3.0753365, y: 1.0614998, z: -1.6416378}
-  m_LocalScale: {x: 0.7190533, y: 0.7526032, z: 0.68061817}
+  m_LocalScale: {x: 2.2825413, y: 2.207782, z: 2.0672922}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -43.987003, y: -60.176003, z: -65.86301}
 --- !u!33 &6057779276928784966
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -78,3 +80,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &631643982
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2238800630506967651}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.38455707
+  m_Center: {x: -0.0005019601, y: -0.08999973, z: 0.044102777}
+--- !u!114 &631643983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2238800630506967651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5f114bf94272449001e09703aa2ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -62,7 +62,7 @@ public class SphereCast : MonoBehaviour
                 currentHitObject = hit2.transform.gameObject;
                 currentHitDistance = hit2.distance + sphereRadius; //to use sphere as a semisphere
 
-                if (gameManager.getTargetPlayer() != null && hit2.collider.gameObject == gameManager.getTargetPlayer().gameObject) // TODO: gameManager.isPlayer(hit2.collider) 
+                if ((gameManager.getTargetPlayer() != null && hit2.collider.gameObject == gameManager.getTargetPlayer().gameObject) || (hit2.collider.tag == "Player1" || hit2.collider.tag == "Player2")) // TODO: gameManager.isPlayer(hit2.collider) 
                 {
                     //print("Ray Hit Player");
 

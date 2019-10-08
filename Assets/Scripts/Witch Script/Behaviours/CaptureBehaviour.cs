@@ -17,6 +17,7 @@ public class CaptureBehaviour : StateMachineBehaviour
         targetPlayer = animator.GetComponent<GameManagerReference>().gameManager.getTargetPlayer();
         //targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
         waitScript = animator.GetComponent<CaptureWait>();
+        targetPlayer.GetComponent<PlayerController>().disableControls(); // make player disabled
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -39,6 +40,12 @@ public class CaptureBehaviour : StateMachineBehaviour
         }
     }
 
+    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+    {
+        targetPlayer.GetComponent<PlayerController>().spawn();
+        targetPlayer.GetComponent<PlayerController>().enableControls();
+    }
+
     private void centerOnPlayer(Transform t, Animator animator)
     {
         /*
@@ -52,9 +59,4 @@ public class CaptureBehaviour : StateMachineBehaviour
 
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
 }

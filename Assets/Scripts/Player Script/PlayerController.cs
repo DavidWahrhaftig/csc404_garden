@@ -6,26 +6,27 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float walkingSpeed, rotationSpeed, stamina;
-    private float movingSpeed;
     public Transform playerBase;
     public float centerToBaseSpeed;
-    private float defaultY;
     public GameObject enemyProjectile;
-    private bool isLightUp;
+    public int jumpForce;
+
+    [SerializeField] AudioClip[] fruitSounds;
+
+    private AudioSource audioSource;
+    private float movingSpeed;
+    private float defaultY;
     private float lightTime = 10;
     private Color ogColor;
-    public int jumpForce;
-    private bool canJump = true;
     private Rigidbody selfRigidbody;
-    /**int numFruits = 0;
-    bool gameWon = false;
-    bool gameLost = false;**/
-    [SerializeField] AudioClip[] fruitSounds;
-    FruitBushScript fruitBushScript;
-    AudioSource audioSource;
-    GameManager gameManager;
+    private GameManager gameManager;
     private int fruitCounter = 0;
-
+    
+    /** Flags **/
+    private bool canJump = true;
+    private bool isGlowing = false; // for witch and hidden ability
+    private bool isDisabled = false;
+    public bool isHidden = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour
         selfRigidbody = GetComponent<Rigidbody>();
         defaultY = transform.position.y;
         movingSpeed = walkingSpeed;
+        var playerRend = gameObject.GetComponent<Renderer>();
+        ogColor = playerRend.material.GetColor("_Color");
 
         gameManager = FindObjectOfType<GameManager>();
     }
@@ -40,21 +43,32 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        respondToInput();
+        if (!isDisabled) { respondToInput(); }
 
-        if (isLightUp)
+        if (isGlowing)
         {
             lightTime -= Time.smoothDeltaTime;
 
             if (lightTime < 0) // keep player lit up until timer runs out 
             {
 
-                isLightUp = false;
-                var playerRend = gameObject.GetComponent<Renderer>();
-                playerRend.material.SetColor("_Color", ogColor);
+                isGlowing = false;
+                stopChasingMe();
                 lightTime = 10;
             }
+            if (isHidden)
+            {
+                // change color back to ogColor and set isGlowing to false
+                // change witch state to chase
+                stopChasingMe();
+            }
         }
+    }
+
+    public void changeColor(Color color)
+    {
+        var playerRend = gameObject.GetComponent<Renderer>();
+        playerRend.material.SetColor("_Color", color);
     }
 
     private void respondToInput()
@@ -104,22 +118,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void setCanJump(bool b)
-    {
-        canJump = b;
-    }
-
-
+  
     private void OnCollisionEnter(Collision collision)
     {
         
         if (collision.transform.tag == "Fruit")
         {
-            //GameObject fruitBush = GameObject.Find(collision.transform.name);
-            //fruitBushScript = fruitBush.GetComponent<FruitBushScript>();
-            //numFruits += fruitBushScript.fruitsInBush;
-            //FindObjectOfType<GameManager>().updateFruitCount(1); //added
-            //fruitBushScript.fruitsInBush = 0;
             playFruitSound();
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             
@@ -141,22 +145,76 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
-            //Debug.Log("COLOR CHANGE!!!");
-            var playerRend = gameObject.GetComponent<Renderer>();
-            ogColor = playerRend.material.GetColor("_Color");
-            playerRend.material.SetColor("_Color", Color.white);
-            isLightUp = true;
-
-            // change witch state to chase
-            Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
-            witchAnimator.SetBool("isChasing", true);
-            witchAnimator.SetBool("isIdle", false);
-            witchAnimator.SetBool("isPatrolling", false);
-            gameManager.setTargetPlayer(transform);
+            chaseMe();
 
             // disable this player from shooting
-        
+
         }
+    }
+
+    public void chaseMe()
+    {
+        changeColor(Color.white);
+        isGlowing = true;
+
+        // change witch state to chase
+        Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
+        witchAnimator.SetBool("isChasing", true);
+        witchAnimator.SetBool("isIdle", false);
+        witchAnimator.SetBool("isPatrolling", false);
+        gameManager.setTargetPlayer(transform);
+    }
+    public void stopChasingMe()
+    {
+        changeColor(ogColor);
+        isGlowing = false;
+        // change witch state to patrol
+        Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
+        witchAnimator.SetBool("isChasing", false);
+        witchAnimator.SetBool("isIdle", false);
+        witchAnimator.SetBool("isPatrolling", true);
+        gameManager.setTargetPlayer(null);
+        isHidden = false;
+    }
+
+    public void disableControls()
+    {
+        isDisabled = true;
+    }
+
+    public void enableControls()
+    {
+        isDisabled = false;
+        stopChasingMe();
+    }
+
+    public void spawn()
+    {
+        transform.position = playerBase.position;
+    }
+
+    public bool getIsHidden()
+    {
+        return isHidden;
+    }
+
+    public void setIsHidden(bool b)
+    {
+       isHidden = b;       
+    }
+
+    public void setCanJump(bool b)
+    {
+        canJump = b;
+    }
+
+    public void setIsGlowing(bool b)
+    {
+        isGlowing = true;
+    }
+    public bool getIsGlowing()
+    {
+        return isGlowing;
     }
 
     public int getFruitCounter()

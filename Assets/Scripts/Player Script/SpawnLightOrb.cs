@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnLightOrbP1 : MonoBehaviour
+public class SpawnLightOrb : MonoBehaviour
 {
 
     public GameObject firePoint;
@@ -11,11 +11,13 @@ public class SpawnLightOrbP1 : MonoBehaviour
     public float reloadTime = 15;
     private float spawnTimer;
     private bool charge = true;
+    private PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
         effectToSpawn = vfx[0];
         spawnTimer = reloadTime;
+        playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -23,13 +25,16 @@ public class SpawnLightOrbP1 : MonoBehaviour
     {
         if (charge)
         {
-            if (Input.GetButtonDown("Fire3"))
+            if (Input.GetButtonDown("Fire3") && !playerController.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
             {
                 CreateEffect();
                 charge = false;
+            } 
+            else if (Input.GetButtonDown("Fire3") && playerController.getIsGlowing())
+            {
+                //TODO: give feedback to player to tell them they cannot shoot while they are glowing
             }
         }
-
         else
         {
             spawnTimer -= Time.smoothDeltaTime;
@@ -52,7 +57,6 @@ public class SpawnLightOrbP1 : MonoBehaviour
                 Quaternion.identity);
             visualEffect.transform.rotation = firePoint.transform.rotation;
         }
-
         else
         {
             Debug.Log("Null Fire Point");

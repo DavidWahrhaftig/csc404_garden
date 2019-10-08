@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
+        /**
         if (numFruits1 == 25 || numFruits2 == 25)
         {
             gameWon = true;
@@ -73,20 +74,20 @@ public class GameManager : MonoBehaviour
 
             Debug.Log("GAME WON");
             Invoke("Restart", restartDelay);
-        }
+        }**/
 
-        if (player1.GetComponent<SpawnLightOrbP1>().getSpawnTimer() != player1.GetComponent<SpawnLightOrbP1>().getReloadTime())
+        if (player1.GetComponent<SpawnLightOrb>().getSpawnTimer() != player1.GetComponent<SpawnLightOrb>().getReloadTime())
         {
-            shotTimer1.text = "Charging ... " + player1.GetComponent<SpawnLightOrbP1>().getSpawnTimer().ToString("f0");
+            shotTimer1.text = "Charging ... " + player1.GetComponent<SpawnLightOrb>().getSpawnTimer().ToString("f0");
         }
         else
         {
             shotTimer1.text = "Charge Full";
         }
 
-        if (player2.GetComponent<SpawnLightOrbP2>().getSpawnTimer() != player2.GetComponent<SpawnLightOrbP2>().getReloadTime())
+        if (player2.GetComponent<SpawnLightOrb>().getSpawnTimer() != player2.GetComponent<SpawnLightOrb>().getReloadTime())
         {
-            shotTimer2.text = "Charging ... " + player2.GetComponent<SpawnLightOrbP2>().getSpawnTimer().ToString("f0");
+            shotTimer2.text = "Charging ... " + player2.GetComponent<SpawnLightOrb>().getSpawnTimer().ToString("f0");
         }
         else
         {
@@ -134,7 +135,7 @@ public class GameManager : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-        SceneManager.LoadScene("PlayerControls");
+        SceneManager.LoadScene("Milestone 2");
         numFruits1 = 0;
         numFruits2 = 0;
         gameWon = false;
