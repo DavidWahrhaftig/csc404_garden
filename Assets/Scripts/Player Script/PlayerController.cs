@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
         selfRigidbody = GetComponent<Rigidbody>();
         defaultY = transform.position.y;
         movingSpeed = walkingSpeed;
+
+        Debug.Log(Input.GetJoystickNames()[0]);
+        Debug.Log(Input.GetJoystickNames()[1]);
     }
 
     // Update is called once per frame
@@ -82,8 +85,8 @@ public class PlayerController : MonoBehaviour
 
     private void respondToInput()
     {
-        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        transform.Translate(movingSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 0f);
+        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical1") * Time.deltaTime);
+        transform.Translate(movingSpeed * Input.GetAxis("Horizontal1") * Time.deltaTime, 0f, 0f);
         transform.Rotate(0, rotationSpeed * Input.GetAxis("HorizontalRot") * Time.deltaTime, 0);
 
         if (Input.GetButton("Fire1"))
