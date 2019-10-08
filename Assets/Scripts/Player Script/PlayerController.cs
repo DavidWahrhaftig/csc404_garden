@@ -43,7 +43,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDisabled) { respondToInput(); }
+        if (isDisabled)
+        {
+            selfRigidbody.useGravity = false;
+            if (canJump)
+            {
+                
+                Invoke("liftInAir", 1);
+                canJump = false;
+            }
+        }
+        else {
+            selfRigidbody.useGravity = true;
+            respondToInput();}
 
         if (isGlowing)
         {
@@ -53,8 +65,9 @@ public class PlayerController : MonoBehaviour
             {
 
                 isGlowing = false;
-                stopChasingMe();
                 lightTime = 10;
+                if (!isDisabled) { stopChasingMe(); }
+                
             }
             if (isHidden)
             {
@@ -65,6 +78,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void liftInAir()
+    {
+        selfRigidbody.AddForce(Vector3.up * 200);
+    }
     public void changeColor(Color color)
     {
         var playerRend = gameObject.GetComponent<Renderer>();
@@ -180,6 +197,7 @@ public class PlayerController : MonoBehaviour
     public void disableControls()
     {
         isDisabled = true;
+        
     }
 
     public void enableControls()
@@ -225,6 +243,11 @@ public class PlayerController : MonoBehaviour
     public void incrementFruitCounter()
     {
         fruitCounter += 1;
+    }
+
+    public void loseFruits()
+    {
+        fruitCounter = 0;
     }
 }
 

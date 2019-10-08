@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -16,12 +17,13 @@ public class GameManager : MonoBehaviour
     public int numFruits2 = 0;
 
     /***Texts ***/
-    public Text fruitCounter1;
-    public Text fruitCounter2;
-    public Text shotTimer1;
-    public Text shotTimer2;
-    public Text GameTimer;
-    public Text gameResult;
+    public TextMeshProUGUI fruitCounter1;
+    public TextMeshProUGUI fruitCounter2;
+    public TextMeshProUGUI shotTimer1;
+    public TextMeshProUGUI shotTimer2;
+    public TextMeshProUGUI GameTimer;
+    public TextMeshProUGUI gameResult1;
+    public TextMeshProUGUI gameResult2;
 
     public float gameDuration = 60;
     private float startTime;
@@ -50,7 +52,8 @@ public class GameManager : MonoBehaviour
         fruitCounter2.text = "Fruit Count: 0";
         shotTimer1.text = "Charge Full";
         shotTimer2.text = "Charge Full";
-        gameResult.text = "";
+        gameResult1.text = "";
+        gameResult2.text = "";
         startTime = Time.time;
     }
 
@@ -100,23 +103,35 @@ public class GameManager : MonoBehaviour
         float t = gameDuration - (Time.time - startTime);
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f0");
-        GameTimer.text = minutes + ":" + seconds;
         
+     
         // winner detection
         if (t <= Mathf.Epsilon)
         {
             if (player1.GetComponent<PlayerController>().getFruitCounter() > player2.GetComponent<PlayerController>().getFruitCounter())
             {
-                gameResult.text = "Merlin's New Apprentice is PLAYER 1";
+                gameResult1.text = "Merlin's Apprentice";
+                gameResult2.text = "Unemployed";
             }
             else if (player1.GetComponent<PlayerController>().getFruitCounter() < player2.GetComponent<PlayerController>().getFruitCounter())
             {
-                gameResult.text = "Merlin's New Apprentice is PLAYER 2";
+                gameResult2.text = "Merlin's Apprentice";
+                gameResult1.text = "Unemployed";
             }
             else
             {
-                gameResult.text = "No One Likes Ties\nPlay Again";
+                gameResult1.text = "No One Likes Ties\nPlay Again";
+                gameResult2.text = "No One Likes Ties\nPlay Again";
+
+                
             }
+
+            player1.GetComponent<PlayerController>().disableControls();
+            player2.GetComponent<PlayerController>().disableControls();
+        }
+        else
+        {
+            GameTimer.text = minutes + ":" + seconds;
         }
 
     }
@@ -136,11 +151,6 @@ public class GameManager : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         SceneManager.LoadScene("Milestone 2");
-        numFruits1 = 0;
-        numFruits2 = 0;
-        gameWon = false;
-        gameLost = false;
-        //gameHasEnded = false;
     }
 
     public void setTargetPlayer(Transform target)
@@ -153,21 +163,6 @@ public class GameManager : MonoBehaviour
         return this.targetPlayer;
     }
 
-    /***fruit increment***/
-    public void UpdateFruitCount(int playerNum)
-    {
-        if (playerNum == 1)
-        {
-            numFruits1 += 1;
-        }
-
-        if (playerNum == 2)
-        {
-            numFruits2 += 1;
-        }
-    }
-
-    /***end of fruit increment***/
 
     /*** GUI display ***/
     private void OnGUI()

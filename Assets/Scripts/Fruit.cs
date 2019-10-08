@@ -20,8 +20,6 @@ public class Fruit : MonoBehaviour
     {
         
         other.GetComponent<PlayerController>().incrementFruitCounter();
-        GameManager gameManager = FindObjectOfType<GameManager>();
-        //Invoke("destoryFruit", 0);
         Destroy(gameObject);
     }
 

@@ -38,6 +38,9 @@ public class CaptureBehaviour : StateMachineBehaviour
         {
             waitScript.DoCoroutine(waitTime);
         }
+
+        // TODO: Decrament slowly player fruitcount 
+        targetPlayer.GetComponent<PlayerController>().loseFruits();
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
