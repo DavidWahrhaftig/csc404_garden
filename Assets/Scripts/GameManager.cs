@@ -69,15 +69,6 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        /**
-        if (numFruits1 == 25 || numFruits2 == 25)
-        {
-            gameWon = true;
-            //EndGame();
-
-            Debug.Log("GAME WON");
-            Invoke("Restart", restartDelay);
-        }**/
 
         if (player1.GetComponent<SpawnLightOrb>().getSpawnTimer() != player1.GetComponent<SpawnLightOrb>().getReloadTime())
         {
@@ -128,6 +119,11 @@ public class GameManager : MonoBehaviour
 
             player1.GetComponent<PlayerController>().disableControls();
             player2.GetComponent<PlayerController>().disableControls();
+
+            if (Input.GetButton("Jump")) // restart game when pressing A button
+            {
+                Restart();
+            }
         }
         else
         {
