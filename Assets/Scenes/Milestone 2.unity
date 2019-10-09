@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13071367, g: 0.189336, b: 0.388564, a: 1}
+  m_IndirectSpecularColor: {r: 0.13068822, g: 0.18902025, b: 0.3883297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5115,7 +5115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f9bfe8fb347412daae6c3f4afac632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSound: {fileID: 8300000, guid: 85a65e03249dd394d862384eff133f0c, type: 3}
+  shotSound: {fileID: 0}
   firePoint: {fileID: 834347835}
   vfx:
   - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
@@ -21360,7 +21360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2570837086931767260}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -101.77344, y: 258.68582, z: -10.238565}
+  m_LocalPosition: {x: -313, y: 138, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5006512735452812590}
@@ -21829,6 +21829,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6457031672379590034}
+  - component: {fileID: 7719259719285374346}
+  - component: {fileID: 7719259719285374345}
+  - component: {fileID: 7719259719285374344}
   m_Layer: 0
   m_Name: Right_Side_Gate_GRP
   m_TagString: Untagged
@@ -21836,6 +21839,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &7719259719285374344
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719259719285374343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30a851bc492c7457c8d4497f08dceb5f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7719259719285374345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719259719285374343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0217c50fcb4404d899a348bb89a0a8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &7719259719285374346
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719259719285374343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 600
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &7758101943622470858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21997,16 +22044,6 @@ PrefabInstance:
       propertyPath: coneRadiusStart
       value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 7988786760691783578, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_Name
-      value: Wand
-      objectReference: {fileID: 0}
-    - target: {fileID: 7988786761416924495, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light
-      objectReference: {fileID: 0}
     - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
         type: 3}
       propertyPath: m_Range
@@ -22016,6 +22053,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786760691783578, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Name
+      value: Wand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786761416924495, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Name
+      value: Spot Light
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7988786761543207936, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
@@ -22441,6 +22488,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.0033333371
       objectReference: {fileID: 0}
+    - target: {fileID: 3772046365883244043, guid: b34828dc78c58be4aadd4e3be2f3d6b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 138
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772046365883244043, guid: b34828dc78c58be4aadd4e3be2f3d6b3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772046365883244043, guid: b34828dc78c58be4aadd4e3be2f3d6b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 830952442278706821, guid: b34828dc78c58be4aadd4e3be2f3d6b3,
         type: 3}
       propertyPath: m_Name
@@ -22458,6 +22520,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3106490094222082724}
+  - component: {fileID: 9124638355613459350}
+  - component: {fileID: 9124638355613459349}
+  - component: {fileID: 9124638355613459348}
   m_Layer: 0
   m_Name: Left_Side_Gate_GRP
   m_TagString: Untagged
@@ -22465,6 +22530,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &9124638355613459348
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124638355613459347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 600
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9124638355613459349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124638355613459347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0217c50fcb4404d899a348bb89a0a8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &9124638355613459350
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124638355613459347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16cd6be89ebb046b6b9920236af83a7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &9174433414691041734
 MeshFilter:
   m_ObjectHideFlags: 0
