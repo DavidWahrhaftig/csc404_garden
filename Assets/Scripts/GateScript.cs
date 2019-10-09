@@ -25,6 +25,7 @@ public class GateScript : MonoBehaviour
         if(other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
             gateAnim.SetTrigger("OpenGate");
+            FindObjectOfType<GameManager>().playSound(FindObjectOfType<GameManager>().gateOpenSound);
         }
             
     }

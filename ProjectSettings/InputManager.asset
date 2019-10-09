@@ -54,11 +54,11 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: CenterToBase2
+    m_Name: CenterToBase5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 2 button 5
+    positiveButton: joystick 5 button 5
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -68,7 +68,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Run1
     descriptiveName: 
@@ -86,11 +86,11 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Run2
+    m_Name: Run5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 2 button 8
+    positiveButton: joystick 5 button 8
     altNegativeButton: 
     altPositiveButton: mouse 1
     gravity: 1000
@@ -100,7 +100,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Jump1
     descriptiveName: 
@@ -118,11 +118,11 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Jump2
+    m_Name: Jump5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 2 button 0
+    positiveButton: joystick 5 button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -132,7 +132,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Mouse X
     descriptiveName: 
@@ -198,7 +198,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Horizontal2
+    m_Name: Horizontal5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -212,7 +212,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Vertical1
     descriptiveName: 
@@ -230,7 +230,7 @@ InputManager:
     axis: 1
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Vertical2
+    m_Name: Vertical5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -244,7 +244,7 @@ InputManager:
     invert: 1
     type: 2
     axis: 1
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Shoot1
     descriptiveName: 
@@ -262,11 +262,11 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Shoot2
+    m_Name: Shoot5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick 2 button 2
+    positiveButton: joystick 5 button 2
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -276,7 +276,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Submit
     descriptiveName: 
@@ -326,7 +326,7 @@ InputManager:
     axis: 3
     joyNum: 1
   - serializedVersion: 3
-    m_Name: HorizontalRot2
+    m_Name: HorizontalRot5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -340,7 +340,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: VerticalRot1
     descriptiveName: 
@@ -353,12 +353,12 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 1
-    invert: 1
+    invert: 0
     type: 2
     axis: 4
     joyNum: 1
   - serializedVersion: 3
-    m_Name: VerticalRot2
+    m_Name: VerticalRot5
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -369,10 +369,10 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 1
-    invert: 1
+    invert: 0
     type: 2
     axis: 4
-    joyNum: 2
+    joyNum: 5
   - serializedVersion: 3
     m_Name: Cancel
     descriptiveName: 

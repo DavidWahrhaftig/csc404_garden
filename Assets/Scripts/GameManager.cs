@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameResult2;
 
     [SerializeField] AudioClip[] fruitSounds;
-    public AudioClip witchLaughSound, witchChasingSound, witchPatrollingSound, witchComplaningSound, witchIdleSound;
+    public AudioClip witchLaughSound, witchChasingSound, witchPatrollingSound, witchComplaningSound, witchIdleSound, gateOpenSound;
 
     public float gameDuration = 60;
     private float startTime;
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Transform player2;
     public Transform targetPlayer;
     public Transform witch;
+    public Transform witchBase;
     /**public void EndGame()
     {
         if (gameHasEnded == false)
@@ -60,6 +61,12 @@ public class GameManager : MonoBehaviour
         gameResult2.text = "";
         startTime = Time.time;
         audioSource = GetComponent<AudioSource>();
+
+        for (int i = 0; i < Input.GetJoystickNames().Length; i++)
+        {
+            Debug.Log(Input.GetJoystickNames()[i]);
+        }
+        
     }
 
     void Update()
@@ -208,6 +215,11 @@ public class GameManager : MonoBehaviour
         {
             audioSource.PlayOneShot(audio);
         }
+    }
+
+    public Transform getWitchBase()
+    {
+        return witchBase;
     }
 
 }
