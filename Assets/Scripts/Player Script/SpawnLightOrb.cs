@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnLightOrb : MonoBehaviour
 {
-
+    public AudioClip shotSound;
+    private AudioSource audioSource;
     public GameObject firePoint;
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effectToSpawn;
@@ -18,6 +19,7 @@ public class SpawnLightOrb : MonoBehaviour
         effectToSpawn = vfx[0];
         spawnTimer = reloadTime;
         playerController = GetComponent<PlayerController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,10 @@ public class SpawnLightOrb : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire3") && !playerController.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
             {
+                if (!audioSource.isPlaying) // so it doesn't layer
+                {
+                    audioSource.PlayOneShot(shotSound);
+                }
                 CreateEffect();
                 charge = false;
             } 

@@ -25,8 +25,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameResult1;
     public TextMeshProUGUI gameResult2;
 
+    [SerializeField] AudioClip[] fruitSounds;
+    public AudioClip witchLaughSound, witchChasingSound, witchPatrollingSound, witchComplaningSound, witchIdleSound;
+
     public float gameDuration = 60;
     private float startTime;
+    private AudioSource audioSource;
     /***end fruit count stuff***/
 
     /*** gui***/
@@ -55,6 +59,7 @@ public class GameManager : MonoBehaviour
         gameResult1.text = "";
         gameResult2.text = "";
         startTime = Time.time;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -186,5 +191,23 @@ public class GameManager : MonoBehaviour
         return this.witch;
     }
 
-    
+    public void playFruitSound()
+    {
+        if (fruitSounds.Length == 0) { return; } // if no sounds were added
+        int index = Random.Range(0, fruitSounds.Length);
+
+        if (!audioSource.isPlaying) // so it doesn't layer
+        {
+            audioSource.PlayOneShot(fruitSounds[index]);
+        }
+    }
+
+    public void playSound(AudioClip audio)
+    {
+        if (!audioSource.isPlaying) // so it doesn't layer
+        {
+            audioSource.PlayOneShot(audio);
+        }
+    }
+
 }

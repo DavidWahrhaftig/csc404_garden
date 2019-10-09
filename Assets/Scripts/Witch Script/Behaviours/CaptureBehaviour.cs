@@ -9,12 +9,14 @@ public class CaptureBehaviour : StateMachineBehaviour
     public float waitTime = 3;
     private Transform targetPlayer;
     private CaptureWait waitScript;
+    GameManager gameManager;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        
-        targetPlayer = animator.GetComponent<GameManagerReference>().gameManager.getTargetPlayer();
+        gameManager = FindObjectOfType<GameManager>();
+        targetPlayer = gameManager.getTargetPlayer();
+        gameManager.playSound(gameManager.witchLaughSound);
         //targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
         waitScript = animator.GetComponent<CaptureWait>();
         targetPlayer.GetComponent<PlayerController>().disableControls(); // make player disabled

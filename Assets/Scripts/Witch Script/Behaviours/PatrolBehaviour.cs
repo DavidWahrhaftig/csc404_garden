@@ -39,6 +39,7 @@ public class PatrolBehaviour : StateMachineBehaviour //the instance of the State
                 //animator.transform.rotation = Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
                 animator.transform.LookAt(patrolPositions[randomIndex]); //Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f)
                 animator.transform.position = Vector3.MoveTowards(animator.transform.position, patrolPositions[randomIndex], Random.Range(patrolSpeedMin, patrolSpeedMax) * Time.deltaTime);
+                
             }
             else
             {

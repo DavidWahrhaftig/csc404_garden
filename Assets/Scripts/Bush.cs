@@ -25,6 +25,7 @@ public class Bush : MonoBehaviour
         {
             PlayerController pc = gameManager.getTargetPlayer().GetComponent<PlayerController>();
             pc.setIsHidden(true);
+            gameManager.playSound(gameManager.witchComplaningSound);
         }
     }
 

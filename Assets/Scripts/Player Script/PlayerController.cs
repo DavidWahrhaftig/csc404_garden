@@ -11,9 +11,12 @@ public class PlayerController : MonoBehaviour
     public GameObject enemyProjectile;
     public int jumpForce;
 
-    [SerializeField] AudioClip[] fruitSounds;
+
+    public AudioClip walkingSound, jumpSound, hitSound;
 
     private AudioSource audioSource;
+
+
     private float movingSpeed;
     private float defaultY;
     private float lightTime = 10;
@@ -107,6 +110,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Jumping");
             if (canJump)
             {
+                playSound(jumpSound);
                 selfRigidbody.AddForce(Vector3.up * jumpForce);
                 canJump = false;
             }
@@ -114,6 +118,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButton("Fire2") && stamina > 0) // running
         {
+            playSound(walkingSound);
             movingSpeed = walkingSpeed * 2;
             stamina -= 0.1f;
         }
@@ -124,24 +129,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void playFruitSound()
-    {
-        if (fruitSounds.Length == 0) { return; } // if no sounds were added
-        int index = Random.Range(0, fruitSounds.Length);
-
-        if (!audioSource.isPlaying) // so it doesn't layer
-        {
-            audioSource.PlayOneShot(fruitSounds[index]);
-        }
-    }
-
   
     private void OnCollisionEnter(Collision collision)
     {
         
         if (collision.transform.tag == "Fruit")
         {
-            playFruitSound();
+            //playFruitSound();
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             
             Debug.Log("FruitCounter: " + fruitCounter);
@@ -163,6 +157,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
             chaseMe();
+
+            playSound(hitSound);
 
             // disable this player from shooting
 
@@ -243,11 +239,21 @@ public class PlayerController : MonoBehaviour
     public void incrementFruitCounter()
     {
         fruitCounter += 1;
+        gameManager.playFruitSound();
     }
 
     public void loseFruits()
     {
         fruitCounter = 0;
+    }
+
+    public void playSound( AudioClip audio)
+    {
+   
+        if (!audioSource.isPlaying) // so it doesn't layer
+        {
+            audioSource.PlayOneShot(audio);
+        }
     }
 }
 
