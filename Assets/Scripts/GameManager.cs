@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
             player1.GetComponent<PlayerController>().disableControls();
             player2.GetComponent<PlayerController>().disableControls();
 
-            if (Input.GetButton("Jump")) // restart game when pressing A button
+            if (Input.GetButton("Jump" + player1.GetComponent<PlayerController>().gamePad) || Input.GetButton("Jump" + player2.GetComponent<PlayerController>().gamePad)) // restart game when pressing A button
             {
                 Restart();
             }

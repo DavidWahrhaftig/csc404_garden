@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject enemyProjectile;
     public int jumpForce;
 
+    public int gamePad;
 
     public AudioClip walkingSound, jumpSound, hitSound;
 
@@ -93,11 +94,11 @@ public class PlayerController : MonoBehaviour
 
     private void respondToInput()
     {
-        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical1") * Time.deltaTime);
-        transform.Translate(movingSpeed * Input.GetAxis("Horizontal1") * Time.deltaTime, 0f, 0f);
-        transform.Rotate(0, rotationSpeed * Input.GetAxis("HorizontalRot") * Time.deltaTime, 0);
+        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical" + gamePad) * Time.deltaTime);
+        transform.Translate(movingSpeed * Input.GetAxis("Horizontal" + gamePad) * Time.deltaTime, 0f, 0f);
+        transform.Rotate(0, rotationSpeed * Input.GetAxis("HorizontalRot" + gamePad) * Time.deltaTime, 0);
 
-        if (Input.GetButton("Fire1")) // Ceneter to base
+        if (Input.GetButton("CenterToBase" + gamePad)) // Ceneter to base
         {
             Vector3 targetDir = playerBase.position - transform.position;
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
@@ -105,7 +106,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(newestDir);
         }
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump" + gamePad))
         {
             Debug.Log("Jumping");
             if (canJump)
@@ -116,7 +117,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Fire2") && stamina > 0) // running
+        if (Input.GetButton("Run" + gamePad) && stamina > 0) // running
         {
             playSound(walkingSound);
             movingSpeed = walkingSpeed * 2;

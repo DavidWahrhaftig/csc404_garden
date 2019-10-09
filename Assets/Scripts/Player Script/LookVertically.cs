@@ -16,6 +16,6 @@ public class LookVertically : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotationSpeed * Input.GetAxis("VerticalRot") * Time.deltaTime, 0, 0);
+        transform.Rotate(rotationSpeed * Input.GetAxis("VerticalRot" + GetComponentInParent<PlayerController>().gamePad) * Time.deltaTime, 0, 0);
     }
 }

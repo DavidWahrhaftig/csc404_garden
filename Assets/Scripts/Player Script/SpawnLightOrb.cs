@@ -27,7 +27,7 @@ public class SpawnLightOrb : MonoBehaviour
     {
         if (charge)
         {
-            if (Input.GetButtonDown("Fire3") && !playerController.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
+            if (Input.GetButtonDown("Shoot" + playerController.gamePad) && !playerController.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
             {
                 if (!audioSource.isPlaying) // so it doesn't layer
                 {
@@ -36,7 +36,7 @@ public class SpawnLightOrb : MonoBehaviour
                 CreateEffect();
                 charge = false;
             } 
-            else if (Input.GetButtonDown("Fire3") && playerController.getIsGlowing())
+            else if (Input.GetButtonDown("Shoot" + playerController.gamePad) && playerController.getIsGlowing())
             {
                 //TODO: give feedback to player to tell them they cannot shoot while they are glowing
             }

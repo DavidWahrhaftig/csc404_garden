@@ -2342,6 +2342,11 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
+    - target: {fileID: 7658990753942065234, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
+        type: 3}
+      propertyPath: gamePad
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7658990753136686970, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
@@ -3617,6 +3622,11 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
+    - target: {fileID: 7658990753942065234, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
+        type: 3}
+      propertyPath: gamePad
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7658990753942065238, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
         type: 3}
       propertyPath: reloadTime
