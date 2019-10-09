@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13068822, g: 0.18902025, b: 0.3883297, a: 1}
+  m_IndirectSpecularColor: {r: 0.13060611, g: 0.18892187, b: 0.38828143, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2345,7 +2345,7 @@ PrefabInstance:
     - target: {fileID: 7658990753942065234, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
         type: 3}
       propertyPath: gamePad
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7658990753136686970, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
         type: 3}
@@ -3602,6 +3602,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7658990753942065238, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
+        type: 3}
+      propertyPath: reloadTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658990753942065238, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
+        type: 3}
+      propertyPath: shotSound
+      value: 
+      objectReference: {fileID: 8300000, guid: dcf10e6f800c6a946bf85b2fe6fe0592, type: 3}
+    - target: {fileID: 7658990753942065238, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7658990753942065234, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
         type: 3}
       propertyPath: playerBase
@@ -3627,16 +3642,6 @@ PrefabInstance:
       propertyPath: gamePad
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7658990753942065238, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
-        type: 3}
-      propertyPath: reloadTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7658990753942065238, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
-        type: 3}
-      propertyPath: shotSound
-      value: 
-      objectReference: {fileID: 8300000, guid: dcf10e6f800c6a946bf85b2fe6fe0592, type: 3}
     m_RemovedComponents:
     - {fileID: 1150614113, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3, type: 3}
@@ -22004,68 +22009,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988786761543207936, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: t
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7988786761543207941, guid: 8a73bb831ea373a46ad004b1a7807539,
         type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2999655317578931557}
-    - target: {fileID: 7988786761416924465, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 2999655317578931557}
-    - target: {fileID: 7988786760743539556, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: noiseIntensity
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: noiseMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: noiseVelocityUseGlobal
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: coneRadiusStart
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_Range
-      value: 6.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7988786760691783578, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_Name
-      value: Wand
-      objectReference: {fileID: 0}
-    - target: {fileID: 7988786761416924495, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
-      propertyPath: m_Name
-      value: Spot Light
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7988786761543207936, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
 --- !u!33 &8031784841257595017
 MeshFilter:

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private float movingSpeed;
     private float defaultY;
-    private float lightTime = 10;
+    public float lightTime = 1000;
     private Color ogColor;
     private Rigidbody selfRigidbody;
     private GameManager gameManager;
