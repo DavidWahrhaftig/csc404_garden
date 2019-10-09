@@ -66,7 +66,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log(Input.GetJoystickNames()[i]);
         }
-        
     }
 
     void Update()

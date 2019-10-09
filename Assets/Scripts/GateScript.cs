@@ -6,6 +6,7 @@ public class GateScript : MonoBehaviour
 {
 
     Animator gateAnim;
+    bool playedSound = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,12 @@ public class GateScript : MonoBehaviour
         if(other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
             gateAnim.SetTrigger("OpenGate");
-            FindObjectOfType<GameManager>().playSound(FindObjectOfType<GameManager>().gateOpenSound);
+            if (!playedSound)
+            {
+                FindObjectOfType<GameManager>().playSound(FindObjectOfType<GameManager>().gateOpenSound);
+                playedSound = true;
+            }
+
         }
             
     }
