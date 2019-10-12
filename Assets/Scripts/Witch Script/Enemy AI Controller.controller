@@ -65,6 +65,7 @@ MonoBehaviour:
   patrolRange: 6
   patrolSpeedMin: 4
   patrolSpeedMax: 7
+  rotationSpeed: 0.1
   waitTime: 1
   isPausing: 0
 --- !u!1101 &-3372411031140431378

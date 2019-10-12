@@ -22,11 +22,6 @@ public class ChaseBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // disable oscillation 
-        // only approach target if spherecast hasn't collided since spherecast controls the player movement, or can change
-
-        // stop chasing after player
-        // TODO: if (target.IsHidden()) { animator.SetBool("isPatrolling", true); animator.SetBool("isChasing", false); } else {}
 
 
         // continue chasing after player
@@ -40,6 +35,6 @@ public class ChaseBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+       
     }
 }

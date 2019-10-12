@@ -5,22 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public int gamePad;
     public float walkingSpeed, rotationSpeed, stamina;
     public Transform playerBase;
     public float centerToBaseSpeed;
     public GameObject enemyProjectile;
     public int jumpForce;
-
-    public int gamePad;
-
+    public float lightTime = 1000;
     public AudioClip walkingSound, jumpSound, hitSound;
 
+
     private AudioSource audioSource;
-
-
     private float movingSpeed;
     private float defaultY;
-    public float lightTime = 1000;
+
     private Color ogColor;
     private Rigidbody selfRigidbody;
     private GameManager gameManager;
@@ -31,6 +29,8 @@ public class PlayerController : MonoBehaviour
     private bool isGlowing = false; // for witch and hidden ability
     private bool isDisabled = false;
     public bool isHidden = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             if (canJump)
             {
                 
-                Invoke("liftInAir", 1);
+                Invoke("levitate", 1);
                 canJump = false;
             }
         }
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void liftInAir()
+    private void levitate()
     {
         selfRigidbody.AddForce(Vector3.up * 200);
     }
@@ -148,8 +148,6 @@ public class PlayerController : MonoBehaviour
             audioSource.Stop();
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
             transform.position = playerBase.transform.position;
-            // gameLost = true;
-            FindObjectOfType<GameManager>().GameLost(); //added
         }
 
         if (collision.transform.tag == "Ground")
@@ -158,10 +156,9 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
             chaseMe();
-
             playSound(hitSound);
 
-            // disable this player from shooting
+            // disable this player from shooting?
 
         }
     }
@@ -171,7 +168,7 @@ public class PlayerController : MonoBehaviour
         changeColor(Color.white);
         isGlowing = true;
 
-        // change witch state to chase
+        // change witch state to 'Chase'
         Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
         witchAnimator.SetBool("isChasing", true);
         witchAnimator.SetBool("isIdle", false);
@@ -182,7 +179,7 @@ public class PlayerController : MonoBehaviour
     {
         changeColor(ogColor);
         isGlowing = false;
-        // change witch state to patrol
+        // change witch state to 'Patrol'
         Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
         witchAnimator.SetBool("isChasing", false);
         witchAnimator.SetBool("isIdle", false);
@@ -194,7 +191,6 @@ public class PlayerController : MonoBehaviour
     public void disableControls()
     {
         isDisabled = true;
-        
     }
 
     public void enableControls()
@@ -225,7 +221,7 @@ public class PlayerController : MonoBehaviour
 
     public void setIsGlowing(bool b)
     {
-        isGlowing = true;
+        isGlowing = b;
     }
     public bool getIsGlowing()
     {
@@ -250,7 +246,6 @@ public class PlayerController : MonoBehaviour
 
     public void playSound( AudioClip audio)
     {
-   
         if (!audioSource.isPlaying) // so it doesn't layer
         {
             audioSource.PlayOneShot(audio);
