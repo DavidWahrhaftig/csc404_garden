@@ -12,12 +12,15 @@ public class SpawnLightOrb : MonoBehaviour
     public float reloadTime = 15;
     private float spawnTimer;
     private bool charge = true;
+    private PlayerLogic playerLogic;
     private PlayerController playerController;
+
     // Start is called before the first frame update
     void Start()
     {
         effectToSpawn = vfx[0];
         spawnTimer = reloadTime;
+        playerLogic = GetComponent<PlayerLogic>();
         playerController = GetComponent<PlayerController>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -27,7 +30,7 @@ public class SpawnLightOrb : MonoBehaviour
     {
         if (charge)
         {
-            if (Input.GetButtonDown("Shoot" + playerController.gamePad) && !playerController.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
+            if (Input.GetButtonDown("Shoot" + playerController.gamePad) && !playerLogic.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
             {
                 if (!audioSource.isPlaying) // so it doesn't layer
                 {
@@ -36,7 +39,7 @@ public class SpawnLightOrb : MonoBehaviour
                 CreateEffect();
                 charge = false;
             } 
-            else if (Input.GetButtonDown("Shoot" + playerController.gamePad) && playerController.getIsGlowing())
+            else if (Input.GetButtonDown("Shoot" + playerController.gamePad) && playerLogic.getIsGlowing())
             {
                 //TODO: give feedback to player to tell them they cannot shoot while they are glowing
             }

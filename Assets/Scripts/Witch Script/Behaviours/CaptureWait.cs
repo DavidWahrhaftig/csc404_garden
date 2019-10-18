@@ -11,8 +11,8 @@ public class CaptureWait : MonoBehaviour
     public void DoCoroutine(float delay)
     {
         StartCoroutine("ChangeState", delay);
-
     }
+
     public IEnumerator ChangeState(float delay)
     {
         yield return new WaitForSeconds(delay);

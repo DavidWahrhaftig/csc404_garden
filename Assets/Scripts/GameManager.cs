@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 
     public float restartDelay = 1f;
 
-
     /***Texts ***/
     public TextMeshProUGUI fruitCounter1;
     public TextMeshProUGUI fruitCounter2;
@@ -26,7 +25,6 @@ public class GameManager : MonoBehaviour
     private float startTime;
     private AudioSource audioSource;
 
-
     public Transform player1;
     public Transform player2;
     public Transform targetPlayer;
@@ -34,7 +32,6 @@ public class GameManager : MonoBehaviour
     public Transform witchBase;
 
     private float remainingTime;
-
 
     private void Start()
     {
@@ -50,7 +47,6 @@ public class GameManager : MonoBehaviour
         gameResult2.text = "";
 
         startTime = Time.time;
-
 
         for (int i = 0; i < Input.GetJoystickNames().Length; i++)
         {
@@ -75,8 +71,8 @@ public class GameManager : MonoBehaviour
         /*** UI Updates ***/
         updateLightBallChargeUI();
 
-        fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerController>().getFruitCounter();
-        fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerController>().getFruitCounter();
+        fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerLogic>().getFruitCounter();
+        fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerLogic>().getFruitCounter();
 
         updateTimer();
 
@@ -93,12 +89,12 @@ public class GameManager : MonoBehaviour
         // winner detection
         if (remainingTime <= Mathf.Epsilon)
         {
-            if (player1.GetComponent<PlayerController>().getFruitCounter() > player2.GetComponent<PlayerController>().getFruitCounter())
+            if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
             {
                 gameResult1.text = "Merlin's Apprentice";
                 gameResult2.text = "Unemployed";
             }
-            else if (player1.GetComponent<PlayerController>().getFruitCounter() < player2.GetComponent<PlayerController>().getFruitCounter())
+            else if (player1.GetComponent<PlayerLogic>().getFruitCounter() < player2.GetComponent<PlayerLogic>().getFruitCounter())
             {
                 gameResult2.text = "Merlin's Apprentice";
                 gameResult1.text = "Unemployed";

@@ -5371,6 +5371,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &505357078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505357075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f60bd71dff427849a782c229d3b013e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBase: {fileID: 310733865}
+  enemyProjectile: {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501,
+    type: 3}
+  lightTime: 1000
+  hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
+  fruitCounter: 0
+  isDisabled: 0
+  isHidden: 0
 --- !u!4 &505357083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1146608122498410820, guid: 2c55d6bad7d485c4da2bc4c9c11e48c3,
@@ -9525,6 +9545,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &886085608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886085606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f60bd71dff427849a782c229d3b013e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBase: {fileID: 1673971771}
+  enemyProjectile: {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8,
+    type: 3}
+  lightTime: 1000
+  hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
+  fruitCounter: 0
+  isDisabled: 0
+  isHidden: 0
 --- !u!1001 &907815715
 PrefabInstance:
   m_ObjectHideFlags: 0

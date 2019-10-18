@@ -42,12 +42,12 @@ public class CaptureBehaviour : StateMachineBehaviour
         }
 
         // TODO: Decrament slowly player fruitcount 
-        targetPlayer.GetComponent<PlayerController>().loseFruits();
+        targetPlayer.GetComponent<PlayerLogic>().loseFruits();
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        targetPlayer.GetComponent<PlayerController>().spawn();
+        targetPlayer.GetComponent<PlayerLogic>().spawn();
         targetPlayer.GetComponent<PlayerController>().enableControls();
     }
 

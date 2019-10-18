@@ -8,6 +8,7 @@ public class LightUpTestScript : MonoBehaviour
     private bool lightUp;
     private float lightTime = 10;
     private Color ogColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,6 @@ public class LightUpTestScript : MonoBehaviour
 
             if (lightTime < 0)
             {
-                //Debug.Log("OG COLOR CHANGE!!!");
                 lightUp = false;
                 var playerRend = gameObject.GetComponent<Renderer>();
                 playerRend.material.SetColor("_Color", ogColor);
@@ -36,17 +36,10 @@ public class LightUpTestScript : MonoBehaviour
     {
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
-            //Debug.Log("COLOR CHANGE!!!");
             var playerRend = gameObject.GetComponent<Renderer>();
             ogColor = playerRend.material.GetColor("_Color");
             playerRend.material.SetColor("_Color", Color.yellow);
             lightUp = true;
         }
-
-        //else
-        //{
-        //    Debug.Log("Colliding Object: " + collision.gameObject.name);
-        //    Debug.Log("Want Object: " + enemyProjectile.name);
-        //}
     }
 }

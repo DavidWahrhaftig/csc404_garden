@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PatrolWait : MonoBehaviour
 {
-    
     public void DoCoroutine(PatrolBehaviour pb)
     {
         StartCoroutine("ChangeState", pb);
-
     }
+
     public IEnumerator ChangeState(PatrolBehaviour pb)
     {
         pb.isPausing = true;

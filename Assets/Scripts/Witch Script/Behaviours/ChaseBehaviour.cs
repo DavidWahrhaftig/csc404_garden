@@ -16,14 +16,11 @@ public class ChaseBehaviour : StateMachineBehaviour
         target = gameManager.getTargetPlayer();
         Debug.Log(target.tag);
         gameManager.playSound(gameManager.witchChasingSound);
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-
         // continue chasing after player
         Vector3 targetPosition = new Vector3(target.position.x, animator.transform.position.y, target.position.z);
         Vector3 direction = animator.transform.position;

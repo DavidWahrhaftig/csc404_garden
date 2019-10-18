@@ -11,6 +11,7 @@ public class Oscillator : MonoBehaviour
     //[Range(0,1)] [SerializeField] float movementFactor; // 0 for not move, 1 for fully moved
     float movementFactor;
     Vector3 startingPos; // must be stored for absolute movement
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,5 @@ public class Oscillator : MonoBehaviour
         {
             transform.position = startingPos + offset;
         }
-
     }
 }

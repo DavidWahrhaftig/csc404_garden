@@ -6,7 +6,7 @@ public class LookVertically : MonoBehaviour
 {
     private Quaternion originalRotation;
     public float rotationSpeed = 20f;
-    bool allowRotation = false;
+
     // Start is called before the first frame update
     void Start()
     {
