@@ -21,11 +21,6 @@ public class PropelLightOrb : MonoBehaviour
         {
             transform.position += transform.forward * (speed * Time.deltaTime);
         }
-
-        else
-        {
-            Debug.Log("Zero Speed");
-        }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -53,9 +48,6 @@ public class PropelLightOrb : MonoBehaviour
             }
         }
 
-        //Debug.Log("BOOM");
-
         Destroy(gameObject);
-        
     }
 }

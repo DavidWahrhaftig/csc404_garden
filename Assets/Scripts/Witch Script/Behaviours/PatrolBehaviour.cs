@@ -19,7 +19,6 @@ public class PatrolBehaviour : StateMachineBehaviour //the instance of the State
     private Vector3 direction;
     private PatrolWait waitScript;
 
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -61,12 +60,9 @@ public class PatrolBehaviour : StateMachineBehaviour //the instance of the State
                     //animator.transform.LookAt(patrolPositions[randomIndex]); //Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f)
                     animator.transform.position = Vector3.MoveTowards(animator.transform.position, patrolPositions[randomIndex], Random.Range(patrolSpeedMin, patrolSpeedMax) * Time.deltaTime);
                 }
-                
-                
             }
             else
             {
-
                 counter++;
                 randomIndex = Random.Range(0, numOfPositions - 1); // randomly choose next position
                 waitScript.DoCoroutine(this);
@@ -79,9 +75,7 @@ public class PatrolBehaviour : StateMachineBehaviour //the instance of the State
                 }
             }
         }
-
     }
-
 
     private Vector3[] getRandomPositions(Transform origin)
     {

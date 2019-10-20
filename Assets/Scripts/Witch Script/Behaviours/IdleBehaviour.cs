@@ -12,11 +12,9 @@ public class IdleBehaviour : StateMachineBehaviour
     private Vector3 direction;
     public bool finishedRotating;
 
-
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         gameManager = animator.GetComponentInChildren<GameManagerReference>().gameManager;
         newVector = new Vector3(gameManager.getWitchBase().position.x, animator.transform.position.y, gameManager.getWitchBase().position.z);
         direction = newVector - animator.transform.position;
@@ -32,7 +30,6 @@ public class IdleBehaviour : StateMachineBehaviour
 
         if (animator.transform.position.x != newVector.x && animator.transform.position.z != newVector.z)
         {
-
             if (!finishedRotating)
             {
                 animator.transform.rotation = Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
@@ -48,7 +45,6 @@ public class IdleBehaviour : StateMachineBehaviour
             {
                 animator.transform.position = Vector3.MoveTowards(animator.transform.position, newVector, movingSeed * Time.deltaTime);
             }
-
         }
         // when reaching base, chagne state to 'Patrol'
         else

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bush : MonoBehaviour
 {
     private GameManager gameManager;
-    PlayerController pc;
+    PlayerLogic pl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +21,19 @@ public class Bush : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("player in Bush");
         if (gameManager.getTargetPlayer() != null && other.gameObject == gameManager.getTargetPlayer().gameObject)
         {
-            PlayerController pc = gameManager.getTargetPlayer().GetComponent<PlayerController>();
-            pc.setIsHidden(true);
+            pl = gameManager.getTargetPlayer().GetComponent<PlayerLogic>();
+            pl.setIsHidden(true);
             gameManager.playSound(gameManager.witchComplaningSound);
         }
     }
 
     private void OnTriggerExit(Collider other)
-    {
-        print("Left the Bush");  
-        if (pc != null)
+    { 
+        if (pl != null)
         {
-            pc.setIsHidden(false);
+            pl.setIsHidden(false);
         }
         
     }

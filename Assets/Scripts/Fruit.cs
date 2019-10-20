@@ -18,20 +18,7 @@ public class Fruit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        other.GetComponent<PlayerController>().incrementFruitCounter();
+        other.GetComponent<PlayerLogic>().incrementFruitCounter();
         Destroy(gameObject);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
-
-    private void destroyFruit()
-    {
-
-        Destroy(gameObject);
-    }
-        
+    }  
 }
