@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Rewired;
 public class SpawnLightOrb : MonoBehaviour
 {
     public AudioClip shotSound;
@@ -15,6 +15,8 @@ public class SpawnLightOrb : MonoBehaviour
     private PlayerLogic playerLogic;
     private PlayerController playerController;
 
+    private Rewired.Player gamePadController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +24,18 @@ public class SpawnLightOrb : MonoBehaviour
         spawnTimer = reloadTime;
         playerLogic = GetComponent<PlayerLogic>();
         playerController = GetComponent<PlayerController>();
+
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        gamePadController = playerController.getGamePadController(); // have to reference in Update method, else gamePadController is null
+        bool shoot = gamePadController.GetButtonDown("Shoot");
         if (charge)
         {
-            if (Input.GetButtonDown("Shoot" + playerController.gamePad) && !playerLogic.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
+            if (shoot && !playerLogic.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
             {
                 if (!audioSource.isPlaying) // so it doesn't layer
                 {
@@ -39,7 +44,7 @@ public class SpawnLightOrb : MonoBehaviour
                 CreateEffect();
                 charge = false;
             } 
-            else if (Input.GetButtonDown("Shoot" + playerController.gamePad) && playerLogic.getIsGlowing())
+            else if (shoot && playerLogic.getIsGlowing())
             {
                 //TODO: give feedback to player to tell them they cannot shoot while they are glowing
             }

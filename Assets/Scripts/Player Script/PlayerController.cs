@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Rewired;
 public class PlayerController : MonoBehaviour
 {
-    public int gamePad;
+    public int gamePadID;
+    [SerializeField] Rewired.Player gamePadController; 
+
     public float walkingSpeed, rotationSpeed, stamina;
     public float centerToBaseSpeed;
     public int jumpForce;
-
     public AudioClip walkingSound, jumpSound;
     private AudioSource audioSource;
-
     private float movingSpeed;
     private float defaultY;
-
     private Rigidbody selfRigidbody;
-
     private GameManager gameManager;
     private PlayerLogic playerLogic;
+
+   
     
     /** Flags **/
     public bool canJump = true;
@@ -27,15 +27,17 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gamePadController = Rewired.ReInput.players.GetPlayer(gamePadID);
+        Debug.Log(gamePadID); // not printing in console?
+        gameManager = FindObjectOfType<GameManager>();
+
+        playerLogic = GetComponent<PlayerLogic>();
+        selfRigidbody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
+
         defaultY = transform.position.y;
         movingSpeed = walkingSpeed;
 
-        selfRigidbody = GetComponent<Rigidbody>();
-
-        gameManager = FindObjectOfType<GameManager>();
-        playerLogic = GetComponent<PlayerLogic>();
-
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,19 +51,31 @@ public class PlayerController : MonoBehaviour
 
     private void respondToInput()
     {
-        transform.Translate(0f, 0f, movingSpeed * Input.GetAxis("Vertical" + gamePad) * Time.deltaTime);
-        transform.Translate(movingSpeed * Input.GetAxis("Horizontal" + gamePad) * Time.deltaTime, 0f, 0f);
-        transform.Rotate(0, rotationSpeed * Input.GetAxis("HorizontalRot" + gamePad) * Time.deltaTime, 0);
+        // getting input from game pad controller
+        float moveVertical = gamePadController.GetAxis("Move Vertical");
+        float rotateHorizontal = gamePadController.GetAxis("Rotate");
+        float lookVertical = gamePadController.GetAxis("Look Vertical"); // in LookVertically.cs
+        bool jump = gamePadController.GetButtonDown("Jump");
+        bool run = gamePadController.GetButton("Run");
+        bool shoot = gamePadController.GetButtonDown("Shoot");
+        //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
+        
 
-        if (Input.GetButton("CenterToBase" + gamePad)) // Ceneter to base
+
+        transform.Translate(0f, 0f, movingSpeed * moveVertical * Time.deltaTime);
+        //transform.Translate(movingSpeed * Input.GetAxis("Horizontal" + gamePadID) * Time.deltaTime, 0f, 0f);
+        transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.deltaTime, 0);
+
+        /*
+        if (Input.GetButton("CenterToBase" + gamePadID)) // Ceneter to base
         {
             Vector3 targetDir = playerLogic.playerBase.position - transform.position;
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
             Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
             transform.rotation = Quaternion.LookRotation(newestDir);
-        }
+        }*/
 
-        if (Input.GetButton("Jump" + gamePad))
+        if (jump)
         {
             Debug.Log("Jumping");
             if (canJump)
@@ -72,7 +86,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("Run" + gamePad) && stamina > 0) // running
+        if (run && stamina > 0) // running
         {
             playSound(walkingSound);
             movingSpeed = walkingSpeed * 2;
@@ -106,6 +120,11 @@ public class PlayerController : MonoBehaviour
         {
             audioSource.PlayOneShot(audio);
         }
+    }
+
+    public Rewired.Player getGamePadController()
+    {
+        return this.gamePadController;
     }
 }
 
