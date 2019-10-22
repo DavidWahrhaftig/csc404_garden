@@ -10,6 +10,9 @@ public class PlayerLogic : MonoBehaviour
     public float lightTime = 1000;
 
     public AudioClip hitSound;
+
+    [SerializeField] SkinnedMeshRenderer playerSkin;
+
     private AudioSource audioSource;
 
     private Rigidbody selfRigidbody;
@@ -31,8 +34,8 @@ public class PlayerLogic : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         selfRigidbody = GetComponent<Rigidbody>();
 
-        var playerRend = gameObject.GetComponent<Renderer>();
-        ogColor = playerRend.material.GetColor("_Color");
+        //var playerRend = gameObject.GetComponent<Renderer>();
+        ogColor = playerSkin.material.GetColor("_Color");
 
         gameManager = FindObjectOfType<GameManager>();
         playerController = GetComponent<PlayerController>();
@@ -116,8 +119,8 @@ public class PlayerLogic : MonoBehaviour
 
     public void changeColor(Color color)
     {
-        var playerRend = gameObject.GetComponent<Renderer>();
-        playerRend.material.SetColor("_Color", color);
+        //var playerRend = gameObject.GetComponent<Renderer>();
+        playerSkin.material.SetColor("_Color", color);
     }
 
     public void chaseMe()
