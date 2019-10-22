@@ -39,6 +39,11 @@ public class CaptureBehaviour : StateMachineBehaviour
         else
         {
             waitScript.DoCoroutine(waitTime);
+            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", true);
+            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", false);
+            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isWalking", false);
+            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isRunning", false);
+
         }
 
         // TODO: Decrament slowly player fruitcount 
@@ -47,6 +52,8 @@ public class CaptureBehaviour : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
+        targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", false);
+        targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", true);
         targetPlayer.GetComponent<PlayerLogic>().spawn();
         targetPlayer.GetComponent<PlayerController>().enableControls();
     }

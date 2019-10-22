@@ -44,10 +44,11 @@ public class PlayerLogic : MonoBehaviour
         if (isDisabled)
         {
             selfRigidbody.useGravity = false;
-            if (playerController.canJump)
+            if (!playerController.isInAir)
             {
-                Invoke("levitate", 1);
-                playerController.canJump = false;
+                //Invoke("levitate", 1);
+                levitate();
+                playerController.isInAir = true;
             }
         }
         else
@@ -94,7 +95,10 @@ public class PlayerLogic : MonoBehaviour
         }
 
         if (collision.transform.tag == "Ground")
-            playerController.canJump = true;
+        {
+            playerController.isInAir = false;
+            playerController.getAnimator().SetBool("isJumping", false);
+        }
 
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
@@ -107,7 +111,7 @@ public class PlayerLogic : MonoBehaviour
 
     private void levitate()
     {
-        selfRigidbody.AddForce(Vector3.up * 200);
+        selfRigidbody.AddForce(Vector3.up * 20);
     }
 
     public void changeColor(Color color)
@@ -144,6 +148,8 @@ public class PlayerLogic : MonoBehaviour
     public void spawn()
     {
         transform.position = playerBase.position;
+        playerController.getAnimator().SetBool("isGettingUp", true);
+        //playerController.getAnimator().SetBool("isCaught", false);
     }
 
     public bool getIsHidden()
@@ -159,6 +165,7 @@ public class PlayerLogic : MonoBehaviour
     {
         isGlowing = b;
     }
+
     public bool getIsGlowing()
     {
         return isGlowing;

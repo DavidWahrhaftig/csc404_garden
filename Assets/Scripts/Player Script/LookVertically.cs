@@ -13,12 +13,13 @@ public class LookVertically : MonoBehaviour
     void Start()
     {
         originalRotation = transform.rotation;
-        gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
+        //gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
     }
 
     // Update is called once per frame
     void Update()
     {
+        gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
         float lookVertical = gamePadController.GetAxis("Look Vertical");
         transform.Rotate(rotationSpeed * lookVertical * Time.deltaTime, 0, 0);
     }
