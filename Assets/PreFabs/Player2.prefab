@@ -3044,7 +3044,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
     width: 0.5
     height: 1
@@ -11161,7 +11161,7 @@ MonoBehaviour:
   shotSound: {fileID: 8300000, guid: dcf10e6f800c6a946bf85b2fe6fe0592, type: 3}
   firePoint: {fileID: 1934262698003037988}
   vfx:
-  - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
+  - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
   reloadTime: 5
 --- !u!1 &7639172112738587085
 GameObject:

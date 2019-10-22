@@ -175,7 +175,6 @@ public class PlayerController : MonoBehaviour
     {
         return this.gamePadController;
     }
-
     public Animator getAnimator()
     {
         return this.animator;
