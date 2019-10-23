@@ -35,6 +35,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSeed: 5
+  rotationSpeed: 0.1
+  finishedRotating: 0
 --- !u!114 &-5693829329926934187
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -47,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cac72f83ec706b4fa5ba5279cfbe2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 11
+  speed: 9
   rotationSpeed: 2
 --- !u!114 &-4356079155301106313
 MonoBehaviour:
@@ -187,9 +189,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 90, y: -70, z: 0}
+  m_AnyStatePosition: {x: 70, y: -100, z: 0}
   m_EntryPosition: {x: 100, y: 120, z: 0}
-  m_ExitPosition: {x: 70, y: -180, z: 0}
+  m_ExitPosition: {x: 70, y: -460, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1860697511469469}
 --- !u!1101 &-1956606500953374337
@@ -229,8 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc03410cca381745bd3abcb05386e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  captureSpeed: 1.5
-  waitTime: 3
+  captureSpeed: 2.5
+  waitTime: 2
 --- !u!1102 &-266400141038051470
 AnimatorState:
   serializedVersion: 5
@@ -274,25 +276,37 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isIdle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isCapturing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isPatrolling
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: isWinner
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isLoser
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

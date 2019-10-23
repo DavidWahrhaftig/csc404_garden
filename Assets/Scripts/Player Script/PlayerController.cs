@@ -72,54 +72,49 @@ public class PlayerController : MonoBehaviour
         runButton = gamePadController.GetButton("Run");
         //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
 
-        #region Idle & Walk Animation Transitions
-        if (Mathf.Abs(moveVertical) > Mathf.Epsilon)
+        if (!playerLogic.isDisabled && !playerLogic.isCaught)
         {
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isIdle", false);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isIdle", true);
-        }
-        #endregion
-
-        if (jumpButton)
-        {
-            if (!isInAir)
+            #region Idle & Walk Animation Transitions
+            if (Mathf.Abs(moveVertical) > Mathf.Epsilon)
             {
-                Jump(jumpForce, forceType);
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isIdle", false);
             }
-        }
+            else
+            {
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isIdle", true);
+            }
+            #endregion
 
-        if (runButton && stamina > 0) // running
-        {
-            animator.SetBool("isRunning", true);
-            animator.SetBool("isIdle", false);
-            animator.SetBool("isWalking", false);
 
-            playSound(walkingSound);
-            movingSpeed = walkingSpeed * 2;
-            stamina -= 0.1f;
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-            movingSpeed = walkingSpeed;
-            stamina += 0.01f;
-        }
-    }
+            #region Running mechanics and Run Animation Transition
+            if (runButton)//if (runButton && stamina > 0) // running
+            {
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isWalking", false);
 
-    /**
-     * FixedUpdate is specifically designed for physics updates e.g. movements, raycasts, collisions, etc...
-     * It is where physics calculations and changes should go since it runs at a constant 50 FPS to match the physics engine.
-    **/
-    void FixedUpdate()
-    {
-        if (!playerLogic.isDisabled)
-        {
-            //respondToInput();
+                playSound(walkingSound);
+                movingSpeed = walkingSpeed * 2;
+                stamina -= 0.1f;
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+                movingSpeed = walkingSpeed;
+                stamina += 0.01f;
+            }
+            #endregion
+
+            if (jumpButton)
+            {
+                if (!isInAir)
+                {
+                    Jump(jumpForce, forceType);
+                }
+            }
+
             // forward/backward movement
             body.MovePosition(transform.position + transform.TransformDirection(0f, 0f, moveVertical) * movingSpeed * Time.deltaTime);
             // horizontal rotation movement
@@ -133,6 +128,21 @@ public class PlayerController : MonoBehaviour
                 Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
                 transform.rotation = Quaternion.LookRotation(newestDir);
             }*/
+        }
+
+        if (playerLogic.isCaught)
+        {
+            body.useGravity = false;
+            if (!isInAir)
+            {
+                //Invoke("levitate", 1);
+                levitate(); 
+                isInAir = true;
+            }
+        }
+        else
+        {
+            body.useGravity = true;
         }
     }
 
@@ -148,16 +158,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isRunning", false);
     }
 
-    public void disableControls()
+    private void levitate()
     {
-        playerLogic.isDisabled = true;
+        body.AddForce(Vector3.up * 20);
     }
-    public void enableControls()
-    {
-        playerLogic.isDisabled = false;
-        playerLogic.stopChasingMe();
-    }
-
+    
     public void setIsJumping(bool b)
     {
         isInAir = b;
@@ -179,5 +184,31 @@ public class PlayerController : MonoBehaviour
     {
         return this.animator;
     }
+
+    public void won()
+    {
+        playerLogic.disableControls();
+        animator.SetBool("isWinner", true);
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isRunning", false);
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isJumping", false);
+
+    }
+
+    public void lose()
+    {
+        playerLogic.disableControls();
+        animator.SetBool("isLoser", true);
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isRunning", false);
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isJumping", false);
+
+    }
+
+
 }
 

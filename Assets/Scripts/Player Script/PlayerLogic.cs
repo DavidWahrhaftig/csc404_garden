@@ -25,6 +25,7 @@ public class PlayerLogic : MonoBehaviour
     private bool isGlowing = false; // for witch and hidden ability
     public bool isDisabled = false;
     public bool isHidden = false;
+    public bool isCaught = false;
 
     private PlayerController playerController;
 
@@ -44,20 +45,7 @@ public class PlayerLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDisabled)
-        {
-            selfRigidbody.useGravity = false;
-            if (!playerController.isInAir)
-            {
-                //Invoke("levitate", 1);
-                levitate();
-                playerController.isInAir = true;
-            }
-        }
-        else
-        {
-            selfRigidbody.useGravity = true;
-        }
+        
 
         if (isGlowing)
         {
@@ -68,13 +56,13 @@ public class PlayerLogic : MonoBehaviour
 
                 isGlowing = false;
                 lightTime = 10;
-                if (!isDisabled) { stopChasingMe(); }
+                if (!isCaught) { stopChasingMe(); }
 
             }
             if (isHidden)
             {
                 // change color back to ogColor and set isGlowing to false
-                // change witch state to chase
+                // Change witch state to patrol
                 stopChasingMe();
             }
         }
@@ -103,7 +91,7 @@ public class PlayerLogic : MonoBehaviour
             playerController.getAnimator().SetBool("isJumping", false);
         }
 
-        if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
+        if (collision.gameObject.name == enemyProjectile.name + "(Clone)") // TODO: change this, don't use Object name, maybe use Tag
         {
             chaseMe();
             playSound(hitSound);
@@ -112,10 +100,6 @@ public class PlayerLogic : MonoBehaviour
         }
     }
 
-    private void levitate()
-    {
-        selfRigidbody.AddForce(Vector3.up * 20);
-    }
 
     public void changeColor(Color color)
     {
@@ -130,10 +114,11 @@ public class PlayerLogic : MonoBehaviour
 
         // change witch state to 'Chase'
         Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
+        gameManager.setTargetPlayer(transform);
         witchAnimator.SetBool("isChasing", true);
         witchAnimator.SetBool("isIdle", false);
         witchAnimator.SetBool("isPatrolling", false);
-        gameManager.setTargetPlayer(transform);
+        
     }
     public void stopChasingMe()
     {
@@ -195,5 +180,22 @@ public class PlayerLogic : MonoBehaviour
         {
             audioSource.PlayOneShot(audio);
         }
+    }
+
+
+    public void gotCaught()
+    {
+        isCaught = true;
+    }
+
+    public void disableControls()
+    {
+        isDisabled = true;
+    }
+    public void enableControls()
+    {
+        isCaught = false;
+        isDisabled = false;
+        stopChasingMe();
     }
 }

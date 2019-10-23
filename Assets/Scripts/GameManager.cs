@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public float restartDelay = 1f;
+
 
     /***Texts ***/
+    [Header("UI Settings")]
     public TextMeshProUGUI fruitCounter1;
     public TextMeshProUGUI fruitCounter2;
     public TextMeshProUGUI shotTimer1;
@@ -18,18 +19,29 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameResult2;
 
     /*** Audio ***/
+    [Header("Game Audio Settings")]
     [SerializeField] AudioClip[] fruitSounds;
-    public AudioClip witchLaughSound, witchChasingSound, witchPatrollingSound, witchComplaningSound, witchIdleSound, gateOpenSound;
+    public AudioClip witchLaughSound;
+    public AudioClip witchChasingSound;
+    public AudioClip witchPatrollingSound;
+    public AudioClip witchComplaningSound;
+    public AudioClip witchIdleSound;
+    public AudioClip gateOpenSound;
 
+    [Header("Time Settings")]
     public float gameDuration = 60;
-    private float startTime;
-    private AudioSource audioSource;
+    public float restartDelay = 1f;
 
+    [Header("Game Objects Settings")]
     public Transform player1;
     public Transform player2;
     public Transform targetPlayer;
     public Transform witch;
     public Transform witchBase;
+
+
+    private float startTime;
+    private AudioSource audioSource;
 
     private float remainingTime;
 
@@ -93,23 +105,30 @@ public class GameManager : MonoBehaviour
             {
                 gameResult1.text = "Merlin's Apprentice";
                 gameResult2.text = "Unemployed";
+                player1.GetComponent<PlayerController>().won();
+                player2.GetComponent<PlayerController>().lose();
+
+
             }
             else if (player1.GetComponent<PlayerLogic>().getFruitCounter() < player2.GetComponent<PlayerLogic>().getFruitCounter())
             {
                 gameResult2.text = "Merlin's Apprentice";
                 gameResult1.text = "Unemployed";
+                player1.GetComponent<PlayerController>().lose();
+                player2.GetComponent<PlayerController>().won();
             }
             else
             {
                 gameResult1.text = "No One Likes Ties\nPlay Again";
                 gameResult2.text = "No One Likes Ties\nPlay Again";
+                player1.GetComponent<PlayerController>().lose();
+                player2.GetComponent<PlayerController>().lose();
             }
 
-            player1.GetComponent<PlayerController>().disableControls();
-            player2.GetComponent<PlayerController>().disableControls();
+            
 
-            // restart game when pressing A button
-            if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Jump") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Jump")) 
+            // restart game when pressing Y or triangle button
+            if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart")) 
             {
                 Restart();
             }
@@ -143,7 +162,7 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene("Milestone 2");
+        SceneManager.LoadScene(0); //game scene at index 0 until we get the menu scene
     }
 
     public Transform getTargetPlayer()
