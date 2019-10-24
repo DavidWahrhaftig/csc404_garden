@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         runButton = gamePadController.GetButton("Run");
         //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
 
-        if (!playerLogic.isDisabled && !playerLogic.isCaught)
+        if (!playerLogic.getIsDisabled() && !playerLogic.getIsCaught())
         {
             #region Idle & Walk Animation Transitions
             if (Mathf.Abs(moveVertical) > Mathf.Epsilon)
@@ -128,22 +128,7 @@ public class PlayerController : MonoBehaviour
                 Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
                 transform.rotation = Quaternion.LookRotation(newestDir);
             }*/
-        }
-
-        if (playerLogic.isCaught)
-        {
-            body.useGravity = false;
-            if (!isInAir)
-            {
-                //Invoke("levitate", 1);
-                levitate(); 
-                isInAir = true;
-            }
-        }
-        else
-        {
-            body.useGravity = true;
-        }
+        } 
     }
 
 
@@ -158,9 +143,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isRunning", false);
     }
 
-    private void levitate()
+    public void levitate()
     {
-        body.AddForce(Vector3.up * 20);
+        this.setGravity(false);
+        body.AddForce(transform.up * 7, ForceMode.Force);
+        isInAir = true;
     }
     
     public void setIsJumping(bool b)
@@ -209,6 +196,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void setGravity(bool b)
+    {
+        body.useGravity = b;
+    }
 
 }
 

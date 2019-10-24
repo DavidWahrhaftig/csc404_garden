@@ -55,7 +55,7 @@ public class CaptureBehaviour : StateMachineBehaviour
         targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", false);
         targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", true);
         targetPlayer.GetComponent<PlayerLogic>().spawn();
-        targetPlayer.GetComponent<PlayerLogic>().enableControls();
+        //targetPlayer.GetComponent<PlayerLogic>().enableControls(); moved to PlayerRespawnBehaviour.cs
     }
 
     private void centerOnPlayer(Transform t, Animator animator)

@@ -196,6 +196,16 @@ public class PlayerLogic : MonoBehaviour
     {
         isCaught = false;
         isDisabled = false;
-        stopChasingMe();
+        //stopChasingMe(); // moved to PlayerRespawnBehaviour.cs
+    }
+
+    public bool getIsCaught()
+    {
+        return this.isCaught;
+    }
+
+    public bool getIsDisabled()
+    {
+        return this.isDisabled;
     }
 }
