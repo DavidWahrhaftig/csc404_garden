@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System;
 public class GameManager : MonoBehaviour
 {
 
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI GameTimer;
     public TextMeshProUGUI gameResult1;
     public TextMeshProUGUI gameResult2;
+    public TextMeshProUGUI countDownUI;
 
     /*** Audio ***/
     [Header("Game Audio Settings")]
@@ -45,9 +46,16 @@ public class GameManager : MonoBehaviour
 
     private float remainingTime;
 
+    private float startCounterTime;
+    private float countDownDuration = 7.0f;
+    private float remainingCountDownTime;
+    private bool beginGame = false;
+
+
     private void Start()
     {
         remainingTime = gameDuration;
+        remainingCountDownTime = countDownDuration;
         audioSource = GetComponent<AudioSource>();
 
         // set initial game UI
@@ -57,13 +65,19 @@ public class GameManager : MonoBehaviour
         shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
         gameResult1.text = "";
         gameResult2.text = "";
+        GameTimer.text = "";
 
-        startTime = Time.time;
+        startCounterTime = Time.time;
 
         for (int i = 0; i < Input.GetJoystickNames().Length; i++)
         {
             Debug.Log(Input.GetJoystickNames()[i]);
         }
+
+
+        // disable both players
+        player1.GetComponent<PlayerLogic>().disableControls();
+        player2.GetComponent<PlayerLogic>().disableControls();
     }
 
     void Update()
@@ -81,12 +95,18 @@ public class GameManager : MonoBehaviour
         }
 
         /*** UI Updates ***/
-        updateLightBallChargeUI();
 
-        fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerLogic>().getFruitCounter();
-        fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerLogic>().getFruitCounter();
+        startCountDown();
 
-        updateTimer();
+        if (beginGame)
+        {
+            fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerLogic>().getFruitCounter();
+            fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerLogic>().getFruitCounter();
+
+            updateLightBallChargeUI();
+            updateTimer();
+        }
+
 
     }
 
@@ -125,16 +145,18 @@ public class GameManager : MonoBehaviour
                 player2.GetComponent<PlayerController>().lose();
             }
 
-            
+
 
             // restart game when pressing Y or triangle button
-            if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart")) 
+            if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart"))
             {
                 Restart();
             }
         }
         else
         {
+            if (Int32.Parse(seconds) < 10) { seconds = "0" + seconds; }
+
             GameTimer.text = minutes + ":" + seconds;
         }
     }
@@ -188,7 +210,7 @@ public class GameManager : MonoBehaviour
     public void playFruitSound()
     {
         if (fruitSounds.Length == 0) { return; } // if no sounds were added
-        int index = Random.Range(0, fruitSounds.Length);
+        int index = UnityEngine.Random.Range(0, fruitSounds.Length);
 
         if (!audioSource.isPlaying) // so it doesn't layer
         {
@@ -204,6 +226,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void startCountDown()
+    {
+
+        remainingCountDownTime = countDownDuration - (Time.time - startCounterTime);
+
+        string seconds = remainingCountDownTime.ToString("f0");
+
+
+        if (remainingCountDownTime > Mathf.Epsilon)
+        {
+
+            countDownUI.text = "Game Begins in \n" + seconds;
+
+        }
+        else
+        {
+            countDownUI.text = "";
+            if (!beginGame)
+            {
+                startTime = Time.time;
+                player1.GetComponent<PlayerLogic>().enableControls();
+                player2.GetComponent<PlayerLogic>().enableControls();
+            }
+
+            beginGame = true;
+        }
+    }
 
 
 }
