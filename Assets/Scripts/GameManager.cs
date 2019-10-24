@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
         // set initial game UI
         fruitCounter1.text = "Fruit Count: 0";
         fruitCounter2.text = "Fruit Count: 0";
-        shotTimer1.text = "Charge Full";
-        shotTimer2.text = "Charge Full";
+        shotTimer1.text = "Orb Ammo: " + player1.GetComponent<SpawnLightOrb>().getAmmo();
+        shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
         gameResult1.text = "";
         gameResult2.text = "";
 
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            shotTimer1.text = "Charge Full";
+            shotTimer1.text = "Orb Ammo: " + player1.GetComponent<SpawnLightOrb>().getAmmo();
         }
 
         if (player2.GetComponent<SpawnLightOrb>().getSpawnTimer() != player2.GetComponent<SpawnLightOrb>().getReloadTime())
@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            shotTimer2.text = "Charge Full";
+            shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
         }
     }
 

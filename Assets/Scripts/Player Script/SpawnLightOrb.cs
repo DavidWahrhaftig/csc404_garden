@@ -9,9 +9,15 @@ public class SpawnLightOrb : MonoBehaviour
     public GameObject firePoint;
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effectToSpawn;
+
+
     public float reloadTime = 15;
     private float spawnTimer;
-    private bool charge = true;
+    private bool charged = true;
+    public int ammoSize;
+    public int ammo;
+
+
     private PlayerLogic playerLogic;
     private PlayerController playerController;
 
@@ -24,6 +30,7 @@ public class SpawnLightOrb : MonoBehaviour
         spawnTimer = reloadTime;
         playerLogic = GetComponent<PlayerLogic>();
         playerController = GetComponent<PlayerController>();
+        ammo = ammoSize;
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -33,7 +40,7 @@ public class SpawnLightOrb : MonoBehaviour
     {
         gamePadController = playerController.getGamePadController(); // have to reference in Update method, else gamePadController is null
         bool shoot = gamePadController.GetButtonDown("Shoot");
-        if (charge)
+        if (charged)
         {
             if (shoot && !playerLogic.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
             {
@@ -42,7 +49,10 @@ public class SpawnLightOrb : MonoBehaviour
                     audioSource.PlayOneShot(shotSound);
                 }
                 CreateEffect();
-                charge = false;
+                ammo -= 1;
+
+                charged &= ammo > 0;
+                
             } 
             else if (shoot && playerLogic.getIsGlowing())
             {
@@ -54,7 +64,8 @@ public class SpawnLightOrb : MonoBehaviour
             spawnTimer -= Time.smoothDeltaTime;
             if (spawnTimer < 0)
             {
-                charge = true;
+                charged = true;
+                ammo = ammoSize;
                 spawnTimer = reloadTime;
             }
         }
@@ -85,5 +96,10 @@ public class SpawnLightOrb : MonoBehaviour
     public float getReloadTime()
     {
         return reloadTime;
+    }
+
+    public int getAmmo()
+    {
+        return ammo;
     }
 }
