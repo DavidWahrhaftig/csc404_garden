@@ -18819,6 +18819,71 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2999655317578931557}
+    - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: intensityInside
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: intensityOutside
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: spotAngle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: fallOffEnd
+      value: 6.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: fresnelPow
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: pluginVersion
+      value: 1730
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: coneRadiusStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: noiseMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: blendingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916354396881613227, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: intensityFromLight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
 --- !u!1001 &8040888721955977970
