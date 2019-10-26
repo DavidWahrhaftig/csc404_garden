@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     #region Controller Inputs
     float moveVertical;
+    float moveHorizontal;
     float rotateHorizontal;
     bool jumpButton;
     bool runButton;
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         moveVertical = gamePadController.GetAxis("Move Vertical");
+        moveHorizontal = gamePadController.GetAxis("Move Horizontal");
         rotateHorizontal = gamePadController.GetAxis("Rotate");
         jumpButton = gamePadController.GetButtonDown("Jump");
         runButton = gamePadController.GetButton("Run");
@@ -116,7 +118,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // forward/backward movement
-            body.MovePosition(transform.position + transform.TransformDirection(0f, 0f, moveVertical) * movingSpeed * Time.deltaTime);
+            body.MovePosition(transform.position + transform.TransformDirection(moveHorizontal, 0f, moveVertical) * movingSpeed * Time.deltaTime);
             // horizontal rotation movement
             transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
 
