@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
+
+    [SerializeField] int respawnTime = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,16 @@ public class Fruit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<PlayerLogic>().incrementFruitCounter();
-        Destroy(gameObject);
+
+        gameObject.SetActive(false);
+
+        Invoke("respawnFruit", respawnTime);
+
+        //Destroy(gameObject);
     }  
+
+    private void respawnFruit()
+    {
+        gameObject.SetActive(true);
+    }
 }
