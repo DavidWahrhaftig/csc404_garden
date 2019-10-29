@@ -9558,6 +9558,7 @@ MonoBehaviour:
   fireRate: 4
   impactPrefab: {fileID: 44115733770284271, guid: 06ab4ccbe9af64c70b21c7bfe302ddf1,
     type: 3}
+  ricochetLimit: 30
 --- !u!54 &6783445151134564090
 Rigidbody:
   m_ObjectHideFlags: 0
