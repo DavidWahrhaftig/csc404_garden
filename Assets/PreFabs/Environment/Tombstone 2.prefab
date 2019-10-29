@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7221167542598243954}
+  - component: {fileID: 4950239459875133717}
   m_Layer: 0
   m_Name: Tombstone 2
   m_TagString: Untagged
@@ -101,9 +102,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5939654473133646945}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.571167, y: -0.000000059604645, z: -38.515022}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7912948, y: 1.7912937, z: 1.7912943}
   m_Children:
   - {fileID: 422142204637248929}
   - {fileID: 7479571369929661931}
@@ -111,6 +112,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4950239459875133717
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939654473133646945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5111282, y: 1.0111282, z: 0.26118946}
+  m_Center: {x: 0.003426321, y: 0.47769722, z: -0.04651133}
 --- !u!1 &6964042434662211103
 GameObject:
   m_ObjectHideFlags: 0
