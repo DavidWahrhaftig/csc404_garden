@@ -17982,6 +17982,11 @@ PrefabInstance:
       propertyPath: playerSkin
       value: 
       objectReference: {fileID: 2605779948121221788}
+    - target: {fileID: 409387792847350204, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 409387792847350200, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: walkingSpeed
@@ -17997,6 +18002,11 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 409387792847350203, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: ammoSize
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 409387792626767205, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -18008,16 +18018,6 @@ PrefabInstance:
       value: 1.089
       objectReference: {fileID: 0}
     - target: {fileID: 409387792162432796, guid: 7a2e2dfb954e714419792a624c938f3a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 409387792847350203, guid: 7a2e2dfb954e714419792a624c938f3a,
-        type: 3}
-      propertyPath: ammoSize
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 409387792847350204, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -18443,6 +18443,11 @@ PrefabInstance:
       propertyPath: countDownUI
       value: 
       objectReference: {fileID: 1581497951}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: countDownDuration
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
 --- !u!114 &2999655317578931557 stripped

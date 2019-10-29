@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [Header("Time Settings")]
     public float gameDuration = 60;
     public float restartDelay = 1f;
+    public float countDownDuration = 7.0f;
 
     [Header("Game Objects Settings")]
     public Transform player1;
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
     private float remainingTime;
 
     private float startCounterTime;
-    private float countDownDuration = 7.0f;
+
     private float remainingCountDownTime;
     private bool beginGame = false;
 
