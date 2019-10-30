@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public Slider slider1;
     public Slider slider2;
 
+    public Image imageSlider1;
+    public Image imageSlider2;
+
     /*** Audio ***/
     [Header("Game Audio Settings")]
     [SerializeField] AudioClip[] fruitSounds;
@@ -54,12 +57,19 @@ public class GameManager : MonoBehaviour
     private float remainingCountDownTime;
     private bool beginGame = false;
 
+
+    private Color colorSlider1;
+    private Color colorSlider2;
     private float sliderLoadTime1;
     private float sliderLoadTime2;
 
 
     private void Start()
     {
+
+        colorSlider1 = imageSlider1.color;
+        colorSlider2 = imageSlider2.color;
+
         remainingTime = gameDuration;
         remainingCountDownTime = countDownDuration;
         audioSource = GetComponent<AudioSource>();
@@ -88,6 +98,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // updating Ammo sliders
         slidersUpdate();
 
         // Force Restart
@@ -129,7 +140,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            slider1.value = (Time.time - sliderLoadTime1) / player1.GetComponent<SpawnLightOrb>().reloadTime;
+            float percentage = (Time.time - sliderLoadTime1) / player1.GetComponent<SpawnLightOrb>().reloadTime;
+            imageSlider1.color = Color.Lerp(Color.yellow, colorSlider1, percentage);
+            slider1.value = percentage;
+
         }
 
         // slider 2
@@ -141,7 +155,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            slider2.value = (Time.time - sliderLoadTime2) / player2.GetComponent<SpawnLightOrb>().reloadTime;
+
+            float percentage = (Time.time - sliderLoadTime2) / player2.GetComponent<SpawnLightOrb>().reloadTime;
+            imageSlider2.color = Color.Lerp(Color.yellow, colorSlider2, percentage);
+            slider2.value = percentage;
         }
     }
 
