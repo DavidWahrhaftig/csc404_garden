@@ -7,12 +7,13 @@ public class Fruit : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] AudioClip[] fruitSounds;
-
+    GameManager gameManager;
     [SerializeField] int respawnTime = 10;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>(); 
         audioSource = GetComponent<AudioSource>();
         
     }
@@ -26,7 +27,7 @@ public class Fruit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<PlayerLogic>().incrementFruitCounter();
-        //playFruitSound();
+        gameManager.playFruitSound();
         gameObject.SetActive(false);
 
         Invoke("respawnFruit", respawnTime);
