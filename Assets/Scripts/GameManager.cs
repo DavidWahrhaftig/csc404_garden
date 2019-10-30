@@ -27,11 +27,6 @@ public class GameManager : MonoBehaviour
     /*** Audio ***/
     [Header("Game Audio Settings")]
     [SerializeField] AudioClip[] fruitSounds;
-    public AudioClip witchLaughSound;
-    public AudioClip witchChasingSound;
-    public AudioClip witchPatrollingSound;
-    public AudioClip witchComplaningSound;
-    public AudioClip witchIdleSound;
     public AudioClip gateOpenSound;
 
     [Header("Time Settings")]

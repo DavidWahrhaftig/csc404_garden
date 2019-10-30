@@ -5,10 +5,16 @@ using UnityEngine;
 public class Fruit : MonoBehaviour
 {
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip[] fruitSounds;
+    GameManager gameManager;
     [SerializeField] int respawnTime = 10;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>(); 
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -21,7 +27,7 @@ public class Fruit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<PlayerLogic>().incrementFruitCounter();
-
+        gameManager.playFruitSound();
         gameObject.SetActive(false);
 
         Invoke("respawnFruit", respawnTime);
@@ -32,5 +38,14 @@ public class Fruit : MonoBehaviour
     private void respawnFruit()
     {
         gameObject.SetActive(true);
+    }
+
+    private void playFruitSound()
+    {
+        if (fruitSounds.Length != 0)
+        {
+            int randomIndex = Random.Range(0, fruitSounds.Length);
+            audioSource.PlayOneShot(fruitSounds[randomIndex]);
+        }
     }
 }

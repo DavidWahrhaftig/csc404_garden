@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
     void Jump(float force, ForceMode type)
     {
         isInAir = true;
