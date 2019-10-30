@@ -615,7 +615,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409387792162432795}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &409387792162432797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409387792626767202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.018, y: 1.045, z: 0.584}
+  m_LocalPosition: {x: 0.018, y: 1.089, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4671575085030474738}
@@ -12298,10 +12298,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.42
   m_Height: 1.6
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8, z: 0.06}
+  m_Center: {x: 0, y: 0.81, z: 0.06}
 --- !u!82 &409387792847350201
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12471,9 +12471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePadID: 0
-  walkingSpeed: 5
-  rotationSpeed: 100
-  stamina: 20
+  walkingSpeed: 6
+  rotationSpeed: 200
+  stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 10
   forceType: 1
@@ -12497,7 +12497,7 @@ MonoBehaviour:
   vfx:
   - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
   reloadTime: 5
-  ammoSize: 0
+  ammoSize: 3
   ammo: 0
 --- !u!1 &8563897774222719841
 GameObject:

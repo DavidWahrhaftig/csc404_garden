@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
     public void levitate()
     {
         this.setGravity(false);
-        body.AddForce(transform.up * 7, ForceMode.Force);
+        body.AddForce(transform.up * 4, ForceMode.Force);
         isInAir = true;
     }
     

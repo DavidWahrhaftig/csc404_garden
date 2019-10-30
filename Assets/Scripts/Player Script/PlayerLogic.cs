@@ -27,6 +27,7 @@ public class PlayerLogic : MonoBehaviour
     public bool isHidden = false;
     public bool isCaught = false;
 
+    private float yRotation;
     private PlayerController playerController;
 
     // Start is called before the first frame update
@@ -40,6 +41,8 @@ public class PlayerLogic : MonoBehaviour
 
         gameManager = FindObjectOfType<GameManager>();
         playerController = GetComponent<PlayerController>();
+
+        yRotation = transform.rotation.y;
     }
 
     // Update is called once per frame
@@ -136,6 +139,7 @@ public class PlayerLogic : MonoBehaviour
     public void spawn()
     {
         transform.position = playerBase.position;
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
         playerController.getAnimator().SetBool("isGettingUp", true);
         //playerController.getAnimator().SetBool("isCaught", false);
     }
