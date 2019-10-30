@@ -69,6 +69,7 @@ public class PropelLightOrb : MonoBehaviour
             Destroy(gameObject);
         }
 
+        // Ricochet the light orb off any other surface
         else
         {
             ricochetLimit -= 1;
