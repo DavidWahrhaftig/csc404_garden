@@ -14,7 +14,7 @@ public class Fruit : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>(); 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -26,13 +26,16 @@ public class Fruit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<PlayerLogic>().incrementFruitCounter();
-        gameManager.playFruitSound();
-        gameObject.SetActive(false);
+        if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
+        {
+            other.GetComponent<PlayerLogic>().incrementFruitCounter();
+            gameManager.playFruitSound();
+            gameObject.SetActive(false);
 
-        Invoke("respawnFruit", respawnTime);
+            Invoke("respawnFruit", respawnTime);
 
-        //Destroy(gameObject);
+            //Destroy(gameObject);
+        }
     }  
 
     private void respawnFruit()
