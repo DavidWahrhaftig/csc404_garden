@@ -166,8 +166,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 20.7
+  m_Color: {r: 0.9379543, g: 0.76862746, b: 1, a: 1}
+  m_Intensity: 14.37
   m_Range: 6.94
   m_SpotAngle: 50
   m_InnerSpotAngle: 5
@@ -228,13 +228,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b69c542c9a8f4f44a3123e3fa103d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorFromLight: 1
+  colorFromLight: 0
   colorMode: 0
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0.70758855, g: 0.5518868, b: 1, a: 1}
   colorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 1, g: 0.5896226, b: 0.9719134, a: 1}
+    key1: {r: 0.4988186, g: 0, b: 0.5849056, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -262,12 +262,12 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   intensityFromLight: 0
   intensityModeAdvanced: 0
-  intensityInside: 0.92
-  intensityOutside: 0.92
+  intensityInside: 0.9
+  intensityOutside: 0.9
   blendingMode: 0
   spotAngleFromLight: 1
   spotAngle: 50
-  coneRadiusStart: 0.01
+  coneRadiusStart: 0
   geomMeshType: 0
   geomCustomSides: 18
   geomCustomSegments: 5
@@ -281,8 +281,8 @@ MonoBehaviour:
   cameraClippingDistance: 0.5
   glareFrontal: 0.5
   glareBehind: 0.5
-  fresnelPow: 8
-  noiseMode: 2
+  fresnelPow: 5.38
+  noiseMode: 0
   _DEPRECATED_NoiseEnabled: 0
   noiseIntensity: 0.3
   noiseScaleUseGlobal: 1
@@ -510,6 +510,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7988786761543207937}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: be6bfa93a15b07546803c35ae5ec52d4,
+        type: 3}
+      propertyPath: m_Name
+      value: Broom
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: be6bfa93a15b07546803c35ae5ec52d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -579,11 +584,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.010000011
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: be6bfa93a15b07546803c35ae5ec52d4,
-        type: 3}
-      propertyPath: m_Name
-      value: Broom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be6bfa93a15b07546803c35ae5ec52d4, type: 3}

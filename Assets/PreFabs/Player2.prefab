@@ -3019,7 +3019,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934262696465468765}
   m_LocalRotation: {x: -0.029955551, y: -0.04794072, z: 0.0014103372, w: -0.9984}
-  m_LocalPosition: {x: -0.11239624, y: 2.4035916, z: -4.572648}
+  m_LocalPosition: {x: -0.47, y: 2.4035916, z: -4.572648}
   m_LocalScale: {x: 100, y: 100, z: 100.00002}
   m_Children: []
   m_Father: {fileID: 6894260485427472820}
@@ -3075,7 +3075,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934262696465468765}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &1934262696465468763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3113,7 +3113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934262698003037988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.018, y: 1.045, z: 0.584}
+  m_LocalPosition: {x: 0.018, y: 1.003, z: 0.772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6894260485427472820}
@@ -10966,10 +10966,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 1.5
+  m_Radius: 0.42
+  m_Height: 1.6
   m_Direction: 1
-  m_Center: {x: 0, y: 0.75, z: 0.06}
+  m_Center: {x: 0, y: 0.81, z: 0.06}
 --- !u!82 &1934262697758032895
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11121,9 +11121,11 @@ MonoBehaviour:
     type: 3}
   lightTime: 1000
   hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
+  playerSkin: {fileID: 4539195912643860323}
   fruitCounter: 0
   isDisabled: 0
   isHidden: 0
+  isCaught: 0
 --- !u!114 &1934262697758032894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11137,9 +11139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePadID: 1
-  walkingSpeed: 10
+  walkingSpeed: 6
   rotationSpeed: 100
-  stamina: 20
+  stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 10
   forceType: 1
@@ -11163,6 +11165,8 @@ MonoBehaviour:
   vfx:
   - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
   reloadTime: 5
+  ammoSize: 3
+  ammo: 0
 --- !u!1 &7639172112738587085
 GameObject:
   m_ObjectHideFlags: 0

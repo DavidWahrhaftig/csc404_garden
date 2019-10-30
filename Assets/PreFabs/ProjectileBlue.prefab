@@ -9554,11 +9554,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3288e42658df34e49a274a895e595779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 65
+  speed: 25
   fireRate: 4
   impactPrefab: {fileID: 44115733770284271, guid: 06ab4ccbe9af64c70b21c7bfe302ddf1,
     type: 3}
-  ricochetLimit: 30
+  ricochetLimit: 15
 --- !u!54 &6783445151134564090
 Rigidbody:
   m_ObjectHideFlags: 0
