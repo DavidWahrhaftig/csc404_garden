@@ -435,6 +435,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4160684461137975911, guid: abd1bb638ae427a4e8ff1f061b416d2d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8667019642425493803, guid: abd1bb638ae427a4e8ff1f061b416d2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: abd1bb638ae427a4e8ff1f061b416d2d, type: 3}
@@ -3566,7 +3571,7 @@ PrefabInstance:
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
       propertyPath: countDownDuration
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
