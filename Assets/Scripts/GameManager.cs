@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameResult1;
     public TextMeshProUGUI gameResult2;
     public TextMeshProUGUI countDownUI;
+    public Slider slider1;
+    public Slider slider2;
 
     /*** Audio ***/
     [Header("Game Audio Settings")]
@@ -52,6 +54,9 @@ public class GameManager : MonoBehaviour
     private float remainingCountDownTime;
     private bool beginGame = false;
 
+    private float sliderLoadTime1;
+    private float sliderLoadTime2;
+
 
     private void Start()
     {
@@ -83,6 +88,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        slidersUpdate();
+
         // Force Restart
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -109,6 +116,33 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    private void slidersUpdate()
+    {
+        // slider 1
+        if (player1.GetComponent<SpawnLightOrb>().getAmmo() != 0)
+        {
+
+            slider1.value = (float) player1.GetComponent<SpawnLightOrb>().getAmmo() / player1.GetComponent<SpawnLightOrb>().ammoSize;
+            sliderLoadTime1 = Time.time;
+        }
+        else
+        {
+            slider1.value = (Time.time - sliderLoadTime1) / player1.GetComponent<SpawnLightOrb>().reloadTime;
+        }
+
+        // slider 2
+        if (player2.GetComponent<SpawnLightOrb>().getAmmo() != 0)
+        {
+
+            slider2.value = (float) player2.GetComponent<SpawnLightOrb>().getAmmo() / player2.GetComponent<SpawnLightOrb>().ammoSize;
+            sliderLoadTime2 = Time.time;
+        }
+        else
+        {
+            slider2.value = (Time.time - sliderLoadTime2) / player2.GetComponent<SpawnLightOrb>().reloadTime;
+        }
     }
 
     private void updateTimer()
