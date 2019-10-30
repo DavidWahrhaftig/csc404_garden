@@ -66,25 +66,16 @@ public class SphereCast : MonoBehaviour
                 {
                     //print("Ray Hit Player");
 
-                    gameManager.setTargetPlayer(hit2.collider.transform);
-
                     targetPlayer = hit2.collider.transform;
+                    gameManager.setTargetPlayer(targetPlayer);
+
+                    
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isChasing", false);
                     animator.SetBool("isPatrolling", false);
                     // if (player.isHidden) {animator.SetBool("isPatrolling", true); animator.SetBool("isCapturing", false);}
                     //else {
                     animator.SetBool("isCapturing", true);
-                }
-
-                if (Input.GetKeyDown(KeyCode.Space)) // to indicate a player is hidden
-                {
-                    //gameManager.setTargetPlayer(null);
-
-                    animator.SetBool("isIdle", false);
-                    animator.SetBool("isChasing", false);
-                    animator.SetBool("isPatrolling", true);
-                    animator.SetBool("isCapturing", false);
                 }
             }           
         } 

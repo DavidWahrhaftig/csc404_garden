@@ -11,6 +11,7 @@ public class PlayerLogic : MonoBehaviour
 
     public AudioClip hitSound;
 
+
     [SerializeField] SkinnedMeshRenderer playerSkin;
 
     private AudioSource audioSource;
@@ -30,9 +31,12 @@ public class PlayerLogic : MonoBehaviour
     private float yRotation;
     private PlayerController playerController;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         selfRigidbody = GetComponent<Rigidbody>();
 
@@ -171,7 +175,7 @@ public class PlayerLogic : MonoBehaviour
     public void incrementFruitCounter()
     {
         fruitCounter += 1;
-        gameManager.playFruitSound();
+        //gameManager.playFruitSound();
     }
     public void loseFruits()
     {
@@ -190,6 +194,10 @@ public class PlayerLogic : MonoBehaviour
     public void gotCaught()
     {
         isCaught = true;
+        animator.SetBool("isIdle", true);
+        animator.SetBool("isRunning", false);
+        animator.SetBool("isWalking", false);
+
     }
 
     public void disableControls()

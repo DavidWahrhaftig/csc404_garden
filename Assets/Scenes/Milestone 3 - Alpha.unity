@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21704605, g: 0.23681867, b: 0.19518709, a: 1}
+  m_IndirectSpecularColor: {r: 0.21707389, g: 0.2372204, b: 0.19531167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -358,6 +358,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1841404733916865344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &141835380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8794797215641511573, guid: b1a6684982ca84d48ab4e905f6dfecb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1065671936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &141835381
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141835380}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1001 &150224694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2058,6 +2102,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442588550807872298, guid: b1a6684982ca84d48ab4e905f6dfecb5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007060522262184306, guid: b1a6684982ca84d48ab4e905f6dfecb5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a6684982ca84d48ab4e905f6dfecb5, type: 3}
@@ -4345,6 +4399,11 @@ PrefabInstance:
       propertyPath: witchBase
       value: 
       objectReference: {fileID: 864186364}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: gameDuration
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
 --- !u!114 &2999655317578931557 stripped
@@ -4501,8 +4560,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988786761543207941, guid: 8a73bb831ea373a46ad004b1a7807539,
-        type: 3}
+    - target: {fileID: 499150029, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2999655317578931557}

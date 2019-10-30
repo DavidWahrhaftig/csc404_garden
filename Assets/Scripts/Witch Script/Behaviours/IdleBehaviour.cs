@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class IdleBehaviour : StateMachineBehaviour
 {
-    Vector3 newVector;
-    GameManager gameManager;
     public float movingSeed;
     [Range(0, 1)] public float rotationSpeed = 0.1f;
 
     private Vector3 direction;
     public bool finishedRotating;
 
+    Vector3 newVector;
+    GameManager gameManager;
+    WitchLogic witchLogic;
+
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        gameManager = animator.GetComponentInChildren<GameManagerReference>().gameManager;
+        witchLogic = animator.GetComponent<WitchLogic>();
+        gameManager = witchLogic.gameManager;
+
+        //witchLogic.playSound(witchLogic.idleSound);
+
         newVector = new Vector3(gameManager.getWitchBase().position.x, animator.transform.position.y, gameManager.getWitchBase().position.z);
         direction = newVector - animator.transform.position;
         finishedRotating = false;

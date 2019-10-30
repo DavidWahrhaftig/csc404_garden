@@ -9,14 +9,18 @@ public class CaptureBehaviour : StateMachineBehaviour
     public float waitTime = 3;
     private Transform targetPlayer;
     private CaptureWait waitScript;
+
+    WitchLogic witchLogic;
     GameManager gameManager;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        gameManager = FindObjectOfType<GameManager>();
+        witchLogic = animator.GetComponent<WitchLogic>();
+        gameManager = witchLogic.gameManager;
+
         targetPlayer = gameManager.getTargetPlayer();
-        gameManager.playSound(gameManager.witchLaughSound);
+        witchLogic.playSound(witchLogic.laughSound);
         //targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
         waitScript = animator.GetComponent<CaptureWait>();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
@@ -46,7 +50,7 @@ public class CaptureBehaviour : StateMachineBehaviour
 
         }
 
-        // TODO: Decrament slowly player fruitcount 
+        // TODO: Decrament player fruitcount slowly 
         targetPlayer.GetComponent<PlayerLogic>().loseFruits();
     }
 

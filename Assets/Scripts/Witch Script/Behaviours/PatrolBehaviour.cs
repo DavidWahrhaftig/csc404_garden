@@ -19,9 +19,15 @@ public class PatrolBehaviour : StateMachineBehaviour //the instance of the State
     private Vector3 direction;
     private PatrolWait waitScript;
 
+    WitchLogic witchLogic;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        witchLogic = animator.GetComponent<WitchLogic>();
+
+        //witchLogic.playSound(witchLogic.patrollingSound);
+
         patrolPositions = getRandomPositions(animator.transform);
         randomIndex = Random.Range(0, numOfPositions - 1);
         waitScript = animator.GetComponent<PatrolWait>();
