@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cac72f83ec706b4fa5ba5279cfbe2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 9
+  speed: 10
   rotationSpeed: 2
 --- !u!114 &-4356079155301106313
 MonoBehaviour:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfPositions: 6
   patrolRange: 12
-  patrolSpeedMin: 6
+  patrolSpeedMin: 8
   patrolSpeedMax: 10
   rotationSpeed: 0.1
   waitTime: 1
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc03410cca381745bd3abcb05386e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  captureSpeed: 3
+  captureSpeed: 3.5
   waitTime: 2
 --- !u!1102 &-266400141038051470
 AnimatorState:

@@ -118,6 +118,12 @@ public class GameManager : MonoBehaviour
         string minutes = ((int)remainingTime / 60).ToString();
         string seconds = (remainingTime % 60).ToString("f0");
 
+        if (seconds == "60")
+        {
+            seconds = "0";
+            minutes = ((int)Math.Ceiling(remainingTime) / 60).ToString();
+        }
+
 
         // winner detection
         if (remainingTime <= Mathf.Epsilon)
