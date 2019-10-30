@@ -4302,39 +4302,9 @@ PrefabInstance:
       objectReference: {fileID: 4418484}
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 5006512736381277259}
-    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
-        type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 883058672}
-    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
-        type: 3}
-      propertyPath: witch
-      value: 
-      objectReference: {fileID: 1623094623}
-    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
-        type: 3}
-      propertyPath: witchBase
-      value: 
-      objectReference: {fileID: 864186364}
-    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
-        type: 3}
-      propertyPath: gameDuration
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
-        type: 3}
       propertyPath: countDownUI
       value: 
       objectReference: {fileID: 1581497951}
-    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
-        type: 3}
-      propertyPath: countDownDuration
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
       propertyPath: slider1
@@ -4355,6 +4325,26 @@ PrefabInstance:
       propertyPath: imageSlider2
       value: 
       objectReference: {fileID: 601343773}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 5006512736381277259}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 883058672}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: witch
+      value: 
+      objectReference: {fileID: 1623094623}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: witchBase
+      value: 
+      objectReference: {fileID: 864186364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
 --- !u!114 &2999655317578931557 stripped
