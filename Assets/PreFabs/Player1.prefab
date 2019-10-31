@@ -12496,9 +12496,9 @@ MonoBehaviour:
   firePoint: {fileID: 409387792626767202}
   vfx:
   - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
-  reloadTime: 5
-  ammoSize: 3
-  ammo: 0
+  magicCharge: 100
+  magicShotPower: 20
+  reloadSpeed: 10
 --- !u!1 &8563897774222719841
 GameObject:
   m_ObjectHideFlags: 0

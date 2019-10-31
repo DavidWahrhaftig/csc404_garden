@@ -53,17 +53,9 @@ public class GameManager : MonoBehaviour
     private bool beginGame = false;
 
 
-    private Color colorSlider1;
-    private Color colorSlider2;
-    private float sliderLoadTime1;
-    private float sliderLoadTime2;
-
 
     private void Start()
     {
-
-        colorSlider1 = imageSlider1.color;
-        colorSlider2 = imageSlider2.color;
 
         remainingTime = gameDuration;
         remainingCountDownTime = countDownDuration;
@@ -72,8 +64,10 @@ public class GameManager : MonoBehaviour
         // set initial game UI
         fruitCounter1.text = "Fruit Count: 0";
         fruitCounter2.text = "Fruit Count: 0";
-        shotTimer1.text = "Orb Ammo: " + player1.GetComponent<SpawnLightOrb>().getAmmo();
-        shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
+        //shotTimer1.text = "Orb Ammo: " + player1.GetComponent<SpawnLightOrb>().getAmmo();
+        //shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
+        shotTimer1.text = "Magic Meter";
+        shotTimer2.text = "Magic Meter";
         gameResult1.text = "";
         gameResult2.text = "";
         GameTimer.text = "";
@@ -117,7 +111,7 @@ public class GameManager : MonoBehaviour
             fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerLogic>().getFruitCounter();
             fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerLogic>().getFruitCounter();
 
-            updateLightBallChargeUI();
+            //updateLightBallChargeUI();
             updateTimer();
         }
 
@@ -126,35 +120,8 @@ public class GameManager : MonoBehaviour
 
     private void slidersUpdate()
     {
-        // slider 1
-        if (player1.GetComponent<SpawnLightOrb>().getAmmo() != 0)
-        {
-
-            slider1.value = (float) player1.GetComponent<SpawnLightOrb>().getAmmo() / player1.GetComponent<SpawnLightOrb>().ammoSize;
-            sliderLoadTime1 = Time.time;
-        }
-        else
-        {
-            float percentage = (Time.time - sliderLoadTime1) / player1.GetComponent<SpawnLightOrb>().reloadTime;
-            imageSlider1.color = Color.Lerp(Color.yellow, colorSlider1, percentage);
-            slider1.value = percentage;
-
-        }
-
-        // slider 2
-        if (player2.GetComponent<SpawnLightOrb>().getAmmo() != 0)
-        {
-
-            slider2.value = (float) player2.GetComponent<SpawnLightOrb>().getAmmo() / player2.GetComponent<SpawnLightOrb>().ammoSize;
-            sliderLoadTime2 = Time.time;
-        }
-        else
-        {
-
-            float percentage = (Time.time - sliderLoadTime2) / player2.GetComponent<SpawnLightOrb>().reloadTime;
-            imageSlider2.color = Color.Lerp(Color.yellow, colorSlider2, percentage);
-            slider2.value = percentage;
-        }
+        slider1.value = player1.GetComponent<SpawnLightOrb>().magicCharge / 100f;
+        slider2.value = player2.GetComponent<SpawnLightOrb>().magicCharge / 100f;
     }
 
     private void updateTimer()
@@ -214,6 +181,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /*
     private void updateLightBallChargeUI()
     {
         if (player1.GetComponent<SpawnLightOrb>().getSpawnTimer() != player1.GetComponent<SpawnLightOrb>().getReloadTime())
@@ -234,6 +202,7 @@ public class GameManager : MonoBehaviour
             shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
         }
     }
+    */
 
     void Restart()
     {

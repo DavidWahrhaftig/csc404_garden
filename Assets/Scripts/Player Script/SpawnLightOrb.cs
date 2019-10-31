@@ -10,13 +10,20 @@ public class SpawnLightOrb : MonoBehaviour
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effectToSpawn;
 
-
+    /*
     public float reloadTime = 15;
     private float spawnTimer;
     private bool charged = true;
     public int ammoSize;
     public int ammo;
+    */
 
+    // Magic ORB Meter
+    [Range(0,100)]
+    public float magicCharge = 100f; // start at 100 percent
+    [Range(0,100)]
+    public float magicShotPower = 20f; // percent usage of shot
+    public float reloadSpeed = 10f; //  the time it takes to load the charge from 0% to 100%
 
     private PlayerLogic playerLogic;
     private PlayerController playerController;
@@ -27,10 +34,10 @@ public class SpawnLightOrb : MonoBehaviour
     void Start()
     {
         effectToSpawn = vfx[0];
-        spawnTimer = reloadTime;
+        //spawnTimer = reloadTime;
         playerLogic = GetComponent<PlayerLogic>();
         playerController = GetComponent<PlayerController>();
-        ammo = ammoSize;
+        //ammo = ammoSize;
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -39,7 +46,10 @@ public class SpawnLightOrb : MonoBehaviour
     void Update()
     {
         gamePadController = playerController.getGamePadController(); // have to reference in Update method, else gamePadController is null
+
         bool shoot = gamePadController.GetButtonDown("Shoot");
+
+        /*
         if (charged)
         {
             if (shoot && !playerLogic.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
@@ -69,7 +79,22 @@ public class SpawnLightOrb : MonoBehaviour
                 spawnTimer = reloadTime;
             }
         }
-        
+        */
+
+        if (magicCharge >= magicShotPower)
+        {
+            if (shoot && !playerLogic.getIsGlowing()) // only shoot when there is a charge and the player is not glowing
+            {
+                audioSource.PlayOneShot(shotSound);
+                CreateEffect();
+                magicCharge -= magicShotPower; // decrease charge
+            }
+        }
+
+        if (magicCharge < 100)
+        {
+            magicCharge += Time.deltaTime / reloadSpeed * 100;
+        }
     }
 
     void CreateEffect()
@@ -88,6 +113,7 @@ public class SpawnLightOrb : MonoBehaviour
         }
     }
 
+    /*
     public float getSpawnTimer()
     {
         return spawnTimer;
@@ -102,4 +128,5 @@ public class SpawnLightOrb : MonoBehaviour
     {
         return ammo;
     }
+    */
 }
