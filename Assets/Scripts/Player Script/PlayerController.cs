@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip walkingSound;
     public AudioClip jumpSound;
 
-
     #region Private Fields
     private AudioSource audioSource;
     private float movingSpeed;
@@ -41,6 +40,8 @@ public class PlayerController : MonoBehaviour
     float rotateHorizontal;
     bool jumpButton;
     bool runButton;
+    bool isCameraFlipped;
+    int flip = 1;
     #endregion
 
 
@@ -58,7 +59,6 @@ public class PlayerController : MonoBehaviour
 
         //defaultY = transform.position.y;
         movingSpeed = walkingSpeed;
-
     }
 
     /**
@@ -72,7 +72,13 @@ public class PlayerController : MonoBehaviour
         rotateHorizontal = gamePadController.GetAxis("Rotate");
         jumpButton = gamePadController.GetButtonDown("Jump");
         runButton = gamePadController.GetButton("Run");
+        isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
         //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
+
+        if (isCameraFlipped)
+        {
+            flip = flip * -1;
+        }
 
         if (!playerLogic.getIsDisabled() && !playerLogic.getIsCaught())
         {
@@ -118,7 +124,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // forward/backward movement
-            body.MovePosition(transform.position + transform.TransformDirection(moveHorizontal, 0f, moveVertical) * movingSpeed * Time.deltaTime);
+            body.MovePosition(transform.position + transform.TransformDirection(moveHorizontal * flip, 0f, moveVertical) * movingSpeed * Time.deltaTime);
             // horizontal rotation movement
             transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
 

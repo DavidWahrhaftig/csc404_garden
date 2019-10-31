@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 
-public class LookVertically : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     private Quaternion originalRotation;
     public float rotationSpeed = 20f;
     private Rewired.Player gamePadController;
+    float lookVertical;
+
+    bool cameraFlip;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,25 @@ public class LookVertically : MonoBehaviour
     void Update()
     {
         gamePadController = GetComponentInParent<PlayerController>().getGamePadController();
-        float lookVertical = gamePadController.GetAxis("Look Vertical");
+
+        lookVertical = gamePadController.GetAxis("Look Vertical");
+        cameraFlip = gamePadController.GetButtonDown("Camera Flip");
+
         transform.Rotate(rotationSpeed * lookVertical * Time.deltaTime, 0, 0);
+
+        if (cameraFlip)
+        {
+            // move camera in front/back of player
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1);
+            // flip camera
+            transform.Rotate(0f, 180, 0f, Space.World);
+
+
+
+            // inverse the horizontal movment and horizontal rotation in playercontroller
+        }
+
+
+
     }
 }
