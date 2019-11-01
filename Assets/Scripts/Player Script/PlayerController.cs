@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
 
             /*
-            if (Input.GetButton("CenterToBase" + gamePadID)) // Ceneter to base
+            if (centerToBase) // Ceneter to base
             {
                 Vector3 targetDir = playerLogic.playerBase.position - transform.position;
                 Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     public void levitate()
     {
         this.setGravity(false);
-        body.AddForce(transform.up * 4, ForceMode.Force);
+        body.AddForce(transform.up * 3, ForceMode.Force);
         isInAir = true;
     }
     

@@ -73,13 +73,7 @@ public class GameManager : MonoBehaviour
         GameTimer.text = "";
 
         startCounterTime = Time.time;
-
-        for (int i = 0; i < Input.GetJoystickNames().Length; i++)
-        {
-            Debug.Log(Input.GetJoystickNames()[i]);
-        }
-
-
+               
         // disable both players
         player1.GetComponent<PlayerLogic>().disableControls();
         player2.GetComponent<PlayerLogic>().disableControls();
@@ -87,16 +81,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // updating Ammo sliders
-        slidersUpdate();
 
-        // Force Restart
+
+        // Force Restart from Keyboard
         if (Input.GetKeyDown(KeyCode.R))
         {
             Restart();
         }
 
-        // Quit Game
+        // Quit Game from Keyboard
         if (Input.GetKey(KeyCode.Q))
         {
             Application.Quit();
@@ -106,12 +99,14 @@ public class GameManager : MonoBehaviour
 
         startCountDown();
 
+        // updating Ammo sliders
+        slidersUpdate();
+
         if (beginGame)
         {
             fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerLogic>().getFruitCounter();
             fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerLogic>().getFruitCounter();
 
-            //updateLightBallChargeUI();
             updateTimer();
         }
 
@@ -180,29 +175,6 @@ public class GameManager : MonoBehaviour
             GameTimer.text = minutes + ":" + seconds;
         }
     }
-
-    /*
-    private void updateLightBallChargeUI()
-    {
-        if (player1.GetComponent<SpawnLightOrb>().getSpawnTimer() != player1.GetComponent<SpawnLightOrb>().getReloadTime())
-        {
-            shotTimer1.text = "Charging ... " + player1.GetComponent<SpawnLightOrb>().getSpawnTimer().ToString("f0");
-        }
-        else
-        {
-            shotTimer1.text = "Orb Ammo: " + player1.GetComponent<SpawnLightOrb>().getAmmo();
-        }
-
-        if (player2.GetComponent<SpawnLightOrb>().getSpawnTimer() != player2.GetComponent<SpawnLightOrb>().getReloadTime())
-        {
-            shotTimer2.text = "Charging ... " + player2.GetComponent<SpawnLightOrb>().getSpawnTimer().ToString("f0");
-        }
-        else
-        {
-            shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
-        }
-    }
-    */
 
     void Restart()
     {

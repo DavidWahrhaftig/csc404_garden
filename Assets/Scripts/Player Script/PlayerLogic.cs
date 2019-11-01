@@ -23,7 +23,7 @@ public class PlayerLogic : MonoBehaviour
     private Color ogColor;
 
     //Flags
-    private bool isGlowing = false; // for witch and hidden ability
+    public bool isGlowing = false; // for witch and hidden ability
     public bool isDisabled = false;
     public bool isHidden = false;
     public bool isCaught = false;

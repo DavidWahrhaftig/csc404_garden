@@ -27,21 +27,19 @@ public class CameraController : MonoBehaviour
         lookVertical = gamePadController.GetAxis("Look Vertical");
         cameraFlip = gamePadController.GetButtonDown("Camera Flip");
 
-        transform.Rotate(rotationSpeed * lookVertical * Time.deltaTime, 0, 0);
+        transform.Rotate(rotationSpeed * lookVertical * Time.deltaTime, 0, 0); // camera vertical rotation
+        
 
         if (cameraFlip)
         {
             // move camera in front/back of player
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1);
+            
             // flip camera
             transform.Rotate(0f, 180, 0f, Space.World);
-
-
-
-            // inverse the horizontal movment and horizontal rotation in playercontroller
+            
+            // inverse the horizontal movment and horizontal rotation in PlayerController.cs
         }
-
-
-
+               
     }
 }

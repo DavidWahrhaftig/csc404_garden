@@ -3018,13 +3018,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934262696465468765}
-  m_LocalRotation: {x: -0.029955551, y: -0.04794072, z: 0.0014103372, w: -0.9984}
-  m_LocalPosition: {x: -0.47, y: 2.4035916, z: -4.572648}
+  m_LocalRotation: {x: 0.029989019, y: -0.0000007861768, z: 0.000026203701, w: 0.9995503}
+  m_LocalPosition: {x: 0, y: 2.4, z: -4.5}
   m_LocalScale: {x: 100, y: 100, z: 100.00002}
   m_Children: []
   m_Father: {fileID: 6894260485427472820}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 19, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.4370003, y: 0, z: 0.003}
 --- !u!20 &1934262696465468761
 Camera:
   m_ObjectHideFlags: 0
@@ -11123,6 +11123,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
   playerSkin: {fileID: 4539195912643860323}
   fruitCounter: 0
+  isGlowing: 0
   isDisabled: 0
   isHidden: 0
   isCaught: 0
@@ -11164,9 +11165,9 @@ MonoBehaviour:
   firePoint: {fileID: 1934262698003037988}
   vfx:
   - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
-  reloadTime: 5
-  ammoSize: 3
-  ammo: 0
+  magicCharge: 100
+  magicShotPower: 20
+  reloadSpeed: 10
 --- !u!1 &7639172112738587085
 GameObject:
   m_ObjectHideFlags: 0
