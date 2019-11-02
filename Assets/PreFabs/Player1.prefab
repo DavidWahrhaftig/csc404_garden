@@ -559,11 +559,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409387792162432795}
   m_LocalRotation: {x: 0.029989019, y: -0.0000007861768, z: 0.000026203701, w: 0.9995503}
-  m_LocalPosition: {x: -0.11239624, y: 2.4035916, z: -4.5}
+  m_LocalPosition: {x: 0, y: 2.4, z: -4.5}
   m_LocalScale: {x: 100, y: 100, z: 100.00002}
   m_Children: []
-  m_Father: {fileID: 4671575085030474738}
-  m_RootOrder: 5
+  m_Father: {fileID: 684054745367152225}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.4370003, y: 0, z: 0.003}
 --- !u!20 &409387792162432799
 Camera:
@@ -10478,6 +10478,37 @@ Transform:
   m_Father: {fileID: 4398416258805704566}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7309220734356135462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684054745367152225}
+  m_Layer: 0
+  m_Name: Camera Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684054745367152225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309220734356135462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 409387792162432794}
+  m_Father: {fileID: 4671575085030474738}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7309766479213343760
 GameObject:
   m_ObjectHideFlags: 0
@@ -12249,7 +12280,7 @@ Transform:
   - {fileID: 1800225225381632751}
   - {fileID: 4398416258805704566}
   - {fileID: 409387792626767205}
-  - {fileID: 409387792162432794}
+  - {fileID: 684054745367152225}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12455,6 +12486,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
   playerSkin: {fileID: 2416153754055146789}
   fruitCounter: 0
+  isGlowing: 0
   isDisabled: 0
   isHidden: 0
   isCaught: 0
