@@ -45,8 +45,8 @@ public class WitchLogic : MonoBehaviour
     public void stopChasing()
     {
         witchAnimator.SetBool("isChasing", false);
-        witchAnimator.SetBool("isIdle", false);
-        witchAnimator.SetBool("isPatrolling", true);
+        witchAnimator.SetBool("isIdle", true);
+        //witchAnimator.SetBool("isPatrolling", false);
 
         targetPlayer = null;
     }
@@ -65,4 +65,6 @@ public class WitchLogic : MonoBehaviour
     {
         return witchBase;
     }
+
+  
 }

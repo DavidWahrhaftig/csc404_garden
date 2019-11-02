@@ -26,6 +26,7 @@ public class PlayerLogic : MonoBehaviour
     public bool disabled = false;
     public bool hidden = false;
     public bool caught = false;
+    public bool canChase = true;
 
     private float yRotation;
     private PlayerController playerController;
@@ -196,4 +197,14 @@ public class PlayerLogic : MonoBehaviour
     {
         return this.disabled;
     }
+
+    public bool getCanChase()
+    {
+        return this.canChase;
+    }
+
+    public void setCanChase(bool b)
+    {
+        this.canChase = b;
+    } 
 }

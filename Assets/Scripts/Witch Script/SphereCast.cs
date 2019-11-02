@@ -68,21 +68,25 @@ public class SphereCast : MonoBehaviour
 
                     targetPlayer = hit2.collider.transform;
 
-                    if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != targetPlayer.gameObject)
+                    if (targetPlayer.GetComponent<PlayerLogic>().getCanChase())
                     {
-                        // caught a player while chasing another player
-                        witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().stopChasingMe();
-                        witchLogic.setTargetPlayer(targetPlayer);
+                        targetPlayer.GetComponent<PlayerLogic>().setCanChase(false);
+                        if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != targetPlayer.gameObject)
+                        {
+                            // caught a player while chasing another player
+                            witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().stopChasingMe();
+                            witchLogic.setTargetPlayer(targetPlayer);
+                        }
+                        else
+                        {
+                            witchLogic.setTargetPlayer(targetPlayer);
+                        }
+
+                        animator.SetBool("isIdle", false);
+                        animator.SetBool("isChasing", false);
+                        animator.SetBool("isPatrolling", false);
+                        animator.SetBool("isCapturing", true);
                     }
-                    else
-                    {
-                        witchLogic.setTargetPlayer(targetPlayer);
-                    }
-                    
-                    animator.SetBool("isIdle", false);
-                    animator.SetBool("isChasing", false);
-                    animator.SetBool("isPatrolling", false);
-                    animator.SetBool("isCapturing", true);
                 }
             }           
         } 

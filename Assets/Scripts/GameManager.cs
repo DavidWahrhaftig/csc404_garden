@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     public Transform player1;
     public Transform player2;
     public Transform witch;
-    public Transform witchBase;
 
 
     private float startTime;
@@ -182,10 +181,6 @@ public class GameManager : MonoBehaviour
         return this.witch;
     }
 
-    public Transform getWitchBase()
-    {
-        return witchBase;
-    }
 
     public void playFruitSound()
     {
