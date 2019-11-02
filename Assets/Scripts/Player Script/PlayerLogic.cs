@@ -8,7 +8,7 @@ public class PlayerLogic : MonoBehaviour
 
     public GameObject enemyProjectile;
 
-    public AudioClip hitSound;
+    public AudioClip hitSound, caughtSound;
 
 
     [SerializeField] SkinnedMeshRenderer playerSkin;
