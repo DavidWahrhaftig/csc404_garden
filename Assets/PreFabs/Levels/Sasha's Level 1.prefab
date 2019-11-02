@@ -1134,7 +1134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4882714343093579312}
   m_Layer: 0
-  m_Name: Sasha's Level
+  m_Name: Sasha's Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,7 +1309,7 @@ PrefabInstance:
     - target: {fileID: 4890356453399219846, guid: 9a16c59064224f142b77758c1d43a159,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.6505632
+      value: 7.29
       objectReference: {fileID: 0}
     - target: {fileID: 4890356453399219846, guid: 9a16c59064224f142b77758c1d43a159,
         type: 3}
@@ -2620,12 +2620,12 @@ PrefabInstance:
     - target: {fileID: 6507041282792217467, guid: f2ffe2e2e66ca0e448c06b8542006b33,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6576707
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6507041282792217467, guid: f2ffe2e2e66ca0e448c06b8542006b33,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.061668
+      value: 18.38
       objectReference: {fileID: 0}
     - target: {fileID: 6507041282792217467, guid: f2ffe2e2e66ca0e448c06b8542006b33,
         type: 3}
