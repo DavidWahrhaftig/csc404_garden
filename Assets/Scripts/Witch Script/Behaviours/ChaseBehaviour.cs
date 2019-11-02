@@ -33,7 +33,7 @@ public class ChaseBehaviour : StateMachineBehaviour
         animator.transform.LookAt(targetPosition); //Quaternion.Slerp(animator.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
         animator.transform.position = Vector3.MoveTowards(animator.transform.position, targetPosition, speed * Time.deltaTime);
 
-        if (target.GetComponent<PlayerLogic>().getIsHidden()) // to indicate a player is hidden
+        if (target.GetComponent<PlayerLogic>().isHidden()) // to indicate a player is hidden
         {
             //gameManager.setTargetPlayer(null);
             target.GetComponent<PlayerLogic>().stopChasingMe();

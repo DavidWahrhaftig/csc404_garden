@@ -7,7 +7,6 @@ public class PlayerLogic : MonoBehaviour
     public Transform playerBase;
 
     public GameObject enemyProjectile;
-    public float lightTime = 1000;
 
     public AudioClip hitSound;
 
@@ -23,10 +22,10 @@ public class PlayerLogic : MonoBehaviour
     private Color ogColor;
 
     //Flags
-    public bool isGlowing = false; // for witch and hidden ability
-    public bool isDisabled = false;
-    public bool isHidden = false;
-    public bool isCaught = false;
+    public bool glowing = false; // for witch and hidden ability
+    public bool disabled = false;
+    public bool hidden = false;
+    public bool caught = false;
 
     private float yRotation;
     private PlayerController playerController;
@@ -40,7 +39,6 @@ public class PlayerLogic : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         selfRigidbody = GetComponent<Rigidbody>();
 
-        //var playerRend = gameObject.GetComponent<Renderer>();
         ogColor = playerSkin.material.GetColor("_Color");
 
         gameManager = FindObjectOfType<GameManager>();
@@ -53,25 +51,9 @@ public class PlayerLogic : MonoBehaviour
     void Update()
     {
         
-
-        if (isGlowing)
+        if (glowing)
         {
-            lightTime -= Time.smoothDeltaTime;
-
-            if (lightTime < 0) // keep player lit up until timer runs out 
-            {
-
-                isGlowing = false;
-                lightTime = 10;
-                if (!isCaught) { stopChasingMe(); }
-
-            }
-            if (isHidden)
-            {
-                // change color back to ogColor and set isGlowing to false
-                // Change witch state to patrol
-                stopChasingMe();
-            }
+            if (hidden) { stopChasingMe(); }
         }
     }
 
@@ -85,25 +67,18 @@ public class PlayerLogic : MonoBehaviour
             Debug.Log("FruitCounter: " + fruitCounter);
         }
 
-        if (collision.transform.tag == "Witch")
-        {
-            audioSource.Stop();
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-            transform.position = playerBase.transform.position;
-        }
-
         if (collision.transform.tag == "Ground")
         {
-            playerController.isInAir = false;
+            playerController.setGrounded(true);
             playerController.getAnimator().SetBool("isJumping", false);
         }
 
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)") // TODO: change this, don't use Object name, maybe use Tag
         {
-            chaseMe();
             playSound(hitSound);
-
-            // disable this player from shooting?
+            chaseMe();
+            
+            // disable this player from shooting in SpawnLightOrb.cs 
         }
     }
 
@@ -117,7 +92,7 @@ public class PlayerLogic : MonoBehaviour
     public void chaseMe()
     {
         changeColor(Color.white);
-        isGlowing = true;
+        glowing = true;
 
         // change witch state to 'Chase'
         Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
@@ -130,14 +105,16 @@ public class PlayerLogic : MonoBehaviour
     public void stopChasingMe()
     {
         changeColor(ogColor);
-        isGlowing = false;
+        setGlowing(false);
+        setHidden(false);
+
         // change witch state to 'Patrol'
         Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
         witchAnimator.SetBool("isChasing", false);
         witchAnimator.SetBool("isIdle", false);
         witchAnimator.SetBool("isPatrolling", true);
         gameManager.setTargetPlayer(null);
-        isHidden = false;
+        
     }
 
     public void spawn()
@@ -148,24 +125,26 @@ public class PlayerLogic : MonoBehaviour
         //playerController.getAnimator().SetBool("isCaught", false);
     }
 
-    public bool getIsHidden()
+    public bool isHidden()
     {
-        return isHidden;
-    }
-    public void setIsHidden(bool b)
-    {
-        isHidden = b;
+        return hidden;
     }
 
-    public void setIsGlowing(bool b)
+    public void setHidden(bool b)
     {
-        isGlowing = b;
+        hidden = b;
     }
 
-    public bool getIsGlowing()
+    public bool isGlowing()
     {
-        return isGlowing;
+        return glowing;
     }
+
+    public void setGlowing(bool b)
+    {
+        glowing = b;
+    }
+
 
     public int getFruitCounter()
     {
@@ -193,7 +172,7 @@ public class PlayerLogic : MonoBehaviour
 
     public void gotCaught()
     {
-        isCaught = true;
+        caught = true;
         animator.SetBool("isIdle", true);
         animator.SetBool("isRunning", false);
         animator.SetBool("isWalking", false);
@@ -202,22 +181,23 @@ public class PlayerLogic : MonoBehaviour
 
     public void disableControls()
     {
-        isDisabled = true;
+        disabled = true;
     }
+
     public void enableControls()
     {
-        isCaught = false;
-        isDisabled = false;
+        caught = false;
+        disabled = false;
         //stopChasingMe(); // moved to PlayerRespawnBehaviour.cs
     }
 
-    public bool getIsCaught()
+    public bool isCaught()
     {
-        return this.isCaught;
+        return this.caught;
     }
 
-    public bool getIsDisabled()
+    public bool isDisabled()
     {
-        return this.isDisabled;
+        return this.disabled;
     }
 }

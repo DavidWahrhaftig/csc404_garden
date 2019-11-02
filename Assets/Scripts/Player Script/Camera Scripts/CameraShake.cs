@@ -24,7 +24,7 @@ public class CameraShake : MonoBehaviour
         shakeLeft = gamePadController.GetButtonDown("ShakeLeft");
         shakeRight = gamePadController.GetButtonDown("ShakeRight");
 
-        if (GetComponentInParent<PlayerLogic>().getIsCaught())
+        if (GetComponentInParent<PlayerLogic>().isCaught())
         {
             if (shakeLeft)
             {

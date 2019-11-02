@@ -26,7 +26,7 @@ public class Bush : MonoBehaviour
         if (gameManager.getTargetPlayer() != null && other.gameObject == gameManager.getTargetPlayer().gameObject)
         {
             playerLogic = gameManager.getTargetPlayer().GetComponent<PlayerLogic>();
-            playerLogic.setIsHidden(true);
+            playerLogic.setHidden(true);
             witchLogic.playSound(witchLogic.complaningSound);
             //gameManager.playSound(gameManager.witchComplaningSound);
         }
@@ -36,7 +36,7 @@ public class Bush : MonoBehaviour
     { 
         if (playerLogic != null)
         {
-            playerLogic.setIsHidden(false);
+            playerLogic.setHidden(false);
         }
         
     }

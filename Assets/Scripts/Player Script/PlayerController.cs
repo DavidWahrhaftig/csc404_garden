@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Jump Settings")]
     public float jumpForce;
     public ForceMode forceType;
-    public bool isInAir = false; // flag
+    public bool grounded = true; // flag
 
     [Header("Sound Settings")]
     public AudioClip walkingSound;
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             flip = flip * -1;
         }
 
-        if (!playerLogic.getIsDisabled() && !playerLogic.getIsCaught())
+        if (!playerLogic.isDisabled() && !playerLogic.isCaught())
         {
             #region Idle & Walk Animation Transitions
             if (Mathf.Abs(moveVertical) > Mathf.Epsilon)
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
             if (jumpButton)
             {
-                if (!isInAir)
+                if (grounded)
                 {
                     Jump(jumpForce, forceType);
                 }
@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump(float force, ForceMode type)
     {
-        isInAir = true;
+        setGrounded(false);
         playSound(jumpSound);
         body.AddForce(transform.up * force, type);
         animator.SetBool("isJumping", true);
@@ -154,14 +154,15 @@ public class PlayerController : MonoBehaviour
 
     public void levitate()
     {
-        this.setGravity(false);
+        setGravity(false);
+        setGrounded(false);
         body.AddForce(transform.up * 3, ForceMode.Force);
-        isInAir = true;
+        
     }
     
-    public void setIsJumping(bool b)
+    public void setGrounded(bool b)
     {
-        isInAir = b;
+        grounded = b;
     }
 
     public void playSound( AudioClip audio)
@@ -176,9 +177,15 @@ public class PlayerController : MonoBehaviour
     {
         return this.gamePadController;
     }
+
     public Animator getAnimator()
     {
         return this.animator;
+    }
+
+    public void setGravity(bool b)
+    {
+        body.useGravity = b;
     }
 
     public void won()
@@ -205,10 +212,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void setGravity(bool b)
-    {
-        body.useGravity = b;
-    }
+ 
 
 }
 
