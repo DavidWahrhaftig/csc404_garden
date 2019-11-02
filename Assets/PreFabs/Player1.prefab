@@ -558,7 +558,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409387792162432795}
-  m_LocalRotation: {x: 0.029989019, y: -0.0000007861768, z: 0.000026203701, w: 0.9995503}
+  m_LocalRotation: {x: 0.029988261, y: -0.0000007861768, z: 0.000026203701, w: 0.9995503}
   m_LocalPosition: {x: 0, y: 2.4, z: -4.5}
   m_LocalScale: {x: 100, y: 100, z: 100.00002}
   m_Children: []
@@ -10487,6 +10487,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684054745367152225}
+  - component: {fileID: 409387792372012987}
+  - component: {fileID: 409387792372012988}
   m_Layer: 0
   m_Name: Camera Holder
   m_TagString: Untagged
@@ -10509,6 +10511,37 @@ Transform:
   m_Father: {fileID: 4671575085030474738}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &409387792372012987
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309220734356135462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa56855d0c65e0d46b0b81a97cab7290, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &409387792372012988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309220734356135462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af88361fd4e62046827ec0697b40880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7309766479213343760
 GameObject:
   m_ObjectHideFlags: 0
@@ -12344,7 +12377,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
