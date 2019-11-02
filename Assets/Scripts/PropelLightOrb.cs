@@ -13,7 +13,7 @@ public class PropelLightOrb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class PropelLightOrb : MonoBehaviour
             // Keep the orb below a set y-value
             if (transform.position.y > 1.1f)
             {
-                transform.position = new Vector3(transform.position.x, 1.1f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
             }
 
             // Propel the orb forward
@@ -81,3 +81,4 @@ public class PropelLightOrb : MonoBehaviour
 
     }
 }
+
