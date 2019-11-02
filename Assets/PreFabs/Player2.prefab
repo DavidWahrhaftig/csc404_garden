@@ -10321,14 +10321,14 @@ MonoBehaviour:
   playerBase: {fileID: 0}
   enemyProjectile: {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501,
     type: 3}
-  lightTime: 1000
   hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
   playerSkin: {fileID: 3828045317082073837}
   fruitCounter: 0
-  isGlowing: 0
-  isDisabled: 0
-  isHidden: 0
-  isCaught: 0
+  glowing: 0
+  disabled: 0
+  hidden: 0
+  caught: 0
+  canChase: 1
 --- !u!114 &1240290768554598000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10348,7 +10348,7 @@ MonoBehaviour:
   centerToBaseSpeed: 10
   jumpForce: 10
   forceType: 1
-  isInAir: 0
+  grounded: 1
   walkingSound: {fileID: 8300000, guid: a8dddc5b010861e45b484854e54f6c0d, type: 3}
   jumpSound: {fileID: 8300000, guid: e499c9fbdfaa60b46ad0de941b570d93, type: 3}
 --- !u!114 &1240290768554598003
