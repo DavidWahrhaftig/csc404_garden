@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             flip = flip * -1;
         }
 
-        if (!playerLogic.isDisabled() && !playerLogic.isCaught())
+        if (!playerLogic.isDisabled())
         {
             #region Idle & Walk Animation Transitions
             if (Mathf.Abs(moveVertical) > Mathf.Epsilon)

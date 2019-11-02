@@ -77,8 +77,6 @@ public class PlayerLogic : MonoBehaviour
         {
             playSound(hitSound);
             chaseMe();
-            
-            // disable this player from shooting in SpawnLightOrb.cs 
         }
     }
 
@@ -91,30 +89,22 @@ public class PlayerLogic : MonoBehaviour
 
     public void chaseMe()
     {
-        changeColor(Color.white);
-        glowing = true;
+        WitchLogic witchLogic = gameManager.getWitch().GetComponent<WitchLogic>();
+        witchLogic.chase(transform);
 
-        // change witch state to 'Chase'
-        Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
-        gameManager.setTargetPlayer(transform);
-        witchAnimator.SetBool("isChasing", true);
-        witchAnimator.SetBool("isIdle", false);
-        witchAnimator.SetBool("isPatrolling", false);
-        
+        changeColor(Color.white);
+        setGlowing(true); // disable this player from shooting in SpawnLightOrb.cs 
+
     }
+
     public void stopChasingMe()
     {
+        WitchLogic witchLogic = gameManager.getWitch().GetComponent<WitchLogic>();
+        witchLogic.stopChasing();
+
         changeColor(ogColor);
         setGlowing(false);
-        setHidden(false);
-
-        // change witch state to 'Patrol'
-        Animator witchAnimator = gameManager.getWitch().GetComponent<Animator>();
-        witchAnimator.SetBool("isChasing", false);
-        witchAnimator.SetBool("isIdle", false);
-        witchAnimator.SetBool("isPatrolling", true);
-        gameManager.setTargetPlayer(null);
-        
+        setHidden(false);        
     }
 
     public void spawn()
@@ -173,6 +163,7 @@ public class PlayerLogic : MonoBehaviour
     public void gotCaught()
     {
         caught = true;
+        disabled = true;
         animator.SetBool("isIdle", true);
         animator.SetBool("isRunning", false);
         animator.SetBool("isWalking", false);
@@ -194,6 +185,11 @@ public class PlayerLogic : MonoBehaviour
     public bool isCaught()
     {
         return this.caught;
+    }
+
+    public void setCaught(bool b)
+    {
+        this.caught = b;
     }
 
     public bool isDisabled()

@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 using System;
 public class GameManager : MonoBehaviour
 {
-
-
-
-    /***Texts ***/
+    /***UI Texts ***/
     [Header("UI Settings")]
     public TextMeshProUGUI fruitCounter1;
     public TextMeshProUGUI fruitCounter2;
@@ -37,7 +34,6 @@ public class GameManager : MonoBehaviour
     [Header("Game Objects Settings")]
     public Transform player1;
     public Transform player2;
-    public Transform targetPlayer;
     public Transform witch;
     public Transform witchBase;
 
@@ -100,7 +96,7 @@ public class GameManager : MonoBehaviour
         startCountDown();
 
         // updating Ammo sliders
-        slidersUpdate();
+        updateSliders();
 
         if (beginGame)
         {
@@ -113,7 +109,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void slidersUpdate()
+    private void updateSliders()
     {
         slider1.value = player1.GetComponent<SpawnLightOrb>().magicCharge / 100f;
         slider2.value = player2.GetComponent<SpawnLightOrb>().magicCharge / 100f;
@@ -179,16 +175,6 @@ public class GameManager : MonoBehaviour
     void Restart()
     {
         SceneManager.LoadScene(0); //game scene at index 0 until we get the menu scene
-    }
-
-    public Transform getTargetPlayer()
-    {
-        return this.targetPlayer;
-    }
-
-    public void setTargetPlayer(Transform target)
-    {
-        this.targetPlayer = target;
     }
 
     public Transform getWitch()

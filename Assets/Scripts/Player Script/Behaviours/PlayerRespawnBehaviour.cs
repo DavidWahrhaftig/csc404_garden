@@ -11,7 +11,7 @@ public class PlayerRespawnBehaviour : StateMachineBehaviour
     {
         playerLogic = animator.transform.GetComponent<PlayerLogic>();
         playerController = animator.transform.GetComponent<PlayerController>();
-        //playerLogic.setIsCaught(false);
+        playerLogic.setCaught(false);
         playerController.setGravity(true);
         playerLogic.stopChasingMe();
     }

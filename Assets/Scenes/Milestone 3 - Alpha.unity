@@ -4039,7 +4039,7 @@ PrefabInstance:
     - target: {fileID: 4671575085030474738, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.03
+      value: -31.14
       objectReference: {fileID: 0}
     - target: {fileID: 4671575085030474738, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
@@ -4569,5 +4569,9 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2999655317578931557}
+    - target: {fileID: 499150029, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
+      propertyPath: witchBase
+      value: 
+      objectReference: {fileID: 864186364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}

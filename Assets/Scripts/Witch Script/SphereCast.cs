@@ -22,16 +22,16 @@ public class SphereCast : MonoBehaviour
     private Light lightComponent;
     private Animator animator; 
 
-    private GameManager gameManager;
+    private WitchLogic witchLogic;
 
     // Start is called before the first frame update
     void Start()
     {
-        //parent = transform.parent;
-        gameManager = FindObjectOfType<GameManager>();
-        oscillator = GetComponent<Oscillator>();
+        witchLogic = GetComponentInParent<WitchLogic>();
+        //oscillator = GetComponent<Oscillator>();
         lightComponent = GetComponent<Light>();
         animator = GetComponent<Animator>();
+
         if (animator == null)
         {
             animator = transform.parent.transform.GetComponent<Animator>();
@@ -62,19 +62,26 @@ public class SphereCast : MonoBehaviour
                 currentHitObject = hit2.transform.gameObject;
                 currentHitDistance = hit2.distance + sphereRadius; //to use sphere as a semisphere
 
-                if ((gameManager.getTargetPlayer() != null && hit2.collider.gameObject == gameManager.getTargetPlayer().gameObject) || (hit2.collider.tag == "Player1" || hit2.collider.tag == "Player2")) // TODO: gameManager.isPlayer(hit2.collider) 
+                if (hit2.collider.tag == "Player1" || hit2.collider.tag == "Player2") 
                 {
                     //print("Ray Hit Player");
 
                     targetPlayer = hit2.collider.transform;
-                    gameManager.setTargetPlayer(targetPlayer);
 
+                    if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != targetPlayer.gameObject)
+                    {
+                        // caught a player while chasing another player
+                        witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().stopChasingMe();
+                        witchLogic.setTargetPlayer(targetPlayer);
+                    }
+                    else
+                    {
+                        witchLogic.setTargetPlayer(targetPlayer);
+                    }
                     
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isChasing", false);
                     animator.SetBool("isPatrolling", false);
-                    // if (player.isHidden) {animator.SetBool("isPatrolling", true); animator.SetBool("isCapturing", false);}
-                    //else {
                     animator.SetBool("isCapturing", true);
                 }
             }           

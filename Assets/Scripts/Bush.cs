@@ -4,40 +4,22 @@ using UnityEngine;
 
 public class Bush : MonoBehaviour
 {
-    private WitchLogic witchLogic;
-    private GameManager gameManager;
-    PlayerLogic playerLogic;
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerStay(Collider other)
     {
-        witchLogic = FindObjectOfType<WitchLogic>();
-        gameManager = FindObjectOfType<GameManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (gameManager.getTargetPlayer() != null && other.gameObject == gameManager.getTargetPlayer().gameObject)
+        if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
-            playerLogic = gameManager.getTargetPlayer().GetComponent<PlayerLogic>();
+            PlayerLogic playerLogic = other.GetComponent<PlayerLogic>();
             playerLogic.setHidden(true);
-            witchLogic.playSound(witchLogic.complaningSound);
-            //gameManager.playSound(gameManager.witchComplaningSound);
         }
     }
 
     private void OnTriggerExit(Collider other)
-    { 
-        if (playerLogic != null)
+    {
+        if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
+            PlayerLogic playerLogic = other.GetComponent<PlayerLogic>();
             playerLogic.setHidden(false);
         }
-        
+
     }
 }

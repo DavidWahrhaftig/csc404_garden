@@ -11,18 +11,16 @@ public class IdleBehaviour : StateMachineBehaviour
     public bool finishedRotating;
 
     Vector3 newVector;
-    GameManager gameManager;
     WitchLogic witchLogic;
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         witchLogic = animator.GetComponent<WitchLogic>();
-        gameManager = witchLogic.gameManager;
 
         //witchLogic.playSound(witchLogic.idleSound);
 
-        newVector = new Vector3(gameManager.getWitchBase().position.x, animator.transform.position.y, gameManager.getWitchBase().position.z);
+        newVector = new Vector3(witchLogic.getWitchBase().position.x, animator.transform.position.y, witchLogic.getWitchBase().position.z);
         direction = newVector - animator.transform.position;
         finishedRotating = false;
     }
@@ -52,7 +50,7 @@ public class IdleBehaviour : StateMachineBehaviour
                 animator.transform.position = Vector3.MoveTowards(animator.transform.position, newVector, movingSeed * Time.deltaTime);
             }
         }
-        // when reaching base, chagne state to 'Patrol'
+        // when reaching base, change state to 'Patrol'
         else
         {
             animator.SetBool("isIdle", false);

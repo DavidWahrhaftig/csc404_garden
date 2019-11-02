@@ -16,26 +16,21 @@ public class CaptureBehaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        witchLogic = animator.GetComponent<WitchLogic>();
-        gameManager = witchLogic.gameManager;
-
-        targetPlayer = gameManager.getTargetPlayer();
-        witchLogic.playSound(witchLogic.laughSound);
-        //targetPlayer = animator.GetComponent<SphereCast>().targetPlayer;
         waitScript = animator.GetComponent<CaptureWait>();
+
+        witchLogic = animator.GetComponent<WitchLogic>();
+        targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
+        witchLogic.playSound(witchLogic.laughSound);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //oscillator.isOscillating = false; // stop floating
-
         
         if (animator.transform.position.x != targetPlayer.position.x && animator.transform.position.z != targetPlayer.position.z)
         {
             centerOnPlayer(targetPlayer, animator);
-            //oscillator.isOscillating = true; // float on the spot
 
             // pause for a little while before moving back to Idle state
             Debug.Log("before CoRouting");            
@@ -43,6 +38,7 @@ public class CaptureBehaviour : StateMachineBehaviour
         else
         {
             waitScript.DoCoroutine(waitTime);
+
             targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", true);
             targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", false);
             targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isWalking", false);
@@ -59,6 +55,8 @@ public class CaptureBehaviour : StateMachineBehaviour
         targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", false);
         targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", true);
         targetPlayer.GetComponent<PlayerLogic>().spawn();
+
+        witchLogic.stopChasing();
         //targetPlayer.GetComponent<PlayerLogic>().enableControls(); moved to PlayerRespawnBehaviour.cs
     }
 
