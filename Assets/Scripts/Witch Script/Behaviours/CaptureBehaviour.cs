@@ -38,7 +38,7 @@ public class CaptureBehaviour : StateMachineBehaviour
         else
         {
             waitScript.DoCoroutine(waitTime);
-
+            targetPlayer.GetComponent<PlayerLogic>().playSound(targetPlayer.GetComponent<PlayerLogic>().caughtSound);
             targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", true);
             targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", false);
             targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isWalking", false);
