@@ -147,9 +147,9 @@ public class PlayerLogic : MonoBehaviour
         fruitCounter += 1;
         //gameManager.playFruitSound();
     }
-    public void loseFruits()
+    public void loseFruits(int numfruits)
     {
-        fruitCounter = 0;
+        fruitCounter -= numfruits;
     }
 
     public void playSound(AudioClip audio)

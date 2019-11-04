@@ -4101,6 +4101,11 @@ PrefabInstance:
       propertyPath: caughtSound
       value: 
       objectReference: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
+    - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: glowing
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e2dfb954e714419792a624c938f3a, type: 3}
 --- !u!1001 &1841404733916865344

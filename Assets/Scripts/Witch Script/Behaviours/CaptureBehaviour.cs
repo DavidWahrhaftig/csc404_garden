@@ -13,6 +13,11 @@ public class CaptureBehaviour : StateMachineBehaviour
     WitchLogic witchLogic;
     GameManager gameManager;
 
+    public float fruitDropTime = 0.75f;
+
+    private float dropTimer;
+    public bool canPlayerResist = false;
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
@@ -22,6 +27,9 @@ public class CaptureBehaviour : StateMachineBehaviour
         targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
         witchLogic.playSound(witchLogic.laughSound);
+
+
+        dropTimer = fruitDropTime;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,35 +38,65 @@ public class CaptureBehaviour : StateMachineBehaviour
         
         if (animator.transform.position.x != targetPlayer.position.x && animator.transform.position.z != targetPlayer.position.z)
         {
-            centerOnPlayer(targetPlayer, animator);
-
-            // pause for a little while before moving back to Idle state
-            Debug.Log("before CoRouting");            
+            centerOnPlayer(targetPlayer, animator);      
         }
         else
         {
-            waitScript.DoCoroutine(waitTime);
-            targetPlayer.GetComponent<PlayerLogic>().playSound(targetPlayer.GetComponent<PlayerLogic>().caughtSound);
-            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", true);
-            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", false);
-            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isWalking", false);
-            targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isRunning", false);
+            if (!canPlayerResist)
+            {
+                targetPlayer.GetComponent<PlayerLogic>().playSound(targetPlayer.GetComponent<PlayerLogic>().caughtSound);
+                targetPlayer.GetComponent<Animator>().SetBool("isCaught", true);
+                targetPlayer.GetComponent<Animator>().SetBool("isIdle", false);
+                targetPlayer.GetComponent<Animator>().SetBool("isWalking", false);
+                targetPlayer.GetComponent<Animator>().SetBool("isRunning", false);
+            }
 
+            canPlayerResist = true;
+            
         }
 
-        // TODO: Decrament player fruitcount slowly 
-        targetPlayer.GetComponent<PlayerLogic>().loseFruits();
+        // TODO: Decrament player fruitcount slowly
+        // targetPlayer.caught = true;  // so player cannot 
+
+        if (canPlayerResist)
+        {
+            // start decremeanting fruits slowly (1 every 0.75 seconds)
+            dropTimer -= Time.deltaTime;
+
+            if (dropTimer < Mathf.Epsilon)
+            {
+                if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() != 0)
+                {
+                    targetPlayer.GetComponent<PlayerLogic>().loseFruits(1);
+                }
+                
+                dropTimer = fruitDropTime;
+            }
+
+            if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() == 0)
+            {
+                // when player fruit count reaches zero, respawn player to base
+                waitScript.DoCoroutine(waitTime);
+                
+            }    
+        }
+        
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
         targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", false);
-        targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isIdle", true);
-        targetPlayer.GetComponent<PlayerLogic>().spawn();
+        targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isGettingUp", true);
+        //targetPlayer.GetComponent<PlayerLogic>().spawn();
 
         witchLogic.stopChasing();
+
+        canPlayerResist = false;
         //targetPlayer.GetComponent<PlayerLogic>().enableControls(); moved to PlayerRespawnBehaviour.cs
     }
+
+
+
 
     private void centerOnPlayer(Transform t, Animator animator)
     {
