@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLogic : MonoBehaviour
 {
-    public Transform playerBase;
+    [SerializeField] Transform playerBase;
 
     public GameObject enemyProjectile;
 
@@ -23,14 +23,13 @@ public class PlayerLogic : MonoBehaviour
 
     //Flags
     public bool glowing = false; // for witch and hidden ability
-    public bool disabled = false;
-    public bool hidden = false;
-    public bool caught = false;
+    public bool disabled = false; // controls 
+    public bool hidden = false; 
+    public bool caught = false; 
     public bool canBeChased = true;
 
-    private float yRotation;
+    private Vector3 originalRotation;
     private PlayerController playerController;
-
     private Animator animator;
 
     // Start is called before the first frame update
@@ -45,7 +44,7 @@ public class PlayerLogic : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         playerController = GetComponent<PlayerController>();
 
-        yRotation = transform.rotation.y;
+        originalRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
     }
 
     // Update is called once per frame
@@ -77,7 +76,12 @@ public class PlayerLogic : MonoBehaviour
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)") // TODO: change this, don't use Object name, maybe use Tag
         {
             playSound(hitSound);
-            chaseMe();
+
+            if (getCanBeChased())
+            {
+                chaseMe();
+            }
+            
         }
     }
 
@@ -106,16 +110,11 @@ public class PlayerLogic : MonoBehaviour
         changeColor(ogColor);
         setGlowing(false);
         setHidden(false);
-
-        //setCanBeChased(true);
     }
 
     public void spawn()
     {
-        transform.position = playerBase.position;
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
         playerController.getAnimator().SetBool("isGettingUp", true);
-        //playerController.getAnimator().SetBool("isCaught", false);
     }
 
     public bool isHidden()
@@ -137,7 +136,6 @@ public class PlayerLogic : MonoBehaviour
     {
         glowing = b;
     }
-
 
     public int getFruitCounter()
     {
@@ -209,4 +207,16 @@ public class PlayerLogic : MonoBehaviour
     {
         this.canBeChased = b;
     } 
+
+    public Transform getPlayerBase()
+    {
+        return this.playerBase;
+    }
+
+    public Quaternion getOriginalRotation()
+    {
+        return Quaternion.Euler(originalRotation.x, originalRotation.y, originalRotation.z);
+    }
 }
+
+

@@ -9,7 +9,12 @@ public class PlayerRespawnBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
+
         playerLogic = animator.transform.GetComponent<PlayerLogic>();
+        animator.transform.position = playerLogic.getPlayerBase().position;
+        //animator.transform.rotation = playerLogic.getOriginalRotation();
+
         playerController = animator.transform.GetComponent<PlayerController>();
         playerLogic.setCaught(false);
         playerController.setGravity(true);
@@ -21,6 +26,7 @@ public class PlayerRespawnBehaviour : StateMachineBehaviour
         // changing state to Idle, so player is not caught anymore and then controls get enabled
         //playerLogic.setIsCaught(false); 
         playerLogic.enableControls(); // transition to Idle state so controls are enabled
-        playerLogic.setCanBeChased(true);
+        playerLogic.setCanBeChased(true); // witch can chase and capture this player again
+        animator.SetBool("isGettingUp", false);
     }
 }

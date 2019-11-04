@@ -57,6 +57,7 @@ public class SphereCast : MonoBehaviour
             // radius = distance to collider * tan(spotlight angle / 2) --> using half the angle to obtain a right angle
             sphereRadius = hit1.distance * Mathf.Tan(Mathf.Deg2Rad * (this.lightComponent.spotAngle/2));
             distance1 = hit1.distance;
+
             if (Physics.SphereCast(origin, sphereRadius, direction, out hit2, hit1.distance, layerMask, QueryTriggerInteraction.UseGlobal))
             {
                 currentHitObject = hit2.transform.gameObject;
@@ -67,22 +68,21 @@ public class SphereCast : MonoBehaviour
                     //print("Ray Hit Player");
 
                     player = hit2.collider.transform;
-
-                    // is this player chasable? AND is the other not currently being captured?
-                    if (player.GetComponent<PlayerLogic>().getCanBeChased() && !witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().isCaught())
+                    
+                    
+                    if (canCapture(player))
                     {
-                        
                         if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != player.gameObject)
                         {
                             // caught a player while chasing another player
-                            
+
                             PlayerLogic otherPlayer = witchLogic.getTargetPlayer().GetComponent<PlayerLogic>();
                             otherPlayer.stopChasingMe();
                         }
 
                         player.GetComponent<PlayerLogic>().setCanBeChased(false);
                         witchLogic.setTargetPlayer(player);
-                        
+
 
 
                         animator.SetBool("isIdle", false);
@@ -93,6 +93,27 @@ public class SphereCast : MonoBehaviour
                 }
             }           
         } 
+    }
+
+    private bool canCapture(Transform player)
+    {
+        // capture only if player can be chased
+        if (player.GetComponent<PlayerLogic>().getCanBeChased())
+        {
+            if (witchLogic.getTargetPlayer() == null)
+            {
+                // no witch target, then player can be captured
+                return true;
+            }
+            else if (!witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().isCaught())
+            {
+                // no player is being captured
+                return true;
+            }
+            
+        }
+
+        return false;
     }
 
     private void OnDrawGizmos()
