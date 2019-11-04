@@ -26,7 +26,7 @@ public class PlayerLogic : MonoBehaviour
     public bool disabled = false;
     public bool hidden = false;
     public bool caught = false;
-    public bool canChase = true;
+    public bool canBeChased = true;
 
     private float yRotation;
     private PlayerController playerController;
@@ -105,7 +105,9 @@ public class PlayerLogic : MonoBehaviour
 
         changeColor(ogColor);
         setGlowing(false);
-        setHidden(false);        
+        setHidden(false);
+
+        //setCanBeChased(true);
     }
 
     public void spawn()
@@ -198,13 +200,13 @@ public class PlayerLogic : MonoBehaviour
         return this.disabled;
     }
 
-    public bool getCanChase()
+    public bool getCanBeChased()
     {
-        return this.canChase;
+        return this.canBeChased;
     }
 
-    public void setCanChase(bool b)
+    public void setCanBeChased(bool b)
     {
-        this.canChase = b;
+        this.canBeChased = b;
     } 
 }

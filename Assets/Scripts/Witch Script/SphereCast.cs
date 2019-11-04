@@ -13,7 +13,7 @@ public class SphereCast : MonoBehaviour
     public float angle;
     public float currentHitDistance; // for debugging
     public float distance1;
-    public Transform targetPlayer;
+    public Transform player;
    
     private Vector3 origin; // position of this gameObject
     private Vector3 direction; // the direction to shoot raycast
@@ -66,21 +66,24 @@ public class SphereCast : MonoBehaviour
                 {
                     //print("Ray Hit Player");
 
-                    targetPlayer = hit2.collider.transform;
+                    player = hit2.collider.transform;
 
-                    if (targetPlayer.GetComponent<PlayerLogic>().getCanChase())
+                    // is this player chasable? AND is the other not currently being captured?
+                    if (player.GetComponent<PlayerLogic>().getCanBeChased() && !witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().isCaught())
                     {
-                        targetPlayer.GetComponent<PlayerLogic>().setCanChase(false);
-                        if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != targetPlayer.gameObject)
+                        
+                        if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != player.gameObject)
                         {
                             // caught a player while chasing another player
-                            witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().stopChasingMe();
-                            witchLogic.setTargetPlayer(targetPlayer);
+                            
+                            PlayerLogic otherPlayer = witchLogic.getTargetPlayer().GetComponent<PlayerLogic>();
+                            otherPlayer.stopChasingMe();
                         }
-                        else
-                        {
-                            witchLogic.setTargetPlayer(targetPlayer);
-                        }
+
+                        player.GetComponent<PlayerLogic>().setCanBeChased(false);
+                        witchLogic.setTargetPlayer(player);
+                        
+
 
                         animator.SetBool("isIdle", false);
                         animator.SetBool("isChasing", false);
