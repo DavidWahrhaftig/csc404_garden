@@ -232,7 +232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   captureSpeed: 3.5
-  waitTime: 2
+  waitTime: 1
+  fruitDropTime: 0.75
+  canPlayerResist: 0
 --- !u!1102 &-266400141038051470
 AnimatorState:
   serializedVersion: 5

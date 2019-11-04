@@ -13,7 +13,7 @@ public class SphereCast : MonoBehaviour
     public float angle;
     public float currentHitDistance; // for debugging
     public float distance1;
-    public Transform targetPlayer;
+    public Transform player;
    
     private Vector3 origin; // position of this gameObject
     private Vector3 direction; // the direction to shoot raycast
@@ -57,6 +57,7 @@ public class SphereCast : MonoBehaviour
             // radius = distance to collider * tan(spotlight angle / 2) --> using half the angle to obtain a right angle
             sphereRadius = hit1.distance * Mathf.Tan(Mathf.Deg2Rad * (this.lightComponent.spotAngle/2));
             distance1 = hit1.distance;
+
             if (Physics.SphereCast(origin, sphereRadius, direction, out hit2, hit1.distance, layerMask, QueryTriggerInteraction.UseGlobal))
             {
                 currentHitObject = hit2.transform.gameObject;
@@ -66,21 +67,23 @@ public class SphereCast : MonoBehaviour
                 {
                     //print("Ray Hit Player");
 
-                    targetPlayer = hit2.collider.transform;
-
-                    if (targetPlayer.GetComponent<PlayerLogic>().getCanChase())
+                    player = hit2.collider.transform;
+                    
+                    
+                    if (canCapture(player))
                     {
-                        targetPlayer.GetComponent<PlayerLogic>().setCanChase(false);
-                        if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != targetPlayer.gameObject)
+                        if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != player.gameObject)
                         {
                             // caught a player while chasing another player
-                            witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().stopChasingMe();
-                            witchLogic.setTargetPlayer(targetPlayer);
+
+                            PlayerLogic otherPlayer = witchLogic.getTargetPlayer().GetComponent<PlayerLogic>();
+                            otherPlayer.stopChasingMe();
                         }
-                        else
-                        {
-                            witchLogic.setTargetPlayer(targetPlayer);
-                        }
+
+                        player.GetComponent<PlayerLogic>().setCanBeChased(false);
+                        witchLogic.setTargetPlayer(player);
+
+
 
                         animator.SetBool("isIdle", false);
                         animator.SetBool("isChasing", false);
@@ -90,6 +93,27 @@ public class SphereCast : MonoBehaviour
                 }
             }           
         } 
+    }
+
+    private bool canCapture(Transform player)
+    {
+        // capture only if player can be chased
+        if (player.GetComponent<PlayerLogic>().getCanBeChased())
+        {
+            if (witchLogic.getTargetPlayer() == null)
+            {
+                // no witch target, then player can be captured
+                return true;
+            }
+            else if (!witchLogic.getTargetPlayer().GetComponent<PlayerLogic>().isCaught())
+            {
+                // no player is being captured
+                return true;
+            }
+            
+        }
+
+        return false;
     }
 
     private void OnDrawGizmos()
