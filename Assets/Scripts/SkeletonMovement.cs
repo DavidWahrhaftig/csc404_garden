@@ -49,16 +49,23 @@ public class SkeletonMovement : MonoBehaviour
                     while(currentTarget == null)
                     {
                         int firstIndex = UnityEngine.Random.Range(0, allWaypoints.Length);
+                        SkeletonWaypoint startingWaypoint = allWaypoints[firstIndex].GetComponent<SkeletonWaypoint>();
 
+
+                        if(startingWaypoint != null)
+                        {
+                            currentTarget = startingWaypoint;
+                        }
                     }
                 }
-                SetTarget();
+                else
+                {
+                    Debug.LogError("No waypoints in the scene");
+                }
+
             }
-            else
-            {
-                Debug.Log("Waypoint list too small for basic behaviiour");
-            }
-            
+            SetTarget();
+             
         }
         
     }
@@ -69,6 +76,7 @@ public class SkeletonMovement : MonoBehaviour
         if(inMotion && navMeshAgent.remainingDistance <= 1.0f)
         {
             inMotion = false;
+            waypointsVisited++;
 
             // If Skeleton is set to go idle, they go idle
             if (goIdleAtWaypoint)
@@ -79,7 +87,6 @@ public class SkeletonMovement : MonoBehaviour
 
             else
             {
-                ChangeWaypoint();
                 SetTarget();
             }
         }
@@ -92,7 +99,6 @@ public class SkeletonMovement : MonoBehaviour
             {
                 idle = false;
 
-                ChangeWaypoint();
                 SetTarget();
             }
         }
@@ -100,34 +106,38 @@ public class SkeletonMovement : MonoBehaviour
 
     private void SetTarget()
     {
-        if (waypoints != null)
+        if (waypointsVisited > 0)
         {
-            Vector3 targetVector = waypoints[currentWaypointIndex].transform.position;
-            navMeshAgent.SetDestination(targetVector);
-            inMotion = true;
+            SkeletonWaypoint nextTarget = currentTarget.NextWaypoint(prevTarget);
+            prevTarget = currentTarget;
+            currentTarget = nextTarget;
         }
+
+        Vector3 targetVector = currentTarget.transform.position;
+        navMeshAgent.SetDestination(targetVector);
+        inMotion = true;
     }
 
-    // Set new waypoint from list with probability of backtracking
-    private void ChangeWaypoint()
-    {
-        if(UnityEngine.Random.Range(0f, 1f) <= turnAroundProbability)
-        {
-            Debug.Log("TURN AROUND");
-            goForward = !goForward;
-        }
+    //// Set new waypoint from list with probability of backtracking
+    //private void ChangeWaypoint()
+    //{
+    //    if(UnityEngine.Random.Range(0f, 1f) <= turnAroundProbability)
+    //    {
+    //        Debug.Log("TURN AROUND");
+    //        goForward = !goForward;
+    //    }
 
-        if (goForward)
-        {
-            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
-            Debug.Log("FORWARD TO " + currentWaypointIndex);
-        }
+    //    if (goForward)
+    //    {
+    //        currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
+    //        Debug.Log("FORWARD TO " + currentWaypointIndex);
+    //    }
 
-        else if (--currentWaypointIndex < 0)
-        {
-            currentWaypointIndex = waypoints.Count - 1;
-            Debug.Log("BACK TO " + currentWaypointIndex);
-        }
-    }
+    //    else if (--currentWaypointIndex < 0)
+    //    {
+    //        currentWaypointIndex = waypoints.Count - 1;
+    //        Debug.Log("BACK TO " + currentWaypointIndex);
+    //    }
+    //}
 
 }
