@@ -5,18 +5,21 @@ using UnityEngine;
 public class CaptureBehaviour : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public float captureSpeed = 2.5f;
-    public float waitTime = 3;
+    [Header("Capture Settings")]
+    public float captureSpeed = 3.5f;
+    public float waitTime = 1;
     private Transform targetPlayer;
     private CaptureWait waitScript;
-
     WitchLogic witchLogic;
     GameManager gameManager;
 
-    public float fruitDropTime = 0.75f;
-
-    private float dropTimer;
+    [Header("Player-Witch Resistance Settings")]
+    public float fruitDropTime = 1f;
     public bool canPlayerResist = false;
+    public float playerPower;
+    public float goal;
+    private float dropTimer;
+    private bool freePlayer = false;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -24,21 +27,27 @@ public class CaptureBehaviour : StateMachineBehaviour
         waitScript = animator.GetComponent<CaptureWait>();
 
         witchLogic = animator.GetComponent<WitchLogic>();
+        witchLogic.playSound(witchLogic.laughSound);
         targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
-        witchLogic.playSound(witchLogic.laughSound);
 
+        goal = targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() * 5;
 
         dropTimer = fruitDropTime;
+
+        gameManager = witchLogic.getGameManager();
+
+        gameManager.activateResistanceSlider(targetPlayer);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        playerPower = targetPlayer.GetComponentInChildren<CameraShake>().getPower();
+
         if (animator.transform.position.x != targetPlayer.position.x && animator.transform.position.z != targetPlayer.position.z)
         {
-            centerOnPlayer(targetPlayer, animator);      
+            centerOnPlayer(targetPlayer, animator);
         }
         else
         {
@@ -52,16 +61,24 @@ public class CaptureBehaviour : StateMachineBehaviour
             }
 
             canPlayerResist = true;
-            
+
         }
 
-        // TODO: Decrament player fruitcount slowly
-        // targetPlayer.caught = true;  // so player cannot 
 
-        if (canPlayerResist)
+        if (canPlayerResist && !freePlayer)
         {
             // start decremeanting fruits slowly (1 every 0.75 seconds)
             dropTimer -= Time.deltaTime;
+
+            if (goal >= 1f)
+            {
+                targetPlayer.GetComponentInChildren<CameraShake>().setResistanceMeter(playerPower / goal);
+            }
+            else
+            {
+                targetPlayer.GetComponentInChildren<CameraShake>().setResistanceMeter(0f);
+            }
+
 
             if (dropTimer < Mathf.Epsilon)
             {
@@ -69,30 +86,33 @@ public class CaptureBehaviour : StateMachineBehaviour
                 {
                     targetPlayer.GetComponent<PlayerLogic>().loseFruits(1);
                 }
-                
+
                 dropTimer = fruitDropTime;
             }
 
-            if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() == 0)
+            if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() == 0 || playerPower >= goal)
             {
-                // when player fruit count reaches zero, respawn player to base
                 waitScript.DoCoroutine(waitTime);
-                
-            }    
+                //canPlayerResist = false;
+                freePlayer = true;
+            }
         }
         
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isCaught", false);
-        targetPlayer.GetComponent<PlayerController>().getAnimator().SetBool("isGettingUp", true);
-        //targetPlayer.GetComponent<PlayerLogic>().spawn();
+        targetPlayer.GetComponent<Animator>().SetBool("isCaught", false);
+        targetPlayer.GetComponent<Animator>().SetBool("isGettingUp", true);
 
+        gameManager.deactivateResistanceSlider(targetPlayer);
         witchLogic.stopChasing();
 
+        // reset fields
         canPlayerResist = false;
-        //targetPlayer.GetComponent<PlayerLogic>().enableControls(); moved to PlayerRespawnBehaviour.cs
+        freePlayer = false;
+        targetPlayer.GetComponentInChildren<CameraShake>().setPower(0f);
+        targetPlayer.GetComponentInChildren<CameraShake>().setResistanceMeter(0f);
     }
 
 

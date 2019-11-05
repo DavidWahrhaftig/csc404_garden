@@ -1,27 +1,133 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SkeletonMovement : MonoBehaviour
 {
+    // Sets whether Skeleton goes idle at each waypoint
+    [SerializeField]
+    bool goIdleAtWaypoint;
 
-    public Transform[] waypoints;
-    public float speed;
+    // total time to be idle at each waypoint
+    [SerializeField]
+    float totalIdleTime = 3f;
 
-    private int currentTarget;
+    // Likelihood of changing direction
+    [SerializeField]
+    float turnAroundProbability = 0.2f;
 
-    // Update is called once per frame
-    void Update()
+
+    NavMeshAgent navMeshAgent;
+    SkeletonWaypoint currentTarget;
+    SkeletonWaypoint prevTarget;
+
+
+    bool inMotion;
+    bool idle;
+    float idleTimer;
+    int waypointsVisited;
+
+    void Start()
     {
-        if (transform.position != waypoints[currentTarget].position)
+        navMeshAgent = this.GetComponent<NavMeshAgent>();
+
+        if (navMeshAgent == null)
         {
-            Vector3 pos = Vector3.MoveTowards(transform.position,
-                waypoints[currentTarget].position, speed * Time.deltaTime);
-            GetComponent<Rigidbody>().MovePosition(pos);
+            Debug.LogError(gameObject.name + " is missing NavMesh");
         }
         else
         {
-            currentTarget = (currentTarget + 1) % waypoints.Length;
+            if(currentTarget == null)
+            {
+                // Find all skeleton waypoints in the scene
+                GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("SkeletonWaypoint");
+
+                if(allWaypoints.Length > 0)
+                {
+                    while(currentTarget == null)
+                    {
+                        int firstIndex = UnityEngine.Random.Range(0, allWaypoints.Length);
+
+                    }
+                }
+                SetTarget();
+            }
+            else
+            {
+                Debug.Log("Waypoint list too small for basic behaviiour");
+            }
+            
+        }
+        
+    }
+
+    void Update()
+    {
+        // Check if close to destination
+        if(inMotion && navMeshAgent.remainingDistance <= 1.0f)
+        {
+            inMotion = false;
+
+            // If Skeleton is set to go idle, they go idle
+            if (goIdleAtWaypoint)
+            {
+                idle = true;
+                idleTimer = 0f;
+            }
+
+            else
+            {
+                ChangeWaypoint();
+                SetTarget();
+            }
+        }
+
+        // Count how long Skeleton is idle, then exit that state when timer is up
+        if (idle)
+        {
+            idleTimer += Time.deltaTime;
+            if(idleTimer >= totalIdleTime)
+            {
+                idle = false;
+
+                ChangeWaypoint();
+                SetTarget();
+            }
         }
     }
+
+    private void SetTarget()
+    {
+        if (waypoints != null)
+        {
+            Vector3 targetVector = waypoints[currentWaypointIndex].transform.position;
+            navMeshAgent.SetDestination(targetVector);
+            inMotion = true;
+        }
+    }
+
+    // Set new waypoint from list with probability of backtracking
+    private void ChangeWaypoint()
+    {
+        if(UnityEngine.Random.Range(0f, 1f) <= turnAroundProbability)
+        {
+            Debug.Log("TURN AROUND");
+            goForward = !goForward;
+        }
+
+        if (goForward)
+        {
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
+            Debug.Log("FORWARD TO " + currentWaypointIndex);
+        }
+
+        else if (--currentWaypointIndex < 0)
+        {
+            currentWaypointIndex = waypoints.Count - 1;
+            Debug.Log("BACK TO " + currentWaypointIndex);
+        }
+    }
+
 }
