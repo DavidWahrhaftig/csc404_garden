@@ -46,7 +46,6 @@ public class WitchLogic : MonoBehaviour
     {
         witchAnimator.SetBool("isChasing", false);
         witchAnimator.SetBool("isIdle", true);
-        //witchAnimator.SetBool("isPatrolling", false);
 
         targetPlayer = null;
     }
@@ -64,6 +63,11 @@ public class WitchLogic : MonoBehaviour
     public Transform getWitchBase()
     {
         return witchBase;
+    }
+
+    public GameManager getGameManager()
+    {
+        return gameManager;
     }
 
   

@@ -70,10 +70,10 @@ public class PlayerLogic : MonoBehaviour
         if (collision.transform.tag == "Ground")
         {
             playerController.setGrounded(true);
-            playerController.getAnimator().SetBool("isJumping", false);
+            transform.GetComponent<Animator>().SetBool("isJumping", false);
         }
 
-        if (collision.gameObject.name == enemyProjectile.name + "(Clone)") // TODO: change this, don't use Object name, maybe use Tag
+        if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
         {
             playSound(hitSound);
 
@@ -112,10 +112,12 @@ public class PlayerLogic : MonoBehaviour
         setHidden(false);
     }
 
+    /*
     public void spawn()
     {
         playerController.getAnimator().SetBool("isGettingUp", true);
     }
+    */
 
     public bool isHidden()
     {

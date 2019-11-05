@@ -15,8 +15,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameResult1;
     public TextMeshProUGUI gameResult2;
     public TextMeshProUGUI countDownUI;
-    public Slider slider1;
-    public Slider slider2;
+    public Slider magicSlider1;
+    public Slider magicSlider2;
+    public Slider resistanceSlider1;
+    public Slider resistanceSlider2;
 
     public Image imageSlider1;
     public Image imageSlider2;
@@ -48,7 +50,6 @@ public class GameManager : MonoBehaviour
     private bool beginGame = false;
 
 
-
     private void Start()
     {
 
@@ -72,6 +73,9 @@ public class GameManager : MonoBehaviour
         // disable both players
         player1.GetComponent<PlayerLogic>().disableControls();
         player2.GetComponent<PlayerLogic>().disableControls();
+
+        resistanceSlider1.gameObject.SetActive(false);
+        resistanceSlider2.gameObject.SetActive(false);
     }
 
     void Update()
@@ -105,13 +109,15 @@ public class GameManager : MonoBehaviour
             updateTimer();
         }
 
+        resistanceSlider1.value = player1.GetComponentInChildren<CameraShake>().getResistanceMeter();
+        resistanceSlider2.value = player2.GetComponentInChildren<CameraShake>().getResistanceMeter();
 
     }
 
     private void updateSliders()
     {
-        slider1.value = player1.GetComponent<SpawnLightOrb>().magicCharge / 100f;
-        slider2.value = player2.GetComponent<SpawnLightOrb>().magicCharge / 100f;
+        magicSlider1.value = player1.GetComponent<SpawnLightOrb>().magicCharge / 100f;
+        magicSlider2.value = player2.GetComponent<SpawnLightOrb>().magicCharge / 100f;
     }
 
     private void updateTimer()
@@ -226,6 +232,31 @@ public class GameManager : MonoBehaviour
             }
 
             beginGame = true;
+        }
+    }
+
+    public void activateResistanceSlider(Transform player)
+    {
+        if (player.gameObject.tag == "Player1")
+        {
+            resistanceSlider1.gameObject.SetActive(true);
+
+        } else if (player.gameObject.tag == "Player2")
+        {
+            resistanceSlider2.gameObject.SetActive(true);
+        }
+    }
+
+    public void deactivateResistanceSlider(Transform player)
+    {
+        if (player.gameObject.tag == "Player1")
+        {
+            resistanceSlider1.gameObject.SetActive(false);
+
+        }
+        else if (player.gameObject.tag == "Player2")
+        {
+            resistanceSlider2.gameObject.SetActive(false);
         }
     }
 

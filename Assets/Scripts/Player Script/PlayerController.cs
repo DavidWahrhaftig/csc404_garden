@@ -178,10 +178,6 @@ public class PlayerController : MonoBehaviour
         return this.gamePadController;
     }
 
-    public Animator getAnimator()
-    {
-        return this.animator;
-    }
 
     public void setGravity(bool b)
     {
