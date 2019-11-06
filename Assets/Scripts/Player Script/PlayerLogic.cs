@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerLogic : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerLogic : MonoBehaviour
     public GameObject enemyProjectile;
 
     public AudioClip hitSound, caughtSound;
+
+    public TextMeshProUGUI counterUI;
 
 
     [SerializeField] SkinnedMeshRenderer playerSkin;
@@ -27,7 +30,6 @@ public class PlayerLogic : MonoBehaviour
     public bool hidden = false; 
     public bool caught = false; 
     public bool canBeChased = true;
-    private bool gainedFruit = false;
     private Vector3 originalRotation;
     private PlayerController playerController;
     private Animator animator;
@@ -147,19 +149,10 @@ public class PlayerLogic : MonoBehaviour
     public void incrementFruitCounter()
     {
         fruitCounter += 1;
-        gainedFruit = true;
+        counterUI.GetComponent<Animator>().SetTrigger("fruitGain"); // do gain animation of fruit counter
 
     }
 
-    public void setGainedFruit(bool b)
-    {
-        gainedFruit = b;
-    }
-
-    public bool hasGainedFruit()
-    {
-        return gainedFruit;
-    }
     public void loseFruits(int numfruits)
     {
         fruitCounter -= numfruits;

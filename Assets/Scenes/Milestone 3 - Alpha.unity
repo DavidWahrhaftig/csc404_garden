@@ -767,15 +767,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a490a002a770c014d8405fbfd639ef05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  losingFruit: {r: 0, g: 1, b: 0.101481676, a: 0}
-  gainFruit: {r: 1, g: 1, b: 1, a: 0}
+  losingFruit:
+    r: 0
+    g: 1
+    b: 0.101481676
+    a: 0
+  gainFruit:
+    r: 1
+    g: 1
+    b: 1
+    a: 0
   fruitCounter1: {fileID: 650248132}
-  counter1Color: {r: 0.94509804, g: 0.7176471, b: 0.7176471, a: 0}
+  counter1Color:
+    r: 0.94509804
+    g: 0.7176471
+    b: 0.7176471
+    a: 0
   fruitCounter2: {fileID: 1743284280}
-  counter2Color: {r: 0.63529414, g: 0.90588236, b: 1, a: 0}
+  counter2Color:
+    r: 0.63529414
+    g: 0.90588236
+    b: 1
+    a: 0
   gainTransitionTime: 1
   playerLogic1: {fileID: 0}
   playerLogic2: {fileID: 0}
+  time1: 0
+  time2: 0
 --- !u!1 &394571539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5326,6 +5344,11 @@ PrefabInstance:
       propertyPath: glowing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: counterUI
+      value: 
+      objectReference: {fileID: 650248132}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e2dfb954e714419792a624c938f3a, type: 3}
 --- !u!1001 &1841404733916865344
@@ -5811,6 +5834,11 @@ PrefabInstance:
       propertyPath: caughtSound
       value: 
       objectReference: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
+    - target: {fileID: 1240290768554597774, guid: 18c927b4b28ba7f4f8132d27043f271b,
+        type: 3}
+      propertyPath: counterUI
+      value: 
+      objectReference: {fileID: 1743284280}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c927b4b28ba7f4f8132d27043f271b, type: 3}
 --- !u!1001 &7988786762375606128

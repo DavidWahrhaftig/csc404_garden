@@ -15,9 +15,12 @@ public class CameraShake : MonoBehaviour
 
     public float resistanceMeter = 0;
     // Start is called before the first frame update
+
+    public bool canShake;
     void Start()
     {
         camAnim = GetComponent<Animator>();
+        canShake = false;
     }
 
     // Update is called once per frame
@@ -27,7 +30,7 @@ public class CameraShake : MonoBehaviour
         shakeLeft = gamePadController.GetButtonDown("ShakeLeft");
         shakeRight = gamePadController.GetButtonDown("ShakeRight");
 
-        if (GetComponentInParent<PlayerLogic>().isCaught())
+        if (canShake)
         {
             if (shakeLeft)
             {
@@ -53,6 +56,11 @@ public class CameraShake : MonoBehaviour
         power += gain;
     }
 
+    public void setCanShake(bool b)
+    {
+        Debug.Log("setting can Shake");
+        canShake = b;
+    }
     public float getPower()
     {
         return power;

@@ -12,7 +12,7 @@ public class PlayerRespawnBehaviour : StateMachineBehaviour
         
 
         playerLogic = animator.transform.GetComponent<PlayerLogic>();
-        animator.transform.position = playerLogic.getPlayerBase().position;
+        //animator.transform.position = playerLogic.getPlayerBase().position;
         //animator.transform.rotation = playerLogic.getOriginalRotation();
 
         playerController = animator.transform.GetComponent<PlayerController>();

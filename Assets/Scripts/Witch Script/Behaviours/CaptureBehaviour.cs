@@ -37,7 +37,7 @@ public class CaptureBehaviour : StateMachineBehaviour
 
         gameManager = witchLogic.getGameManager();
 
-        gameManager.activateResistanceSlider(targetPlayer);
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -58,9 +58,13 @@ public class CaptureBehaviour : StateMachineBehaviour
                 targetPlayer.GetComponent<Animator>().SetBool("isIdle", false);
                 targetPlayer.GetComponent<Animator>().SetBool("isWalking", false);
                 targetPlayer.GetComponent<Animator>().SetBool("isRunning", false);
+
+                canPlayerResist = true;
+                targetPlayer.GetComponentInChildren<CameraShake>().setCanShake(true);
+                gameManager.activateResistanceSlider(targetPlayer);
             }
 
-            canPlayerResist = true;
+            
 
         }
 
@@ -92,8 +96,8 @@ public class CaptureBehaviour : StateMachineBehaviour
 
             if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() == 0 || playerPower >= goal)
             {
+                targetPlayer.GetComponentInChildren<CameraShake>().setCanShake(false);
                 waitScript.DoCoroutine(waitTime);
-                //canPlayerResist = false;
                 freePlayer = true;
             }
         }
