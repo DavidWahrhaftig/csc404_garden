@@ -64,9 +64,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfPositions: 6
-  patrolRange: 12
+  patrolRange: 20
   patrolSpeedMin: 8
-  patrolSpeedMax: 10
+  patrolSpeedMax: 11
   rotationSpeed: 0.1
   waitTime: 1
   isPausing: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc03410cca381745bd3abcb05386e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  captureSpeed: 3.5
+  captureSpeed: 4
   waitTime: 1
   fruitDropTime: 1
   canPlayerResist: 0
