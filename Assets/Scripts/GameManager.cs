@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         // set initial game UI
-        fruitCounter1.text = "Fruit Count: 0";
-        fruitCounter2.text = "Fruit Count: 0";
+        fruitCounter1.text = "0";
+        fruitCounter2.text = "0";
         //shotTimer1.text = "Orb Ammo: " + player1.GetComponent<SpawnLightOrb>().getAmmo();
         //shotTimer2.text = "Orb Ammo: " + player2.GetComponent<SpawnLightOrb>().getAmmo();
         shotTimer1.text = "Magic Meter";
@@ -103,8 +103,8 @@ public class GameManager : MonoBehaviour
 
         if (beginGame)
         {
-            fruitCounter1.text = "Fruit Count: " + player1.GetComponent<PlayerLogic>().getFruitCounter();
-            fruitCounter2.text = "Fruit Count: " + player2.GetComponent<PlayerLogic>().getFruitCounter();
+            fruitCounter1.text = player1.GetComponent<PlayerLogic>().getFruitCounter().ToString();
+            fruitCounter2.text = player2.GetComponent<PlayerLogic>().getFruitCounter().ToString();
 
             updateTimer();
         }
@@ -259,6 +259,4 @@ public class GameManager : MonoBehaviour
             resistanceSlider2.gameObject.SetActive(false);
         }
     }
-
-
 }

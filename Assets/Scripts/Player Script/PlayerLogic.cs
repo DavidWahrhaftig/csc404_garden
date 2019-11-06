@@ -27,7 +27,7 @@ public class PlayerLogic : MonoBehaviour
     public bool hidden = false; 
     public bool caught = false; 
     public bool canBeChased = true;
-
+    private bool gainedFruit = false;
     private Vector3 originalRotation;
     private PlayerController playerController;
     private Animator animator;
@@ -147,7 +147,18 @@ public class PlayerLogic : MonoBehaviour
     public void incrementFruitCounter()
     {
         fruitCounter += 1;
-        //gameManager.playFruitSound();
+        gainedFruit = true;
+
+    }
+
+    public void setGainedFruit(bool b)
+    {
+        gainedFruit = b;
+    }
+
+    public bool hasGainedFruit()
+    {
+        return gainedFruit;
     }
     public void loseFruits(int numfruits)
     {

@@ -42,7 +42,7 @@ public class SpawnLightOrb : MonoBehaviour
 
         if (magicCharge >= magicShotPower)
         {
-            if (shoot && !playerLogic.isGlowing()) // only shoot when there is a charge and the player is not glowing
+            if (shoot && !playerLogic.isGlowing() && !playerLogic.isDisabled()) // only shoot when there is a charge and the player is not glowing
             {
                 audioSource.PlayOneShot(shotSound);
                 CreateEffect();
