@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             flip = flip * -1;
         }
 
-        if (!playerLogic.isDisabled())
+        if (!playerLogic.isDisabled() && !GetComponent<SpawnLightOrb>().isShooting())
         {
             #region Idle & Walk Animation Transitions
             if (Mathf.Abs(moveVertical) > Mathf.Epsilon)

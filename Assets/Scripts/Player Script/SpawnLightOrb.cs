@@ -22,6 +22,8 @@ public class SpawnLightOrb : MonoBehaviour
     private PlayerController playerController;
     private Rewired.Player gamePadController;
 
+    private bool notShooting = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,17 +39,18 @@ public class SpawnLightOrb : MonoBehaviour
     {
         gamePadController = playerController.getGamePadController(); // have to reference in Update method, else gamePadController is null
 
-        bool shoot = gamePadController.GetButtonDown("Shoot");
+        bool shootButton = gamePadController.GetButton("Shoot");
 
 
         if (magicCharge >= magicShotPower)
         {
-            if (shoot && !playerLogic.isGlowing() && !playerLogic.isDisabled()) // only shoot when there is a charge and the player is not glowing
+            if (shootButton && notShooting && !playerLogic.isGlowing() && !playerLogic.isDisabled()) // only shoot when there is a charge and the player is not glowing
             {
                 //audioSource.PlayOneShot(shotSound);
                 //CreateEffect();
                 //magicCharge -= magicShotPower; // decrease charge
                 GetComponent<Animator>().SetTrigger("isShooting");
+                notShooting = false;
             }
         }
 
@@ -75,6 +78,13 @@ public class SpawnLightOrb : MonoBehaviour
 
     public void shoot(float delay)
     {
+        magicCharge -= magicShotPower; // decrease charge
+
+        if (magicCharge <= Mathf.Epsilon)
+        {
+            magicCharge = 0f;
+        }
+
         Invoke("shootLater", delay);
         
     }
@@ -83,11 +93,12 @@ public class SpawnLightOrb : MonoBehaviour
     {
         audioSource.PlayOneShot(shotSound);
         CreateEffect();
-        magicCharge -= magicShotPower; // decrease charge
+        notShooting = true;
+        
+    }
 
-        if (magicCharge <= Mathf.Epsilon)
-        {
-            magicCharge = 0f;
-        }
+    public bool isShooting()
+    {
+        return !notShooting;
     }
 }
