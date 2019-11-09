@@ -6,16 +6,16 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Stone_text
-  m_DiffuseTexture: {fileID: 2800000, guid: 5151e0669d43bee40a3de9b4504c5945, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 16fb0d3d99e97ba4a8cf864b274547ee, type: 3}
-  m_MaskMapTexture: {fileID: 2800000, guid: 9488227ae01b53241a164130481216b0, type: 3}
+  m_Name: mud
+  m_DiffuseTexture: {fileID: 2800000, guid: 5e621391e57cad24a922f984473a1fae, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 226b6ce30ab4e9a4c8eb3f3fd4a0f747, type: 3}
+  m_MaskMapTexture: {fileID: 2800000, guid: a85f9ff46789f0748bf5b410ef5d0b76, type: 3}
   m_TileSize: {x: 5, y: 5}
   m_TileOffset: {x: 0, y: 0}
-  m_Specular: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
+  m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
-  m_Smoothness: 0.503
-  m_NormalScale: 2
+  m_Smoothness: 0.392
+  m_NormalScale: 6
   m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
   m_DiffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}
   m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
