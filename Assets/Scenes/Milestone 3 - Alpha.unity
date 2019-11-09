@@ -5294,11 +5294,6 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 650248132}
-    - target: {fileID: 409387792847350203, guid: 7a2e2dfb954e714419792a624c938f3a,
-        type: 3}
-      propertyPath: reloadSpeed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e2dfb954e714419792a624c938f3a, type: 3}
 --- !u!1001 &1841404733916865344
@@ -5779,11 +5774,6 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 1743284280}
-    - target: {fileID: 1240290768554598003, guid: 18c927b4b28ba7f4f8132d27043f271b,
-        type: 3}
-      propertyPath: reloadSpeed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c927b4b28ba7f4f8132d27043f271b, type: 3}
 --- !u!1001 &7988786762375606128

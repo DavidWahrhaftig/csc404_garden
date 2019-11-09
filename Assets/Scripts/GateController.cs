@@ -8,6 +8,7 @@ public class GateController : MonoBehaviour
 
     [SerializeField] Transform[] allowedPlayers;
     [SerializeField] AudioClip openSound, closeSound;
+    [SerializeField] float waitToCloseDuration = 1.5f;
     private Animator animator;
     private AudioSource audioSource;
 
@@ -28,8 +29,7 @@ public class GateController : MonoBehaviour
     {
         if (isPermitted(other.gameObject))
         {
-            animator.SetTrigger("open");
-            audioSource.PlayOneShot(openSound);
+            open();
         }
     }
 
@@ -37,8 +37,7 @@ public class GateController : MonoBehaviour
     {
         if (isPermitted(other.gameObject))
         {
-            animator.SetTrigger("close");
-            audioSource.PlayOneShot(closeSound);
+            Invoke("close", waitToCloseDuration);
         }
     }
 
@@ -54,5 +53,18 @@ public class GateController : MonoBehaviour
         }
 
         return false;
+    }
+
+
+    void open()
+    {
+        animator.SetTrigger("open");
+        audioSource.PlayOneShot(openSound);
+    }
+
+    void close()
+    {
+        animator.SetTrigger("close");
+        audioSource.PlayOneShot(closeSound);
     }
 }

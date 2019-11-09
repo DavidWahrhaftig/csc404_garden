@@ -12545,7 +12545,7 @@ MonoBehaviour:
   rotationSpeed: 250
   stamina: 40
   centerToBaseSpeed: 10
-  jumpForce: 10
+  jumpForce: 15
   forceType: 1
   grounded: 1
   walkingSound: {fileID: 8300000, guid: a8dddc5b010861e45b484854e54f6c0d, type: 3}
@@ -12568,7 +12568,7 @@ MonoBehaviour:
   - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
   magicCharge: 100
   magicShotPower: 20
-  reloadSpeed: 10
+  reloadSpeed: 7
 --- !u!1 &8563897774222719841
 GameObject:
   m_ObjectHideFlags: 0
