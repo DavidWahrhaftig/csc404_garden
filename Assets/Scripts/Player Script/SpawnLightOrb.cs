@@ -44,9 +44,10 @@ public class SpawnLightOrb : MonoBehaviour
         {
             if (shoot && !playerLogic.isGlowing() && !playerLogic.isDisabled()) // only shoot when there is a charge and the player is not glowing
             {
-                audioSource.PlayOneShot(shotSound);
-                CreateEffect();
-                magicCharge -= magicShotPower; // decrease charge
+                //audioSource.PlayOneShot(shotSound);
+                //CreateEffect();
+                //magicCharge -= magicShotPower; // decrease charge
+                GetComponent<Animator>().SetTrigger("isShooting");
             }
         }
 
@@ -69,6 +70,24 @@ public class SpawnLightOrb : MonoBehaviour
         else
         {
             Debug.Log("Null Fire Point");
+        }
+    }
+
+    public void shoot(float delay)
+    {
+        Invoke("shootLater", delay);
+        
+    }
+
+    void shootLater()
+    {
+        audioSource.PlayOneShot(shotSound);
+        CreateEffect();
+        magicCharge -= magicShotPower; // decrease charge
+
+        if (magicCharge <= Mathf.Epsilon)
+        {
+            magicCharge = 0f;
         }
     }
 }

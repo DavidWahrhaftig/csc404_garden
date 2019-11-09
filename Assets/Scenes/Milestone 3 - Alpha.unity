@@ -749,24 +749,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!1 &367802032 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2999655317141620381, guid: bc13233766da3d14e87c388d2f7c6a55,
-    type: 3}
-  m_PrefabInstance: {fileID: 2999655317578931556}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &367802033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367802032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a490a002a770c014d8405fbfd639ef05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &394571539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5309,19 +5291,14 @@ PrefabInstance:
       objectReference: {fileID: 1673971771}
     - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
-      propertyPath: caughtSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
-    - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
-        type: 3}
-      propertyPath: glowing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
-        type: 3}
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 650248132}
+    - target: {fileID: 409387792847350203, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: reloadSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e2dfb954e714419792a624c938f3a, type: 3}
 --- !u!1001 &1841404733916865344
@@ -5638,7 +5615,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2999655317578931556}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367802032}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd052ff17e9807840ae85f15c9aae8fa, type: 3}
@@ -5737,11 +5714,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 7068268737416185385, guid: 18c927b4b28ba7f4f8132d27043f271b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player2
-      objectReference: {fileID: 0}
     - target: {fileID: 6074459998436865082, guid: 18c927b4b28ba7f4f8132d27043f271b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5804,14 +5776,14 @@ PrefabInstance:
       objectReference: {fileID: 310733865}
     - target: {fileID: 1240290768554597774, guid: 18c927b4b28ba7f4f8132d27043f271b,
         type: 3}
-      propertyPath: caughtSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
-    - target: {fileID: 1240290768554597774, guid: 18c927b4b28ba7f4f8132d27043f271b,
-        type: 3}
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 1743284280}
+    - target: {fileID: 1240290768554598003, guid: 18c927b4b28ba7f4f8132d27043f271b,
+        type: 3}
+      propertyPath: reloadSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c927b4b28ba7f4f8132d27043f271b, type: 3}
 --- !u!1001 &7988786762375606128
