@@ -9,8 +9,8 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        for (int - = 0; i < popUps.Length; i++) {
-            if (if == popUpIndex)
+        for (int i = 0; i < popUps.Length; i++) {
+            if (i == popUpIndex)
                 {
                     popUps[popUpIndex].SetActive(true);
                 }
@@ -23,49 +23,52 @@ public class TutorialManager : MonoBehaviour
         }
         if (popUpIndex == 0)
         {
-            if /**left and right movement**/ {
+            if (false)/**left and right movement**/
+            {
                 popUpIndex++;
             }
         }
 
         else if (popUpIndex == 1)
         {
-            if /**jump**/ {
+            if (false)/**jump**/
+            {
                 popUpIndex++;
             }
         }
 
         if (popUpIndex == 2)
         {
-            if /**rotate camera**/ {
+            if (false)/**rotate camera**/
+            {
                 popUpIndex++;
             }
         }
 
         if (popUpIndex == 3)
         {
-            if /**flip camera**/ {
+            if (false)/**flip camera**/ {
                 popUpIndex++;
             }
         }
 
         if (popUpIndex == 4)
         {
-            if /**get fruit**/ {
+            if (false)/**get fruit**/ {
                 popUpIndex++;
             }
         }
 
         if (popUpIndex == 5)
         {
-            if /**throw light ball**/ {
+            if (false)/**throw light ball**/ {
                 popUpIndex++;
             }
         }
 
         if (popUpIndex == 6)
         {
-            if /**shake off the witch**/ {
+            if (false)/**shake off the witch**/ {
                 popUpIndex++;
             }
         }
