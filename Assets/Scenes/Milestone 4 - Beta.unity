@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.61040914, g: 0.5356846, b: 0.3438692, a: 1}
+  m_IndirectSpecularColor: {r: 0.7185784, g: 0.71530235, b: 0.62276894, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1759,36 +1759,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2850022688437258741, guid: 7625a09e5ebcda445a40db3affaba1a6,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2850022688437258740, guid: 7625a09e5ebcda445a40db3affaba1a6,
-        type: 3}
-      propertyPath: allowedPlayers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2850022688437258740, guid: 7625a09e5ebcda445a40db3affaba1a6,
         type: 3}
       propertyPath: allowedPlayers.Array.data[0]
       value: 
       objectReference: {fileID: 4059252458929149914}
-    - target: {fileID: 2874416745861530618, guid: 7625a09e5ebcda445a40db3affaba1a6,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.567
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874416745861530618, guid: 7625a09e5ebcda445a40db3affaba1a6,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874416745861530618, guid: 7625a09e5ebcda445a40db3affaba1a6,
-        type: 3}
-      propertyPath: MinDistance
-      value: 11.170238
-      objectReference: {fileID: 0}
     - target: {fileID: 2874416745861530619, guid: 7625a09e5ebcda445a40db3affaba1a6,
         type: 3}
       propertyPath: allowedPlayers.Array.data[0]

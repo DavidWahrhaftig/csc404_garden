@@ -428,6 +428,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1461547890, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
+      propertyPath: allowedPlayers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461547891, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
 --- !u!4 &9179255146021667883 stripped
@@ -503,13 +511,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1461547888, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
+      propertyPath: m_Radius
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1461547890, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
       propertyPath: allowedPlayers.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1461547888, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
-      propertyPath: m_Radius
-      value: 12
+    - target: {fileID: 1461547891, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
+      propertyPath: m_Volume
+      value: 0.567
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461547891, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
+      propertyPath: MinDistance
+      value: 11.170238
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0962585f267134c83eb433f93ba09c, type: 3}
@@ -976,11 +992,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1050,6 +1061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.010724005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -1156,11 +1172,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1230,6 +1241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.013719014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (12)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -1696,11 +1712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1770,6 +1781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.016594231
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -2136,11 +2152,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2210,6 +2221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.013565012
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -2316,11 +2332,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2391,6 +2402,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.012381352
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (10)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
 --- !u!4 &5811255277898476781 stripped
@@ -2406,11 +2422,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2480,6 +2491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.011206018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -3191,11 +3207,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3266,6 +3277,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01659423
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
 --- !u!4 &5811255278097937488 stripped
@@ -3281,11 +3297,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3355,6 +3366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.010960015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -3461,11 +3477,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3535,6 +3546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.015565227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -3986,11 +4002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4060,6 +4071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.010960009
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -4431,11 +4447,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4506,6 +4517,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.010924004
       objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
 --- !u!4 &5811255277669961770 stripped
@@ -4521,11 +4537,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4595,6 +4606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.010475103
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -5511,11 +5527,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5585,6 +5596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.014041521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -6051,11 +6067,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8488528144042686071}
     m_Modifications:
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6125,6 +6136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.011041006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (13)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}

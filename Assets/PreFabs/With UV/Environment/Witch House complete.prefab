@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1175100593409081679}
   - component: {fileID: 7860414659582557049}
   - component: {fileID: 4479186173720987520}
+  - component: {fileID: 270286894002967321}
   m_Layer: 0
   m_Name: Witch House complete
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &270286894002967321
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744260194407625564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 1014931439958208672, guid: dd2ea8620e87ca54aa3b91727006cb9b, type: 3}

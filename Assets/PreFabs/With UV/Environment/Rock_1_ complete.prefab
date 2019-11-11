@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4181958526344596733}
   - component: {fileID: 7581181550795190276}
   - component: {fileID: 3015239535546342321}
+  - component: {fileID: 6028439117688930393}
   m_Layer: 0
-  m_Name: rock_1_ complete
-  m_TagString: Untagged
+  m_Name: Rock_1_ complete
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &6028439117688930393
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145061710189184216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4605051993852417682, guid: acdbf41776918ec4c9eab47ecf272222, type: 3}

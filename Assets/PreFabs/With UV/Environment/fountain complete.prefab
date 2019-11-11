@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 8463766401189357847}
   - component: {fileID: 2758982372527232494}
   - component: {fileID: 7396128625098800731}
+  - component: {fileID: 8185963315798205798}
+  - component: {fileID: 3621467944590228619}
   m_Layer: 0
   m_Name: fountain complete
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +100,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &8185963315798205798
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500514213422096690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.34
+  m_Height: 3.7262704
+  m_Direction: 2
+  m_Center: {x: -0.00000023841858, y: 0, z: 1.6535317}
+--- !u!65 &3621467944590228619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500514213422096690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3851485, y: 2.5627527, z: 0.6511335}
+  m_Center: {x: -0.075478315, y: 0.028204083, z: 0.51500183}
