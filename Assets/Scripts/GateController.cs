@@ -12,6 +12,7 @@ public class GateController : MonoBehaviour
     private Animator animator;
     private AudioSource audioSource;
 
+    bool isOpen = false;
 
 
     void Start()
@@ -60,11 +61,13 @@ public class GateController : MonoBehaviour
     {
         animator.SetTrigger("open");
         audioSource.PlayOneShot(openSound);
+        isOpen = true;
     }
 
     void close()
     {
         animator.SetTrigger("close");
         audioSource.PlayOneShot(closeSound);
+        isOpen = false;
     }
 }

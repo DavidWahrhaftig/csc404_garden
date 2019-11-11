@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Speed Settings")]
     public float walkingSpeed;
+    public float movingSpeed;
     public float rotationSpeed;
     public float stamina;
     public float centerToBaseSpeed;
@@ -26,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     #region Private Fields
     private AudioSource audioSource;
-    private float movingSpeed;
+    
     private float defaultY;
     private Rigidbody body;
     private GameManager gameManager;
@@ -75,68 +76,99 @@ public class PlayerController : MonoBehaviour
         isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
         //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
 
+        /*
         if (isCameraFlipped)
         {
             flip = flip * -1;
         }
+        */
 
-        if (!playerLogic.isDisabled() && !GetComponent<SpawnLightOrb>().isShooting())
+        if (!playerLogic.isDisabled())
         {
-            #region Idle & Walk Animation Transitions
-            if (Mathf.Abs(moveVertical) > Mathf.Epsilon)
-            {
-                animator.SetBool("isWalking", true);
-                animator.SetBool("isIdle", false);
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isIdle", true);
-            }
-            #endregion
 
-
-            #region Running mechanics and Run Animation Transition
-            if (runButton)//if (runButton && stamina > 0) // running
-            {
-                animator.SetBool("isRunning", true);
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isWalking", false);
-
-                playSound(walkingSound);
-                movingSpeed = walkingSpeed * 2;
-                stamina -= 0.1f;
-            }
-            else
-            {
-                animator.SetBool("isRunning", false);
-                movingSpeed = walkingSpeed;
-                stamina += 0.01f;
-            }
-            #endregion
-
-            if (jumpButton)
-            {
-                if (grounded)
-                {
-                    Jump(jumpForce, forceType);
-                }
-            }
-
-            // forward/backward movement
-            body.MovePosition(transform.position + transform.TransformDirection(moveHorizontal * flip, 0f, moveVertical) * movingSpeed * Time.deltaTime);
             // horizontal rotation movement
             transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
 
-            /*
-            if (centerToBase) // Ceneter to base
+            if (!GetComponent<SpawnLightOrb>().isShooting())
             {
-                Vector3 targetDir = playerLogic.playerBase.position - transform.position;
-                Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
-                Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
-                transform.rotation = Quaternion.LookRotation(newestDir);
-            }*/
-        } 
+                
+                if (Mathf.Abs(moveVertical) > 0.8f) // Running
+                {
+                    animator.SetBool("isRunning", true);
+                    animator.SetBool("isIdle", false);
+                    animator.SetBool("isWalking", false);
+
+                    playSound(walkingSound);
+                    movingSpeed = walkingSpeed * 2;
+                    stamina -= 0.1f;
+                }
+                #region Idle & Walk Animation Transitions
+                else if (Mathf.Abs(moveVertical) > Mathf.Epsilon) // Walking
+                {
+                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isIdle", false);
+
+                    animator.SetBool("isRunning", false);
+                    movingSpeed = walkingSpeed;
+                    stamina += 0.01f;
+                }
+                else // Idle
+                {
+                    animator.SetBool("isWalking", false);
+                    animator.SetBool("isIdle", true);
+
+                    animator.SetBool("isRunning", false);
+                    movingSpeed = walkingSpeed;
+                    stamina += 0.01f;
+                }
+                #endregion
+
+
+                /*
+                #region Running mechanics and Run Animation Transition
+                if (runButton)//if (runButton && stamina > 0) // running
+                {
+                    animator.SetBool("isRunning", true);
+                    animator.SetBool("isIdle", false);
+                    animator.SetBool("isWalking", false);
+
+                    playSound(walkingSound);
+                    movingSpeed = walkingSpeed * 2;
+                    stamina -= 0.1f;
+                }
+                else
+                {
+                    animator.SetBool("isRunning", false);
+                    movingSpeed = walkingSpeed;
+                    stamina += 0.01f;
+                }
+                
+                #endregion
+                */
+
+                if (jumpButton)
+                {
+                    if (grounded)
+                    {
+                        Jump(jumpForce, forceType);
+                    }
+                }
+
+                // forward/backward movement
+                body.MovePosition(transform.position + transform.TransformDirection(moveHorizontal * flip, 0f, moveVertical) * movingSpeed * Time.deltaTime);
+                
+
+                /*
+                if (centerToBase) // Ceneter to base
+                {
+                    Vector3 targetDir = playerLogic.playerBase.position - transform.position;
+                    Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
+                    Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
+                    transform.rotation = Quaternion.LookRotation(newestDir);
+                }*/
+            }
+        }
+
     }
 
 
