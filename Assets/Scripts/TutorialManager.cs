@@ -18,8 +18,8 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        player1.jumpForce = 0;
-        player2.jumpForce = 0;
+        //player1.jumpForce = 0;
+        //player2.jumpForce = 0;
     }
     void Update()
     {
