@@ -161,6 +161,7 @@ public class PlayerLogic : MonoBehaviour
     public void loseFruits(int numfruits)
     {
         fruitCounter -= numfruits;
+        counterUI.GetComponent<Animator>().SetTrigger("fruitLoss"); // do lose animation of fruit counter
     }
 
     public void playSound(AudioClip audio)

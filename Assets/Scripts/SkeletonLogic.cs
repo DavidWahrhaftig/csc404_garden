@@ -25,14 +25,15 @@ public class SkeletonLogic : MonoBehaviour
 
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-            //Debug.Log("Skeleton spotted player! Stop!!!");
+            
             if(other.GetComponent<PlayerLogic>().getFruitCounter() > 0)
             {
                 other.GetComponent<PlayerLogic>().loseFruits(snatchCounter);
             }
-            
 
+            //Debug.Log("Skeleton spotted player! Stop!!!");
             navMeshAgent.isStopped = true;
+            //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
             playersInProximity += 1;
         }
     }
@@ -46,6 +47,7 @@ public class SkeletonLogic : MonoBehaviour
             if (fruitSnatchTimer > fruitSnatchTimeThreshold && other.GetComponent<PlayerLogic>().getFruitCounter() > 0)
             {
                 other.GetComponent<PlayerLogic>().loseFruits(snatchCounter);
+                //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                 fruitSnatchTimer = 0;
             }
             
@@ -63,6 +65,7 @@ public class SkeletonLogic : MonoBehaviour
             {
                 //Debug.Log("No more players to see. Resume!");
                 navMeshAgent.isStopped = false;
+                //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
             }
         }
     }

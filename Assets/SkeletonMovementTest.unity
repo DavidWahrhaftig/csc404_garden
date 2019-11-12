@@ -1094,7 +1094,7 @@ PrefabInstance:
     - target: {fileID: 6074459998436865082, guid: 18c927b4b28ba7f4f8132d27043f271b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.1
+      value: 14.26
       objectReference: {fileID: 0}
     - target: {fileID: 6074459998436865082, guid: 18c927b4b28ba7f4f8132d27043f271b,
         type: 3}
@@ -1145,6 +1145,16 @@ PrefabInstance:
         type: 3}
       propertyPath: fruitCounter
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240290768554597774, guid: 18c927b4b28ba7f4f8132d27043f271b,
+        type: 3}
+      propertyPath: counterUI
+      value: 
+      objectReference: {fileID: 1488769552}
+    - target: {fileID: 1240290768554598005, guid: 18c927b4b28ba7f4f8132d27043f271b,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c927b4b28ba7f4f8132d27043f271b, type: 3}
@@ -6766,6 +6776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: fruitCounter
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e2dfb954e714419792a624c938f3a, type: 3}
