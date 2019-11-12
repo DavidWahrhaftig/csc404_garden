@@ -146,6 +146,11 @@ public class PlayerLogic : MonoBehaviour
         return fruitCounter;
     }
 
+    public void animateFruitCounter()
+    {
+        counterUI.GetComponent<Animator>().SetTrigger("fruitGain");
+    }
+
     public void incrementFruitCounter()
     {
         fruitCounter += 1;
