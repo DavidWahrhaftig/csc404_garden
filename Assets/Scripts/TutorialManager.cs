@@ -10,33 +10,19 @@ public class TutorialManager : MonoBehaviour
     public GameObject[] popUps;
     private int popUpIndex;
 
-    /***
-    #region Controller Inputs
-    float moveVertical;
-    float moveHorizontal;
-    float rotateHorizontal;
-    bool jumpButton;
-    bool runButton;
-    bool isCameraFlipped;
-    int flip = 1;
-    #endregion ***/
 
     public Transform player1;
     public Transform player2;
     public Transform witch;
 
 
-
-    private void Update()
+    private void Start()
     {
-        /***
-        moveVertical = gamePadController.GetAxis("Move Vertical");
-        moveHorizontal = gamePadController.GetAxis("Move Horizontal");
-        rotateHorizontal = gamePadController.GetAxis("Rotate");
-        jumpButton = gamePadController.GetButtonDown("Jump");
-        runButton = gamePadController.GetButton("Run");
-        isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
-        ****/
+        player1.jumpForce = 0;
+        player2.jumpForce = 0;
+    }
+    void Update()
+    {
 
         for (int i = 0; i < popUps.Length; i++)
         {
@@ -58,11 +44,13 @@ public class TutorialManager : MonoBehaviour
 
             if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Move Vertical"))
             {
+                //player1.jumpForce = ???
                 player1Moved = true;
             }
 
             if (player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Move Vertical"))
             {
+                //player2.jumpForce = ??
                 player2Moved = true;
             }
 
@@ -115,17 +103,43 @@ public class TutorialManager : MonoBehaviour
             }
         }
 
-        else if (popUpIndex == 3)
+        else if (popUpIndex == 3) /**get fruit**/
         {
-            if (false)/**get fruit**/
+            bool player1GetFruit = false;
+            bool player2GetFruit = false;
+
+            if (player1.GetComponent<PlayerLogic>().getFruitCounter() == 1)
+            {
+                player1GetFruit = true;
+            }
+
+            if (player2.GetComponent<PlayerLogic>().getFruitCounter() == 1)
+            {
+                player2GetFruit = true;
+            }
+
+            if (player1GetFruit && player2GetFruit)/**both players have gotten 1 fruit**/
             {
                 popUpIndex++;
             }
         }
 
-        else if (popUpIndex == 4)
+        else if (popUpIndex == 4) /***shoot light ball***/
         {
-            if (false)/**throw light ball**/
+            bool player1ShotBall = false;
+            bool player2ShotBall = false;
+
+            if (player1.GetComponent<SpawnLightOrb>().isShooting())
+            {
+                player1ShotBall = true;
+            }
+
+            if (player2.GetComponent<SpawnLightOrb>().isShooting())
+            {
+                player2ShotBall = true;
+            }
+
+            if (player1ShotBall && player2ShotBall)/**both players have thrown light ball**/
             {
                 popUpIndex++;
             }
