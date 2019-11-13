@@ -23,7 +23,7 @@ public class SpecialFruit : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
         redFruit.SetActive(false);
         blueFruit.SetActive(false);
 

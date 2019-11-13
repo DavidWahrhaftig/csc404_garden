@@ -629,6 +629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 20
+  upperBound: 0.162
+  lowerBound: -0.0133
 --- !u!1 &409387792626767202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12542,13 +12544,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePadID: 0
   walkingSpeed: 6
+  movingSpeed: 0
   rotationSpeed: 250
   stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 15
   forceType: 1
   grounded: 1
-  walkingSound: {fileID: 8300000, guid: a8dddc5b010861e45b484854e54f6c0d, type: 3}
+  walkingSound: {fileID: 8300000, guid: 2d42c88a13831234e8b3098cce16a36a, type: 3}
   jumpSound: {fileID: 8300000, guid: e499c9fbdfaa60b46ad0de941b570d93, type: 3}
 --- !u!114 &409387792847350203
 MonoBehaviour:

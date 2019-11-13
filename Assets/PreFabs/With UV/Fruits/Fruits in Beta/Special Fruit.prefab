@@ -53,8 +53,7 @@ MonoBehaviour:
   redFruit: {fileID: 420909866843160843}
   blueFruit: {fileID: 3915545539308146532}
   fruitSounds:
-  - {fileID: 8300000, guid: aa00e90e36a82764ab9f07065a67c7d0, type: 3}
-  - {fileID: 8300000, guid: f08edda956cb53d45867aa222956a654, type: 3}
+  - {fileID: 8300000, guid: c8272d894e4674447a4e869f33c5de0b, type: 3}
   spellDuration: 5
   respawnTime: 10
 --- !u!82 &3323800234281984306
@@ -188,11 +187,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3323800234281984300}
     m_Modifications:
-    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Fruit
-      objectReference: {fileID: 0}
     - target: {fileID: 1081091725140123809, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,6 +241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Fruit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc, type: 3}

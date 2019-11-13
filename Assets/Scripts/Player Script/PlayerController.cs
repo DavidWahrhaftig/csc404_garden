@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
                     playSound(walkingSound);
                     movingSpeed = walkingSpeed * 2;
-                    stamina -= 0.1f;
+                    stamina -= 0.1f;                   
                 }
                 #region Idle & Walk Animation Transitions
                 else if (Mathf.Abs(moveVertical) > Mathf.Epsilon) // Walking
