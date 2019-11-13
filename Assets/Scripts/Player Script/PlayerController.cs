@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
             if (!GetComponent<SpawnLightOrb>().isShooting())
             {
                 
-                if (Mathf.Abs(moveVertical) > 0.8f) // Running
+                if (Mathf.Abs(moveVertical) > 0.8f || Mathf.Abs(moveHorizontal) > 0.8f) // Running
                 {
                     animator.SetBool("isRunning", true);
                     animator.SetBool("isIdle", false);
