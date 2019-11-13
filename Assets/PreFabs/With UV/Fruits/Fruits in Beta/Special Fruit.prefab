@@ -55,7 +55,8 @@ MonoBehaviour:
   fruitSounds:
   - {fileID: 8300000, guid: c8272d894e4674447a4e869f33c5de0b, type: 3}
   spellDuration: 5
-  respawnTime: 10
+  respawnTime: 5
+  respawnDistance: 15
 --- !u!82 &3323800234281984306
 AudioSource:
   m_ObjectHideFlags: 0
