@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.18
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1331949770}
-  m_IndirectSpecularColor: {r: 0.2610268, g: 0.22145042, b: 0.1258789, a: 0.18}
+  m_IndirectSpecularColor: {r: 0.26102635, g: 0.22145048, b: 0.12587914, a: 0.18}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8716,9 +8716,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ebb58709832423643be1bf84028b41ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8f8e59f240e49654ab2866600dbadc18, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.301
+  m_Volume: 0.342
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8962,6 +8962,11 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 650248132}
+    - target: {fileID: 409387792847350201, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 6460332367630671450, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: maxAngle
@@ -9531,6 +9536,11 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 1743284280}
+    - target: {fileID: 1240290768554598001, guid: 18c927b4b28ba7f4f8132d27043f271b,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c927b4b28ba7f4f8132d27043f271b, type: 3}
 --- !u!1001 &7988786762375606128
