@@ -33,6 +33,7 @@ public class PlayerLogic : MonoBehaviour
     private Vector3 originalRotation;
     private PlayerController playerController;
     private Animator animator;
+    private string enemyTag;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,15 @@ public class PlayerLogic : MonoBehaviour
         playerController = GetComponent<PlayerController>();
 
         originalRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+
+        if(gameObject.tag == "Player1")
+        {
+            enemyTag = "Player2";
+        }
+        else if (gameObject.tag == "Player2")
+        {
+            enemyTag = "Player1";
+        }
     }
 
     // Update is called once per frame
@@ -79,7 +89,9 @@ public class PlayerLogic : MonoBehaviour
         {
             playSound(hitSound);
 
-            if (getCanBeChased())
+            // 
+
+            if (getCanBeChased() && !GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerLogic>().isGlowing())
             {
                 chaseMe();
             }
@@ -160,7 +172,16 @@ public class PlayerLogic : MonoBehaviour
 
     public void loseFruits(int numfruits)
     {
-        fruitCounter -= numfruits;
+        
+        if (numfruits > fruitCounter)
+        {
+            fruitCounter = 0;
+        } 
+        else
+        {
+            fruitCounter -= numfruits;
+        }
+
         counterUI.GetComponent<Animator>().SetTrigger("fruitLoss"); // do lose animation of fruit counter
     }
 

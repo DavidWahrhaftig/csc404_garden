@@ -9,7 +9,7 @@ public class ScarecrowLogic : MonoBehaviour
     [SerializeField]
     private float fruitSnatchTimeThreshold = 1f;
     private float fruitSnatchTimer;
-    public int snatchCounter;
+    public int snatchQuantity;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,12 +17,7 @@ public class ScarecrowLogic : MonoBehaviour
 
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-
-            if (other.GetComponent<PlayerLogic>().getFruitCounter() >= snatchCounter)
-            {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchCounter);
-            }
-
+            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
         }
     }
 
@@ -32,9 +27,9 @@ public class ScarecrowLogic : MonoBehaviour
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
             fruitSnatchTimer += Time.deltaTime;
-            if (fruitSnatchTimer > fruitSnatchTimeThreshold && other.GetComponent<PlayerLogic>().getFruitCounter() >= snatchCounter)
+            if (fruitSnatchTimer > fruitSnatchTimeThreshold)
             {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchCounter);
+                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
                 //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                 fruitSnatchTimer = 0;
             }

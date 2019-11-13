@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Audio Settings")]
     [SerializeField] AudioClip[] fruitSounds;
     public AudioClip gateOpenSound;
+    [SerializeField] AudioClip gameSoundtrack, last30secondsTrack, gameOverTrack;
 
     [Header("Time Settings")]
     public float gameDuration = 60;
@@ -48,7 +49,9 @@ public class GameManager : MonoBehaviour
 
     private float remainingCountDownTime;
     private bool beginGame = false;
+    private bool gameOver = false;
 
+    private int trackNumberPlaying = 1;
 
     private void Start()
     {
@@ -133,10 +136,29 @@ public class GameManager : MonoBehaviour
             minutes = ((int)Math.Ceiling(remainingTime) / 60).ToString();
         }
 
+        if (remainingTime <= 30f)
+        {
+
+            if (trackNumberPlaying == 1)
+            {
+                trackNumberPlaying++;
+                playTrack(last30secondsTrack);
+            }
+        }
+
 
         // winner detection
         if (remainingTime <= Mathf.Epsilon)
         {
+            gameOver = true;
+            if (trackNumberPlaying == 2)
+            {
+                trackNumberPlaying++;
+
+                Invoke("playLastTrack", 0.3f);
+            }
+            
+
             if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
             {
                 gameResult1.text = "Merlin's Apprentice";
@@ -207,6 +229,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void playTrack(AudioClip audioClip)
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(audioClip);
+    }
+
+    public void playLastTrack()
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(gameOverTrack);
+    }
+
     private void startCountDown()
     {
 
@@ -273,5 +307,10 @@ public class GameManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public bool isGameOver()
+    {
+        return this.gameOver;
     }
 }

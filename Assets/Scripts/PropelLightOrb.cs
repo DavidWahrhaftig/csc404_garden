@@ -8,12 +8,17 @@ public class PropelLightOrb : MonoBehaviour
     public float fireRate;
     public GameObject impactPrefab;
     public float orbHealth;
+    public string enemyplayerTag;
+    private GameObject enemyPlayer;
+    public bool honing = true;
+    [SerializeField]
+    private float honingRotationSpeed = Mathf.Epsilon;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        enemyPlayer = GameObject.FindGameObjectWithTag(enemyplayerTag);
     }
 
     // Update is called once per frame
@@ -21,16 +26,27 @@ public class PropelLightOrb : MonoBehaviour
     {
         if (speed != 0)
         {
-            // Keep the orb rotated to a fixed x axis.
-            Vector3 eulers = transform.eulerAngles;
-            eulers.x = 0;
-            transform.eulerAngles = eulers;
-
-            // Keep the orb below a set y-value
-            if (transform.position.y > 2f)
+            if (honing)
             {
-                transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
+                Quaternion honingRotation = Quaternion.LookRotation(enemyPlayer.transform.position - transform.position);
+
+                transform.rotation = Quaternion.Lerp(transform.rotation, honingRotation, Time.deltaTime - honingRotationSpeed);
             }
+
+            else
+            {
+                // Keep the orb rotated to a fixed x axis.
+                Vector3 eulers = transform.eulerAngles;
+                eulers.x = 0;
+                transform.eulerAngles = eulers;
+
+                // Keep the orb below a set y-value
+                if (transform.position.y > 2f)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
+                }
+            }
+            
 
             // Propel the orb forward
             transform.position += transform.forward * (speed * Time.deltaTime);
@@ -49,7 +65,7 @@ public class PropelLightOrb : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         //Destroy the orb if it hits a player
-        if (collision.transform.tag == "Player1" || collision.transform.tag == "Player2")
+        if (collision.gameObject.tag == enemyplayerTag)
         {
             speed = 0;
 
@@ -81,6 +97,7 @@ public class PropelLightOrb : MonoBehaviour
             Vector3 reflectDir = Vector3.Reflect(transform.forward, collision.contacts[0].normal);
             float rotation = 90 - (Mathf.Atan2(reflectDir.z, reflectDir.x) * Mathf.Rad2Deg);
             transform.eulerAngles = new Vector3(0, rotation, 0);
+            honing = false;
 
         }
 

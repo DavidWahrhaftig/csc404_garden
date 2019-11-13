@@ -70,7 +70,7 @@ public class SphereCast : MonoBehaviour
                     player = hit2.collider.transform;
                     
                     
-                    if (canCapture(player))
+                    if (canCapture(player) && !FindObjectOfType<GameManager>().isGameOver())
                     {
                         if (witchLogic.getTargetPlayer() != null && witchLogic.getTargetPlayer().gameObject != player.gameObject)
                         {

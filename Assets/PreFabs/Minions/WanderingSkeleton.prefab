@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitSnatchTimeThreshold: 2
-  snatchCounter: 2
+  snatchQuantity: 2
 --- !u!1 &7918646079301318405
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,11 +280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 476607191398393813}
     m_Modifications:
-    - target: {fileID: 6603482524530847261, guid: 9eade7fbcdc7a4797aa8972995f2e85f,
-        type: 3}
-      propertyPath: m_Name
-      value: SkeletonAura
-      objectReference: {fileID: 0}
     - target: {fileID: 6870586264548303312, guid: 9eade7fbcdc7a4797aa8972995f2e85f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -339,6 +334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603482524530847261, guid: 9eade7fbcdc7a4797aa8972995f2e85f,
+        type: 3}
+      propertyPath: m_Name
+      value: SkeletonAura
       objectReference: {fileID: 0}
     - target: {fileID: 8051220033347125504, guid: 9eade7fbcdc7a4797aa8972995f2e85f,
         type: 3}
