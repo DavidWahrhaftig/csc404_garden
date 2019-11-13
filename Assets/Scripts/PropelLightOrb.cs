@@ -27,7 +27,7 @@ public class PropelLightOrb : MonoBehaviour
             transform.eulerAngles = eulers;
 
             // Keep the orb below a set y-value
-            if (transform.position.y > 1.1f)
+            if (transform.position.y > 2f)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
             }
