@@ -11,7 +11,7 @@ public class SkeletonLogic : MonoBehaviour
     [SerializeField]
     private float fruitSnatchTimeThreshold = 1f;
     private float fruitSnatchTimer;
-    public int snatchCounter;
+    public int snatchQuantity;
 
     private void Start()
     {
@@ -26,10 +26,9 @@ public class SkeletonLogic : MonoBehaviour
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
             
-            if(other.GetComponent<PlayerLogic>().getFruitCounter() > 0)
-            {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchCounter);
-            }
+            
+            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
+            
 
             //Debug.Log("Skeleton spotted player! Stop!!!");
             navMeshAgent.isStopped = true;
@@ -44,9 +43,9 @@ public class SkeletonLogic : MonoBehaviour
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
             fruitSnatchTimer += Time.deltaTime;
-            if (fruitSnatchTimer > fruitSnatchTimeThreshold && other.GetComponent<PlayerLogic>().getFruitCounter() > 0)
+            if (fruitSnatchTimer > fruitSnatchTimeThreshold)
             {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchCounter);
+                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
                 //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                 fruitSnatchTimer = 0;
             }
