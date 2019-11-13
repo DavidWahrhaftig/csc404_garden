@@ -259,4 +259,19 @@ public class GameManager : MonoBehaviour
             resistanceSlider2.gameObject.SetActive(false);
         }
     }
+
+    public Transform getPlayer(int playerNum)
+    {
+        if (playerNum == 1)
+        {
+            return this.player1;
+        }
+
+        if (playerNum == 2)
+        {
+            return this.player2;
+        }
+
+        return null;
+    }
 }

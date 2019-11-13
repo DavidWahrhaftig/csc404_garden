@@ -13,7 +13,8 @@ public class SpecialFruit : MonoBehaviour
     [SerializeField] AudioClip[] fruitSounds;
 
     [SerializeField] float spellDuration = 5f; // how long a fruit will be under a spell before becoming neutral again
-    [SerializeField] float respawnTime = 10f;
+    [SerializeField] float respawnTime = 5f;
+    [SerializeField] float respawnDistance = 15f;
 
     GameObject currentActiveFruit;
     private AudioSource audioSource;
@@ -23,7 +24,7 @@ public class SpecialFruit : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        
+
         redFruit.SetActive(false);
         blueFruit.SetActive(false);
 
@@ -33,14 +34,14 @@ public class SpecialFruit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (isCollectable)
         {
-            if (other.gameObject.tag == "Player1"  || other.gameObject.tag == "Player2")
+            if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
             {
                 if (canPlyerTakeFruit(other.gameObject.tag))
                 {
@@ -69,7 +70,8 @@ public class SpecialFruit : MonoBehaviour
         {
             enemyFruit = blueFruit;
 
-        } else if (playerTag == "Player2")
+        }
+        else if (playerTag == "Player2")
         {
             enemyFruit = redFruit;
         }
@@ -80,8 +82,32 @@ public class SpecialFruit : MonoBehaviour
     private void respawnFruit()
     {
         currentActiveFruit = neutralFruit;
+        StartCoroutine(respawnFruitCoRoutine());
+
+    }
+
+    IEnumerator respawnFruitCoRoutine()
+    {
+        Debug.Log("In Coroutine");
+        bool wait = true;
+        while (wait)
+        {
+            if (minDistanceFromPlayers() > respawnDistance)
+            {
+                wait = false;
+
+            }
+
+            yield return null;
+
+
+        }
         currentActiveFruit.SetActive(true);
         isCollectable = true;
+
+        yield return null;
+
+
     }
 
     private void playFruitSound()
@@ -119,7 +145,7 @@ public class SpecialFruit : MonoBehaviour
             currentActiveFruit.SetActive(true);
             Invoke("spellWearOff", spellDuration);
         }
-        
+
     }
 
     private void spellWearOff()
@@ -129,6 +155,15 @@ public class SpecialFruit : MonoBehaviour
         currentActiveFruit.SetActive(true);
 
         isUnderSpell = false;
+    }
+
+    private float minDistanceFromPlayers()
+    {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        float distancePlayer1 = Vector3.Distance(gameManager.getPlayer(1).position, transform.transform.position);
+        float distancePlayer2 = Vector3.Distance(gameManager.getPlayer(2).position, transform.transform.position);
+
+        return Mathf.Min(distancePlayer1, distancePlayer2);
     }
 
 }
