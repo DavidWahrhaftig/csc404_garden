@@ -58,7 +58,22 @@ public class PropelLightOrb : MonoBehaviour
             Vector3 pos = contact.point;
 
             DestroyOrb(pos, rotation);
+
         }
+        /*
+        else if (collision.transform.tag == "SpecialFruit")
+        {
+            speed = 0;
+
+            ContactPoint contact = collision.contacts[0];
+            Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            Vector3 pos = contact.point;
+
+            collision.gameObject.GetComponent<SpecialFruit>().putSpellOnFruit(gameObject.tag);
+
+            DestroyOrb(pos, rotation);
+        }
+        */
 
         // Ricochet the light orb off any other surface
         else
@@ -91,6 +106,18 @@ public class PropelLightOrb : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    public void contactFruit()
+    {
+        //speed = 0;
+
+        //ContactPoint contact = collision.contacts[0];
+        //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        //Vector3 pos = contact.point;
+
+        //DestroyOrb(pos, rotation);
+        DestroyOrb(transform.position, transform.rotation);
     }
 }
 

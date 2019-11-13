@@ -10,6 +10,9 @@ TagManager:
   - Fruit
   - Player1
   - Player2
+  - SpecialFruit
+  - ProjectileBlue
+  - ProjectileRed
   layers:
   - Default
   - TransparentFX

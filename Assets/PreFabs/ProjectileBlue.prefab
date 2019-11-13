@@ -9520,7 +9520,7 @@ GameObject:
   - component: {fileID: 5606139984299952699}
   m_Layer: 0
   m_Name: ProjectileBlue
-  m_TagString: Untagged
+  m_TagString: ProjectileBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
