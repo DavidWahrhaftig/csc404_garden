@@ -181,13 +181,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4596540726462829741}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7036701, y: 0.04029576, z: 0.06762564, w: 0.70615256}
+  m_LocalPosition: {x: 0.08, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3956194637410102182}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 81.244, y: 87.57201, z: 89.79301}
 --- !u!198 &5858141045734056198
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5021,7 +5021,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7102640668156567629}
-  m_LocalRotation: {x: -0, y: 0.93644965, z: -0, w: 0.35080227}
+  m_LocalRotation: {x: 0, y: 0.93644893, z: 0, w: 0.350804}
   m_LocalPosition: {x: -48.192543, y: 0, z: -0.21060765}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5057,8 +5057,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d235793a0a3874121896bd5b44763863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitSnatchTimeThreshold: 2
-  snatchQuantity: 3
+  fruitSnatchTimeThreshold: 3
+  snatchQuantity: 1
 --- !u!1001 &1274601262142609869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5079,7 +5079,7 @@ PrefabInstance:
     - target: {fileID: 2834858836691792491, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2834858836691792491, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
         type: 3}
@@ -5143,21 +5143,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
         type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime1
-      value: 45104
-      objectReference: {fileID: 0}
-    - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime0
-      value: 21588
-      objectReference: {fileID: 0}
-    - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
-        type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
       value: 0.7369097
       objectReference: {fileID: 0}
@@ -5183,13 +5168,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
         type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime2
-      value: 53392
+      propertyPath: ColorModule.gradient.maxGradient.ctime0
+      value: 21588
       objectReference: {fileID: 0}
     - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
         type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
-      value: 2
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 45104
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime2
+      value: 53392
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a103711d7ffe4b85a49e2ae437a9bec, type: 3}

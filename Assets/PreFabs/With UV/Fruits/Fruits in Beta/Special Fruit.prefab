@@ -69,7 +69,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.502
+  m_Volume: 0.378
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -188,6 +188,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3323800234281984300}
     m_Modifications:
+    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Fruit
+      objectReference: {fileID: 0}
     - target: {fileID: 1081091725140123809, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,11 +247,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133063018449834674, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Fruit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f8a7a4c0d761654dba6045e4e2fbdbc, type: 3}

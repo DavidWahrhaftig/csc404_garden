@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitSnatchTimeThreshold: 2
-  snatchQuantity: 2
+  snatchQuantity: 1
 --- !u!1 &7918646079301318405
 GameObject:
   m_ObjectHideFlags: 0

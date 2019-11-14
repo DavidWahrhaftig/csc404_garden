@@ -11,6 +11,13 @@ public class ScarecrowLogic : MonoBehaviour
     private float fruitSnatchTimer;
     public int snatchQuantity;
 
+    public bool isActive = true;
+
+    private void Start()
+    {
+        gameObject.SetActive(isActive);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Collision Tag: " + other.transform.tag);
