@@ -47,6 +47,7 @@ public class SpecialFruit : MonoBehaviour
                 if (canPlyerTakeFruit(other.gameObject.tag))
                 {
                     isCollectable = false;
+                    isUnderSpell = false;
 
                     other.gameObject.GetComponent<PlayerLogic>().incrementFruitCounter();
                     playFruitSound();
@@ -151,11 +152,14 @@ public class SpecialFruit : MonoBehaviour
 
     private void spellWearOff()
     {
-        currentActiveFruit.SetActive(false);
-        currentActiveFruit = neutralFruit;
-        currentActiveFruit.SetActive(true);
+        if (isUnderSpell)
+        {
+            currentActiveFruit.SetActive(false);
+            currentActiveFruit = neutralFruit;
+            currentActiveFruit.SetActive(true);
 
-        isUnderSpell = false;
+            isUnderSpell = false;
+        }
     }
 
     private float minDistanceFromPlayers()
