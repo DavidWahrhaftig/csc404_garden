@@ -12,7 +12,7 @@ public class PropelLightOrb : MonoBehaviour
     private GameObject enemyPlayer;
     public bool honing = true;
     [SerializeField]
-    private float honingRotationSpeed = Mathf.Epsilon;
+    private float honingRotationSpeed = 10;
 
 
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class PropelLightOrb : MonoBehaviour
             {
                 Quaternion honingRotation = Quaternion.LookRotation(enemyPlayer.transform.position - transform.position);
 
-                transform.rotation = Quaternion.Lerp(transform.rotation, honingRotation, Time.deltaTime - honingRotationSpeed);
+                transform.rotation = Quaternion.Lerp(transform.rotation, honingRotation, honingRotationSpeed - Time.deltaTime);
             }
 
             else
