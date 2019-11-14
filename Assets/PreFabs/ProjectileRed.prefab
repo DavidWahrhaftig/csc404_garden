@@ -9561,7 +9561,7 @@ MonoBehaviour:
   orbHealth: 25
   enemyplayerTag: Player2
   honing: 1
-  honingRotationSpeed: 0
+  honingRotationSpeed: 0.1
 --- !u!65 &2752165059703928675
 BoxCollider:
   m_ObjectHideFlags: 0
