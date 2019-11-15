@@ -29,7 +29,7 @@ public class Fruit : MonoBehaviour
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
             other.GetComponent<PlayerLogic>().incrementFruitCounter();
-            gameManager.playFruitSound();
+            //gameManager.playFruitSound();
             gameObject.SetActive(false);
 
             Invoke("respawnFruit", respawnTime);

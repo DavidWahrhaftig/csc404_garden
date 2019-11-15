@@ -28,7 +28,7 @@ public class GateScript : MonoBehaviour
             gateAnim.SetTrigger("OpenGate");
             if (!playedSound)
             {
-                FindObjectOfType<GameManager>().playSound(FindObjectOfType<GameManager>().gateOpenSound);
+                //FindObjectOfType<GameManager>().playSound(FindObjectOfType<GameManager>().gateOpenSound);
                 playedSound = true;
             }
 

@@ -23,11 +23,6 @@ public class GameManager : MonoBehaviour
     public Image imageSlider1;
     public Image imageSlider2;
 
-    /*** Audio ***/
-    [Header("Game Audio Settings")]
-    [SerializeField] AudioClip[] fruitSounds;
-    public AudioClip gateOpenSound;
-    [SerializeField] AudioClip gameSoundtrack, last30secondsTrack, gameOverTrack;
 
     [Header("Time Settings")]
     public float gameDuration = 60;
@@ -58,7 +53,6 @@ public class GameManager : MonoBehaviour
 
         remainingTime = gameDuration;
         remainingCountDownTime = countDownDuration;
-        audioSource = GetComponent<AudioSource>();
 
         // set initial game UI
         fruitCounter1.text = "0";
@@ -136,27 +130,12 @@ public class GameManager : MonoBehaviour
             minutes = ((int)Math.Ceiling(remainingTime) / 60).ToString();
         }
 
-        if (remainingTime <= 30f)
-        {
-
-            if (trackNumberPlaying == 1)
-            {
-                trackNumberPlaying++;
-                playTrack(last30secondsTrack);
-            }
-        }
 
 
         // winner detection
         if (remainingTime <= Mathf.Epsilon)
         {
             gameOver = true;
-            if (trackNumberPlaying == 2)
-            {
-                trackNumberPlaying++;
-
-                Invoke("playLastTrack", 0.3f);
-            }
             
 
             if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
@@ -209,37 +188,6 @@ public class GameManager : MonoBehaviour
         return this.witch;
     }
 
-
-    public void playFruitSound()
-    {
-        if (fruitSounds.Length == 0) { return; } // if no sounds were added
-        int index = UnityEngine.Random.Range(0, fruitSounds.Length);
-
-        if (!audioSource.isPlaying) // so it doesn't layer
-        {
-            audioSource.PlayOneShot(fruitSounds[index]);
-        }
-    }
-
-    public void playSound(AudioClip audio)
-    {
-        if (!audioSource.isPlaying) // so it doesn't layer
-        {
-            audioSource.PlayOneShot(audio);
-        }
-    }
-
-    public void playTrack(AudioClip audioClip)
-    {
-        audioSource.Stop();
-        audioSource.PlayOneShot(audioClip);
-    }
-
-    public void playLastTrack()
-    {
-        audioSource.Stop();
-        audioSource.PlayOneShot(gameOverTrack);
-    }
 
     private void startCountDown()
     {
@@ -312,5 +260,10 @@ public class GameManager : MonoBehaviour
     public bool isGameOver()
     {
         return this.gameOver;
+    }
+
+    public float getTimeRemaining()
+    {
+        return this.remainingTime;
     }
 }

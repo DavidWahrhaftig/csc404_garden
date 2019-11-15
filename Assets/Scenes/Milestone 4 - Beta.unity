@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.18
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1331949770}
-  m_IndirectSpecularColor: {r: 0.26102635, g: 0.22145048, b: 0.12587914, a: 0.18}
+  m_IndirectSpecularColor: {r: 0.26102644, g: 0.2214506, b: 0.12587914, a: 0.18}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5812,6 +5812,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1020971245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2999655317141620381, guid: bc13233766da3d14e87c388d2f7c6a55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2999655317578931556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020971246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020971245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ab5a7253d68d145a23985c80c3a743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  last30SecondsTrack: {fileID: 8300000, guid: f6cf13a8dc1044db99625da3e1fed28a, type: 3}
+  gameOverTrack: {fileID: 8300000, guid: b080e276ca60e9743999deeea6b2bd80, type: 3}
 --- !u!1001 &1021415845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11916,7 +11936,7 @@ PrefabInstance:
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
       propertyPath: gameDuration
-      value: 210
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
@@ -11957,7 +11977,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2999655317578931556}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1020971245}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd052ff17e9807840ae85f15c9aae8fa, type: 3}
