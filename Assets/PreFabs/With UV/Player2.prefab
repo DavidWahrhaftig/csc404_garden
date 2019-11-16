@@ -10327,6 +10327,7 @@ MonoBehaviour:
   caughtSound: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
   counterUI: {fileID: 0}
   playerSkin: {fileID: 3828045317082073837}
+  glowMaterial: {fileID: 2100000, guid: 1e608df5b86f11d47a79cea9127e28a7, type: 2}
   fruitCounter: 0
   glowing: 0
   disabled: 0

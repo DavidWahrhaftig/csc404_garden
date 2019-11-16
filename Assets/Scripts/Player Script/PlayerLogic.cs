@@ -15,6 +15,7 @@ public class PlayerLogic : MonoBehaviour
 
 
     [SerializeField] SkinnedMeshRenderer playerSkin;
+    [SerializeField] Material glowMaterial;
 
     private AudioSource audioSource;
 
@@ -22,7 +23,7 @@ public class PlayerLogic : MonoBehaviour
     private GameManager gameManager;
     public int fruitCounter = 0;
 
-    private Color ogColor;
+    private Material ogMaterial;
 
     //Flags
     public bool glowing = false; // for witch and hidden ability
@@ -42,7 +43,7 @@ public class PlayerLogic : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         selfRigidbody = GetComponent<Rigidbody>();
 
-        ogColor = playerSkin.material.GetColor("_Color");
+        ogMaterial = playerSkin.material;
 
         gameManager = FindObjectOfType<GameManager>();
         playerController = GetComponent<PlayerController>();
@@ -100,10 +101,10 @@ public class PlayerLogic : MonoBehaviour
     }
 
 
-    public void changeColor(Color color)
+    public void changeMaterial(Material material)
     {
         //var playerRend = gameObject.GetComponent<Renderer>();
-        playerSkin.material.SetColor("_Color", color);
+        playerSkin.material = material;
     }
 
     public void chaseMe()
@@ -111,7 +112,7 @@ public class PlayerLogic : MonoBehaviour
         WitchLogic witchLogic = gameManager.getWitch().GetComponent<WitchLogic>();
         witchLogic.chase(transform);
 
-        changeColor(Color.white);
+        changeMaterial(glowMaterial);
         setGlowing(true); // disable this player from shooting in SpawnLightOrb.cs 
 
     }
@@ -121,7 +122,7 @@ public class PlayerLogic : MonoBehaviour
         WitchLogic witchLogic = gameManager.getWitch().GetComponent<WitchLogic>();
         witchLogic.stopChasing();
 
-        changeColor(ogColor);
+        changeMaterial(ogMaterial);
         setGlowing(false);
         setHidden(false);
     }
