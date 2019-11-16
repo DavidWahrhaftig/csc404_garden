@@ -11563,7 +11563,7 @@ PrefabInstance:
     - target: {fileID: 4671575085030474738, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 4671575085030474738, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
@@ -11851,7 +11851,7 @@ PrefabInstance:
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
       propertyPath: countDownDuration
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
@@ -11936,7 +11936,7 @@ PrefabInstance:
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
       propertyPath: gameDuration
-      value: 35
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
@@ -12208,7 +12208,7 @@ PrefabInstance:
     - target: {fileID: 6074459998436865082, guid: 18c927b4b28ba7f4f8132d27043f271b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.153
+      value: -0.026
       objectReference: {fileID: 0}
     - target: {fileID: 6074459998436865082, guid: 18c927b4b28ba7f4f8132d27043f271b,
         type: 3}

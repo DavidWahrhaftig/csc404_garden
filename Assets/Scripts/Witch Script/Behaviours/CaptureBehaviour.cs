@@ -18,8 +18,12 @@ public class CaptureBehaviour : StateMachineBehaviour
     public bool canPlayerResist = false;
     public float playerPower;
     public float goal;
+    public int fruitLossRate = 1; // one fruit every fruitDropTime
     private float dropTimer;
     private bool freePlayer = false;
+
+    private float originalFruitDropTime;
+    private int originalFruitLossRate;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -31,11 +35,19 @@ public class CaptureBehaviour : StateMachineBehaviour
         targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
 
-        goal = targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() * 5;
+
+        originalFruitDropTime = fruitDropTime;
+        originalFruitLossRate = fruitLossRate;
+
+        //goal = targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() * 5;
+
+        goal = getGoal(targetPlayer.GetComponent<PlayerLogic>().getFruitCounter());
 
         dropTimer = fruitDropTime;
 
         gameManager = witchLogic.getGameManager();
+
+      
 
         
     }
@@ -61,7 +73,11 @@ public class CaptureBehaviour : StateMachineBehaviour
 
                 canPlayerResist = true;
                 targetPlayer.GetComponentInChildren<CameraShake>().setCanShake(true);
-                gameManager.activateResistanceSlider(targetPlayer);
+
+                if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() > 0)
+                {
+                    gameManager.activateResistanceSlider(targetPlayer);
+                }
             }
 
             
@@ -71,7 +87,7 @@ public class CaptureBehaviour : StateMachineBehaviour
 
         if (canPlayerResist && !freePlayer)
         {
-            // start decremeanting fruits slowly (1 every 0.75 seconds)
+            // start decremeanting fruits slowly 
             dropTimer -= Time.deltaTime;
 
             if (goal >= 1f)
@@ -88,7 +104,7 @@ public class CaptureBehaviour : StateMachineBehaviour
             {
                 if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() != 0)
                 {
-                    targetPlayer.GetComponent<PlayerLogic>().loseFruits(1);
+                    targetPlayer.GetComponent<PlayerLogic>().loseFruits(fruitLossRate);
                 }
 
                 dropTimer = fruitDropTime;
@@ -117,6 +133,9 @@ public class CaptureBehaviour : StateMachineBehaviour
         freePlayer = false;
         targetPlayer.GetComponentInChildren<CameraShake>().setPower(0f);
         targetPlayer.GetComponentInChildren<CameraShake>().setResistanceMeter(0f);
+
+        fruitLossRate = originalFruitLossRate;
+        fruitDropTime = originalFruitDropTime;
     }
 
 
@@ -133,6 +152,43 @@ public class CaptureBehaviour : StateMachineBehaviour
 
         // Note animator.transform pivot should be the same as the spotlight pivot
 
+    }
+
+    private float getGoal(int fruitCount)
+    {
+        goal = 0f;
+
+        if (fruitCount <= 5)
+        {
+            goal = fruitCount * 4f;
+        }
+        else if (fruitCount <= 10)
+        {
+            goal = fruitCount * 4f;
+            fruitDropTime *= 1.2f;
+
+        } else if (fruitCount <= 15)
+        {
+            goal = fruitCount * 3f;
+            //fruitDropTime = fruitDropTime * 0.8f;
+
+        } else if (fruitCount <= 25)
+        {
+            goal = 40f + (fruitCount - 10) * 1;
+            fruitDropTime = fruitDropTime * 1.1f;
+            fruitLossRate *= 2;
+        }
+
+        else
+        {
+            goal = 40f + (fruitCount - 10) * 1;
+            fruitDropTime = fruitDropTime * 1.3f;
+            fruitLossRate *= 2;
+        }
+
+
+
+        return goal;
     }
 
 }
