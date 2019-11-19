@@ -5778,7 +5778,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 3
+  m_CollisionDetection: 1
 --- !u!136 &3097553944671694264
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5933,7 +5933,7 @@ MonoBehaviour:
   rotationSpeed: 250
   stamina: 40
   centerToBaseSpeed: 10
-  jumpForce: 11
+  jumpForce: 11.5
   forceType: 1
   grounded: 1
   walkingSound: {fileID: 8300000, guid: a8dddc5b010861e45b484854e54f6c0d, type: 3}

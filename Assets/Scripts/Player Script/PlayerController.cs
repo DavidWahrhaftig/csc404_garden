@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     bool runButton;
     bool isCameraFlipped;
     int flip = 1;
+    bool isShooting;
     #endregion
 
     Vector3 movement;
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
         jumpButton = gamePadController.GetButtonDown("Jump");
         runButton = gamePadController.GetButton("Run");
         isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
+        isShooting = gamePadController.GetButton("Shoot");
         //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
 
         /*
@@ -97,11 +99,11 @@ public class PlayerController : MonoBehaviour
             //transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
             // forward/backward movement
 
-            body.MovePosition(transform.position + movement * movingSpeed * Time.deltaTime);
             rotatePlayer();
 
-            if (!GetComponent<SpawnLightOrb>().isShooting())
+            if (!isShooting)
             {
+                body.MovePosition(transform.position + movement * movingSpeed * Time.deltaTime);
 
                 if (Mathf.Abs(moveVertical) > 0.8f || Mathf.Abs(moveHorizontal) > 0.8f) // Running
                 {

@@ -655,7 +655,7 @@ MonoBehaviour:
   rotationSpeed: 250
   stamina: 40
   centerToBaseSpeed: 10
-  jumpForce: 11
+  jumpForce: 11.5
   forceType: 1
   grounded: 1
   walkingSound: {fileID: 8300000, guid: a8dddc5b010861e45b484854e54f6c0d, type: 3}
