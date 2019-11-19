@@ -163,8 +163,9 @@ public class PlayerController : MonoBehaviour
 
     void Jump(float force, ForceMode type)
     {
+        playJumpingSound();
         setGrounded(false);
-        playSound(jumpSound);
+        //playSound(jumpSound);
         body.AddForce(transform.up * force, type);
         animator.SetBool("isJumping", true);
         animator.SetBool("isIdle", false);
@@ -185,11 +186,20 @@ public class PlayerController : MonoBehaviour
         grounded = b;
     }
 
-    public void playSound( AudioClip audio)
+    public void playSound(AudioClip audio)
     {
         if (!audioSource.isPlaying) // so it doesn't layer
         {
             audioSource.PlayOneShot(audio);
+        }
+    }
+
+    public void playJumpingSound()
+    {
+        if (grounded)
+        {
+            //audioSource.Stop();
+            audioSource.PlayOneShot(jumpSound);
         }
     }
 
