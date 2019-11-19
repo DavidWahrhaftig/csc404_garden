@@ -2936,7 +2936,7 @@ PrefabInstance:
     - target: {fileID: 695595725947302527, guid: 40e68156101899d4d827c9280ffe3e42,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 220
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 695595725947302527, guid: 40e68156101899d4d827c9280ffe3e42,
         type: 3}
@@ -8016,7 +8016,7 @@ PrefabInstance:
     - target: {fileID: 695595725947302527, guid: 40e68156101899d4d827c9280ffe3e42,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 220
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 695595725947302527, guid: 40e68156101899d4d827c9280ffe3e42,
         type: 3}
@@ -12065,16 +12065,6 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 650248132}
-    - target: {fileID: 581382059666174651, guid: 91bda12834efab645aa2271c99c2649e,
-        type: 3}
-      propertyPath: shotSound
-      value: 
-      objectReference: {fileID: 8300000, guid: dcf10e6f800c6a946bf85b2fe6fe0592, type: 3}
-    - target: {fileID: 4102493684016254318, guid: 91bda12834efab645aa2271c99c2649e,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91bda12834efab645aa2271c99c2649e, type: 3}
 --- !u!1001 &1841404733916865344
@@ -12741,6 +12731,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 1.8019267e+31
+      objectReference: {fileID: 0}
+    - target: {fileID: 499150028, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}

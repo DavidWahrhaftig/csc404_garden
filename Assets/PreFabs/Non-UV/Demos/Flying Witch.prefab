@@ -212,7 +212,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.577907e-19, y: 3.0262028e+29, z: 1.5936923e-10,
+    w: 1.8019267e+31}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -315,7 +316,7 @@ MonoBehaviour:
   angle: 0
   currentHitDistance: 0
   distance1: 0
-  targetPlayer: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &7988786761543207967
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  witchBase: {fileID: 0}
+  targetPlayer: {fileID: 0}
   laughSound: {fileID: 8300000, guid: 6c866b4200e5c85419880894ebb3e7b4, type: 3}
   chasingSound: {fileID: 8300000, guid: 8a49b40d452730043a9ab0abfb48068d, type: 3}
   patrollingSound: {fileID: 8300000, guid: bc9fce71543336445b20417bc2fc67f7, type: 3}
@@ -429,7 +432,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
