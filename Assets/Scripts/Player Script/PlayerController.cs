@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         }
         */
 
-        movement = transform.forward * moveVertical + transform.right * moveHorizontal;
+        movement = transform.forward * moveVertical + transform.right * moveHorizontal/2f;
 
     }
 

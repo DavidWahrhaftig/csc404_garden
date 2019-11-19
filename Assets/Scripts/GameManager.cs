@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public GameObject resistancePrompt1;
     public GameObject resistancePrompt2;
 
+    bool seenResistancePrompt1 = false;
+    bool seenResistancePrompt2 = false;
+
 
 
     //public Image imageSlider1;
@@ -233,12 +236,26 @@ public class GameManager : MonoBehaviour
         if (player.gameObject.tag == "Player1")
         {
             resistanceSlider1.gameObject.SetActive(true);
-            resistancePrompt1.SetActive(true);
+
+            if (!seenResistancePrompt1)
+            {
+                //seenResistancePrompt1 = true;
+                resistancePrompt1.SetActive(true);
+
+            }
+            
 
         } else if (player.gameObject.tag == "Player2")
         {
             resistanceSlider2.gameObject.SetActive(true);
-            resistancePrompt2.SetActive(true);
+
+            if (!seenResistancePrompt2)
+            {
+                //seenResistancePrompt2 = true;
+                resistancePrompt2.SetActive(true);
+
+            }
+            
         }
     }
 
@@ -247,6 +264,7 @@ public class GameManager : MonoBehaviour
         if (player.gameObject.tag == "Player1")
         {
             resistanceSlider1.gameObject.SetActive(false);
+
             resistancePrompt1.SetActive(false);
 
         }
