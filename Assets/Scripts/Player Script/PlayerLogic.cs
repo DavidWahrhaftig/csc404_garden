@@ -82,8 +82,12 @@ public class PlayerLogic : MonoBehaviour
 
         if (collision.transform.tag == "Ground")
         {
-            playerController.setGrounded(true);
-            transform.GetComponent<Animator>().SetBool("isJumping", false);
+            if (!playerController.grounded)
+            {
+                playerController.setGrounded(true);
+                transform.GetComponent<Animator>().SetBool("isJumping", false);
+            }
+
         }
 
         if (collision.gameObject.name == enemyProjectile.name + "(Clone)")
