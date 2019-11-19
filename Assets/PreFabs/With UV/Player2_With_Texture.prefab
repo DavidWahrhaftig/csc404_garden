@@ -5718,7 +5718,7 @@ GameObject:
   - component: {fileID: 3367328297946077773}
   - component: {fileID: 4915970438258197936}
   m_Layer: 0
-  m_Name: Player2_UV
+  m_Name: Player2_With_Texture
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5756,7 +5756,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 50751f04c5a7ea34dbddd89f4ddfdf20, type: 3}
   m_Controller: {fileID: 9100000, guid: a628cd0960b50184fbb56a0f9a113d7b, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -5933,7 +5933,7 @@ MonoBehaviour:
   rotationSpeed: 250
   stamina: 40
   centerToBaseSpeed: 10
-  jumpForce: 15
+  jumpForce: 11
   forceType: 1
   grounded: 1
   walkingSound: {fileID: 8300000, guid: a8dddc5b010861e45b484854e54f6c0d, type: 3}

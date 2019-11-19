@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     int flip = 1;
     #endregion
 
+    Vector3 movement;
 
     // Start is called before the first frame update
     void Start()
@@ -83,15 +84,25 @@ public class PlayerController : MonoBehaviour
         }
         */
 
+        movement = transform.forward * moveVertical + transform.right * moveHorizontal;
+
+    }
+
+    private void FixedUpdate()
+    {
         if (!playerLogic.isDisabled())
         {
 
             // horizontal rotation movement
-            transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
+            //transform.Rotate(0, rotationSpeed * rotateHorizontal * Time.fixedDeltaTime, 0);
+            // forward/backward movement
+
+            body.MovePosition(transform.position + movement * movingSpeed * Time.deltaTime);
+            rotatePlayer();
 
             if (!GetComponent<SpawnLightOrb>().isShooting())
             {
-                
+
                 if (Mathf.Abs(moveVertical) > 0.8f || Mathf.Abs(moveHorizontal) > 0.8f) // Running
                 {
                     animator.SetBool("isRunning", true);
@@ -100,10 +111,10 @@ public class PlayerController : MonoBehaviour
 
                     playSound(walkingSound);
                     movingSpeed = walkingSpeed * 2;
-                    stamina -= 0.1f;                   
+                    stamina -= 0.1f;
                 }
                 #region Idle & Walk Animation Transitions
-                else if (Mathf.Abs(moveVertical) > Mathf.Epsilon) // Walking
+                else if (Mathf.Abs(moveVertical) > Mathf.Epsilon && grounded) // Walking
                 {
                     animator.SetBool("isWalking", true);
                     animator.SetBool("isIdle", false);
@@ -119,32 +130,10 @@ public class PlayerController : MonoBehaviour
 
                     animator.SetBool("isRunning", false);
                     movingSpeed = walkingSpeed;
-                    stamina += 0.01f;
+                    //stamina += 0.01f;
                 }
                 #endregion
 
-
-                /*
-                #region Running mechanics and Run Animation Transition
-                if (runButton)//if (runButton && stamina > 0) // running
-                {
-                    animator.SetBool("isRunning", true);
-                    animator.SetBool("isIdle", false);
-                    animator.SetBool("isWalking", false);
-
-                    playSound(walkingSound);
-                    movingSpeed = walkingSpeed * 2;
-                    stamina -= 0.1f;
-                }
-                else
-                {
-                    animator.SetBool("isRunning", false);
-                    movingSpeed = walkingSpeed;
-                    stamina += 0.01f;
-                }
-                
-                #endregion
-                */
 
                 if (jumpButton)
                 {
@@ -154,24 +143,21 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                // forward/backward movement
-                body.MovePosition(transform.position + transform.TransformDirection(moveHorizontal * flip, 0f, moveVertical) * movingSpeed * Time.deltaTime);
-                
-
-                /*
-                if (centerToBase) // Ceneter to base
-                {
-                    Vector3 targetDir = playerLogic.playerBase.position - transform.position;
-                    Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, centerToBaseSpeed * Time.deltaTime, 0.0f);
-                    Vector3 newestDir = new Vector3(newDir.x, defaultY, newDir.z);
-                    transform.rotation = Quaternion.LookRotation(newestDir);
-                }*/
             }
         }
-
     }
 
+    private void rotatePlayer()
+    {
+        float turn = rotateHorizontal * rotationSpeed * Time.deltaTime;
 
+        //Debug.Log("yRotation " + turn);
+        // Make this into a rotation in the y axis.
+        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+
+        // Apply this rotation to the rigidbody's rotation.
+        body.MoveRotation(body.rotation * turnRotation);
+    }
 
     void Jump(float force, ForceMode type)
     {
