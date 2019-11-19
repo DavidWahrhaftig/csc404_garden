@@ -24,16 +24,18 @@ public class CameraOscillator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //protect against period becoming 0
-        if (period <= Mathf.Epsilon) { return; }
-        float cycles = Time.time / period;
-        const float tau = Mathf.PI * 2f; // about 6.28
-        float rawSinWave = Mathf.Cos(cycles * tau);
+        if (isOscillating)
+        {
+            //protect against period becoming 0
+            if (period <= Mathf.Epsilon) { return; }
+            float cycles = Time.time / period;
+            const float tau = Mathf.PI * 2f; // about 6.28
+            float rawSinWave = Mathf.Cos(cycles * tau);
 
 
-        movementFactor = rawSinWave / 2f + 0.5f;
-        Vector3 offset = movementVector * movementFactor;
-        transform.position = startingPos + offset;
-        
+            movementFactor = rawSinWave / 2f + 0.5f;
+            Vector3 offset = movementVector * movementFactor;
+            transform.position = startingPos + offset;
+        }
     }
 }

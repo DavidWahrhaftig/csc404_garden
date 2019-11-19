@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject resistancePrompt2;
 
 
+
     //public Image imageSlider1;
     //public Image imageSlider2;
 
@@ -54,6 +55,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+
+        
 
         remainingTime = gameDuration;
         remainingCountDownTime = countDownDuration;
