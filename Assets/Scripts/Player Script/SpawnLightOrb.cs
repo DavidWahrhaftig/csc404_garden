@@ -7,6 +7,7 @@ public class SpawnLightOrb : MonoBehaviour
     public AudioClip shotSound;
     
     public GameObject firePoint;
+    public AudioSource ShootingSoundAudioSource;
     public List<GameObject> vfx = new List<GameObject>();
     private GameObject effectToSpawn;
 
@@ -17,7 +18,7 @@ public class SpawnLightOrb : MonoBehaviour
     public float magicShotPower = 20f; // percent usage of shot
     public float reloadSpeed = 10f; //  the time it takes to load the charge from 0% to 100%
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
     private PlayerLogic playerLogic;
     private PlayerController playerController;
     private Rewired.Player gamePadController;
@@ -31,7 +32,7 @@ public class SpawnLightOrb : MonoBehaviour
         playerLogic = GetComponent<PlayerLogic>();
         playerController = GetComponent<PlayerController>();
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -91,7 +92,8 @@ public class SpawnLightOrb : MonoBehaviour
 
     void shootLater()
     {
-        audioSource.PlayOneShot(shotSound);
+        //audioSource.PlayOneShot(shotSound);
+        ShootingSoundAudioSource.PlayOneShot(shotSound);
         CreateEffect();
         notShooting = true;
         
