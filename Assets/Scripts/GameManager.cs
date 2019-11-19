@@ -20,8 +20,12 @@ public class GameManager : MonoBehaviour
     public Slider resistanceSlider1;
     public Slider resistanceSlider2;
 
-    public Image imageSlider1;
-    public Image imageSlider2;
+    public GameObject resistancePrompt1;
+    public GameObject resistancePrompt2;
+
+
+    //public Image imageSlider1;
+    //public Image imageSlider2;
 
 
     [Header("Time Settings")]
@@ -73,6 +77,10 @@ public class GameManager : MonoBehaviour
 
         resistanceSlider1.gameObject.SetActive(false);
         resistanceSlider2.gameObject.SetActive(false);
+
+        resistancePrompt1.SetActive(false);
+        resistancePrompt2.SetActive(false);
+
     }
 
     void Update()
@@ -222,10 +230,12 @@ public class GameManager : MonoBehaviour
         if (player.gameObject.tag == "Player1")
         {
             resistanceSlider1.gameObject.SetActive(true);
+            resistancePrompt1.SetActive(true);
 
         } else if (player.gameObject.tag == "Player2")
         {
             resistanceSlider2.gameObject.SetActive(true);
+            resistancePrompt2.SetActive(true);
         }
     }
 
@@ -234,11 +244,13 @@ public class GameManager : MonoBehaviour
         if (player.gameObject.tag == "Player1")
         {
             resistanceSlider1.gameObject.SetActive(false);
+            resistancePrompt1.SetActive(false);
 
         }
         else if (player.gameObject.tag == "Player2")
         {
             resistanceSlider2.gameObject.SetActive(false);
+            resistancePrompt2.SetActive(false);
         }
     }
 
@@ -266,4 +278,6 @@ public class GameManager : MonoBehaviour
     {
         return this.remainingTime;
     }
+
 }
+

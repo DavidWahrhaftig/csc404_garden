@@ -76,7 +76,11 @@ public class CaptureBehaviour : StateMachineBehaviour
 
                 if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() > 0)
                 {
+                    // activate prompt message
                     gameManager.activateResistanceSlider(targetPlayer);
+
+                    
+  
                 }
             }
 
@@ -115,6 +119,8 @@ public class CaptureBehaviour : StateMachineBehaviour
                 targetPlayer.GetComponentInChildren<CameraShake>().setCanShake(false);
                 waitScript.DoCoroutine(waitTime);
                 freePlayer = true;
+
+                
             }
         }
         
@@ -124,7 +130,7 @@ public class CaptureBehaviour : StateMachineBehaviour
     {
         targetPlayer.GetComponent<Animator>().SetBool("isCaught", false);
         targetPlayer.GetComponent<Animator>().SetBool("isGettingUp", true);
-
+        //deactivate prompt message
         gameManager.deactivateResistanceSlider(targetPlayer);
         witchLogic.stopChasing();
 

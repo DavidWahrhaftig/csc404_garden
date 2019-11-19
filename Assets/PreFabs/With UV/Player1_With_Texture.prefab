@@ -652,7 +652,7 @@ MonoBehaviour:
   gamePadID: 0
   walkingSpeed: 6
   movingSpeed: 0
-  rotationSpeed: 250
+  rotationSpeed: 200
   stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 11.5
