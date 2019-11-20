@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
 
     public bool displayingInstructions = true;
     public Texture2D controlsImage;
-    public TextMeshProUGUI startGame;
 
 
 
@@ -212,12 +211,7 @@ public class GameManager : MonoBehaviour
     {
         if (displayingInstructions)
         {
-            GUI.Label(new Rect(0, -10, Screen.width, Screen.height * 1.1f), controlsImage);
-            startGame.text = "Press X to begin game";
-        }
-        else
-        {
-            startGame.text = "";
+            GUI.Label(new Rect(0, -10, Screen.width, Screen.height * 1.03f), controlsImage);
         }
     }
 

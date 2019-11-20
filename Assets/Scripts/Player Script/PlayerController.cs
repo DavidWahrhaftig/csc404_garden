@@ -70,14 +70,9 @@ public class PlayerController : MonoBehaviour
     **/
     private void Update()
     {
-        /*if (gameManager.displayingInstructions)
-        {
-            if (gamePadController.GetButtonDown("Jump"))
-                gameManager.displayingInstructions = false;
-        }*/
         if (gameManager.displayingInstructions)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (gamePadController.GetButtonDown("Jump"))
                 gameManager.displayingInstructions = false;
         }
 
