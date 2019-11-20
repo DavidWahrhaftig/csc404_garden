@@ -636,7 +636,7 @@ MonoBehaviour:
   ShootingSoundAudioSource: {fileID: 4102493684016254318}
   vfx:
   - {fileID: 7234356380532221871, guid: 0ee3bcf5f697a4da997d6feed1780501, type: 3}
-  magicCharge: 100
+  magicCharge: 0
   magicShotPower: 20
   reloadSpeed: 7
 --- !u!114 &581382059666174652
