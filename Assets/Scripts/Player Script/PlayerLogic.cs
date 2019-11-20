@@ -36,6 +36,9 @@ public class PlayerLogic : MonoBehaviour
     private Animator animator;
     private string enemyTag;
 
+    [Range(0,1)]
+    public float materialTransition = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +71,8 @@ public class PlayerLogic : MonoBehaviour
         {
             if (hidden) { stopChasingMe(); }
         }
+
+        playerSkin.material.Lerp(ogMaterial, glowMaterial, materialTransition);
     }
 
     private void OnCollisionEnter(Collision collision)
