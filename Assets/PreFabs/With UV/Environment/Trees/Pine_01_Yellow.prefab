@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4586755879795682039}
   - component: {fileID: 4826847888995307713}
   - component: {fileID: 1279270782134070328}
+  - component: {fileID: 5401536662071452076}
   m_Layer: 0
-  m_Name: Pine_01_UV_Ready
+  m_Name: Pine_01_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5401536662071452076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719511557980100836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1790261, y: 1.7056326, z: 7.3034515}
+  m_Center: {x: -0.7741554, y: 0.20349646, z: 3.6517258}
