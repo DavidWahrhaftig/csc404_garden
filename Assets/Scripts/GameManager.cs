@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     bool seenResistancePrompt1 = false;
     bool seenResistancePrompt2 = false;
 
+    public bool displayingInstructions = true;
+    public Texture2D controlsImage;
+    public TextMeshProUGUI startGame;
+
 
 
     //public Image imageSlider1;
@@ -75,7 +79,7 @@ public class GameManager : MonoBehaviour
         gameResult2.text = "";
         GameTimer.text = "";
 
-        startCounterTime = Time.time;
+        //startCounterTime = Time.time;
                
         // disable both players
         player1.GetComponent<PlayerLogic>().disableControls();
@@ -86,7 +90,6 @@ public class GameManager : MonoBehaviour
 
         resistancePrompt1.SetActive(false);
         resistancePrompt2.SetActive(false);
-
     }
 
     void Update()
@@ -104,10 +107,13 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
-
+        
         /*** UI Updates ***/
 
-        startCountDown();
+        if (!displayingInstructions)
+            startCountDown();
+        else
+            startCounterTime = Time.time;
 
         // updating Ammo sliders
         updateSliders();
@@ -202,6 +208,18 @@ public class GameManager : MonoBehaviour
         return this.witch;
     }
 
+    private void OnGUI()
+    {
+        if (displayingInstructions)
+        {
+            GUI.Label(new Rect(0, -10, Screen.width, Screen.height * 1.1f), controlsImage);
+            startGame.text = "Press X to begin game";
+        }
+        else
+        {
+            startGame.text = "";
+        }
+    }
 
     private void startCountDown()
     {
