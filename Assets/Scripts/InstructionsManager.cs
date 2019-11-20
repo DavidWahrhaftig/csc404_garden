@@ -19,11 +19,8 @@ public class InstructionsManager : MonoBehaviour
     void Update()
     {
         if (gamePadController.GetButtonDown("Jump"))
+            SceneManager.LoadScene("Milestone 5");
+        if (gamePadController.GetButtonDown("Camera Flip"))
             SceneManager.LoadScene("MainMenu2");
-    }
-
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(0, -10, Screen.width, Screen.height * 1.03f), controlsImage);
     }
 }

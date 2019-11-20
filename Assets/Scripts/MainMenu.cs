@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
         {
             camera.transform.Translate(transform.forward * 0.1f, Space.World);
             fadeAnimator.SetTrigger("FadeOut");
-            Invoke("PlayGame", 2.3f);
+            Invoke("OpenInstructions", 2.3f);
         }
 
     }
