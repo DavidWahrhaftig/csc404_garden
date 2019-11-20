@@ -70,12 +70,6 @@ public class PlayerController : MonoBehaviour
     **/
     private void Update()
     {
-        if (gameManager.displayingInstructions)
-        {
-            if (gamePadController.GetButtonDown("Jump"))
-                gameManager.displayingInstructions = false;
-        }
-
         moveVertical = gamePadController.GetAxis("Move Vertical");
         moveHorizontal = gamePadController.GetAxis("Move Horizontal");
         rotateHorizontal = gamePadController.GetAxis("Rotate");
