@@ -7,8 +7,9 @@ public class InstructionsManager : MonoBehaviour
 {
     [SerializeField] Rewired.Player gamePadController;
 
-    public Texture2D controlsImage;
+    [SerializeField] Animator fadeOut;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,26 @@ public class InstructionsManager : MonoBehaviour
     void Update()
     {
         if (gamePadController.GetButtonDown("Jump"))
-            SceneManager.LoadScene("Milestone 5");
+        {
+            fadeOut.SetTrigger("FadeOut");
+            Invoke("goToGameScene", 2.3f);
+        }
+            
         if (gamePadController.GetButtonDown("Camera Flip"))
-            SceneManager.LoadScene("MainMenu2");
+        {
+            fadeOut.SetTrigger("FadeOut");
+            Invoke("goToMenuScene", 2.3f);
+        }
+            
+    }
+
+    void goToGameScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    void goToMenuScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

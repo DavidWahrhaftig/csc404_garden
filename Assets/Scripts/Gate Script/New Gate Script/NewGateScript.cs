@@ -6,9 +6,13 @@ public class NewGateScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    
 
-    public GameObject gateBlock;
+
+    [SerializeField] GameObject gateBlock;
+    
+    [SerializeField] AudioClip openSound, closeSound;
+
+    AudioSource audioSource;
 
     bool isGateOpen = false;
 
@@ -18,6 +22,7 @@ public class NewGateScript : MonoBehaviour
     void Start()
     {
         gateBlock.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,19 +51,24 @@ public class NewGateScript : MonoBehaviour
         if (!isGateOpen)
         {
             isGateOpen = true;
-            // play open gate sound
+            
             gateBlock.SetActive(false);
             GetComponent<Animator>().SetTrigger("open");
+
+            // play open gate sound
+            audioSource.PlayOneShot(openSound);
         }
         
     }
 
     public void closeGate()
     {
-            isGateOpen = false;
-            gateBlock.SetActive(true);
-            GetComponent<Animator>().SetTrigger("close");
-            //play close gate sound
+        isGateOpen = false;
+        gateBlock.SetActive(true);
+        GetComponent<Animator>().SetTrigger("close");
+        
+        //play close gate sound
+        audioSource.PlayOneShot(openSound);
     }
 
 }

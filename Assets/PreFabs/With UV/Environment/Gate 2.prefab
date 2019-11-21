@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.2768135, y: 9.379402, z: 1.3073921}
-  m_Center: {x: 2.5663853, y: -4.189701, z: 0.15369606}
+  m_Size: {x: 15.266468, y: 9.379402, z: 2.8790588}
+  m_Center: {x: 3.125616, y: -4.189701, z: -0.6321373}
 --- !u!1 &924876334046534850
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +84,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924876334046534850}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 11.871505, y: 1, z: 5.967676}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5036849446742150320}
   - component: {fileID: 8843862765222915827}
   - component: {fileID: 619244138617752291}
-  - component: {fileID: 5688070306043854211}
+  - component: {fileID: 6159429921811773463}
   m_Layer: 0
   m_Name: Left_Side_Gate_GEO
   m_TagString: Untagged
@@ -180,8 +180,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5688070306043854211
-MeshCollider:
+--- !u!65 &6159429921811773463
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -190,10 +190,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 2155569334061378815, guid: f4c31bdc7420b1a47a81fe66ea2889b7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.0786152, y: 12.006302, z: 0.57287514}
+  m_Center: {x: 1.1241301, y: 6.003151, z: 0.037651286}
 --- !u!1 &5247215307968856203
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +399,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5311814504976338716}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 15.89906, y: 1, z: 5.967676}
@@ -428,7 +427,7 @@ GameObject:
   - component: {fileID: 671230878353372124}
   - component: {fileID: 2337704766941651941}
   - component: {fileID: 5516299223901507162}
-  - component: {fileID: 588167255262312849}
+  - component: {fileID: 3909931664668982385}
   m_Layer: 0
   m_Name: Right_Side_Gate_GEO
   m_TagString: Untagged
@@ -496,8 +495,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &588167255262312849
-MeshCollider:
+--- !u!65 &3909931664668982385
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -506,7 +505,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 5628741627574651379, guid: f4c31bdc7420b1a47a81fe66ea2889b7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 3.078616, y: 12.006302, z: 0.57287514}
+  m_Center: {x: -1.1241294, y: 6.003151, z: 0.037651196}
