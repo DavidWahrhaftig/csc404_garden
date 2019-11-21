@@ -13,6 +13,11 @@ public class CaptureBehaviour : StateMachineBehaviour
     WitchLogic witchLogic;
     GameManager gameManager;
 
+    [Header("Vibration Settings")]
+    [SerializeField] int motorIndex = 0;
+    [Range(0,1)]
+    [SerializeField] float motorLevel = 0.5f;
+
     [Header("Player-Witch Resistance Settings")]
     public float fruitDropTime = 1f;
     public bool canPlayerResist = false;
@@ -78,9 +83,10 @@ public class CaptureBehaviour : StateMachineBehaviour
                 {
                     // activate prompt message
                     gameManager.activateResistanceSlider(targetPlayer);
+                    targetPlayer.GetComponent<PlayerController>().getGamePadController().SetVibration(motorIndex, motorLevel);
 
-                    
-  
+
+
                 }
             }
 
@@ -120,6 +126,7 @@ public class CaptureBehaviour : StateMachineBehaviour
                 waitScript.DoCoroutine(waitTime);
                 freePlayer = true;
 
+                targetPlayer.GetComponent<PlayerController>().getGamePadController().StopVibration();
                 
             }
         }

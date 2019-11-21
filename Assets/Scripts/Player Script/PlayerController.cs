@@ -25,6 +25,13 @@ public class PlayerController : MonoBehaviour
     public AudioClip walkingSound;
     public AudioClip jumpSound;
 
+    /*
+    public int motorIndex = 0;
+    [Range(0,1)]
+    public float motorLevel = 0.5f;
+    public float duration = 2f;
+    */
+
     #region Private Fields
     private AudioSource audioSource;
     
@@ -59,9 +66,10 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         #endregion 
-
-        //defaultY = transform.position.y;
         movingSpeed = walkingSpeed;
+
+        
+        //gamePadController.SetVibration(motorIndex, motorLevel, duration, true);
     }
 
     /**
@@ -79,15 +87,8 @@ public class PlayerController : MonoBehaviour
         isShooting = gamePadController.GetButton("Shoot");
         //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
 
-        /*
-        if (isCameraFlipped)
-        {
-            flip = flip * -1;
-        }
-        */
 
         movement = transform.forward * moveVertical + transform.right * moveHorizontal;
-
     }
 
     private void FixedUpdate()

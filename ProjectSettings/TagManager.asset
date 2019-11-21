@@ -13,6 +13,7 @@ TagManager:
   - SpecialFruit
   - ProjectileBlue
   - ProjectileRed
+  - SkeletonWaypoint
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Players
+  - FruitLoss
   - 
   - 
   - 

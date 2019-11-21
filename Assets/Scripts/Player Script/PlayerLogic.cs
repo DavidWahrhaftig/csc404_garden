@@ -39,6 +39,8 @@ public class PlayerLogic : MonoBehaviour
     [Range(0,1)]
     public float materialTransition = 0f;
 
+    [SerializeField] GameObject fruitToLoseObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -182,17 +184,33 @@ public class PlayerLogic : MonoBehaviour
 
     public void loseFruits(int numfruits)
     {
-        
-        if (numfruits > fruitCounter)
+        int fruitToLose = numfruits;
+
+        // do nothing
+        if (numfruits == 0)
         {
-            fruitCounter = 0;
-        } 
-        else
-        {
-            fruitCounter -= numfruits;
+            return;
         }
 
+        // when we are losing more fruits than we have
+        if (numfruits > fruitCounter)
+        {
+            fruitToLose = fruitCounter;
+        }
+
+        // update the fruitCoutner
+        fruitCounter -= fruitToLose;
+        // animate the fruitCounter UI
         counterUI.GetComponent<Animator>().SetTrigger("fruitLoss"); // do lose animation of fruit counter
+
+        // create the fruitToLose amount of fruit props
+        for (int i = 0; i < fruitToLose; i++)
+        {
+            CreateFruitToLose();
+        }
+       
+
+
     }
 
     public void playSound(AudioClip audio)
@@ -211,7 +229,6 @@ public class PlayerLogic : MonoBehaviour
         animator.SetBool("isIdle", true);
         animator.SetBool("isRunning", false);
         animator.SetBool("isWalking", false);
-
     }
 
     public void disableControls()
@@ -259,6 +276,26 @@ public class PlayerLogic : MonoBehaviour
     public Quaternion getOriginalRotation()
     {
         return Quaternion.Euler(originalRotation.x, originalRotation.y, originalRotation.z);
+    }
+
+
+    void CreateFruitToLose()
+    {
+        GameObject fruitToLose;
+
+        if (fruitToLoseObject != null)
+        {
+            fruitToLose = Instantiate(fruitToLoseObject, transform.position + new Vector3(0f, Random.Range(0.3f, 1f), 0f),
+                Quaternion.identity);
+            fruitToLose.transform.rotation = transform.rotation;
+
+            fruitToLose.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f,1f), 0f, Random.Range(-1f, 1f)));
+            fruitToLose.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-0.5f, 0.5f), 0f, 0f));
+        }
+        else
+        {
+            Debug.Log("Null Fruit to Lose");
+        }
     }
 }
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3677269768921813229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7216735763013346869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7654712912642309684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 316467853341267718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170532916555487534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5419671925670414519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandRing1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7903559575431651134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5406169137582029537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2910933267760454595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5139470937217258251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6580090973653649519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4266789857840293692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandThumb3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 607706260454438331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6040287597811411122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3923350845700544672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2343764552091629772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2764281107007890432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5324636050107855587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8552001373464593227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_GuideCurve_Cluster2Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2243671290404549357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_Follow_Knee_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7322960162623722111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2734514422241889674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6364216453402011623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5605642891104102943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712949501684297738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6794850580906543396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6162694051623751327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7909210593323559291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 1557158522463328804}
   - component: {fileID: 1846911778741311647}
   - component: {fileID: 1428767673020204130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4865048543881229359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +1005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9115137150811560915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8065329332984336732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightShoulder_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1845583074866986542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 54014430135288001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightArm_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,7 +1127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3700333082502960702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4785127027589690798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,7 +1189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1737941178838160914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1220,7 +1220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4033731835703301785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105523958941229003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7696225524019748506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Neck_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5039134167035877896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1344,7 +1344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468062205719849772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5993387783568509614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 620962698435862477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3472899218380578344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1467,7 +1467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2402740727328154351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957584844579225001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1529,7 +1529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2954957197776994444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftToeBase_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1559,7 +1559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2817480919321022949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8894584849167191971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1619,7 +1619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443545295969378644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandThumb2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5208931569896622892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077600494307325468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Hips_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1710,7 +1710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6115928668977990510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8387945842557694607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightFoot_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1771,7 +1771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5631671492974014188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,7 +1802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442577832726883970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1834,7 +1834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8320332169959699953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1865,7 +1865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4045803216566056754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1896,7 +1896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5857238352594402052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1927,7 +1927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3922644898864643509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftUpLeg_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1958,7 +1958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8917185561568406239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1989,7 +1989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4310193397358426650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2019,7 +2019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1189369007288897490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightUpLeg_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2050,7 +2050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 150641632772333956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,7 +2081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7121650106589995858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2111,7 +2111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7405161523285099710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2142,7 +2142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3148022029083199629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2173,7 +2173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4979188067364916302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2204,7 +2204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9085819154225667680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2235,7 +2235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5097059399268078685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandMiddle1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2265,7 +2265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2687286813943656357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2296,7 +2296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4612131260837918827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_Ankle_IK_AnimData_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2327,7 +2327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6172145747206892326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_grandparent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7703853475772668641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_CTRL_Inherit_Rotation_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2388,7 +2388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7124820029157771202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2419,7 +2419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128662861019871404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2450,7 +2450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6328124663463305140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2481,7 +2481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1539471594847611127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2511,7 +2511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6448398101161521205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2542,7 +2542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1632849595880430472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightShoulder_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2573,7 +2573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9133437137110897181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftUpLeg_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2604,7 +2604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3822980037927458765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2635,7 +2635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5827319699786199348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2666,7 +2666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1666215950806862243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2697,7 +2697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8547643574231577484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandIndex3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2727,7 +2727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309467909102503586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6638434111182990471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2791,7 +2791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4715370021916779261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2822,7 +2822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4534111838311632730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Joint_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2854,7 +2854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7820979042903222346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2885,7 +2885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1216190743351569319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftLeg_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2915,7 +2915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 446876215306001737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2946,7 +2946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1369053285636378850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2977,7 +2977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1088643687994172201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3007,7 +3007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3885921098535578150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3038,7 +3038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2877999703187704226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3069,7 +3069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5963065846601101463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightArm_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3100,7 +3100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8553816913962999023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_GuideCurve_Cluster2Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3130,7 +3130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8945510881625097561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3161,7 +3161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370203465644568985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3192,7 +3192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2503801981663518678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftArm_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3223,7 +3223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8260988321099420405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3254,7 +3254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6036228997684029978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandPinky3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3284,7 +3284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7716934528064397043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,7 +3315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7595606897359233509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3346,7 +3346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5140780529973382835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3377,7 +3377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673493973484330500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3408,7 +3408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5621667588801355797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3439,7 +3439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683245799852753139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3470,7 +3470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7825727402520672573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3501,7 +3501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3393997223361850085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3532,7 +3532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8698110249960540967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3563,7 +3563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8198182587459886476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3596,7 +3596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 830871797805748590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3626,7 +3626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3558115756018073693}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_Joint_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3657,7 +3657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621667824761604066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightToeBase_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3688,7 +3688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4054260382447707837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: global_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3734,7 +3734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 788695909701706008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftToeBase_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3764,7 +3764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7691546491458234304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3794,7 +3794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461418007898399280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_grandparent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3825,7 +3825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 790579055728073801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3855,7 +3855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767949454273783616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3886,7 +3886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5618739926099322355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandPinky4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3916,7 +3916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4872708536609670140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3947,7 +3947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2710165453470249376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_Ankle_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3979,7 +3979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6728328142626170799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4010,7 +4010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6238217410268085289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftShoulder_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4041,7 +4041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3532138529370063161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,7 +4072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8168238205841697582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4106,7 +4106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2901110695496813175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4137,7 +4137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1250081943009370571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftToe_End_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4167,7 +4167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 828334932173372522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftArm_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4198,7 +4198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8389570705006392714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_CTRLs_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4232,7 +4232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3378109017201288295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4263,7 +4263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631924638785812976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4294,7 +4294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7863919580673642590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandMiddle3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4324,7 +4324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7349047485474467043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandMiddle3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4354,7 +4354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2015760759250936043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4385,7 +4385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8395964178054609581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_grandparent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4416,7 +4416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6724782186817964408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4447,7 +4447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3470717538945299629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4478,7 +4478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5200366272353663192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4508,7 +4508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4247314629844451670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4539,7 +4539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2165843176411472803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Head_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4569,7 +4569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 546838636639829366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4600,7 +4600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2180761943901210133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftToeBase_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4631,7 +4631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8898988693776317681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4663,7 +4663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 451342863709687529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4693,7 +4693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5013957276047153363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4724,7 +4724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590191996110039449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4755,7 +4755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5317760545948356168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4786,7 +4786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6051667429058262416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4817,7 +4817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4790925242976377354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4848,7 +4848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6205807021067604336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4878,7 +4878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5088947934544458456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4910,7 +4910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7360413454266728375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightUpLeg_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4941,7 +4941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6819003744692614868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_Follow_Foot_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4972,7 +4972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3529888244141820203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5003,7 +5003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3759257415683740807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5034,7 +5034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4156131848390945847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5065,7 +5065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6200149428471089280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandMiddle2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5095,7 +5095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7509970018413599835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5126,7 +5126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8756311536624813323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftShoulder_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5157,7 +5157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3331284933693024547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +5188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795253275503712770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5219,7 +5219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5346132966180521798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5250,7 +5250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5632500506233995196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6576343131049864718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5311,7 +5311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581429399300356331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5342,7 +5342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2868494837030680152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_GuideCurve_Cluster2Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5372,7 +5372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5908476539207169386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Spine2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5402,7 +5402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3404224713840757216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5433,7 +5433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7960220073550647243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5464,7 +5464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 131288615675928822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_Toe_End_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3570295615270653633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5527,7 +5527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3579655762795272734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5558,7 +5558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6122029171965641367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Neck1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5588,7 +5588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6823083296951033044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5618,7 +5618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7757203321681402777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5649,7 +5649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2737960814706875205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5680,7 +5680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2568221533609333847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_GuideCurve_Cluster2Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5718,7 +5718,7 @@ GameObject:
   - component: {fileID: 3367328297946077773}
   - component: {fileID: 4915970438258197936}
   - component: {fileID: 3136691564730965804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player2_With_Texture
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -5916,6 +5916,8 @@ MonoBehaviour:
   hidden: 0
   caught: 0
   canBeChased: 1
+  materialTransition: 0
+  fruitToLoseObject: {fileID: 0}
 --- !u!114 &3367328297946077773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5931,7 +5933,7 @@ MonoBehaviour:
   gamePadID: 1
   walkingSpeed: 6
   movingSpeed: 0
-  rotationSpeed: 200
+  rotationSpeed: 150
   stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 11.5
@@ -5958,7 +5960,7 @@ MonoBehaviour:
   - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
   magicCharge: 0
   magicShotPower: 20
-  reloadSpeed: 7
+  reloadSpeed: 5
 --- !u!82 &3136691564730965804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6064,7 +6066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6656440812589408390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6094,7 +6096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6658742003840492253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_grandparent_inRig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6125,7 +6127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2462963267103052212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6156,7 +6158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4679827114025525240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6187,7 +6189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3683689734069146080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6220,7 +6222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8895092931382230792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6251,7 +6253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9190506815709850060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftShoulder_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6281,7 +6283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4339692573416205011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightUpLeg_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6312,7 +6314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8660311543066743849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6343,7 +6345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3916429431045434105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6374,7 +6376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3717252177943885948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6405,7 +6407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8123962592876395425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandIndex3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6435,7 +6437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3008741588540861905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_BakingLOC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6465,7 +6467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6099046185568406089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6496,7 +6498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8153348671336843336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandThumb1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6526,7 +6528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9178839613494542309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6557,7 +6559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4185995391922186509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6588,7 +6590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5392471380539705256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightToe_End_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6618,7 +6620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1800938363141681149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandPinky4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6648,7 +6650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953154963012954822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_HeadTop_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6678,7 +6680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2420505900733283438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6709,7 +6711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4922798809518936775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_GuideCurve_Cluster1Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6739,7 +6741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256169633959633492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6770,7 +6772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7751374857857363963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6801,7 +6803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1766605719312161744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6832,7 +6834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7647024749728633919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6863,7 +6865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8985887012140964367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6893,7 +6895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696540148493436504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6924,7 +6926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3711247108164291095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandIndex2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6954,7 +6956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447984743812153220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6985,7 +6987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3082742763540442042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7016,7 +7018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2160149017960829321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightShoulder_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7047,7 +7049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1664402358597467516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftToeBase_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7078,7 +7080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8729221849623462903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7109,7 +7111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5310801339188733722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHand_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7139,7 +7141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7635442216114101755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7170,7 +7172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2769861314057928189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7201,7 +7203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2372789407846397633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7232,7 +7234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5251606153285039507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7263,7 +7265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4490928767225483696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7294,7 +7296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1192707361413737216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7325,7 +7327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 806803414912194311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7357,7 +7359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7238255743187824497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7388,7 +7390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5533877269640385041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7418,7 +7420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3330858689863300883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7449,7 +7451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8040532389510682434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7480,7 +7482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6414297061710474171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandRing2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7510,7 +7512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5390488012076702637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7541,7 +7543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2264087642574262137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandIndex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7571,7 +7573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 510663729971905242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7602,7 +7604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5384126327373210517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandPinky1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7632,7 +7634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4107812812166172075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7663,7 +7665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6499614726163723975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7694,7 +7696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4293716644283313337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7725,7 +7727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7382691313538930471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7755,7 +7757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 388806624468225144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7786,7 +7788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6888975240931240731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7817,7 +7819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8975636931759299437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandThumb2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7847,7 +7849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7448411539012386628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7878,7 +7880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548492144219621357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7909,7 +7911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1642596796642830994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7940,7 +7942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2831879890708866493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightUpLeg_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7971,7 +7973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5466209053561651438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8002,7 +8004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342546995817756469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightForeArm_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8032,7 +8034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6758641865257331903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8063,7 +8065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1398780497834869425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8094,7 +8096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5786586713772003919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_GuideCurve_Cluster1Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8124,7 +8126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8502450847554375719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8155,7 +8157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5485704986457536172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8186,7 +8188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2741144962193244142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8217,7 +8219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4679505504990897478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8248,7 +8250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2355534029825774282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8279,7 +8281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5888604769168803894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8310,7 +8312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5465769039639526473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8341,7 +8343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 234471885210198930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_Follow_Knee_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8371,7 +8373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3856503263077177669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8402,7 +8404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5667916257702876354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8434,7 +8436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3715470806377326818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8464,7 +8466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4579985691947672331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8496,7 +8498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4331666423191079212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftForeArm_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8526,7 +8528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2956593830917954784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8557,7 +8559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6410939751188376918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8588,7 +8590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4069825010487028914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Neck_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8618,7 +8620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6136479773590395205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8649,7 +8651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7612937735754633916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Spine1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8679,7 +8681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7055692007589600459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_BakingLOC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8709,7 +8711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8446688648266539782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8739,7 +8741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2773125585359668554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightToeBase_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8771,7 +8773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3911104407155204624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8802,7 +8804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2701585106122265668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8833,7 +8835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2348909723931565132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8863,7 +8865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8254619709746074850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8894,7 +8896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8088562237504050930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_Ankle_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8926,7 +8928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8610988840036203251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8959,7 +8961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3262114269775398836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8990,7 +8992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8627563146222839690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9021,7 +9023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8004529230841595972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9051,7 +9053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2997426276489914749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9081,7 +9083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3836375843202288553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9112,7 +9114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2858253518869479381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CTRL_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9143,7 +9145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4376239541429232056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9173,7 +9175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5160384628067852987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9204,7 +9206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 744066538294151364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9235,7 +9237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 437713697969983256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9268,7 +9270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1820569352460152941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_ToeBase_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9298,7 +9300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1231995568299094722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9329,7 +9331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7572379563222854256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9360,7 +9362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7842264324697390868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Misc_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9465,7 +9467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9153849354575040105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9496,7 +9498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5211518939198713269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9527,7 +9529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3713040934562040419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9558,7 +9560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2716665004104832854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9589,7 +9591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757130601979495128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightArm_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9620,7 +9622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5579188112814215335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9651,7 +9653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4508157004406667371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9683,7 +9685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708923892059323330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9714,7 +9716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 111687961576037695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9745,7 +9747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6759731189203055790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9776,7 +9778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5106112714515928503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandPinky3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9808,7 +9810,7 @@ GameObject:
   - component: {fileID: 6779246623741078694}
   - component: {fileID: 7200016403989320132}
   - component: {fileID: 258725415037437258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9873,7 +9875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2727512088407740559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9904,7 +9906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7613188533578767619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9935,7 +9937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4908593460866174942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandPinky1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9965,7 +9967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3366355479905280207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9996,7 +9998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2268091751729645222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightToeBase_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10026,7 +10028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5918611725995372623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandThumb4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10056,7 +10058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5897059667506424487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_ToeBase_IK_AnimData_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10088,7 +10090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3571722219653650189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightEye_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10118,7 +10120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7862913077827638510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandRing4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10148,7 +10150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3886558108691457539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10179,7 +10181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4080231137350685386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftUpLeg_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10210,7 +10212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2479975897602974821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10241,7 +10243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633185563870198236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandMiddle4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10271,7 +10273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 565154671355059368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10302,7 +10304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8531186271415778158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10333,7 +10335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8524168556851753860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandRing2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10363,7 +10365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 615735632250692062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10394,7 +10396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8809897311962431575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandIndex4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10424,7 +10426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7113417128914799694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10455,7 +10457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 979057120918112031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10486,7 +10488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919040584260486052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10517,7 +10519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4904950767461658088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_grandparent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10548,7 +10550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7035751929169022119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10580,7 +10582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6778684356620100658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10611,7 +10613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42573010337506224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10642,7 +10644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3166992871230266231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10673,7 +10675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5983191672650696888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10704,7 +10706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8282897010140166436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10735,7 +10737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1104449974315025869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandRing4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10765,7 +10767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2147541721603474416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing3_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10796,7 +10798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7564548959739501140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10827,7 +10829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2673748165925213040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Spine_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10857,7 +10859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5266034897358601197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightArm_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10888,7 +10890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3918485278919748623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_Reorient_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10919,7 +10921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7549331056078555903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10950,7 +10952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4050426647139457778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_ToeBase_IkHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10980,7 +10982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4791210648877305753}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftFoot_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11010,7 +11012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5825645895619242679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_GuideCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11040,7 +11042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8624841008092502227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_GuideCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11070,7 +11072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5121975234915365533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11101,7 +11103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5274686891476345768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11132,7 +11134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8314258129969148203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11163,7 +11165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2327503471176664795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11193,7 +11195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4100456069886668394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_BakingLOC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11223,7 +11225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8526300690041610472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_Toe_IK_AnimData_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11254,7 +11256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7284693580667512755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11285,7 +11287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6088321019010554841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11316,7 +11318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7850166920440351718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11347,7 +11349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8816824342743357663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11378,7 +11380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 974020528293372896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11409,7 +11411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279490726193824605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11440,7 +11442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6052853082032848257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11471,7 +11473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3025414989784105878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11508,7 +11510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6134389399257969302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandPinky2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11538,7 +11540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6302700063549087878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11569,7 +11571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1818265402752274260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHand_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11599,7 +11601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2327884445737742592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11630,7 +11632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2812449767085549880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Joint_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11661,7 +11663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5622430963614377653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11692,7 +11694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3114799115851775848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11723,7 +11725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9207831690974974660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightShoulder_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11754,7 +11756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5239009547000725364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftArm_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11785,7 +11787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683509873084759193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11816,7 +11818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7387508615851818133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftShoulder_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11847,7 +11849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6141257103240701499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11878,7 +11880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 423780139209154050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11911,7 +11913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7408725159117097463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11942,7 +11944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458701597428255830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11972,7 +11974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2832466453627986157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightToeBase_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12003,7 +12005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6849806275507690167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12034,7 +12036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4498753015082616728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12065,7 +12067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 785511575816157807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12096,7 +12098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7914284407720456907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12127,7 +12129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4680087074070951618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12158,7 +12160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3867481603679108177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightArm_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12189,7 +12191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5395579966374837370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12220,7 +12222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1366244213417272771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightLeg_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12250,7 +12252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328769383535651324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_GuideCurve_Cluster1Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12280,7 +12282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7644599638549846697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12311,7 +12313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5463456234001064935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12342,7 +12344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2689781031694060582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12373,7 +12375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5312494221354038105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_ToeBase_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12403,7 +12405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985536089541422461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_grandparent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12434,7 +12436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6353976651166040608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12465,7 +12467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6192590758101774009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12496,7 +12498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1103156240652050914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12527,7 +12529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745968707259807389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandThumb1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12557,7 +12559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7207383305708500898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12588,7 +12590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8529712595027556797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_HeadTop_End_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12618,7 +12620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2752651220068519155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12649,7 +12651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1647587031498026102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12680,7 +12682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1175946379520185917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12711,7 +12713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6177250172190472713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_parent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12742,7 +12744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8321859139720778823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_BakingLOC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12772,7 +12774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5475506602841319541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12803,7 +12805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3312764633490802340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12833,7 +12835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 721646297004471781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandRing1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12863,7 +12865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2653143696129530537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Root_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12893,7 +12895,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8073394018872383334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12924,7 +12926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7267031847830073803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandRing3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12954,7 +12956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8244778287537340138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Neck_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12985,7 +12987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6486546059134693563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13016,7 +13018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3204472394005944456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13047,7 +13049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5372379961430011345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13078,7 +13080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5400428820303793525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13109,7 +13111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5897830723239295595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_ToeBase_IkHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13139,7 +13141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3851952957972657910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13170,7 +13172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2435110254841567729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13201,7 +13203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 628017712287362970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_grandparent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13232,7 +13234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7891608384889437353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandThumb4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13262,7 +13264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1969035078904145939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_grandparent_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13293,7 +13295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8712480858125127939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13323,7 +13325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5702512523903946544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftArm_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13354,7 +13356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1607936826148901171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_Toe_End_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13386,7 +13388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7336014342687610803}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13417,7 +13419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5657087842052967968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13448,7 +13450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7419188631346298302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13478,7 +13480,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7194230122910921786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13511,7 +13513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1315345493251175578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13541,7 +13543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7773283937449437289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13572,7 +13574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7231163993721981635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13603,7 +13605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9031564454210151426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13633,7 +13635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633175024194675864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_Toe_IK_AnimData_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13664,7 +13666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8639092303183978416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandRing4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13694,7 +13696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552878833032854259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13725,7 +13727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7641750205925158417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13756,7 +13758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1313983421294999816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing3_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13787,7 +13789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2618259806311212061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13821,7 +13823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616208381730745628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13852,7 +13854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799105159799173549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftShoulder_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13883,7 +13885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8239022779324591867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13914,7 +13916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5820287833427544745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandRing3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13944,7 +13946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5907646904526716935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_BakingLOC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13974,7 +13976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8348330450835780078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightToeBase_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14004,7 +14006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4847812266061113911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14035,7 +14037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2112211474375556556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14066,7 +14068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6979206563440472999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandMiddle1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14096,7 +14098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2790414814271744471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftToeBase_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14128,7 +14130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5962043123786013666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14159,7 +14161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7861773026571774498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftUpLeg_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14190,7 +14192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3809894719810421285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14221,7 +14223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4335280349895053917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftArm_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14251,7 +14253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5905970735838037042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14281,7 +14283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054199718140325675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_Joint_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14312,7 +14314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6590848985052913570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14343,7 +14345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4485945845961752470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandIndex1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14373,7 +14375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2354279719678858094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14404,7 +14406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902094476139261165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14435,7 +14437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3430797335391009587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14465,7 +14467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7488637399236768364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14496,7 +14498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3757869613836424166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14527,7 +14529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6685092679478849124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14558,7 +14560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3800909318782093481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14589,7 +14591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5136750458212598984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14620,7 +14622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2886165219183913845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_RightHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14650,7 +14652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7365992439235964106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14681,7 +14683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9062618174980287756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14713,7 +14715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4672301550477273903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14744,7 +14746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6995071725924526684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14775,7 +14777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4501750885276854847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14806,7 +14808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8071052265962807580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14837,7 +14839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609553554092585423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14868,7 +14870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6798826726663149274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14899,7 +14901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6496404915735951479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightShoulder_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14929,7 +14931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8235793770809280933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandMiddle2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14959,7 +14961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 585773198814911117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14990,7 +14992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1855740020159618262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb2_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15021,7 +15023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 866735500175712612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftEye_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15051,7 +15053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8864799795672677710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb3_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15082,7 +15084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3666081129382918300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_Spine3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15112,7 +15114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4811397292339684636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15144,7 +15146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7861950381423144274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_Reorient_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15175,7 +15177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5270529736843788941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mesh_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15206,7 +15208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4915299857379850545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15237,7 +15239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3599110230548655642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15267,7 +15269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7011357593748514325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15297,7 +15299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1823691507170555874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15328,7 +15330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8255331107211963451}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15362,7 +15364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8566678421067164424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15394,7 +15396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 704459027747611707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15425,7 +15427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8380064492341573259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandIndex1_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15455,7 +15457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6302532539621953936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandIndex1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15486,7 +15488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7470541549475011354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandPinky2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15516,7 +15518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 145208053049306346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15547,7 +15549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300992766781550054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_GuideCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15577,7 +15579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7584985174888130928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15609,7 +15611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2681456604570930177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_CTRLs_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15643,7 +15645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7160441343555709328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightFoot_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15674,7 +15676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5971888603064467890}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15705,7 +15707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3431159374029795505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Neck_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15736,7 +15738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968530083002151088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15768,7 +15770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6237695574847847368}
   - component: {fileID: 5094825461592919804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mesh_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15894,7 +15896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2599894405098778987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightHandIndex2_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15924,7 +15926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8741052252850850800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_Ankle_IK_AnimData_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15955,7 +15957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6641785125362049642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftFoot_FK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15986,7 +15988,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2497620490832736591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftToe_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16016,7 +16018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452391115611097072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandThumb1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16047,7 +16049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678493468400709843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16078,7 +16080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4274699446667516939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16109,7 +16111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396978538105195231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16140,7 +16142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2799423016750446761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16171,7 +16173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8571136729964814413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandThumb3_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16201,7 +16203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5032306663575748883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16232,7 +16234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423698638619423416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle2_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16263,7 +16265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432134818242057450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FK_LeftToeBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16294,7 +16296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5867031622774731312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spine1_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16325,7 +16327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1373925843432555487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_BakingLOC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16355,7 +16357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6683386792018498504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_FK_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16386,7 +16388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6840516233103994191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_IK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16417,7 +16419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7312279236187199147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandMiddle4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16447,7 +16449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2028606640160426986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandThumb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16477,7 +16479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2148923181862178670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg_IK_CTRL_GuideCurve_Cluster1Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16507,7 +16509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3438976464920751465}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_Follow_Foot_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16538,7 +16540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39243317740520283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IK_Dummy_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16568,7 +16570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447631733704439663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16599,7 +16601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835429304771099096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_RightUpLeg_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16629,7 +16631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7365179234975060410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightForeArm_IK_CTRL_GuideCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16659,7 +16661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2708802175152505409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16690,7 +16692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9027630306062009810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg_IK_CTRL_parent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16721,7 +16723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5415103790373905830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16752,7 +16754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8348279654402816136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandIndex1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16783,7 +16785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5331718666893933848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandMiddle2_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16814,7 +16816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8042646848723356240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bind_LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16845,7 +16847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8765684988293137772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle1_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16876,7 +16878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8868489263708545140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Neck_CTRL_In_Rig_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16907,7 +16909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2842238096460972578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftUpLeg_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16937,7 +16939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2953341694284707016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandThumb2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16968,7 +16970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7754758763529936747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16999,7 +17001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2293192272987925477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand_IK_CTRL_grandparent_Global_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17030,7 +17032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4161798950519703879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftForeArm_FK_CTRL_AnimData_CONST_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17061,7 +17063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4089954289979622651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17092,7 +17094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3801209476547430026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandMiddle2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17123,7 +17125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8053067117626029704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_ToeBase_IK_AnimData_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17155,7 +17157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5427455685363638783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MIXAMO_CHARACTER_LeftHandIndex4_infoNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17185,7 +17187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3332646852329828269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_LeftHandMiddle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17215,7 +17217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6399875231832350492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AnimData_RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17246,7 +17248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 62412429724432544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandRing3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17276,7 +17278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045724215608764836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandRing1_CTRL_POS_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
