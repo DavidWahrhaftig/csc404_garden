@@ -114,7 +114,7 @@ public class CaptureBehaviour : StateMachineBehaviour
             {
                 if (targetPlayer.GetComponent<PlayerLogic>().getFruitCounter() != 0)
                 {
-                    targetPlayer.GetComponent<PlayerLogic>().loseFruits(fruitLossRate);
+                    targetPlayer.GetComponent<PlayerLogic>().loseFruits(fruitLossRate, false);
                 }
 
                 dropTimer = fruitDropTime;

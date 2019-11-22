@@ -24,7 +24,7 @@ public class ScarecrowLogic : MonoBehaviour
 
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
+            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
         }
     }
 
@@ -36,7 +36,7 @@ public class ScarecrowLogic : MonoBehaviour
             fruitSnatchTimer += Time.deltaTime;
             if (fruitSnatchTimer > fruitSnatchTimeThreshold)
             {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
+                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
                 //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                 fruitSnatchTimer = 0;
             }

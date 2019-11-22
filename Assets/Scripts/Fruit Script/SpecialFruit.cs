@@ -6,6 +6,8 @@ public class SpecialFruit : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public bool respawnable = true;
+
     [SerializeField] GameObject neutralFruit;
     [SerializeField] GameObject redFruit;
     [SerializeField] GameObject blueFruit;
@@ -20,6 +22,7 @@ public class SpecialFruit : MonoBehaviour
     private AudioSource audioSource;
     private bool isUnderSpell = false;
     private bool isCollectable = true;
+
 
     void Start()
     {
@@ -51,9 +54,12 @@ public class SpecialFruit : MonoBehaviour
 
                     other.gameObject.GetComponent<PlayerLogic>().incrementFruitCounter();
                     playFruitSound();
+
+                    
                     currentActiveFruit.SetActive(false);
 
                     Invoke("respawnFruit", respawnTime);
+                    
                 }
 
             }
@@ -64,6 +70,7 @@ public class SpecialFruit : MonoBehaviour
             }
         }
     }
+
 
     private bool canPlyerTakeFruit(string playerTag)
     {
@@ -83,14 +90,15 @@ public class SpecialFruit : MonoBehaviour
 
     private void respawnFruit()
     {
-        currentActiveFruit = neutralFruit;
-        StartCoroutine(respawnFruitCoRoutine());
-
+        if (respawnable)
+        {
+            currentActiveFruit = neutralFruit;
+            StartCoroutine(respawnFruitCoRoutine());
+        }
     }
 
     IEnumerator respawnFruitCoRoutine()
     {
-        Debug.Log("In Coroutine");
         bool wait = true;
         while (wait)
         {
@@ -169,6 +177,11 @@ public class SpecialFruit : MonoBehaviour
         float distancePlayer2 = Vector3.Distance(gameManager.getPlayer(2).position, transform.transform.position);
 
         return Mathf.Min(distancePlayer1, distancePlayer2);
+    }
+
+    public GameObject getCurrentActiveFruit()
+    {
+        return this.currentActiveFruit;
     }
 
 }

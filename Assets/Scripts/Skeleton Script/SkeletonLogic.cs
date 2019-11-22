@@ -27,7 +27,7 @@ public class SkeletonLogic : MonoBehaviour
         {
             
             
-            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
+            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
             
 
             //Debug.Log("Skeleton spotted player! Stop!!!");
@@ -45,7 +45,7 @@ public class SkeletonLogic : MonoBehaviour
             fruitSnatchTimer += Time.deltaTime;
             if (fruitSnatchTimer > fruitSnatchTimeThreshold)
             {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity);
+                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
                 //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                 fruitSnatchTimer = 0;
             }

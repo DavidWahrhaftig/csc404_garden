@@ -182,7 +182,7 @@ public class PlayerLogic : MonoBehaviour
 
     }
 
-    public void loseFruits(int numfruits)
+    public void loseFruits(int numfruits, bool vibrate)
     {
         int fruitToLose = numfruits;
 
@@ -207,6 +207,11 @@ public class PlayerLogic : MonoBehaviour
         for (int i = 0; i < fruitToLose; i++)
         {
             CreateFruitToLose();
+        }
+
+        if(vibrate)
+        {
+            playerController.getGamePadController().SetVibration(0, 0.5f, 0.6f, true);
         }
        
 
