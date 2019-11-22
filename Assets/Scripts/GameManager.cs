@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
-        
+
         /*** UI Updates ***/
 
         startCountDown();
@@ -121,6 +121,25 @@ public class GameManager : MonoBehaviour
         resistanceSlider1.value = player1.GetComponentInChildren<CameraShake>().getResistanceMeter();
         resistanceSlider2.value = player2.GetComponentInChildren<CameraShake>().getResistanceMeter();
 
+        radarActivation();
+
+    }
+
+    private void radarActivation()
+    {
+        if (player1.GetComponent<PlayerLogic>().fruitCounter == player2.GetComponent<PlayerLogic>().fruitCounter)
+        {
+            player1.GetComponent<PlayerLogic>().setRadarOn(false);
+            player2.GetComponent<PlayerLogic>().setRadarOn(false);
+        }
+        else if (player1.GetComponent<PlayerLogic>().fruitCounter > player2.GetComponent<PlayerLogic>().fruitCounter)
+        {
+            player2.GetComponent<PlayerLogic>().setRadarOn(true);
+        }
+        else
+        {
+            player1.GetComponent<PlayerLogic>().setRadarOn(true);
+        }
     }
 
     private void updateSliders()

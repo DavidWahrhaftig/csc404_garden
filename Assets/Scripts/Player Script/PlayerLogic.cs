@@ -41,6 +41,8 @@ public class PlayerLogic : MonoBehaviour
 
     [SerializeField] GameObject fruitToLoseObject;
 
+    [SerializeField] GameObject radar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -301,6 +303,18 @@ public class PlayerLogic : MonoBehaviour
         {
             Debug.Log("Null Fruit to Lose");
         }
+    }
+
+    public void setRadarOn(bool b)
+    {
+        if (caught)
+        {
+            radar.SetActive(false);
+        } else
+        {
+            radar.SetActive(b);
+        }
+        
     }
 }
 

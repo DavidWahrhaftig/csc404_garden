@@ -14971,6 +14971,11 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 650248132}
+    - target: {fileID: 809303931701224085, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: enemyPlayer
+      value: 
+      objectReference: {fileID: 9131257446618440460}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91bda12834efab645aa2271c99c2649e, type: 3}
 --- !u!1001 &1841404733916865344
@@ -15826,6 +15831,11 @@ PrefabInstance:
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 1743284280}
+    - target: {fileID: 7863011286820077000, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: enemyPlayer
+      value: 
+      objectReference: {fileID: 4488437635940417705}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3e2149d983777049bd70761979f2fc6, type: 3}
 --- !u!4 &9131257446618440460 stripped
