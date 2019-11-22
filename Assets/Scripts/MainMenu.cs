@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
      
         if (moveCamera)
         {
-            camera.transform.Translate(transform.forward * 0.1f, Space.World);
+            camera.transform.Translate(transform.forward * 0.08f, Space.World);
             fadeAnimator.SetTrigger("FadeOut");
             Invoke("OpenInstructions", 2.3f);
         }
@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public void OpenInstructions()
     {
-        SceneManager.LoadScene("Instructions");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
@@ -51,4 +51,5 @@ public class MainMenu : MonoBehaviour
         // open gate, move camera forwrad and fade out scene
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 }

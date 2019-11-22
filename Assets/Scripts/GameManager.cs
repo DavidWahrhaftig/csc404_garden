@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject resistancePrompt1;
     public GameObject resistancePrompt2;
+    public GameObject restartPrompt;
 
     bool seenResistancePrompt1 = false;
     bool seenResistancePrompt2 = false;
@@ -58,7 +59,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 
-        
+        restartPrompt.SetActive(false);
+        //restartPrompt.GetComponent<Image>().material.color.a = 0f;
 
         remainingTime = gameDuration;
         remainingCountDownTime = countDownDuration;
@@ -123,10 +125,22 @@ public class GameManager : MonoBehaviour
 
         radarActivation();
 
+        if (gameOver)
+        {
+            restartPrompt.SetActive(true);
+        }
+
     }
 
     private void radarActivation()
     {
+        if (gameOver)
+        {
+            player1.GetComponent<PlayerLogic>().setRadarOn(false);
+            player2.GetComponent<PlayerLogic>().setRadarOn(false);
+            return;
+        }
+
         if (player1.GetComponent<PlayerLogic>().fruitCounter == player2.GetComponent<PlayerLogic>().fruitCounter)
         {
             player1.GetComponent<PlayerLogic>().setRadarOn(false);
