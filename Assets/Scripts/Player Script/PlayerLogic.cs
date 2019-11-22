@@ -105,7 +105,9 @@ public class PlayerLogic : MonoBehaviour
 
             // 
 
-            if (getCanBeChased() && !GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerLogic>().isGlowing())
+            if (getCanBeChased() && 
+                !GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerLogic>().isGlowing() && 
+                !GameObject.FindGameObjectWithTag(enemyTag).GetComponent<PlayerLogic>().isCaught())
             {
                 chaseMe();
             }
@@ -172,10 +174,6 @@ public class PlayerLogic : MonoBehaviour
         return fruitCounter;
     }
 
-    public void animateFruitCounter()
-    {
-        counterUI.GetComponent<Animator>().SetTrigger("fruitGain");
-    }
 
     public void incrementFruitCounter()
     {
@@ -215,9 +213,6 @@ public class PlayerLogic : MonoBehaviour
         {
             playerController.getGamePadController().SetVibration(0, 0.5f, 0.6f, true);
         }
-       
-
-
     }
 
     public void playSound(AudioClip audio)

@@ -146,6 +146,11 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
+            } else
+            {
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isIdle", true);
+                animator.SetBool("isWalking", false);
             }
         }
     }
@@ -179,7 +184,6 @@ public class PlayerController : MonoBehaviour
         setGravity(false);
         setGrounded(false);
         body.AddForce(transform.up * 3, ForceMode.Force);
-        
     }
     
     public void setGrounded(bool b)
