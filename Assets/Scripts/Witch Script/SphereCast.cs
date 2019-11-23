@@ -65,7 +65,7 @@ public class SphereCast : MonoBehaviour
 
                 if (hit2.collider.tag == "Player1" || hit2.collider.tag == "Player2") 
                 {
-                    //print("Ray Hit Player");
+                    Debug.Log("Spherecast Got Player");
 
                     player = hit2.collider.transform;
                     

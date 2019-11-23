@@ -52,6 +52,8 @@ public class CaptureBehaviour : StateMachineBehaviour
 
         gameManager = witchLogic.getGameManager();
 
+        Debug.Log("Witch Capture behaviour");
+
       
 
         
@@ -62,14 +64,22 @@ public class CaptureBehaviour : StateMachineBehaviour
     {
         playerPower = targetPlayer.GetComponentInChildren<CameraShake>().getPower();
 
-        if (animator.transform.position.x != targetPlayer.position.x && animator.transform.position.z != targetPlayer.position.z)
+        /*if (animator.transform.position.x != targetPlayer.position.x && animator.transform.position.z != targetPlayer.position.z)
         {
+            centerOnPlayer(targetPlayer, animator);
+        }*/
+        if (Mathf.Abs(animator.transform.position.x - targetPlayer.position.x) >= 0.01f && Mathf.Abs(animator.transform.position.z - targetPlayer.position.z) >= 0.01f)
+        {
+            Debug.Log("difference x: " + Mathf.Abs(animator.transform.position.x - targetPlayer.position.x));
+            Debug.Log("difference z: " + Mathf.Abs(animator.transform.position.z - targetPlayer.position.z));
             centerOnPlayer(targetPlayer, animator);
         }
         else
         {
             if (!canPlayerResist)
             {
+                Debug.Log("last difference x: " + Mathf.Abs(animator.transform.position.x - targetPlayer.position.x));
+                Debug.Log("last difference z: " + Mathf.Abs(animator.transform.position.z - targetPlayer.position.z));
                 targetPlayer.GetComponent<PlayerLogic>().playSound(targetPlayer.GetComponent<PlayerLogic>().caughtSound);
                 targetPlayer.GetComponent<Animator>().SetBool("isCaught", true);
                 targetPlayer.GetComponent<Animator>().SetBool("isIdle", false);

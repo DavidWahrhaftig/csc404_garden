@@ -15822,6 +15822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flying Witch
       objectReference: {fileID: 0}
+    - target: {fileID: 7988786761543207967, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7988786761543207937, guid: 8a73bb831ea373a46ad004b1a7807539,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15877,6 +15882,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2160657094144856014, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2160657093273882729, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786760691783578, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786761416924495, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 499150029, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
       propertyPath: gameManager
       value: 
@@ -15888,6 +15913,26 @@ PrefabInstance:
     - target: {fileID: 499150028, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
       propertyPath: m_Volume
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331147055993438100, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454357608975522103, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633801167400010751, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786760743539554, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7988786761416924466, guid: 8a73bb831ea373a46ad004b1a7807539,
         type: 3}
@@ -15908,6 +15953,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 1.8019267e+31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988786762668999840, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147335009837279344, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365666453003745253, guid: 8a73bb831ea373a46ad004b1a7807539,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a73bb831ea373a46ad004b1a7807539, type: 3}
