@@ -22,49 +22,65 @@ public class SkeletonLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Collision Tag: " + other.transform.tag);
+        if (!FindObjectOfType<GameManager>().isGameOver()) { 
 
-        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
-        {
-            
-            
-            other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-            
+            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+            {
 
-            //Debug.Log("Skeleton spotted player! Stop!!!");
-            navMeshAgent.isStopped = true;
-            //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-            playersInProximity += 1;
+                if (!other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
+                {
+                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+
+
+                    //Debug.Log("Skeleton spotted player! Stop!!!");
+                    navMeshAgent.isStopped = true;
+                    //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                    playersInProximity += 1;
+                }
+            }
         }
     }
 
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        if (!FindObjectOfType<GameManager>().isGameOver())
         {
-            fruitSnatchTimer += Time.deltaTime;
-            if (fruitSnatchTimer > fruitSnatchTimeThreshold)
+            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
             {
-                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                fruitSnatchTimer = 0;
+                if (!other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
+                {
+                    fruitSnatchTimer += Time.deltaTime;
+                    if (fruitSnatchTimer > fruitSnatchTimeThreshold)
+                    {
+                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                        fruitSnatchTimer = 0;
+                    }
+                }
+
             }
-            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        if (!FindObjectOfType<GameManager>().isGameOver())
         {
-            //Debug.Log("Skeleton lost sight of a player...");
-            playersInProximity -= 1;
-
-            if (playersInProximity == 0)
+            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
             {
-                //Debug.Log("No more players to see. Resume!");
-                navMeshAgent.isStopped = false;
-                //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                if (!other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
+                {
+                    //Debug.Log("Skeleton lost sight of a player...");
+                    playersInProximity -= 1;
+
+                    if (playersInProximity == 0)
+                    {
+                        //Debug.Log("No more players to see. Resume!");
+                        navMeshAgent.isStopped = false;
+                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                    }
+                }
             }
         }
     }

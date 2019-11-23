@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     private float remainingCountDownTime;
     private bool beginGame = false;
     private bool gameOver = false;
-
+    public bool overTime;
     private int trackNumberPlaying = 1;
 
     private void Start()
@@ -127,7 +127,20 @@ public class GameManager : MonoBehaviour
 
         if (gameOver)
         {
-            restartPrompt.SetActive(true);
+            
+
+            if (player1.GetComponent<PlayerLogic>().isCaught() || player2.GetComponent<PlayerLogic>().isCaught())
+            {
+                overTime = true;
+                GameTimer.text = "Over Time";
+                
+            }
+            else
+            {
+                overTime = false;
+                restartPrompt.SetActive(true);
+            }
+
         }
 
     }
@@ -141,18 +154,20 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (player1.GetComponent<PlayerLogic>().fruitCounter == player2.GetComponent<PlayerLogic>().fruitCounter)
+        if (player1.GetComponent<PlayerLogic>().fruitCounter > player2.GetComponent<PlayerLogic>().fruitCounter) // player 2 is behind
+        {
+            player1.GetComponent<PlayerLogic>().setRadarOn(false);
+            player2.GetComponent<PlayerLogic>().setRadarOn(true);
+        }
+        else if (player1.GetComponent<PlayerLogic>().fruitCounter < player2.GetComponent<PlayerLogic>().fruitCounter) // player 1 is behind
+        {
+            player1.GetComponent<PlayerLogic>().setRadarOn(true);
+            player2.GetComponent<PlayerLogic>().setRadarOn(false);
+        }
+        else // tied
         {
             player1.GetComponent<PlayerLogic>().setRadarOn(false);
             player2.GetComponent<PlayerLogic>().setRadarOn(false);
-        }
-        else if (player1.GetComponent<PlayerLogic>().fruitCounter > player2.GetComponent<PlayerLogic>().fruitCounter)
-        {
-            player2.GetComponent<PlayerLogic>().setRadarOn(true);
-        }
-        else
-        {
-            player1.GetComponent<PlayerLogic>().setRadarOn(true);
         }
     }
 
@@ -182,38 +197,46 @@ public class GameManager : MonoBehaviour
         {
             gameOver = true;
             
-
-            if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
+            if (!overTime)
             {
-                gameResult1.text = "Merlin's Apprentice";
-                gameResult2.text = "Unemployed";
-                player1.GetComponent<PlayerController>().won();
-                player2.GetComponent<PlayerController>().lose();
+
+                if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
+                {
+                    gameResult1.text = "Merlin's Apprentice";
+                    gameResult2.text = "Unemployed";
+                    player1.GetComponent<PlayerController>().won();
+                    player2.GetComponent<PlayerController>().lose();
 
 
-            }
-            else if (player1.GetComponent<PlayerLogic>().getFruitCounter() < player2.GetComponent<PlayerLogic>().getFruitCounter())
-            {
-                gameResult2.text = "Merlin's Apprentice";
-                gameResult1.text = "Unemployed";
-                player1.GetComponent<PlayerController>().lose();
-                player2.GetComponent<PlayerController>().won();
+                }
+                else if (player1.GetComponent<PlayerLogic>().getFruitCounter() < player2.GetComponent<PlayerLogic>().getFruitCounter())
+                {
+                    gameResult2.text = "Merlin's Apprentice";
+                    gameResult1.text = "Unemployed";
+                    player1.GetComponent<PlayerController>().lose();
+                    player2.GetComponent<PlayerController>().won();
+                }
+                else
+                {
+                    gameResult1.text = "No One Likes Ties\nPlay Again";
+                    gameResult2.text = "No One Likes Ties\nPlay Again";
+                    player1.GetComponent<PlayerController>().lose();
+                    player2.GetComponent<PlayerController>().lose();
+                }
+
+
+
+                // restart game when pressing Y or triangle button
+                if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart"))
+                {
+                    Restart();
+                }
             }
             else
             {
-                gameResult1.text = "No One Likes Ties\nPlay Again";
-                gameResult2.text = "No One Likes Ties\nPlay Again";
-                player1.GetComponent<PlayerController>().lose();
-                player2.GetComponent<PlayerController>().lose();
-            }
-
-
-
-            // restart game when pressing Y or triangle button
-            if (player1.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart") || player2.GetComponent<PlayerController>().getGamePadController().GetButtonDown("Restart"))
-            {
-                Restart();
-            }
+                player1.GetComponent<PlayerLogic>().disableControls();
+                player2.GetComponent<PlayerLogic>().disableControls();
+            } 
         }
         else
         {
