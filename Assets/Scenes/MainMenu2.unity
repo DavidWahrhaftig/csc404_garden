@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: be6c37625a5b4e740a428df2a39d8e99, type: 2}
   m_HaloStrength: 0.801
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -958,13 +958,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548574883}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.020499295, y: -0.3419387, z: 0.007461131, w: 0.93946904}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.5, y: -40, z: 0}
 --- !u!224 &551243489 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 227316464934750596, guid: 64c2a17d147c03744a2c9ffe2ec2ab7d,
@@ -1282,6 +1282,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1681229337}
     m_Modifications:
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1351,11 +1356,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02880886
-      objectReference: {fileID: 0}
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
@@ -2843,6 +2843,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1681229337}
     m_Modifications:
+    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
+        type: 3}
+      propertyPath: m_Name
+      value: Skull (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 7662891632035709540, guid: 9bc9e8bfbc7435948afb1d40062122e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2912,11 +2917,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02880884
-      objectReference: {fileID: 0}
-    - target: {fileID: 6630238244310855799, guid: 9bc9e8bfbc7435948afb1d40062122e5,
-        type: 3}
-      propertyPath: m_Name
-      value: Skull (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc9e8bfbc7435948afb1d40062122e5, type: 3}
