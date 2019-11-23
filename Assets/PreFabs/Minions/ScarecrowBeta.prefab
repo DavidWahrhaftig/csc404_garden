@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2d3a17f3ab8076f43a137d8ed5685184, type: 2}
+  - {fileID: 2100000, guid: 1284f74f20360084a9f722ba9cfb5cde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 641d444f126e9fc4587c0972c0255f9c, type: 2}
+  - {fileID: 2100000, guid: 1284f74f20360084a9f722ba9cfb5cde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4975,7 +4975,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8420105441908341936, guid: 5f538bb4f28314670bda4eeeb32a905c, type: 3}
+  - {fileID: 2100000, guid: 1284f74f20360084a9f722ba9cfb5cde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5059,6 +5059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitSnatchTimeThreshold: 3
   snatchQuantity: 1
+  isActive: 1
 --- !u!1001 &1274601262142609869
 PrefabInstance:
   m_ObjectHideFlags: 0
