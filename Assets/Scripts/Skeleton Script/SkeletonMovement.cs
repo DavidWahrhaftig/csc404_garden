@@ -24,6 +24,9 @@ public class SkeletonMovement : MonoBehaviour
     SkeletonWaypoint prevTarget;
 
 
+    private Animator animator;
+
+
     bool inMotion;
     bool idle;
     float idleTimer;
@@ -32,6 +35,7 @@ public class SkeletonMovement : MonoBehaviour
     void Start()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
+        animator = this.GetComponent<Animator>();
 
         if (navMeshAgent == null)
         {
@@ -83,6 +87,13 @@ public class SkeletonMovement : MonoBehaviour
             {
                 idle = true;
                 idleTimer = 0f;
+                if(animator != null)
+                {
+                    animator.SetBool("isIdle", true);
+                    animator.SetBool("isWalking", false);
+                }
+                
+
             }
 
             else
@@ -92,7 +103,7 @@ public class SkeletonMovement : MonoBehaviour
         }
 
         // Count how long Skeleton is idle, then exit that state when timer is up
-        if (idle)
+        if (idle && !navMeshAgent.isStopped)
         {
             idleTimer += Time.deltaTime;
             if(idleTimer >= totalIdleTime)
@@ -116,6 +127,12 @@ public class SkeletonMovement : MonoBehaviour
         Vector3 targetVector = currentTarget.transform.position;
         navMeshAgent.SetDestination(targetVector);
         inMotion = true;
+        if(animator != null)
+        {
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isIdle", false);
+        }
+        
     }
 
     //// Set new waypoint from list with probability of backtracking

@@ -11337,6 +11337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3507651765914841938}
+  - component: {fileID: 1506929582743156570}
   m_Layer: 0
   m_Name: RightHand_CTRLs_GRP
   m_TagString: Untagged
@@ -11362,6 +11363,19 @@ Transform:
   m_Father: {fileID: 8972209491989880933}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1506929582743156570
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425382704155510457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!1 &6451363447735891822
 GameObject:
   m_ObjectHideFlags: 0
