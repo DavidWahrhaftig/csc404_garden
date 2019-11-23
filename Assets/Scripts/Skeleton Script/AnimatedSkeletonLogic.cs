@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SkeletonLogic : MonoBehaviour
+public class AnimatedSkeletonLogic : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
     private int playersInProximity;
@@ -12,6 +12,7 @@ public class SkeletonLogic : MonoBehaviour
     private float fruitSnatchTimeThreshold = 1f;
     private float fruitSnatchTimer;
     public int snatchQuantity;
+
 
     private void Start()
     {
@@ -22,16 +23,14 @@ public class SkeletonLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Collision Tag: " + other.transform.tag);
-        if (!FindObjectOfType<GameManager>().isGameOver()) { 
+        if (!FindObjectOfType<GameManager>().isGameOver())
+        {
 
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
             {
 
                 if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
                 {
-                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-
-
                     //Debug.Log("Skeleton spotted player! Stop!!!");
                     navMeshAgent.isStopped = true;
                     //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
@@ -39,11 +38,13 @@ public class SkeletonLogic : MonoBehaviour
                 }
             }
         }
-    }
+        
+	}
 
 
     private void OnTriggerStay(Collider other)
     {
+
         if (!FindObjectOfType<GameManager>().isGameOver())
         {
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
@@ -53,14 +54,13 @@ public class SkeletonLogic : MonoBehaviour
                     fruitSnatchTimer += Time.deltaTime;
                     if (fruitSnatchTimer > fruitSnatchTimeThreshold)
                     {
-                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                         fruitSnatchTimer = 0;
                     }
                 }
 
             }
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -82,6 +82,19 @@ public class SkeletonLogic : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log("Collision Tag: " + other.transform.tag);
+
+        if (collision.transform.tag == "Player1" || collision.transform.tag == "Player2")
+        {
+
+            collision.gameObject.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+
+
         }
     }
 

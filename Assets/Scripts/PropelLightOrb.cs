@@ -10,9 +10,8 @@ public class PropelLightOrb : MonoBehaviour
     public float orbHealth;
     public string enemyplayerTag;
     private GameObject enemyPlayer;
-    public bool honing = true;
-    [SerializeField]
-    private float honingRotationSpeed = 10;
+    public bool honing;
+    private float honingRotationSpeed = Mathf.Epsilon;
 
 
     // Start is called before the first frame update
@@ -30,7 +29,7 @@ public class PropelLightOrb : MonoBehaviour
             {
                 Quaternion honingRotation = Quaternion.LookRotation(enemyPlayer.transform.position - transform.position);
 
-                transform.rotation = Quaternion.Lerp(transform.rotation, honingRotation, honingRotationSpeed - Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, honingRotation, Time.deltaTime - honingRotationSpeed);
             }
 
             else
@@ -135,6 +134,11 @@ public class PropelLightOrb : MonoBehaviour
 
         //DestroyOrb(pos, rotation);
         DestroyOrb(transform.position, transform.rotation);
+    }
+
+    public void startHoning()
+    {
+        honing = true;
     }
 }
 

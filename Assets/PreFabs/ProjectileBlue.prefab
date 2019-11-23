@@ -9561,7 +9561,6 @@ MonoBehaviour:
   orbHealth: 25
   enemyplayerTag: Player1
   honing: 0
-  honingRotationSpeed: 0.1
 --- !u!54 &6783445151134564090
 Rigidbody:
   m_ObjectHideFlags: 0
