@@ -30,13 +30,16 @@ public class CaptureBehaviour : StateMachineBehaviour
     private float originalFruitDropTime;
     private int originalFruitLossRate;
 
+    private bool playedSound = false;
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
         waitScript = animator.GetComponent<CaptureWait>();
 
         witchLogic = animator.GetComponent<WitchLogic>();
-        //witchLogic.playSound(witchLogic.laughSound);
+
+
         targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
 
@@ -58,7 +61,11 @@ public class CaptureBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        if (!animator.GetComponent<AudioSource>().isPlaying && !playedSound)
+        {
+            playedSound = true;
+            witchLogic.playSound(witchLogic.laughSound);
+        }
 
 
         playerPower = targetPlayer.GetComponentInChildren<CameraShake>().getPower();
@@ -158,6 +165,8 @@ public class CaptureBehaviour : StateMachineBehaviour
 
         fruitLossRate = originalFruitLossRate;
         fruitDropTime = originalFruitDropTime;
+
+        playedSound = false;
     }
 
 
