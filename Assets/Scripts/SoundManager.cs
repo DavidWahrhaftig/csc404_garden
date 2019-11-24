@@ -43,13 +43,15 @@ public class SoundManager : MonoBehaviour
             {
                 isGamOverTrackPlaying = true;
                 audioSource.Stop();
-                
+                audioSource.clip = gameOverTrack;
+                audioSource.Play();
             }
-
+            /*
             if(!audioSource.isPlaying) // to loop game over track
             {
                 audioSource.PlayOneShot(gameOverTrack);
             }
+            */
 
         }
 
