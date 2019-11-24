@@ -22,64 +22,57 @@ public class SkeletonLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Collision Tag: " + other.transform.tag);
-        if (!FindObjectOfType<GameManager>().isGameOver()) { 
+        
+        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        {
 
-            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+            if (!FindObjectOfType<GameManager>().isGameOver() && !other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
             {
-
-                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
-                {
-                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
 
 
-                    //Debug.Log("Skeleton spotted player! Stop!!!");
-                    navMeshAgent.isStopped = true;
-                    //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                    playersInProximity += 1;
-                }
+                //Debug.Log("Skeleton spotted player! Stop!!!");
+                navMeshAgent.isStopped = true;
+                //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                playersInProximity += 1;
             }
         }
+
     }
 
 
     private void OnTriggerStay(Collider other)
     {
-        if (!FindObjectOfType<GameManager>().isGameOver())
+        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+            if (!FindObjectOfType<GameManager>().isGameOver() && !other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
             {
-                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
+                fruitSnatchTimer += Time.deltaTime;
+                if (fruitSnatchTimer > fruitSnatchTimeThreshold)
                 {
-                    fruitSnatchTimer += Time.deltaTime;
-                    if (fruitSnatchTimer > fruitSnatchTimeThreshold)
-                    {
-                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                        fruitSnatchTimer = 0;
-                    }
+                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                    //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                    fruitSnatchTimer = 0;
                 }
-
             }
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!FindObjectOfType<GameManager>().isGameOver())
+        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+            if (!FindObjectOfType<GameManager>().isGameOver() && !other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
             {
-                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
-                {
-                    //Debug.Log("Skeleton lost sight of a player...");
-                    playersInProximity -= 1;
+                //Debug.Log("Skeleton lost sight of a player...");
+                playersInProximity -= 1;
 
-                    if (playersInProximity == 0)
-                    {
-                        //Debug.Log("No more players to see. Resume!");
-                        navMeshAgent.isStopped = false;
-                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                    }
+                if (playersInProximity == 0)
+                {
+                    //Debug.Log("No more players to see. Resume!");
+                    navMeshAgent.isStopped = false;
+                    //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
                 }
             }
         }

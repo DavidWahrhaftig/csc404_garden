@@ -1595,6 +1595,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3551433
       objectReference: {fileID: 0}
+    - target: {fileID: 8871632563197752181, guid: 7fb2a5f03026c1643bf168b0ed8addbd,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.54509807
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871632563197752181, guid: 7fb2a5f03026c1643bf168b0ed8addbd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871632563197752181, guid: 7fb2a5f03026c1643bf168b0ed8addbd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5471698
+      objectReference: {fileID: 0}
+    - target: {fileID: 8871632563197752181, guid: 7fb2a5f03026c1643bf168b0ed8addbd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5471698
+      objectReference: {fileID: 0}
     - target: {fileID: 8871632562639943295, guid: 7fb2a5f03026c1643bf168b0ed8addbd,
         type: 3}
       propertyPath: m_text

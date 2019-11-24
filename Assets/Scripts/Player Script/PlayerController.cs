@@ -78,10 +78,11 @@ public class PlayerController : MonoBehaviour
     **/
     private void Update()
     {
+        /*
         moveVertical = gamePadController.GetAxis("Move Vertical");
         moveHorizontal = gamePadController.GetAxis("Move Horizontal");
         rotateHorizontal = gamePadController.GetAxis("Rotate");
-        jumpButton = gamePadController.GetButton("Jump");
+        jumpButton = gamePadController.GetButtonDown("Jump");
         runButton = gamePadController.GetButton("Run");
         isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
         isShooting = gamePadController.GetButton("Shoot");
@@ -89,10 +90,23 @@ public class PlayerController : MonoBehaviour
 
 
         movement = transform.forward * moveVertical + transform.right * moveHorizontal;
+        */
     }
 
     private void FixedUpdate()
     {
+        moveVertical = gamePadController.GetAxis("Move Vertical");
+        moveHorizontal = gamePadController.GetAxis("Move Horizontal");
+        rotateHorizontal = gamePadController.GetAxis("Rotate");
+        jumpButton = gamePadController.GetButtonDown("Jump");
+        runButton = gamePadController.GetButton("Run");
+        isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
+        isShooting = gamePadController.GetButton("Shoot");
+        //bool centerToBase = gamePadController.GetButtonDown("CenterToBase");
+
+
+        movement = transform.forward * moveVertical + transform.right * moveHorizontal;
+
         if (!playerLogic.isDisabled())
         {
 

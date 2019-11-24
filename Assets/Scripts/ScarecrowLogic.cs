@@ -21,34 +21,29 @@ public class ScarecrowLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Collision Tag: " + other.transform.tag);
-        if (!FindObjectOfType<GameManager>().isGameOver())
+        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+            if (!FindObjectOfType<GameManager>().isGameOver() && !other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
             {
-                if (!other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
-                {
-                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                }
+                other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
             }
         }
+
     }
 
 
     private void OnTriggerStay(Collider other)
     {
-        if (!FindObjectOfType<GameManager>().isGameOver())
+        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
-            if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+            if (!FindObjectOfType<GameManager>().isGameOver() && !other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
             {
-                if (!other.GetComponent<PlayerLogic>().isCaught() && !other.GetComponent<PlayerLogic>().isDisabled())
+                fruitSnatchTimer += Time.deltaTime;
+                if (fruitSnatchTimer > fruitSnatchTimeThreshold)
                 {
-                    fruitSnatchTimer += Time.deltaTime;
-                    if (fruitSnatchTimer > fruitSnatchTimeThreshold)
-                    {
-                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                        fruitSnatchTimer = 0;
-                    }
+                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                    //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                    fruitSnatchTimer = 0;
                 }
             }
         }
