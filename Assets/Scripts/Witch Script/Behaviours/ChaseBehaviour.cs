@@ -11,14 +11,45 @@ public class ChaseBehaviour : StateMachineBehaviour
     WitchLogic witchLogic;
     Transform targetPlayer;
 
+    [SerializeField] AudioClip[] redPlayerChasingSound;
+    [SerializeField] AudioClip[] bluePlayerChasingSound;
+
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         witchLogic = animator.GetComponent<WitchLogic>();
         targetPlayer = witchLogic.getTargetPlayer();
-        
+
+        playChasingSound(targetPlayer.tag);
+    }
+
+    private void playChasingSound(string playerTag)
+    {
         // play chasing sound
-        witchLogic.playSound(witchLogic.chasingSound);
+        AudioClip chasingSound = null;
+
+        if (playerTag == "Player1")
+        {
+            if (redPlayerChasingSound.Length == 0) { return; }
+            
+            chasingSound = getRandomSound(redPlayerChasingSound);
+
+        }
+        else if (playerTag == "Player2")
+        {
+            if (bluePlayerChasingSound.Length == 0) { return; }
+            
+            chasingSound = getRandomSound(bluePlayerChasingSound);
+        }
+
+        witchLogic.playSound(chasingSound);
+    }
+
+    private AudioClip getRandomSound(AudioClip[] sounds)
+    {
+        // play red sound 
+        return sounds[Random.Range(0, sounds.Length)];
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

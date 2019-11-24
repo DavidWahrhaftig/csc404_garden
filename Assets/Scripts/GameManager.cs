@@ -54,7 +54,8 @@ public class GameManager : MonoBehaviour
     private bool beginGame = false;
     private bool gameOver = false;
     public bool overTime;
-    private int trackNumberPlaying = 1;
+
+    private bool flippedCameraEnd = false;
 
     private void Start()
     {
@@ -199,6 +200,8 @@ public class GameManager : MonoBehaviour
             
             if (!overTime)
             {
+                // flip cameras when game is over
+                flipPlayerCameras();
 
                 if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
                 {
@@ -243,6 +246,16 @@ public class GameManager : MonoBehaviour
             if (Int32.Parse(seconds) < 10) { seconds = "0" + seconds; }
 
             GameTimer.text = minutes + ":" + seconds;
+        }
+    }
+
+    private void flipPlayerCameras()
+    {
+        if (!flippedCameraEnd)
+        {
+            flippedCameraEnd = true;
+            player1.GetComponentInChildren<CameraShake>().GetComponentInChildren<CameraController>().flipCamera();
+            player2.GetComponentInChildren<CameraShake>().GetComponentInChildren<CameraController>().flipCamera();
         }
     }
 

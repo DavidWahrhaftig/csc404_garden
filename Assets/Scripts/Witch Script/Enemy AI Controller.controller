@@ -51,6 +51,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 13
   rotationSpeed: 2
+  redPlayerChasingSound:
+  - {fileID: 8300000, guid: 54139898036d3cc49b35019d83684e12, type: 3}
+  - {fileID: 8300000, guid: 2746145179aa8f74f887a1716633d39c, type: 3}
+  - {fileID: 8300000, guid: 0253fd9c676b0eb499dfb0be4d9f0df6, type: 3}
+  - {fileID: 8300000, guid: e0b4229722ea3834e9e67c49aa2920c9, type: 3}
+  - {fileID: 8300000, guid: 363cc7473fb1aee4fbb5484b6212add6, type: 3}
+  - {fileID: 8300000, guid: 8a49b40d452730043a9ab0abfb48068d, type: 3}
+  bluePlayerChasingSound:
+  - {fileID: 8300000, guid: 1c6d191dca958a64a877f5c586d336e8, type: 3}
+  - {fileID: 8300000, guid: 5341daa0969caa44ea999c76eae293b3, type: 3}
+  - {fileID: 8300000, guid: da658e509115521419c69f74436b1be5, type: 3}
+  - {fileID: 8300000, guid: 5271957842cb0ff49bcc704cedf227bc, type: 3}
+  - {fileID: 8300000, guid: 3b37549a054c3af42a036d3e102cac46, type: 3}
+  - {fileID: 8300000, guid: 8a49b40d452730043a9ab0abfb48068d, type: 3}
 --- !u!114 &-4356079155301106313
 MonoBehaviour:
   m_ObjectHideFlags: 1

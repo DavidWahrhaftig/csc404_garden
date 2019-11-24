@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2999655317141620383}
   - component: {fileID: 9132218331756551923}
   - component: {fileID: 29197789}
+  - component: {fileID: 1020971246}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -56,21 +57,16 @@ MonoBehaviour:
   magicSlider2: {fileID: 0}
   resistanceSlider1: {fileID: 0}
   resistanceSlider2: {fileID: 0}
-  imageSlider1: {fileID: 0}
-  imageSlider2: {fileID: 0}
-  fruitSounds:
-  - {fileID: 8300000, guid: aa00e90e36a82764ab9f07065a67c7d0, type: 3}
-  - {fileID: 8300000, guid: f08edda956cb53d45867aa222956a654, type: 3}
-  gateOpenSound: {fileID: 8300000, guid: 7391a611766cd2c45b8fd4da338e339b, type: 3}
-  gameSoundtrack: {fileID: 0}
-  last30secondsTrack: {fileID: 0}
-  gameOverTrack: {fileID: 0}
-  gameDuration: 120
+  resistancePrompt1: {fileID: 0}
+  resistancePrompt2: {fileID: 0}
+  restartPrompt: {fileID: 0}
+  gameDuration: 210
   restartDelay: 2
-  countDownDuration: 1
+  countDownDuration: 5
   player1: {fileID: 0}
   player2: {fileID: 0}
   witch: {fileID: 0}
+  overTime: 0
 --- !u!82 &29197789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -81,11 +77,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.524
+  m_audioClip: {fileID: 8300000, guid: ebb58709832423643be1bf84028b41ad, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -167,3 +163,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1020971246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999655317141620381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ab5a7253d68d145a23985c80c3a743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  last30SecondsTrack: {fileID: 8300000, guid: f6cf13a8dc1044db99625da3e1fed28a, type: 3}
+  gameOverTrack: {fileID: 8300000, guid: b080e276ca60e9743999deeea6b2bd80, type: 3}

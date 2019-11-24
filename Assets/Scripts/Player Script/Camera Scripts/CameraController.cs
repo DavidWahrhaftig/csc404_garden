@@ -81,4 +81,12 @@ public class CameraController : MonoBehaviour
     {
         return transform.localRotation.x <= lowerBound && rotationFactor >= Mathf.Epsilon;
     }
+
+    public void flipCamera()
+    {
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z * -1f);
+
+        // flip camera
+        transform.Rotate(0f, 180, 0f, Space.World);
+    }
 }

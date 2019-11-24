@@ -36,7 +36,7 @@ public class CaptureBehaviour : StateMachineBehaviour
         waitScript = animator.GetComponent<CaptureWait>();
 
         witchLogic = animator.GetComponent<WitchLogic>();
-        witchLogic.playSound(witchLogic.laughSound);
+        //witchLogic.playSound(witchLogic.laughSound);
         targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
 
@@ -53,15 +53,14 @@ public class CaptureBehaviour : StateMachineBehaviour
         gameManager = witchLogic.getGameManager();
 
         Debug.Log("Witch Capture behaviour");
-
-      
-
-        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
+
+
         playerPower = targetPlayer.GetComponentInChildren<CameraShake>().getPower();
 
         /*if (animator.transform.position.x != targetPlayer.position.x && animator.transform.position.z != targetPlayer.position.z)
