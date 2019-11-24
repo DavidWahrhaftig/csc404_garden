@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         moveVertical = gamePadController.GetAxis("Move Vertical");
         moveHorizontal = gamePadController.GetAxis("Move Horizontal");
         rotateHorizontal = gamePadController.GetAxis("Rotate");
-        jumpButton = gamePadController.GetButtonDown("Jump");
+        jumpButton = gamePadController.GetButton("Jump");
         runButton = gamePadController.GetButton("Run");
         isCameraFlipped = gamePadController.GetButtonDown("Camera Flip");
         isShooting = gamePadController.GetButton("Shoot");

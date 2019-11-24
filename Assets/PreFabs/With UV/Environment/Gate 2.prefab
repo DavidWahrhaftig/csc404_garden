@@ -359,6 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gateBlock: {fileID: 518131315}
+  openSound: {fileID: 8300000, guid: 7391a611766cd2c45b8fd4da338e339b, type: 3}
+  closeSound: {fileID: 8300000, guid: 3a88fa2437a918b48a1070074e3b7180, type: 3}
 --- !u!1 &5311814504976338716
 GameObject:
   m_ObjectHideFlags: 0
