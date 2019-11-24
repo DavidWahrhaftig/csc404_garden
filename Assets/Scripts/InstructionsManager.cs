@@ -8,7 +8,9 @@ public class InstructionsManager : MonoBehaviour
     [SerializeField] Rewired.Player gamePadController1, gamePadController2;
 
     [SerializeField] Animator fadeOut;
+    [SerializeField] GameObject check1, check2;
 
+    bool playGame = false;
     
     // Start is called before the first frame update
     void Start()
@@ -20,8 +22,21 @@ public class InstructionsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gamePadController1.GetButtonDown("Jump") || gamePadController2.GetButtonDown("Jump"))
+
+        if (playGame)
         {
+            check1.SetActive(true); // visual check for player 1
+            check2.SetActive(true); // visual check for player 2
+        } else
+        {
+            check1.SetActive(gamePadController1.GetButton("Jump")); // visual check for player 1
+            check2.SetActive(gamePadController2.GetButton("Jump")); // visual check for player 2
+        }
+
+
+        if (gamePadController1.GetButton("Jump") && gamePadController2.GetButton("Jump"))
+        {
+            playGame = true;
             fadeOut.SetTrigger("FadeOut");
             Invoke("goToGameScene", 2.3f);
         }
