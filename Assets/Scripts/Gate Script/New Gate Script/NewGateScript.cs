@@ -11,27 +11,38 @@ public class NewGateScript : MonoBehaviour
     [SerializeField] GameObject gateBlock;
     
     [SerializeField] AudioClip openSound, closeSound;
+    [SerializeField] float closingDistance = 5f;
 
     AudioSource audioSource;
 
     bool isGateOpen = false;
+    bool isGateClosing = false;
 
     bool insidePlayer1 = false;
     bool insidePlayer2 = false;
+
+    Transform player1, player2;
 
     void Start()
     {
         gateBlock.SetActive(false);
         audioSource = GetComponent<AudioSource>();
+        player1 = FindObjectOfType<GameManager>().getPlayer(1);
+        player2 = FindObjectOfType<GameManager>().getPlayer(2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (insidePlayer1 && insidePlayer2 && isGateOpen)
+        if (insidePlayer1 && insidePlayer2 && isGateOpen && areBothPlayerFarEnough())
         {
             closeGate();
         }
+    }
+
+    private bool areBothPlayerFarEnough()
+    {
+        return Vector3.Distance(player1.position, transform.position) > closingDistance && Vector3.Distance(player2.position, transform.position) > closingDistance;
     }
     
     public void setInsidePlayer1(bool b)
@@ -63,12 +74,16 @@ public class NewGateScript : MonoBehaviour
 
     public void closeGate()
     {
-        isGateOpen = false;
-        gateBlock.SetActive(true);
-        GetComponent<Animator>().SetTrigger("close");
-        
-        //play close gate sound
-        audioSource.PlayOneShot(openSound);
+        if (!isGateClosing)
+        {
+            isGateClosing = true;
+            isGateOpen = false;
+            gateBlock.SetActive(true);
+            GetComponent<Animator>().SetTrigger("close");
+
+            //play close gate sound
+            audioSource.PlayOneShot(openSound);
+        }
     }
 
 }
