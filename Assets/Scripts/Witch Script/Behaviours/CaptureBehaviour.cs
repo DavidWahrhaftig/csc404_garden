@@ -36,9 +36,7 @@ public class CaptureBehaviour : StateMachineBehaviour
     {
 
         waitScript = animator.GetComponent<CaptureWait>();
-
         witchLogic = animator.GetComponent<WitchLogic>();
-
 
         targetPlayer = witchLogic.getTargetPlayer();
         targetPlayer.GetComponent<PlayerLogic>().gotCaught(); // make player disabled
@@ -61,6 +59,7 @@ public class CaptureBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        // play laughing sound only when she hasn't laughed before and no other phrase is playing
         if (!animator.GetComponent<AudioSource>().isPlaying && !playedSound)
         {
             playedSound = true;

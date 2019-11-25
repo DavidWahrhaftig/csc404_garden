@@ -80,8 +80,8 @@ public class GameManager : MonoBehaviour
         startCounterTime = Time.time;
                
         // disable both players
-        player1.GetComponent<PlayerLogic>().disableControls();
-        player2.GetComponent<PlayerLogic>().disableControls();
+        //player1.GetComponent<PlayerLogic>().disableControls();
+        //player2.GetComponent<PlayerLogic>().disableControls();
 
         resistanceSlider1.gameObject.SetActive(false);
         resistanceSlider2.gameObject.SetActive(false);
@@ -365,6 +365,11 @@ public class GameManager : MonoBehaviour
     public float getTimeRemaining()
     {
         return this.remainingTime;
+    }
+
+    public bool isGameStart()
+    {
+        return this.beginGame;
     }
 
 }

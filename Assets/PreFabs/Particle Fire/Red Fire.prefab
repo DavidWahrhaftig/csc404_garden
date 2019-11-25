@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1475831058606741987}
   - component: {fileID: 3882753635744545212}
   m_Layer: 0
-  m_Name: WItchFireEffect
+  m_Name: Red Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1314,8 +1314,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.7909144, g: 1, b: 0, a: 1}
-        key1: {r: 0, g: 0.8679245, b: 0.8159602, a: 1}
+        key0: {r: 1, g: 0.11129024, b: 0, a: 1}
+        key1: {r: 0.7741895, g: 0.8666667, b: 0, a: 1}
         key2: {r: 1, g: 0.050477777, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -3773,7 +3773,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -3783,7 +3783,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 20
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3886,7 +3886,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 20
+    maxLights: 1
   TrailModule:
     enabled: 0
     mode: 0

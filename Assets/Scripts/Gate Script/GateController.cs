@@ -24,22 +24,27 @@ public class GateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {    
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (isPermitted(other.gameObject))
+        if (FindObjectOfType<GameManager>().isGameStart() && !isOpen)
         {
             open();
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        /*if (isPermitted(other.gameObject))
+        {
+            open();
+        }*/
+    }
+
     private void OnTriggerExit(Collider other)
     {
-        if (isPermitted(other.gameObject))
+        /*if (isPermitted(other.gameObject))
         {
             Invoke("close", waitToCloseDuration);
         }
+        */
     }
 
 
