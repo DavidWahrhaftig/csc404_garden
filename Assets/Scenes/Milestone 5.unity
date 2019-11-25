@@ -10884,6 +10884,31 @@ PrefabInstance:
       propertyPath: enemyPlayer
       value: 
       objectReference: {fileID: 9131257446618440460}
+    - target: {fileID: 809303931701224087, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 809303932329840701, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392499724362196807, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595840261371538687, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 7991
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656016393494350176, guid: 91bda12834efab645aa2271c99c2649e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91bda12834efab645aa2271c99c2649e, type: 3}
 --- !u!1001 &2999655317578931556
@@ -11576,6 +11601,31 @@ PrefabInstance:
       propertyPath: enemyPlayer
       value: 
       objectReference: {fileID: 4488437635940417705}
+    - target: {fileID: 7863011286820077002, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238720712473376794, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863011286327758688, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557158522463328804, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 12087
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907647817158268477, guid: b3e2149d983777049bd70761979f2fc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3e2149d983777049bd70761979f2fc6, type: 3}
 --- !u!4 &9131257446618440460 stripped
