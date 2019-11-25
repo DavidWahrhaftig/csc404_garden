@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 1461547889}
   - component: {fileID: 1461547890}
   m_Layer: 0
-  m_Name: Gate
+  m_Name: Gate Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,7 +247,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -364,6 +364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowedPlayers:
   - {fileID: 0}
-  openSound: {fileID: 8300000, guid: 547566f4f9775784e80b9bc6a0944d73, type: 3}
+  openSound: {fileID: 8300000, guid: d6d6759d6672f2f42ba72c483b302432, type: 3}
   closeSound: {fileID: 8300000, guid: 3a88fa2437a918b48a1070074e3b7180, type: 3}
   waitToCloseDuration: 2.5

@@ -762,7 +762,7 @@ MonoBehaviour:
   - {fileID: 153317896193759081}
   - {fileID: 6204673798658603192}
   areTorchesRed: 1
-  timeDelay: 0.8
+  timeDelay: 0.5
 --- !u!1 &751165042932738377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   - {fileID: 7542535560884613993}
   - {fileID: 2662989839914694861}
   areTorchesRed: 0
-  timeDelay: 0.8
+  timeDelay: 0.5
 --- !u!1001 &64463821
 PrefabInstance:
   m_ObjectHideFlags: 0

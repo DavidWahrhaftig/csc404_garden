@@ -34,7 +34,7 @@ public class InstructionsManager : MonoBehaviour
         }
 
 
-        if (gamePadController1.GetButton("Jump") && gamePadController2.GetButton("Jump"))
+        if (gamePadController1.GetButton("Jump") && gamePadController2.GetButton("Jump") || Input.GetKeyDown(KeyCode.Return))
         {
             playGame = true;
             fadeOut.SetTrigger("FadeOut");
