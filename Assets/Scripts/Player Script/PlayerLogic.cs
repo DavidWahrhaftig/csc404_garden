@@ -20,7 +20,6 @@ public class PlayerLogic : MonoBehaviour
     private AudioSource audioSource;
 
     private Rigidbody selfRigidbody;
-    private GameManager gameManager;
     public int fruitCounter = 0;
 
     private Material ogMaterial;
@@ -52,7 +51,6 @@ public class PlayerLogic : MonoBehaviour
 
         ogMaterial = playerSkin.material;
 
-        gameManager = FindObjectOfType<GameManager>();
         playerController = GetComponent<PlayerController>();
 
         originalRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
@@ -124,7 +122,7 @@ public class PlayerLogic : MonoBehaviour
 
     public void chaseMe()
     {
-        WitchLogic witchLogic = gameManager.getWitch().GetComponent<WitchLogic>();
+        WitchLogic witchLogic = FindObjectOfType<GameManager>().getWitch().GetComponent<WitchLogic>();
         witchLogic.chase(transform);
 
         changeMaterial(glowMaterial);
@@ -134,7 +132,7 @@ public class PlayerLogic : MonoBehaviour
 
     public void stopChasingMe()
     {
-        WitchLogic witchLogic = gameManager.getWitch().GetComponent<WitchLogic>();
+        WitchLogic witchLogic = FindObjectOfType<GameManager>().getWitch().GetComponent<WitchLogic>();
         witchLogic.stopChasing();
 
         changeMaterial(ogMaterial);

@@ -14,6 +14,8 @@ public class ChaseBehaviour : StateMachineBehaviour
     [SerializeField] AudioClip[] redPlayerChasingSound;
     [SerializeField] AudioClip[] bluePlayerChasingSound;
 
+    private bool hasPlayedSound = false;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -21,29 +23,7 @@ public class ChaseBehaviour : StateMachineBehaviour
         witchLogic = animator.GetComponent<WitchLogic>();
         targetPlayer = witchLogic.getTargetPlayer();
 
-        playChasingSound(targetPlayer.tag);
-    }
-
-    private void playChasingSound(string playerTag)
-    {
-        // play chasing sound
-        AudioClip chasingSound = null;
-
-        if (playerTag == "Player1")
-        {
-            if (redPlayerChasingSound.Length == 0) { return; }
-            
-            chasingSound = getRandomSound(redPlayerChasingSound);
-
-        }
-        else if (playerTag == "Player2")
-        {
-            if (bluePlayerChasingSound.Length == 0) { return; }
-            
-            chasingSound = getRandomSound(bluePlayerChasingSound);
-        }
-
-        witchLogic.playSound(chasingSound);
+        
     }
 
     private AudioClip getRandomSound(AudioClip[] sounds)
@@ -55,6 +35,13 @@ public class ChaseBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
+        if (!animator.GetComponent<AudioSource>().isPlaying && !hasPlayedSound)
+        {
+            hasPlayedSound = true;
+            playChasingSound(targetPlayer.tag);
+        }
+
         // continue chasing after player
         Vector3 targetPosition = new Vector3(targetPlayer.position.x, animator.transform.position.y, targetPlayer.position.z);
         Vector3 direction = animator.transform.position;
@@ -67,5 +54,32 @@ public class ChaseBehaviour : StateMachineBehaviour
             targetPlayer.GetComponent<PlayerLogic>().stopChasingMe();
             witchLogic.playSound(witchLogic.complaningSound);
         }
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+    {
+        hasPlayedSound = false;
+    }
+
+    private void playChasingSound(string playerTag)
+    {
+        // play chasing sound
+        AudioClip chasingSound = null;
+
+        if (playerTag == "Player1")
+        {
+            if (redPlayerChasingSound.Length == 0) { return; }
+
+            chasingSound = getRandomSound(redPlayerChasingSound);
+
+        }
+        else if (playerTag == "Player2")
+        {
+            if (bluePlayerChasingSound.Length == 0) { return; }
+
+            chasingSound = getRandomSound(bluePlayerChasingSound);
+        }
+
+        witchLogic.playSound(chasingSound);
     }
 }

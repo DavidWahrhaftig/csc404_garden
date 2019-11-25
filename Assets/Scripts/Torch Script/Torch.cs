@@ -11,7 +11,7 @@ public class Torch : MonoBehaviour
     void Start()
     {
         currentFlame = greenFire;
-
+        currentFlame.gameObject.SetActive(false);
         redFire.gameObject.SetActive(false);
         blueFire.gameObject.SetActive(false);
 

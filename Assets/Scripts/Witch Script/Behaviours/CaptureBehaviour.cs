@@ -30,7 +30,7 @@ public class CaptureBehaviour : StateMachineBehaviour
     private float originalFruitDropTime;
     private int originalFruitLossRate;
 
-    private bool playedSound = false;
+    private bool hasPlayedSound = false;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -60,9 +60,9 @@ public class CaptureBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         // play laughing sound only when she hasn't laughed before and no other phrase is playing
-        if (!animator.GetComponent<AudioSource>().isPlaying && !playedSound)
+        if (!animator.GetComponent<AudioSource>().isPlaying && !hasPlayedSound)
         {
-            playedSound = true;
+            hasPlayedSound = true;
             witchLogic.playSound(witchLogic.laughSound);
         }
 
@@ -165,7 +165,7 @@ public class CaptureBehaviour : StateMachineBehaviour
         fruitLossRate = originalFruitLossRate;
         fruitDropTime = originalFruitDropTime;
 
-        playedSound = false;
+        hasPlayedSound = false;
     }
 
 

@@ -725,13 +725,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370552071808520576}
-  m_LocalRotation: {x: -0, y: 0.29338878, z: -0, w: 0.95599324}
-  m_LocalPosition: {x: -3.67, y: 0, z: -7.2}
+  m_LocalRotation: {x: -0, y: 0.2644208, z: -0, w: 0.96440744}
+  m_LocalPosition: {x: -3.95, y: 0, z: -8.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5225503289334238059}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 34.122, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 30.665, z: 0}
 --- !u!65 &2473541196357998504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -743,8 +743,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.7799654, y: 7.1696663, z: 1}
-  m_Center: {x: -0.2179842, y: 2.0256286, z: -0.00000011730447}
+  m_Size: {x: 10.362535, y: 7.1696663, z: 2.032275}
+  m_Center: {x: -0.26170373, y: 2.025629, z: -0.045056336}
 --- !u!114 &1116721333952338420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   - {fileID: 153317896193759081}
   - {fileID: 6204673798658603192}
   areTorchesRed: 1
-  timeDelay: 1
+  timeDelay: 0.8
 --- !u!1 &751165042932738377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8799982102159305052}
   m_LocalRotation: {x: -0, y: -0.26946834, z: -0, w: 0.96300924}
-  m_LocalPosition: {x: 56.99, y: 0, z: -8.64}
+  m_LocalPosition: {x: 57.36, y: 0, z: -9.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6941288104380250143}
@@ -1235,8 +1235,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.7799654, y: 7.1696663, z: 1}
-  m_Center: {x: -0.2179842, y: 2.0256286, z: -0.00000011730447}
+  m_Size: {x: 6.7799654, y: 8.601006, z: 2.411994}
+  m_Center: {x: -0.21798426, y: 2.7412982, z: 0.34656522}
 --- !u!114 &615519555015042570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   - {fileID: 7542535560884613993}
   - {fileID: 2662989839914694861}
   areTorchesRed: 0
-  timeDelay: 1
+  timeDelay: 0.8
 --- !u!1001 &64463821
 PrefabInstance:
   m_ObjectHideFlags: 0

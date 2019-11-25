@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private bool flippedCameraEnd = false;
 
-    private void Start()
+    void Awake()
     {
 
         restartPrompt.SetActive(false);
@@ -221,8 +221,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    gameResult1.text = "No One Likes Ties\nPlay Again";
-                    gameResult2.text = "No One Likes Ties\nPlay Again";
+                    gameResult1.text = "No One Likes Ties";
+                    gameResult2.text = "No One Likes Ties";
                     player1.GetComponent<PlayerController>().lose();
                     player2.GetComponent<PlayerController>().lose();
                 }
