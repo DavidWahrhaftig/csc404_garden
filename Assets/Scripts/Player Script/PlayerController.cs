@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
     private PlayerLogic playerLogic;
     private Animator animator;
+    bool isLevitating = false;
     #endregion
 
     #region Controller Inputs
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     Vector3 movement;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +108,11 @@ public class PlayerController : MonoBehaviour
 
 
         movement = transform.forward * moveVertical + transform.right * moveHorizontal;
+
+        if (isLevitating)
+        {
+            levitate();
+        }
 
         if (!playerLogic.isDisabled())
         {
@@ -197,7 +204,11 @@ public class PlayerController : MonoBehaviour
     {
         setGravity(false);
         setGrounded(false);
-        body.AddForce(transform.up * 3, ForceMode.Force);
+        //body.AddForce(transform.up * 3, ForceMode.Force);
+        if (transform.position.y < 2f)
+        {
+            body.MovePosition(transform.position + transform.up * 0.15f * Time.deltaTime);
+        }
     }
     
     public void setGrounded(bool b)
@@ -255,6 +266,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isWalking", false);
         animator.SetBool("isJumping", false);
 
+    }
+
+    public void setIsLevitating(bool b)
+    {
+        isLevitating = b;
     }
 
  

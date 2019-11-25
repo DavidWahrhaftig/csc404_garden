@@ -11,8 +11,9 @@ public class PlayerCaughtBehaviour : StateMachineBehaviour
     {
         playerLogic = animator.transform.GetComponent<PlayerLogic>();
         playerController = animator.transform.GetComponent<PlayerController>();
-        playerLogic.gotCaught();
-        playerController.levitate();
+        //playerLogic.gotCaught();
+        //playerController.levitate();
+        playerController.setIsLevitating(true);
     }
 
 }

@@ -12,7 +12,7 @@ public class TorchesTrigger : MonoBehaviour
     int currentIndex = 0;
     private bool firstTime = true;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (FindObjectOfType<GameManager>().isGameStart())
         {
