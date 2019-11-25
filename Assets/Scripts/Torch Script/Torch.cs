@@ -23,6 +23,7 @@ public class Torch : MonoBehaviour
         currentFlame.gameObject.SetActive(false);
         currentFlame = redFire;
         currentFlame.gameObject.SetActive(true);
+        GetComponent<AudioSource>().Play();
     }
 
     public void makeFlameBlue()
@@ -30,6 +31,7 @@ public class Torch : MonoBehaviour
         currentFlame.gameObject.SetActive(false);
         currentFlame = blueFire;
         currentFlame.gameObject.SetActive(true);
+        GetComponent<AudioSource>().Play();
     }
 
 }

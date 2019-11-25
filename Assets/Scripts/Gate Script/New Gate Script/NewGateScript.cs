@@ -82,7 +82,7 @@ public class NewGateScript : MonoBehaviour
             GetComponent<Animator>().SetTrigger("close");
 
             //play close gate sound
-            audioSource.PlayOneShot(openSound);
+            audioSource.PlayOneShot(closeSound);
         }
     }
 
