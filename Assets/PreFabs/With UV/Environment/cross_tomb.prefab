@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3982811224752994737}
   - component: {fileID: 5340933850301727623}
   - component: {fileID: 1811087384072421246}
+  - component: {fileID: 8531312696664739843}
   m_Layer: 0
   m_Name: cross_tomb
   m_TagString: Ground
@@ -89,6 +90,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8531312696664739843
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80660645145594786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7331691750506480349, guid: f93d15cb389ca1e4da05ebd77926f061, type: 3}
 --- !u!1 &910318006336565511
 GameObject:
   m_ObjectHideFlags: 0

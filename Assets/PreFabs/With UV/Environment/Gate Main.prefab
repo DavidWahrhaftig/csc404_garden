@@ -362,6 +362,8 @@ MonoBehaviour:
   openSound: {fileID: 8300000, guid: 7391a611766cd2c45b8fd4da338e339b, type: 3}
   closeSound: {fileID: 8300000, guid: 3a88fa2437a918b48a1070074e3b7180, type: 3}
   closingDistance: 5
+  witchWelcomeSound: {fileID: 8300000, guid: 6f7d064a57ed9074ab9045c02281ffff, type: 3}
+  witchWelcomeDelay: 2.5
 --- !u!1 &5311814504976338716
 GameObject:
   m_ObjectHideFlags: 0

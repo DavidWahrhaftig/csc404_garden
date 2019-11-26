@@ -17,6 +17,8 @@ public class WitchLogic : MonoBehaviour
     public AudioClip patrollingSound;
     public AudioClip complaningSound;
     public AudioClip idleSound;
+    public AudioClip witchWelcomeSound;
+    public float welcomeDelay = 3f;
 
     private Animator witchAnimator;
     private AudioSource audioSource;
@@ -70,5 +72,15 @@ public class WitchLogic : MonoBehaviour
         return gameManager;
     }
 
-  
+    public void playDelayedWitchWelcomeSound()
+    {
+        Invoke("playWitchWelcomeSound", welcomeDelay);
+    }
+
+    private void playWitchWelcomeSound()
+    {
+        audioSource.PlayOneShot(witchWelcomeSound);
+    }
+
+
 }

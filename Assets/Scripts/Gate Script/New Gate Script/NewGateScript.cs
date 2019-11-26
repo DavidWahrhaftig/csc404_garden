@@ -9,7 +9,7 @@ public class NewGateScript : MonoBehaviour
 
 
     [SerializeField] GameObject gateBlock;
-    
+
     [SerializeField] AudioClip openSound, closeSound;
     [SerializeField] float closingDistance = 5f;
 
@@ -83,7 +83,10 @@ public class NewGateScript : MonoBehaviour
 
             //play close gate sound
             audioSource.PlayOneShot(closeSound);
+            FindObjectOfType<WitchLogic>().playDelayedWitchWelcomeSound();
         }
     }
+
+ 
 
 }

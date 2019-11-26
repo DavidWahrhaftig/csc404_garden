@@ -48,6 +48,9 @@ public class SphereCast : MonoBehaviour
         RaycastHit hit2;
         Ray landingRay = new Ray(transform.position, Vector3.down);
 
+        /*
+          if (Physics.Raycast(from, dirToTarget, out hit, (1 << LayerMask.NameToLayer("Sight") | (1 << LayerMask.NameToLayer("OtherLayerMaskName"))))
+         */
 
         if (Physics.Raycast(landingRay, out hit1))
         {

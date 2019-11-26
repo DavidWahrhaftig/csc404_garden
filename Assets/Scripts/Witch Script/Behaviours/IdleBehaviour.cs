@@ -53,9 +53,12 @@ public class IdleBehaviour : StateMachineBehaviour
         // when reaching base, change state to 'Patrol'
         else
         {
-            animator.SetBool("isIdle", false);
-            animator.SetBool("isPatrolling", true);
-            animator.SetBool("isChasing", false);
+            if (animator.GetComponent<WitchLogic>().getTargetPlayer() == null) // catching bug
+            {
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isPatrolling", true);
+                animator.SetBool("isChasing", false);
+            }
         }
     }
 }
