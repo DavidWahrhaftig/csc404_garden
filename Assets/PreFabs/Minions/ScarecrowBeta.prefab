@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329973590508310369}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7070901, y: 0.0048595956, z: 0.004859603, w: 0.7070901}
+  m_LocalPosition: {x: -0.00030476437, y: 0.00000019693437, z: -0.0000076293945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6109977141336724062}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0.78800005}
 --- !u!33 &6064847551764411224
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5058,9 +5058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d235793a0a3874121896bd5b44763863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitSnatchTimeThreshold: 3
-  snatchQuantity: 1
   isActive: 1
+  snatchQuantity: 1
+  fruitSnatchTimeThreshold: 3
 --- !u!82 &7395392154024714469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5068,12 +5068,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7102640668156567629}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a9b7eee7ff59b524ebcae20d0a332207, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.646
+  m_Volume: 0.25
   m_Pitch: 1.87
   Loop: 1
   Mute: 0
@@ -5082,9 +5082,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0.57
   MinDistance: 0.8
-  MaxDistance: 4
+  MaxDistance: 1
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5223,6 +5223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5074694936861420063, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8878119758494121176, guid: 3a103711d7ffe4b85a49e2ae437a9bec,
         type: 3}
