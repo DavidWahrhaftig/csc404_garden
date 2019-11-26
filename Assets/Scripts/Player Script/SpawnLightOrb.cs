@@ -70,6 +70,9 @@ public class SpawnLightOrb : MonoBehaviour
             visualEffect = Instantiate(effectToSpawn, firePoint.transform.position,
                 Quaternion.identity);
             visualEffect.transform.rotation = firePoint.transform.rotation;
+
+            // Scale Light Orb
+            //visualEffect.transform.localScale = new Vector3(2f, 2f, 2f);
         }
         else
         {

@@ -1082,7 +1082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528347315023389267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15700006, y: 0.86, z: 0.95}
+  m_LocalPosition: {x: 0.15700006, y: 0.86, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1228292318439299984}
@@ -5960,7 +5960,7 @@ MonoBehaviour:
   firePoint: {fileID: 528347315023389267}
   ShootingSoundAudioSource: {fileID: 3136691564730965804}
   vfx:
-  - {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8, type: 3}
+  - {fileID: 7234356380532221871, guid: 4eb573337329b4abca9af1f100f70e24, type: 3}
   magicCharge: 0
   magicShotPower: 20
   reloadSpeed: 5
