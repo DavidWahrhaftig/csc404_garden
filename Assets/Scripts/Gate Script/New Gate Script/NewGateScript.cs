@@ -68,6 +68,7 @@ public class NewGateScript : MonoBehaviour
 
             // play open gate sound
             audioSource.PlayOneShot(openSound);
+            FindObjectOfType<WitchLogic>().playDelayedWitchWelcomeSound();
         }
         
     }
@@ -83,7 +84,7 @@ public class NewGateScript : MonoBehaviour
 
             //play close gate sound
             audioSource.PlayOneShot(closeSound);
-            FindObjectOfType<WitchLogic>().playDelayedWitchWelcomeSound();
+            
         }
     }
 
