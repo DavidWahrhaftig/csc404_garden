@@ -58,7 +58,12 @@ public class SoundManager : MonoBehaviour
                 audioSource.Stop();
                 audioSource.clip = gameOverTrack;
                 audioSource.Play();
-                Invoke("delayMerlinGameOverPhrase", 2f); // a nice delay
+
+                if(gameManager.getPlayer(1).GetComponent<PlayerLogic>().getFruitCounter() != gameManager.getPlayer(2).GetComponent<PlayerLogic>().getFruitCounter()) // only when there isn't a tie, tell the winner congratulations
+                {
+                    Invoke("delayMerlinGameOverPhrase", 2f); // a nice delay
+                }
+               
 
             }
         }
