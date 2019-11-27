@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.18
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1331949770}
-  m_IndirectSpecularColor: {r: 0.06310668, g: 0.07311683, b: 0.05253371, a: 0.18}
+  m_IndirectSpecularColor: {r: 0.06320571, g: 0.073306926, b: 0.052600726, a: 0.18}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11484,6 +11484,23 @@ PrefabInstance:
       propertyPath: witch
       value: 
       objectReference: {fileID: 1623094623}
+    - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
+        type: 3}
+      propertyPath: gameDuration
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020971246, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
+      propertyPath: merlinAudio
+      value: 
+      objectReference: {fileID: 1457056224}
+    - target: {fileID: 1020971246, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
+      propertyPath: merlinLast30Second
+      value: 
+      objectReference: {fileID: 8300000, guid: dc05322cfdeb8714ab2132fb849f7d75, type: 3}
+    - target: {fileID: 1020971246, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
+      propertyPath: merlinGameOver
+      value: 
+      objectReference: {fileID: 8300000, guid: c8ed1dbd52c1aab49a2fe710484809af, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
 --- !u!114 &2999655317578931557 stripped

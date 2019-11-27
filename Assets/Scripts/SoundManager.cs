@@ -7,9 +7,15 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] AudioClip last30SecondsTrack;
     [SerializeField] AudioClip gameOverTrack;
+    [SerializeField] AudioSource merlinAudio;
+
+    [SerializeField] AudioClip merlinLast30Second, merlinGameOver;
 
     GameManager gameManager;
     AudioSource audioSource;
+
+    bool isPlayingMerlinSound = false;
+    
 
     bool isLast30SecondsTrackPlaying = false;
     bool isGamOverTrackPlaying = false;
@@ -36,6 +42,13 @@ public class SoundManager : MonoBehaviour
            
         }
 
+        if (gameManager.getTimeRemaining() <= 27f && !isPlayingMerlinSound && !gameManager.isGameOver())
+        {
+            isPlayingMerlinSound = true;
+            merlinAudio.PlayOneShot(merlinLast30Second);
+   
+        }
+
         if (gameManager.isGameOver())
         {
             
@@ -45,14 +58,9 @@ public class SoundManager : MonoBehaviour
                 audioSource.Stop();
                 audioSource.clip = gameOverTrack;
                 audioSource.Play();
-            }
-            /*
-            if(!audioSource.isPlaying) // to loop game over track
-            {
-                audioSource.PlayOneShot(gameOverTrack);
-            }
-            */
+                merlinAudio.PlayOneShot(merlinGameOver);
 
+            }
         }
 
     }

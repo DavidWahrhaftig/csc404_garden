@@ -82,5 +82,15 @@ public class WitchLogic : MonoBehaviour
         audioSource.PlayOneShot(witchWelcomeSound);
     }
 
+    public void gameOver()
+    {
+        witchAnimator.SetTrigger("gameOver");
+        if (targetPlayer != null)
+        {
+            targetPlayer.GetComponent<PlayerLogic>().stopChasingMe();
+        }
+        stopChasing();
+        
+    }
 
 }

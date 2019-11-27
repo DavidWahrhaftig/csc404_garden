@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     private float remainingCountDownTime;
     private bool beginGame = false;
     private bool gameOver = false;
-    public bool overTime;
+    public bool overTime = false;
 
     private bool flippedCameraEnd = false;
 
@@ -126,24 +126,6 @@ public class GameManager : MonoBehaviour
 
         radarActivation();
 
-        if (gameOver)
-        {
-            
-
-            if (player1.GetComponent<PlayerLogic>().isCaught() || player2.GetComponent<PlayerLogic>().isCaught())
-            {
-                overTime = true;
-                GameTimer.text = "Over Time";
-                
-            }
-            else
-            {
-                overTime = false;
-                restartPrompt.SetActive(true);
-            }
-
-        }
-
     }
 
     private void radarActivation()
@@ -196,12 +178,29 @@ public class GameManager : MonoBehaviour
         // winner detection
         if (remainingTime <= Mathf.Epsilon)
         {
+            // is overtime?
+
             gameOver = true;
-            
+
+            if (player1.GetComponent<PlayerLogic>().isCaught() || player2.GetComponent<PlayerLogic>().isCaught())
+            {
+                overTime = true;
+                GameTimer.text = "Over Time";
+
+            } else
+            {
+                overTime = false;
+                restartPrompt.SetActive(true);
+                witch.GetComponent<WitchLogic>().gameOver();
+            }
+
+
+
             if (!overTime)
             {
                 // flip cameras when game is over
                 flipPlayerCameras();
+                GameTimer.text = "Game Over";
 
                 if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
                 {
@@ -239,7 +238,7 @@ public class GameManager : MonoBehaviour
             {
                 player1.GetComponent<PlayerLogic>().disableControls();
                 player2.GetComponent<PlayerLogic>().disableControls();
-            } 
+            }
         }
         else
         {
