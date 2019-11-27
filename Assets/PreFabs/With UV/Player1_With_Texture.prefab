@@ -653,9 +653,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePadID: 0
-  walkingSpeed: 6
+  walkingSpeed: 5
   movingSpeed: 0
-  rotationSpeed: 150
+  rotationSpeed: 115
   stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 11.5
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBase: {fileID: 0}
-  enemyProjectile: {fileID: 7234356380532221871, guid: 472e7d17d4a13414a952c1c49030d3b8,
+  enemyProjectile: {fileID: 7234356380532221871, guid: 4eb573337329b4abca9af1f100f70e24,
     type: 3}
   hitSound: {fileID: 8300000, guid: 336efe323bd474e4fa5e584d60903942, type: 3}
   caughtSound: {fileID: 8300000, guid: 552fb9ffbc6737c479a2ce1e2bf5efe6, type: 3}
@@ -5171,7 +5171,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 7991
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -17315,6 +17315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radar
       objectReference: {fileID: 0}
+    - target: {fileID: 192665246887046443, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 192665246887046440, guid: 91d83568b430a6e40a45ec34cac0f06d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17369,6 +17374,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192665246546780033, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846229765610481915, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181797466070533852, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d83568b430a6e40a45ec34cac0f06d, type: 3}
