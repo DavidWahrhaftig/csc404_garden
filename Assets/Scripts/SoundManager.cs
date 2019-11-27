@@ -58,10 +58,15 @@ public class SoundManager : MonoBehaviour
                 audioSource.Stop();
                 audioSource.clip = gameOverTrack;
                 audioSource.Play();
-                merlinAudio.PlayOneShot(merlinGameOver);
+                Invoke("delayMerlinGameOverPhrase", 2f); // a nice delay
 
             }
         }
 
+    }
+
+    void delayMerlinGameOverPhrase()
+    {
+        merlinAudio.PlayOneShot(merlinGameOver);
     }
 }

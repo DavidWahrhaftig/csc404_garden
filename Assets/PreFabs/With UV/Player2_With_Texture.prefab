@@ -930,7 +930,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 12087
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5934,9 +5934,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePadID: 1
-  walkingSpeed: 6
+  walkingSpeed: 5
   movingSpeed: 0
-  rotationSpeed: 150
+  rotationSpeed: 115
   stamina: 40
   centerToBaseSpeed: 10
   jumpForce: 11.5
@@ -17315,6 +17315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radar
       objectReference: {fileID: 0}
+    - target: {fileID: 192665246887046443, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 192665246887046440, guid: 91d83568b430a6e40a45ec34cac0f06d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17369,6 +17374,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192665246546780033, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846229765610481915, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5181797466070533852, guid: 91d83568b430a6e40a45ec34cac0f06d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d83568b430a6e40a45ec34cac0f06d, type: 3}
