@@ -8,8 +8,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
     private int numPlayersInProximity;
-    [SerializeField]
-    private float fruitSnatchTimeThreshold = 1f;
+    public float fruitSnatchTimeThreshold;
     private float fruitSnatchTimer;
     public int snatchQuantity;
     private Animator animator;
@@ -19,21 +18,17 @@ public class AnimatedSkeletonLogic : MonoBehaviour
     private Vector3 direction;
     private string playerTargetTag;
     private bool isPlayerInProximity;
+    private AudioSource hitSound;
 
     private void Start()
     {
         //Debug.Log("NavMesh Registered");
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         animator = this.GetComponent<Animator>();
+        hitSound = this.GetComponent<AudioSource>();
     }
 
-    private void Update()
-    {
-        if (isPlayerInProximity)
-        {
-            
-        }
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -42,25 +37,24 @@ public class AnimatedSkeletonLogic : MonoBehaviour
         {
 
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        {
+
+            if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
             {
+                //Debug.Log("Skeleton spotted player! Stop!!!");
+                navMeshAgent.isStopped = true;
+                //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
+                numPlayersInProximity += 1;
 
-                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
+                // Now can rotate to face Player (Need to implement lock on player)
+                if (!isPlayerInProximity)
                 {
-                    //Debug.Log("Skeleton spotted player! Stop!!!");
-                    navMeshAgent.isStopped = true;
-                    //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                    numPlayersInProximity += 1;
-
-                    // Now can rotate to face Player (Need to implement lock on player)
-                    if (!isPlayerInProximity)
-                    {
-                        isPlayerInProximity = true;
-                        playerTargetTag = other.transform.tag;
-                        direction = GameObject.FindGameObjectWithTag(playerTargetTag).transform.position - animator.transform.position;
-                        animator.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
-                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-
-                    }
+                    isPlayerInProximity = true;
+                    playerTargetTag = other.transform.tag;
+                    direction = GameObject.FindGameObjectWithTag(playerTargetTag).transform.position - animator.transform.position;
+                    animator.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
+                    other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                        hitSound.Play();
 
                     // Turn on Attack animation
                     animator.SetBool("isAttacking", true);
@@ -69,13 +63,13 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isWalking", false);
 
-
-                    
                 }
+
             }
         }
-        
-	}
+        }
+
+    }
 
 
     private void OnTriggerStay(Collider other)
@@ -94,11 +88,19 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     if (fruitSnatchTimer > fruitSnatchTimeThreshold)
                     {
                         other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                        hitSound.Play();
                         fruitSnatchTimer = 0;
                     }
                 }
 
             }
+
+            else if ((other.transform.tag == "Player1" || other.transform.tag == "Player2") && playerTargetTag == null)
+            {
+                playerTargetTag = other.transform.tag;
+            }
+
+
         }
 
     }
@@ -114,15 +116,18 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     //Debug.Log("Skeleton lost sight of a player...");
                     numPlayersInProximity -= 1;
 
+                    if (other.transform.tag == playerTargetTag)
+                    {
+                        // Have to Unlock from player
+                        playerTargetTag = null;
+                    }
+
                     if (numPlayersInProximity == 0)
                     {
                         //Debug.Log("No more players to see. Resume!");
                         navMeshAgent.isStopped = false;
-                        //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
 
-
-                        // Have to Unlock from player
-
+                        isPlayerInProximity = false;
 
                         //Turn off attacking animation
                         animator.SetBool("isAttacking", false);
@@ -130,9 +135,8 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                         animator.SetBool("isWalking", isWalkingState);
 
                     }
-
-                    
                 }
+                fruitSnatchTimer = 0;
             }
         }
     }

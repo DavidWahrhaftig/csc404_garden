@@ -1578,6 +1578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 7174388320862039899, guid: 1ffd41a16926c144d81140956ca1fdb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6182270150971465032, guid: 1ffd41a16926c144d81140956ca1fdb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1635,77 +1640,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ffd41a16926c144d81140956ca1fdb0, type: 3}
---- !u!1 &566147471 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6861873342025557646, guid: 4f878900d14178841ba52c21c9ae8626,
-    type: 3}
-  m_PrefabInstance: {fileID: 733229609}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &566147474
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566147471}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.8
-  m_Speed: 3
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 180
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &566147475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566147471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a61591d0a422f4009be5cd4165b5c5c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goIdleAtWaypoint: 1
-  totalIdleTime: 3
-  turnAroundProbability: 0.2
---- !u!114 &566147476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566147471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6fe34132d8d4377bdea98d00ce356a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruitSnatchTimeThreshold: 1
-  snatchQuantity: 0
---- !u!136 &566147477
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566147471}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 2.5261006
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &566646414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitSnatchTimeThreshold: 1
   snatchQuantity: 0
+  rotationSpeed: 0.1
 --- !u!114 &959313402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6385,13 +6320,19 @@ PrefabInstance:
     - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: fruitCounter
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
         type: 3}
       propertyPath: counterUI
       value: 
       objectReference: {fileID: 1944497443}
+    - target: {fileID: 409387792847350342, guid: 7a2e2dfb954e714419792a624c938f3a,
+        type: 3}
+      propertyPath: fruitToLoseObject
+      value: 
+      objectReference: {fileID: 3612087545768206463, guid: d5ba4b78e2b262c4cb3d85096f993b6b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e2dfb954e714419792a624c938f3a, type: 3}
 --- !u!1001 &2106152760
@@ -6629,6 +6570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WanderingSkeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514609189544809926, guid: b5895e0ebd1b043858b2dfe7b4f0b985,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 476607191398393813, guid: b5895e0ebd1b043858b2dfe7b4f0b985,
         type: 3}
