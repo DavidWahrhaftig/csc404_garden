@@ -177,3 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   last30SecondsTrack: {fileID: 8300000, guid: f6cf13a8dc1044db99625da3e1fed28a, type: 3}
   gameOverTrack: {fileID: 8300000, guid: b080e276ca60e9743999deeea6b2bd80, type: 3}
+  merlinAudio: {fileID: 0}
+  merlinLast30Second: {fileID: 0}
+  merlinGameOver: {fileID: 0}
