@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour
                 #endregion
 
 
-                if (jumpButton)
+                if (jumpButton && !GetComponent<PlayerLogic>().isGlowing())
                 {
                     if (grounded)
                     {
