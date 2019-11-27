@@ -9,6 +9,11 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     [SerializeField] int snatchQuantity = 1;
     [SerializeField] float fruitSnatchTimeThreshold = 3f;
 
+    [SerializeField] Transform scarecrowRotation;
+    [SerializeField] Animator scarecrowAnimator;
+
+    [Range(0, 1)] public float rotationSpeed = 0.1f;
+    private Vector3 direction;
 
     private float fruitSnatchTimer = 0f;
 
@@ -25,6 +30,7 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
         //Debug.Log("Collision Tag: " + other.transform.tag);
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
+            scarecrowAnimator.SetTrigger("scare");
             if (canHarmPlayer(other.gameObject))
             {
                 other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
@@ -38,6 +44,10 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     {
         if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
+
+            direction = GameObject.FindGameObjectWithTag(other.transform.tag).transform.position - scarecrowRotation.position;
+            scarecrowRotation.rotation = Quaternion.Slerp(scarecrowRotation.rotation, Quaternion.LookRotation(direction), rotationSpeed);
+
             if (canHarmPlayer(other.gameObject))
             {
                 fruitSnatchTimer += Time.deltaTime;
@@ -51,6 +61,14 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
+        {
+            scarecrowAnimator.SetTrigger("idle");
+        }
+
+    }
     private bool canHarmPlayer(GameObject player)
     {
         return !FindObjectOfType<GameManager>().isGameOver() && !player.GetComponent<PlayerLogic>().isCaught() && !player.GetComponent<PlayerLogic>().isDisabled();

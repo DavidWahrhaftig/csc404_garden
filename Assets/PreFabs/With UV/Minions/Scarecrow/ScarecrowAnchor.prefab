@@ -103,7 +103,6 @@ GameObject:
   m_Component:
   - component: {fileID: 653780009713828398}
   - component: {fileID: 653780009713828397}
-  - component: {fileID: 653780009713828396}
   - component: {fileID: 653780009713828395}
   m_Layer: 0
   m_Name: ScarecrowAnchor
@@ -140,20 +139,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &653780009713828396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653780009713828399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b014158366d343045a2e96f2a9b21aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snatchQuantity: 1
-  fruitSnatchTimeThreshold: 3
 --- !u!95 &653780009713828395
 Animator:
   serializedVersion: 3
