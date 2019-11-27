@@ -18,17 +18,33 @@ public class AnimatedSkeletonLogic : MonoBehaviour
     private Vector3 direction;
     private string playerTargetTag;
     private bool isPlayerInProximity;
-    private AudioSource hitSound;
+    private AudioSource audioSource;
+    public AudioClip hitSound;
 
+    public float maxAudioDistance = 5f;
+    private float initialVolume;
     private void Start()
     {
         //Debug.Log("NavMesh Registered");
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         animator = this.GetComponent<Animator>();
-        hitSound = this.GetComponent<AudioSource>();
+        audioSource = this.GetComponent<AudioSource>();
+        initialVolume = audioSource.volume;
     }
 
-    
+    private void Update()
+    {
+        if (getMinimumDistanceOfPlayer() < maxAudioDistance && !FindObjectOfType<GameManager>().isGameOver())
+        {
+            audioSource.volume = initialVolume * (1f - getMinimumDistanceOfPlayer() / maxAudioDistance);
+        }
+        else
+        {
+            audioSource.volume = 0f;
+        }
+    }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,7 +70,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     direction = GameObject.FindGameObjectWithTag(playerTargetTag).transform.position - animator.transform.position;
                     animator.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
                     other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                        hitSound.Play();
+                    audioSource.PlayOneShot(hitSound);
 
                     // Turn on Attack animation
                     animator.SetBool("isAttacking", true);
@@ -88,7 +104,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     if (fruitSnatchTimer > fruitSnatchTimeThreshold)
                     {
                         other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
-                        hitSound.Play();
+                        audioSource.PlayOneShot(hitSound);
                         fruitSnatchTimer = 0;
                     }
                 }
@@ -153,5 +169,13 @@ public class AnimatedSkeletonLogic : MonoBehaviour
 
     //    }
     //}
+
+    private float getMinimumDistanceOfPlayer()
+    {
+        Transform player1 = FindObjectOfType<GameManager>().getPlayer(1);
+        Transform player2 = FindObjectOfType<GameManager>().getPlayer(2);
+
+        return Mathf.Min(Vector3.Distance(player1.position, transform.position), Vector3.Distance(player2.position, transform.position));
+    }
 
 }

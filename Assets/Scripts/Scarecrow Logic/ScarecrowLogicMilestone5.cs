@@ -16,11 +16,27 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
     private Vector3 direction;
 
     private float fruitSnatchTimer = 0f;
-
+    public float maxAudioDistance = 10f;
+    private float initialVolume;
+    private AudioSource audioSource;
+    
 
     private void Start()
     {
         //gameObject.SetActive(isActive);
+        audioSource = GetComponent<AudioSource>();
+        initialVolume = audioSource.volume;
+    }
+
+    private void Update()
+    {
+        if (getMinimumDistanceOfPlayer() < maxAudioDistance && !FindObjectOfType<GameManager>().isGameOver())
+        {
+            audioSource.volume = initialVolume * (1f -  getMinimumDistanceOfPlayer()/maxAudioDistance);
+        } else
+        {
+            audioSource.volume = 0f;
+        }
     }
 
 
@@ -67,11 +83,22 @@ public class ScarecrowLogicMilestone5 : MonoBehaviour
         {
             scarecrowAnimator.SetTrigger("idle");
         }
+        fruitSnatchTimer = 0;
 
     }
     private bool canHarmPlayer(GameObject player)
     {
         return !FindObjectOfType<GameManager>().isGameOver() && !player.GetComponent<PlayerLogic>().isCaught() && !player.GetComponent<PlayerLogic>().isDisabled();
     }
+
+    
+    private float getMinimumDistanceOfPlayer()
+    {
+        Transform player1 = FindObjectOfType<GameManager>().getPlayer(1);
+        Transform player2 = FindObjectOfType<GameManager>().getPlayer(2);
+
+        return Mathf.Min(Vector3.Distance(player1.position, transform.position), Vector3.Distance(player2.position, transform.position));
+    }
+    
 
 }

@@ -9,12 +9,13 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip gameOverTrack;
     [SerializeField] AudioSource merlinAudio;
 
-    [SerializeField] AudioClip merlinLast30Second, merlinGameOver;
+    [SerializeField] AudioClip merlinLast30Second, merlinGameOver, merlinTieGame;
 
     GameManager gameManager;
     AudioSource audioSource;
 
     bool isPlayingMerlinSound = false;
+    bool playedMerlinEndPhrase = false;
     
 
     bool isLast30SecondsTrackPlaying = false;
@@ -51,6 +52,28 @@ public class SoundManager : MonoBehaviour
 
         if (gameManager.isGameOver())
         {
+            if (gameManager.getPlayer(1).GetComponent<PlayerLogic>().isCaught() || gameManager.getPlayer(2).GetComponent<PlayerLogic>().isCaught())
+            {
+                // wait until overtime finishes
+            }
+            else
+            {
+                if (!playedMerlinEndPhrase)
+                {
+                    // say the phrase one time
+                    playedMerlinEndPhrase = true;
+                    
+
+                    if (gameManager.getPlayer(1).GetComponent<PlayerLogic>().getFruitCounter() != gameManager.getPlayer(2).GetComponent<PlayerLogic>().getFruitCounter())
+                    {
+                        Invoke("delayMerlinGameOverPhrase", 2f); // a nice delay
+                    }
+                    else
+                    {
+                        Invoke("delayMerlinTiePhrase", 2f);
+                    }
+                }
+            }
             
             if (!isGamOverTrackPlaying)
             {
@@ -58,13 +81,6 @@ public class SoundManager : MonoBehaviour
                 audioSource.Stop();
                 audioSource.clip = gameOverTrack;
                 audioSource.Play();
-
-                if(gameManager.getPlayer(1).GetComponent<PlayerLogic>().getFruitCounter() != gameManager.getPlayer(2).GetComponent<PlayerLogic>().getFruitCounter()) // only when there isn't a tie, tell the winner congratulations
-                {
-                    Invoke("delayMerlinGameOverPhrase", 2f); // a nice delay
-                }
-               
-
             }
         }
 
@@ -73,5 +89,10 @@ public class SoundManager : MonoBehaviour
     void delayMerlinGameOverPhrase()
     {
         merlinAudio.PlayOneShot(merlinGameOver);
+    }
+
+    void delayMerlinTiePhrase()
+    {
+        merlinAudio.PlayOneShot(merlinTieGame);
     }
 }

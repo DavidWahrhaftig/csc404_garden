@@ -13112,6 +13112,8 @@ MonoBehaviour:
   fruitSnatchTimeThreshold: 1.1
   snatchQuantity: 1
   rotationSpeed: 0.1
+  hitSound: {fileID: 8300000, guid: e8d759d40008bd14a9370b1048b57bbf, type: 3}
+  maxAudioDistance: 3
 --- !u!136 &7372473405873867649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13136,11 +13138,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e8d759d40008bd14a9370b1048b57bbf, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_audioClip: {fileID: 8300000, guid: 407a10687f3702c4b9f793e130d120fc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
