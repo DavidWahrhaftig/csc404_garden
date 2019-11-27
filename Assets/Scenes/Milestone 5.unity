@@ -11487,8 +11487,20 @@ PrefabInstance:
     - target: {fileID: 9132218331756551923, guid: bc13233766da3d14e87c388d2f7c6a55,
         type: 3}
       propertyPath: gameDuration
-      value: 210
+      value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 1020971246, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
+      propertyPath: merlinAudio
+      value: 
+      objectReference: {fileID: 1457056224}
+    - target: {fileID: 1020971246, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
+      propertyPath: merlinLast30Second
+      value: 
+      objectReference: {fileID: 8300000, guid: dc05322cfdeb8714ab2132fb849f7d75, type: 3}
+    - target: {fileID: 1020971246, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
+      propertyPath: merlinGameOver
+      value: 
+      objectReference: {fileID: 8300000, guid: c8ed1dbd52c1aab49a2fe710484809af, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc13233766da3d14e87c388d2f7c6a55, type: 3}
 --- !u!114 &2999655317578931557 stripped
