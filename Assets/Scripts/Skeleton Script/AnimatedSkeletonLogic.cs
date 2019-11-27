@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class AnimatedSkeletonLogic : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
-    private int playersInProximity;
+    private int numPlayersInProximity;
     [SerializeField]
     private float fruitSnatchTimeThreshold = 1f;
     private float fruitSnatchTimer;
@@ -15,13 +15,24 @@ public class AnimatedSkeletonLogic : MonoBehaviour
     private Animator animator;
     private bool isIdleState;
     private bool isWalkingState;
-
+    [Range(0, 1)] public float rotationSpeed = 0.1f;
+    private Vector3 direction;
+    private string playerTargetTag;
+    private bool isPlayerInProximity;
 
     private void Start()
     {
         //Debug.Log("NavMesh Registered");
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         animator = this.GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (isPlayerInProximity)
+        {
+            
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,10 +49,18 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     //Debug.Log("Skeleton spotted player! Stop!!!");
                     navMeshAgent.isStopped = true;
                     //Debug.Log("Is Stopped :: " + navMeshAgent.isStopped);
-                    playersInProximity += 1;
+                    numPlayersInProximity += 1;
 
-                    // Rotate to face Player (Need to implement lock on player)
+                    // Now can rotate to face Player (Need to implement lock on player)
+                    if (!isPlayerInProximity)
+                    {
+                        isPlayerInProximity = true;
+                        playerTargetTag = other.transform.tag;
+                        direction = GameObject.FindGameObjectWithTag(playerTargetTag).transform.position - animator.transform.position;
+                        animator.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
+                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
 
+                    }
 
                     // Turn on Attack animation
                     animator.SetBool("isAttacking", true);
@@ -49,6 +68,8 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                     isWalkingState = animator.GetBool("isWalking");
                     animator.SetBool("isIdle", false);
                     animator.SetBool("isWalking", false);
+
+
                     
                 }
             }
@@ -57,26 +78,30 @@ public class AnimatedSkeletonLogic : MonoBehaviour
 	}
 
 
-    //private void OnTriggerStay(Collider other)
-    //{
+    private void OnTriggerStay(Collider other)
+    {
 
-    //    if (!FindObjectOfType<GameManager>().isGameOver())
-    //    {
-    //        if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
-    //        {
-    //            if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
-    //            {
-    //                fruitSnatchTimer += Time.deltaTime;
-    //                if (fruitSnatchTimer > fruitSnatchTimeThreshold)
-    //                {
-    //                    fruitSnatchTimer = 0;
-    //                }
-    //            }
+        if (!FindObjectOfType<GameManager>().isGameOver())
+        {
+            if (other.transform.tag == playerTargetTag)
+            {
+                direction = GameObject.FindGameObjectWithTag(playerTargetTag).transform.position - animator.transform.position;
+                animator.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
 
-    //        }
-    //    }
+                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
+                {
+                    fruitSnatchTimer += Time.deltaTime;
+                    if (fruitSnatchTimer > fruitSnatchTimeThreshold)
+                    {
+                        other.GetComponent<PlayerLogic>().loseFruits(snatchQuantity, true);
+                        fruitSnatchTimer = 0;
+                    }
+                }
 
-    //}
+            }
+        }
+
+    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -87,9 +112,9 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                 if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
                 {
                     //Debug.Log("Skeleton lost sight of a player...");
-                    playersInProximity -= 1;
+                    numPlayersInProximity -= 1;
 
-                    if (playersInProximity == 0)
+                    if (numPlayersInProximity == 0)
                     {
                         //Debug.Log("No more players to see. Resume!");
                         navMeshAgent.isStopped = false;
@@ -105,6 +130,8 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                         animator.SetBool("isWalking", isWalkingState);
 
                     }
+
+                    
                 }
             }
         }

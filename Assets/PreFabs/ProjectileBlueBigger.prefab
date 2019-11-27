@@ -9556,10 +9556,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   fireRate: 4
-  impactPrefab: {fileID: 8041960155703509171, guid: 1aa0b6d99f69846deb73705b2beaff32,
+  impactPrefab: {fileID: 44115733770284271, guid: 06ab4ccbe9af64c70b21c7bfe302ddf1,
     type: 3}
   orbHealth: 25
-  enemyplayerTag: Player2
+  enemyplayerTag: Player1
   honing: 0
 --- !u!65 &2752165059703928675
 BoxCollider:
