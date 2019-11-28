@@ -55,7 +55,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
         {
 
-            if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
+            if (!(other.GetComponent<PlayerLogic>().isCaught() || other.GetComponent<PlayerLogic>().isDisabled()))
             {
                 //Debug.Log("Skeleton spotted player! Stop!!!");
                 navMeshAgent.isStopped = true;
@@ -98,7 +98,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
                 direction = GameObject.FindGameObjectWithTag(playerTargetTag).transform.position - animator.transform.position;
                 animator.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
 
-                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
+                if (!(other.GetComponent<PlayerLogic>().isCaught() || other.GetComponent<PlayerLogic>().isDisabled()))
                 {
                     fruitSnatchTimer += Time.deltaTime;
                     if (fruitSnatchTimer > fruitSnatchTimeThreshold)
@@ -127,7 +127,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
         {
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
             {
-                if (!other.GetComponent<PlayerLogic>().isCaught() || !other.GetComponent<PlayerLogic>().isDisabled())
+                if (!(other.GetComponent<PlayerLogic>().isCaught() || other.GetComponent<PlayerLogic>().isDisabled()))
                 {
                     //Debug.Log("Skeleton lost sight of a player...");
                     numPlayersInProximity -= 1;
