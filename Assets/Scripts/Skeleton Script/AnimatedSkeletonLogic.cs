@@ -127,7 +127,7 @@ public class AnimatedSkeletonLogic : MonoBehaviour
         {
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
             {
-                if (!(other.GetComponent<PlayerLogic>().isCaught() || other.GetComponent<PlayerLogic>().isDisabled()))
+                if (!(other.GetComponent<PlayerLogic>().isCaught() || other.GetComponent<PlayerLogic>().isDisabled())) // not sure if needed when player exits trigger
                 {
                     //Debug.Log("Skeleton lost sight of a player...");
                     numPlayersInProximity -= 1;
