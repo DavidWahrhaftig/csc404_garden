@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
 
         resistancePrompt1.SetActive(false);
         resistancePrompt2.SetActive(false);
+
+        Physics.IgnoreCollision(player1.GetComponent<Collider>(), player2.GetComponent<Collider>());
     }
 
     void Update()
@@ -201,6 +203,8 @@ public class GameManager : MonoBehaviour
                 // flip cameras when game is over
                 flipPlayerCameras();
                 GameTimer.text = "Game Over";
+                //magicSlider1.gameObject.SetActive(false);
+                //magicSlider2.gameObject.SetActive(false);
 
                 if (player1.GetComponent<PlayerLogic>().getFruitCounter() > player2.GetComponent<PlayerLogic>().getFruitCounter())
                 {

@@ -127,30 +127,26 @@ public class AnimatedSkeletonLogic : MonoBehaviour
         {
             if (other.transform.tag == "Player1" || other.transform.tag == "Player2")
             {
-                if (!(other.GetComponent<PlayerLogic>().isCaught() || other.GetComponent<PlayerLogic>().isDisabled())) // not sure if needed when player exits trigger
+                //Debug.Log("Skeleton lost sight of a player...");
+                numPlayersInProximity -= 1;
+
+                if (other.transform.tag == playerTargetTag)
                 {
-                    //Debug.Log("Skeleton lost sight of a player...");
-                    numPlayersInProximity -= 1;
+                    // Have to Unlock from player
+                    playerTargetTag = null;
+                }
 
-                    if (other.transform.tag == playerTargetTag)
-                    {
-                        // Have to Unlock from player
-                        playerTargetTag = null;
-                    }
+                if (numPlayersInProximity == 0)
+                {
+                    //Debug.Log("No more players to see. Resume!");
+                    navMeshAgent.isStopped = false;
 
-                    if (numPlayersInProximity == 0)
-                    {
-                        //Debug.Log("No more players to see. Resume!");
-                        navMeshAgent.isStopped = false;
+                    isPlayerInProximity = false;
 
-                        isPlayerInProximity = false;
-
-                        //Turn off attacking animation
-                        animator.SetBool("isAttacking", false);
-                        animator.SetBool("isIdle", isIdleState);
-                        animator.SetBool("isWalking", isWalkingState);
-
-                    }
+                    //Turn off attacking animation
+                    animator.SetBool("isAttacking", false);
+                    animator.SetBool("isIdle", isIdleState);
+                    animator.SetBool("isWalking", isWalkingState);
                 }
                 fruitSnatchTimer = 0;
             }
