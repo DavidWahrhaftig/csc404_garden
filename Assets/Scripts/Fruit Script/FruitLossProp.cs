@@ -7,12 +7,16 @@ public class FruitLossProp : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] float destoryTimer = 2.5f;
+    [SerializeField] Collider collider;
+    [SerializeField] AudioClip collectSound;
     //[SerializeField] AudioClip loseFruitSound;
     private AudioSource audioSource;
+
+    private bool collectable = false;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        Invoke("destroyFruitProp", destoryTimer);
+        Invoke("dissolveFruit", destoryTimer);
     }
 
 
@@ -21,11 +25,36 @@ public class FruitLossProp : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             audioSource.Play();
+            collectable = true;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player1" || other.tag == "Player2")
+        {
+            if (collectable)
+            {
+                other.GetComponent<PlayerLogic>().incrementFruitCounter();
+                other.GetComponent<AudioSource>().PlayOneShot(collectSound);
+                Destroy(gameObject);
+            }
+        }        
+    }
+
+    void dissolveFruit()
+    {
+        collider.enabled = false;
+        Invoke("destroyFruitProp", 2f);
     }
 
     void destroyFruitProp()
     {
         Destroy(gameObject);
+    }
+
+    public bool isCollectable()
+    {
+        return collectable;
     }
 }
