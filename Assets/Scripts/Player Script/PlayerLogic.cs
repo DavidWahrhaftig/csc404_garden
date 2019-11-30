@@ -288,6 +288,7 @@ public class PlayerLogic : MonoBehaviour
             fruitToLose = Instantiate(fruitToLoseObject, transform.position + new Vector3(0f, Random.Range(0.3f, 1f), 0f),
                 Quaternion.identity);
             fruitToLose.transform.rotation = transform.rotation;
+            fruitToLose.GetComponent<FruitLossProp>().setPlayer(gameObject);
 
             fruitToLose.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1f,1f), 0f, Random.Range(-1f, 1f)));
             fruitToLose.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-0.5f, 0.5f), 0f, 0f));
