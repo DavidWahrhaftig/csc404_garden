@@ -12,7 +12,7 @@ public class FruitLossProp : MonoBehaviour
     //[SerializeField] AudioClip loseFruitSound;
     private AudioSource audioSource;
 
-    private GameObject player;
+    private GameObject forbiddenPlayer;
     private bool collectable = false;
 
 
@@ -24,7 +24,7 @@ public class FruitLossProp : MonoBehaviour
     }
     private void Update()
     {
-        Physics.IgnoreCollision(GetComponent<Collider>(), this.player.GetComponent<Collider>());
+        Physics.IgnoreCollision(GetComponent<Collider>(), this.forbiddenPlayer.GetComponent<Collider>());
     }
 
 
@@ -41,7 +41,7 @@ public class FruitLossProp : MonoBehaviour
     {
         if (other.tag == "Player1" || other.tag == "Player2")
         {
-            if (other.tag != this.player.tag)
+            if (other.tag != this.forbiddenPlayer.tag)
             {
                 other.GetComponent<PlayerLogic>().incrementFruitCounter();
                 other.GetComponent<AudioSource>().PlayOneShot(collectSound);
@@ -68,6 +68,10 @@ public class FruitLossProp : MonoBehaviour
 
     public void setPlayer(GameObject player)
     {
-        this.player = player;
+        /**
+         * this method is called from PlayerLogic in the loseFruit Method 
+         **/
+
+        this.forbiddenPlayer = player;
     }
 }
